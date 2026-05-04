@@ -110,13 +110,25 @@
     return html.join('\n');
   }
 
+  // Path prefix is '../' when this loader runs inside /insights/<slug>.html,
+  // and '' when it runs at the root (insight.html?slug=...). Frontmatter and
+  // fetch paths are stored relative to project root and normalized via this.
+  const inSubfolder = /\/insights\/[^/]+\.html?$/.test(window.location.pathname);
+  const pathPrefix = inSubfolder ? '../' : '';
+  function resolveAsset(p) {
+    if (!p) return p;
+    if (/^https?:\/\//i.test(p) || p.startsWith('mailto:') || p.startsWith('data:')) return p;
+    const cleaned = String(p).replace(/^(\.\.\/|\.\/|\/)+/, '');
+    return pathPrefix + cleaned;
+  }
+
   async function loadInsight() {
     if (!allowedSlugs.has(slug)) {
       if (body) body.innerHTML = '<p>Insight not found.</p>';
       return;
     }
 
-    const response = await fetch('../content/insights/' + slug + '.md');
+    const response = await fetch(pathPrefix + 'content/insights/' + slug + '.md');
     if (!response.ok) {
       if (body) body.innerHTML = '<p>Insight not found.</p>';
       return;
@@ -143,7 +155,7 @@
     const image = document.querySelector('[data-insight-image]');
     const imageWrap = image ? image.closest('.insight-detail-image') : null;
     if (parsed.meta.image) {
-      image.src = parsed.meta.image;
+      image.src = resolveAsset(parsed.meta.image);
       image.alt = imageAlt[slug] || parsed.meta.title || '';
       if (imageWrap) imageWrap.hidden = false;
     } else if (imageWrap) {
@@ -152,10 +164,10 @@
 
     const audioType = parsed.meta.audio && parsed.meta.audio.toLowerCase().endsWith('.m4a') ? 'audio/mp4' : 'audio/mpeg';
     const audio = parsed.meta.audio
-      ? '<div class="insight-audio"><audio controls><source src="' + escapeHtml(parsed.meta.audio) + '" type="' + audioType + '"></audio></div>'
+      ? '<div class="insight-audio"><audio controls><source src="' + escapeHtml(resolveAsset(parsed.meta.audio)) + '" type="' + audioType + '"></audio></div>'
       : '';
     const contentImage = parsed.meta.contentImage
-      ? '<figure class="insight-content-image"><img src="' + escapeHtml(parsed.meta.contentImage) + '" alt="' + escapeHtml(parsed.meta.contentImageAlt || '') + '"><figcaption>' + escapeHtml(parsed.meta.contentImageCaption || '') + '</figcaption></figure>'
+      ? '<figure class="insight-content-image"><img src="' + escapeHtml(resolveAsset(parsed.meta.contentImage)) + '" alt="' + escapeHtml(parsed.meta.contentImageAlt || '') + '"><figcaption>' + escapeHtml(parsed.meta.contentImageCaption || '') + '</figcaption></figure>'
       : '';
     const cta = parsed.meta.ctaLabel
       ? '<div class="insight-article-cta"><a href="' + escapeHtml(parsed.meta.ctaHref || 'contact.html#contact-options') + '" class="btn btn-primary">' + escapeHtml(parsed.meta.ctaLabel) + '</a></div>'
