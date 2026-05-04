@@ -50,7 +50,7 @@
       part: 2,
       title: "Process: Fix the System Before You Accelerate It",
       category: "Workflow Optimization",
-      image: "assets/insights/foundations-series-02-process-redesign.png",
+      image: "assets/insights/foundations-series-process-pathway.png",
       subhead: "Automating a broken process does not fix it. It makes it fail faster.",
       pull: "A bad process with AI is still a bad process — just faster, louder, and harder to unwind.",
       operator: "AI should not be used to hide process weakness. It should be applied after the workflow is visible, repeatable, and controlled. If humans cannot explain the decision path, automation will not make it stronger.",
