@@ -1058,12 +1058,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 /* Foundations field series */
+.foundations-hub-hero,
 .foundations-article-hero {
-  background: var(--faa-navy);
-  color: var(--faa-white);
-  padding: 88px 0 76px;
-}
-.foundations-hub-hero {
   background: var(--faa-navy); /* fallback if image fails */
   color: var(--faa-white);
   padding: 88px 0 76px;
@@ -1071,11 +1067,12 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   overflow: hidden;
   isolation: isolate;
 }
-.foundations-hub-hero::before {
+.foundations-hub-hero::before,
+.foundations-article-hero::before {
   content: "";
   position: absolute;
   inset: -4%;
-  background-image: url('assets/insights/foundations-series-five-layers-hero.png');
+  background-image: url('assets/insights/foundations-series-architecture-hero.png');
   background-size: cover;
   background-position: right center;
   z-index: 0;
@@ -1083,7 +1080,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   will-change: transform;
   animation: foundationsHubHeroDrift 28s ease-in-out infinite alternate;
 }
-.foundations-hub-hero::after {
+.foundations-hub-hero::after,
+.foundations-article-hero::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1096,7 +1094,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     rgba(15,23,42,0)    85%);
   z-index: 1;
 }
-.foundations-hub-hero > * {
+.foundations-hub-hero > *,
+.foundations-article-hero > * {
   position: relative;
   z-index: 2;
 }
@@ -1105,10 +1104,17 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   100% { transform: scale(1.08) translate3d(1%, -0.5%, 0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .foundations-hub-hero::before {
+  .foundations-hub-hero::before,
+  .foundations-article-hero::before {
     animation: none;
     transform: scale(1.04);
   }
+}
+/* Hide the per-Part figure thumbnail (rendered just below the hero) —
+   the architecture image is now the hero background, applied uniformly
+   across the hub and all 5 Foundations Series article pages. */
+.foundations-hero-image {
+  display: none;
 }
 .foundations-hub-grid {
   display: grid;
