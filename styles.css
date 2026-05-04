@@ -1058,11 +1058,57 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 /* Foundations field series */
-.foundations-hub-hero,
 .foundations-article-hero {
   background: var(--faa-navy);
   color: var(--faa-white);
   padding: 88px 0 76px;
+}
+.foundations-hub-hero {
+  background: var(--faa-navy); /* fallback if image fails */
+  color: var(--faa-white);
+  padding: 88px 0 76px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.foundations-hub-hero::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  background-image: url('assets/insights/foundations-series-five-layers-hero.png');
+  background-size: cover;
+  background-position: right center;
+  z-index: 0;
+  transform-origin: 60% 50%;
+  will-change: transform;
+  animation: foundationsHubHeroDrift 28s ease-in-out infinite alternate;
+}
+.foundations-hub-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Soft left-side darken so the white H1 and lede stay readable, the
+     right-side visual stack shows through cleanly. */
+  background: linear-gradient(to right,
+    rgba(15,23,42,0.62) 0%,
+    rgba(15,23,42,0.42) 35%,
+    rgba(15,23,42,0.10) 65%,
+    rgba(15,23,42,0)    85%);
+  z-index: 1;
+}
+.foundations-hub-hero > * {
+  position: relative;
+  z-index: 2;
+}
+@keyframes foundationsHubHeroDrift {
+  0%   { transform: scale(1.04) translate3d(-1%, 0.5%, 0); }
+  100% { transform: scale(1.08) translate3d(1%, -0.5%, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .foundations-hub-hero::before {
+    animation: none;
+    transform: scale(1.04);
+  }
 }
 .foundations-hub-grid {
   display: grid;

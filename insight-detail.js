@@ -6,7 +6,9 @@
     'designing-for-human-in-the-loop-before-you-design-for-ai',
     'data-governance-non-enterprise-teams',
     'where-agents-earn-their-keep',
-    'mid-market-case-for-platform-agnostic'
+    'mid-market-case-for-platform-agnostic',
+    'automating-a-broken-process-scales-the-problem',
+    'how-work-actually-gets-done-vs-how-its-documented'
   ]);
 
   const imageAlt = {
@@ -15,7 +17,9 @@
     'master-data-quality-silent-killer-ai-projects': 'Overhead view of system maps, reports, and notes used to assess master data quality',
     'data-governance-non-enterprise-teams': 'Infographic explaining lightweight data governance for non-enterprise teams',
     'where-agents-earn-their-keep': 'Abstract visualization of unstructured data flowing through filtering gates into an ordered grid output.',
-    'mid-market-case-for-platform-agnostic': 'Abstract visualization of complex data flowing through layered architecture panels into a structured tiered stack.'
+    'mid-market-case-for-platform-agnostic': 'Abstract visualization of complex data flowing through layered architecture panels into a structured tiered stack.',
+    'automating-a-broken-process-scales-the-problem': 'Abstract visualization of data flows curving across structured operating platforms, representing workflow optimization',
+    'how-work-actually-gets-done-vs-how-its-documented': 'Two professionals mapping decision workflows and process logic across structured diagrams and documents'
   };
 
   const params = new URLSearchParams(window.location.search);
