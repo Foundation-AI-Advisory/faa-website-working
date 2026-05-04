@@ -1065,18 +1065,28 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 /* ─── Foundations Series Hub — image-led, light theme ─────────────── */
-/* Section 1: full-bleed architecture image with subtle Ken Burns drift. */
+/* Section 1: contained architecture image (~65% of viewport, centered)
+   on a clean white surface, with subtle Ken Burns drift. */
 .foundations-hub-image-section {
   width: 100%;
+  background: var(--faa-white);
+  padding: 48px 0;
+  text-align: center;
   overflow: hidden;
-  background: var(--faa-navy); /* fallback while image loads */
 }
 .foundations-hub-image {
   display: block;
-  width: 100%;
+  width: 65%;
+  max-width: 1100px;
   height: auto;
+  margin: 0 auto;
   will-change: transform;
   animation: foundationsHubImageDrift 30s ease-in-out infinite alternate;
+}
+@media (max-width: 768px) {
+  /* On smaller screens, give the image more horizontal room since the
+     viewport is already narrow. */
+  .foundations-hub-image { width: 88%; }
 }
 @keyframes foundationsHubImageDrift {
   0%   { transform: scale(1.00); }
