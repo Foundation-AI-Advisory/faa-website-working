@@ -1672,3 +1672,14 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 @media (min-width: 1024px) {
   .page-hero-content { padding-top: 120px; padding-bottom: 120px; }
 }
+
+/* ─── Header CTA: responsive label ─────────────────────────────────── */
+/* Long label fits at narrow viewports (nav hidden) and very wide viewports.
+   In the cramped 1280-1535px range where the full nav competes for space,
+   swap to a shorter label so the button never gets clipped. */
+.header-cta-long  { display: inline; }
+.header-cta-short { display: none; }
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .header-cta-long  { display: none; }
+  .header-cta-short { display: inline; }
+}
