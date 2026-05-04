@@ -1674,13 +1674,19 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .page-hero-content { padding-top: 120px; padding-bottom: 120px; }
 }
 
-/* ─── Header CTA: responsive label ─────────────────────────────────── */
-/* Long label fits at narrow viewports (nav hidden) and very wide viewports.
-   In the cramped 1280-1535px range where the full nav competes for space,
-   swap to a shorter label so the button never gets clipped. */
-.header-cta-long  { display: inline; }
-.header-cta-short { display: none; }
-@media (min-width: 1280px) and (max-width: 1535px) {
-  .header-cta-long  { display: none; }
-  .header-cta-short { display: inline; }
+/* ─── Header layout: tighten whenever the primary nav is visible ─── */
+/* Below xl (1280px) the nav is hidden and the button has the row to
+   itself — no override needed. Once the nav appears, the full row
+   competes for space inside the 1280px container; tighten nav gaps and
+   shrink the CTA slightly so everything stays inside that container. */
+@media (min-width: 1280px) {
+  #site-header nav[aria-label="Primary"] {
+    gap: 14px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  #site-header .btn-primary {
+    padding: 0 14px;
+    font-size: 13px;
+  }
 }
