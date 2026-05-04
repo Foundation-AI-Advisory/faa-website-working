@@ -17,7 +17,7 @@
       part: 1,
       title: "Data: The Constraint You Can’t Outrun",
       category: "Data Curation & Governance",
-      image: "assets/insights/foundations-series-01-data-foundation.png",
+      image: "assets/insights/foundations-series-architecture-hero.png",
       subhead: "AI does not fail because models are wrong. It fails because the data underneath it never agreed.",
       pull: "AI does not fix data problems. It makes them operationally unavoidable.",
       operator: "Before AI can support decisions, the business has to know which data source wins, who owns it, and how changes are controlled. The goal is not perfect data. The goal is usable, governed, consistent data that the business can trust.",
@@ -50,7 +50,7 @@
       part: 2,
       title: "Process: Fix the System Before You Accelerate It",
       category: "Workflow Optimization",
-      image: "assets/insights/foundations-series-process-pathway.png",
+      image: "assets/insights/foundations-series-architecture-hero.png",
       subhead: "Automating a broken process does not fix it. It makes it fail faster.",
       pull: "A bad process with AI is still a bad process — just faster, louder, and harder to unwind.",
       operator: "AI should not be used to hide process weakness. It should be applied after the workflow is visible, repeatable, and controlled. If humans cannot explain the decision path, automation will not make it stronger.",
@@ -85,7 +85,7 @@
       part: 3,
       title: "Architecture: The System Behind the System",
       category: "Applied AI",
-      image: "assets/insights/foundations-series-03-system-architecture.png",
+      image: "assets/insights/foundations-series-architecture-hero.png",
       subhead: "Most companies do not have a system problem. They have a system interaction problem.",
       pull: "AI cannot compensate for architecture no one understands.",
       operator: "The issue is rarely one bad system. The issue is how systems interact. Before AI is deployed, the business needs to understand where data moves, where logic changes, and where manual cleanup enters the process.",
@@ -121,7 +121,7 @@
       part: 4,
       title: "ROI Sequencing: Where AI Actually Creates Value",
       category: "Applied AI",
-      image: "assets/insights/foundations-series-04-roi-sequencing.png",
+      image: "assets/insights/foundations-series-architecture-hero.png",
       subhead: "AI does not create value everywhere at once. It creates value where conditions are already aligned.",
       pull: "The best first AI use case is rarely the flashiest. It is the one the business is ready to absorb.",
       operator: "The first AI use case should build confidence, not create organizational drag. Start where the conditions are ready: cleaner inputs, clearer outputs, tighter process boundaries, and measurable value.",
@@ -156,7 +156,7 @@
       part: 5,
       title: "Governance: The System That Holds It Together",
       category: "Data Curation & Governance",
-      image: "assets/insights/foundations-series-05-governance-system.png",
+      image: "assets/insights/foundations-series-architecture-hero.png",
       subhead: "Without governance, every improvement degrades over time.",
       pull: "Governance is not overhead. It is how you keep AI from turning operational noise into operational risk.",
       operator: "Governance is not a policy binder. It is the operating system for accountability. Without it, AI increases speed but reduces control.",
@@ -209,20 +209,31 @@
     document.title = hub.title + " — Foundation AI Advisory";
     root.innerHTML = `
       <section class="foundations-hub-hero">
-        <div class="container-faa foundations-hub-grid">
-          <div>
-            <div class="eyebrow">${esc(hub.eyebrow)}</div>
-            <h1 class="foundations-h1">${esc(hub.title)}</h1>
-            ${hub.description.map((item) => `<p class="foundations-lede">${esc(item)}</p>`).join("")}
-            <div class="foundations-actions">
-              <a href="${hub.primary.href}" class="btn btn-primary">${esc(hub.primary.label)}</a>
-              <a href="${hub.secondary.href}" class="btn btn-outline-white">${esc(hub.secondary.label)}</a>
+        <div class="container-faa foundations-hub-stack">
+          <figure class="foundations-hub-image">
+            <img src="assets/insights/foundations-series-architecture-hero.png" alt="Five layered operating planes — data, process, architecture, ROI sequencing, and governance — stacked as a single architecture for applied AI" />
+          </figure>
+          <div class="foundations-hub-grid">
+            <div>
+              <div class="eyebrow">${esc(hub.eyebrow)}</div>
+              <h1 class="foundations-h1">${esc(hub.title)}</h1>
+              ${hub.description.map((item) => `<p class="foundations-lede">${esc(item)}</p>`).join("")}
+              <div class="foundations-actions">
+                <a href="${hub.primary.href}" class="btn btn-primary">${esc(hub.primary.label)}</a>
+                <a href="${hub.secondary.href}" class="btn btn-outline-white">${esc(hub.secondary.label)}</a>
+              </div>
+            </div>
+            <div class="foundations-hub-panel" aria-label="Series structure">
+              <span>Five operating layers</span>
+              <strong>Data → Process → Architecture → ROI → Governance</strong>
             </div>
           </div>
-          <div class="foundations-hub-panel" aria-label="Series structure">
-            <span>Five operating layers</span>
-            <strong>Data → Process → Architecture → ROI → Governance</strong>
-          </div>
+        </div>
+      </section>
+      <section class="foundations-hub-context">
+        <div class="container-faa">
+          <p class="foundations-context-lede">AI does not fail because models are weak. It fails because the operating system underneath is not ready to support it. Data is fragmented. Workflows depend on tribal knowledge. Architecture grew around constraints that no longer exist. ROI is measured against the wrong unit. Governance is improvised after the fact.</p>
+          <p class="foundations-context-lede">Foundations is the field series for operators who want to fix that order before the next AI initiative. Each Part covers one of the five operating layers that determine whether AI creates leverage or scales failure. Each is short enough to read in twenty minutes and concrete enough to act on this week.</p>
         </div>
       </section>
       <section class="bg-white">

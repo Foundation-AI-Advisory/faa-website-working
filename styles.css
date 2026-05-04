@@ -1060,61 +1060,46 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 /* Foundations field series */
 .foundations-hub-hero,
 .foundations-article-hero {
-  background: var(--faa-navy); /* fallback if image fails */
+  background: var(--faa-navy);
   color: var(--faa-white);
   padding: 88px 0 76px;
-  position: relative;
+}
+/* Hub hero: image stacked above the text block. */
+.foundations-hub-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.foundations-hub-image {
+  margin: 0;
+  border-radius: 6px;
   overflow: hidden;
-  isolation: isolate;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
 }
-.foundations-hub-hero::before,
-.foundations-article-hero::before {
-  content: "";
-  position: absolute;
-  inset: -4%;
-  background-image: url('assets/insights/foundations-series-architecture-hero.png');
-  background-size: cover;
-  background-position: right center;
-  z-index: 0;
-  transform-origin: 60% 50%;
-  will-change: transform;
-  animation: foundationsHubHeroDrift 28s ease-in-out infinite alternate;
+.foundations-hub-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  background: var(--faa-navy);
 }
-.foundations-hub-hero::after,
-.foundations-article-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* Soft left-side darken so the white H1 and lede stay readable, the
-     right-side visual stack shows through cleanly. */
-  background: linear-gradient(to right,
-    rgba(15,23,42,0.62) 0%,
-    rgba(15,23,42,0.42) 35%,
-    rgba(15,23,42,0.10) 65%,
-    rgba(15,23,42,0)    85%);
-  z-index: 1;
+/* Foundations context block — sits between the navy hero and the 5-Part
+   card grid, frames why the series exists and what readers will get. */
+.foundations-hub-context {
+  background: var(--faa-white);
+  padding: 64px 0 32px;
 }
-.foundations-hub-hero > *,
-.foundations-article-hero > * {
-  position: relative;
-  z-index: 2;
+.foundations-context-lede {
+  max-width: 880px;
+  margin: 0 auto;
+  color: var(--faa-gray-600);
+  font-size: 18px;
+  line-height: 1.65;
 }
-@keyframes foundationsHubHeroDrift {
-  0%   { transform: scale(1.04) translate3d(-1%, 0.5%, 0); }
-  100% { transform: scale(1.08) translate3d(1%, -0.5%, 0); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .foundations-hub-hero::before,
-  .foundations-article-hero::before {
-    animation: none;
-    transform: scale(1.04);
-  }
-}
-/* Hide the per-Part figure thumbnail (rendered just below the hero) —
-   the architecture image is now the hero background, applied uniformly
-   across the hub and all 5 Foundations Series article pages. */
-.foundations-hero-image {
-  display: none;
+.foundations-context-lede + .foundations-context-lede {
+  margin-top: 20px;
 }
 .foundations-hub-grid {
   display: grid;
@@ -1234,19 +1219,19 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   padding-bottom: 88px;
 }
 .foundations-hero-image {
-  min-height: 360px;
   margin: 0 0 56px;
-  background:
-    linear-gradient(135deg, rgba(15,23,42,0.90), rgba(45,104,158,0.55)),
-    repeating-linear-gradient(135deg, transparent 0 18px, rgba(255,255,255,0.04) 18px 19px);
+  border-radius: 6px;
   overflow: hidden;
+  background: var(--faa-navy);
+  border: 1px solid rgba(15,23,42,0.10);
 }
 .foundations-hero-image img {
   display: block;
   width: 100%;
-  height: 460px;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  background: var(--faa-navy);
 }
 .foundations-hero-image.is-missing::after {
   content: "FOUNDATIONS FIELD SERIES";
