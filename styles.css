@@ -60,6 +60,7 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 }
 .card:hover {
   border-color: var(--faa-blue);
+  background: var(--faa-blue-50);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(30,41,59,0.08);
 }
