@@ -1773,23 +1773,3 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     font-size: 13px;
   }
 }
-
-/* Methodology section — full-bleed hero image band */
-.methodology-hero-image-band {
-  width: 100%;
-  background: var(--faa-navy);
-  overflow: hidden;
-}
-.methodology-hero-image-band img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 460px;
-  object-fit: cover;
-  object-position: center center;
-}
-@media (max-width: 767px) {
-  .methodology-hero-image-band img {
-    max-height: 260px;
-  }
-}
