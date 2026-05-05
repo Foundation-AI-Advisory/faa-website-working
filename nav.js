@@ -28,7 +28,7 @@
       '<a href="industries.html">Where We Work</a>',
       '<a href="insights.html">Insights</a>',
       '<a href="about.html">About</a>',
-      '<a href="contact.html#contact-options" class="mobile-menu-cta">Start with a Business Systems Assessment</a>'
+      '<a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-menu-cta">Business Systems Assessment</a>'
     ].join('');
     header.appendChild(panel);
 

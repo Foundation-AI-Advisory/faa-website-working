@@ -475,13 +475,36 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   border-bottom: 0;
 }
 .mobile-menu-panel .mobile-menu-cta {
-  color: var(--faa-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px 16px;
+  background: var(--faa-blue);
+  color: var(--faa-white);
   font-weight: 600;
+  font-size: 15px;
+  border: 1px solid var(--faa-blue);
+  border-radius: 4px;
+  text-align: center;
+}
+.mobile-menu-panel .mobile-menu-cta:hover {
+  background: var(--faa-navy);
+  border-color: var(--faa-navy);
+  color: var(--faa-white);
 }
 @media (min-width: 1280px) {
   .mobile-menu-toggle,
   .mobile-menu-panel {
     display: none !important;
+  }
+}
+/* Header CTA: hide on mobile (the `.btn` rule's display:inline-flex
+   beats Tailwind's `.hidden`, so add a header-scoped override). */
+@media (max-width: 639px) {
+  #site-header .btn-primary {
+    display: none;
   }
 }
 
@@ -1748,5 +1771,25 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   #site-header .btn-primary {
     padding: 0 14px;
     font-size: 13px;
+  }
+}
+
+/* Methodology section — full-bleed hero image band */
+.methodology-hero-image-band {
+  width: 100%;
+  background: var(--faa-navy);
+  overflow: hidden;
+}
+.methodology-hero-image-band img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: cover;
+  object-position: center center;
+}
+@media (max-width: 767px) {
+  .methodology-hero-image-band img {
+    max-height: 260px;
   }
 }
