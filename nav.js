@@ -107,10 +107,10 @@
         return;
       }
       const email = input.value.trim();
-      const subject = encodeURIComponent('Subscribe me to FAA insights');
+      const subject = encodeURIComponent('Subscribe to FAA Insights');
       const body = encodeURIComponent('Please add ' + email + ' to the FAA insights list.');
       status.textContent = 'Thanks. Your email client will open so we can add you to the list.';
-      window.location.href = 'mailto:hello@foundationaiadvisory.com?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:blueprint@foundationaiadvisory.com?subject=' + subject + '&body=' + body;
     });
   });
 

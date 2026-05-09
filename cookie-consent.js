@@ -48,7 +48,7 @@
     root.innerHTML = [
       '<div class="cookie-consent__copy">',
       '  <h2>We value your privacy &amp; do not sell your information.</h2>',
-      '  <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking &lsquo;Accept All,&rsquo; you consent to our use of cookies. <a href="/cookie-policy">Cookie Policy</a></p>',
+      '  <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking &lsquo;Accept All,&rsquo; you consent to our use of cookies. <a href="/cookie-policy.html">Cookie Policy</a></p>',
       '</div>',
       '<div class="cookie-consent__actions">',
       '  <button type="button" class="cookie-consent__button cookie-consent__button--secondary" data-cookie-customize aria-label="Customize cookie preferences">Customize</button>',
