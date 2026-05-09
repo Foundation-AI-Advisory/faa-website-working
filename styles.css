@@ -1437,12 +1437,6 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
-/* Industry icon box */
-.industry-icon {
-  width: 32px; height: 32px;
-  color: var(--faa-navy);
-}
-
 /* Industry tile with background image (homepage "By Industry" grid). */
 .industry-card {
   position: relative;
