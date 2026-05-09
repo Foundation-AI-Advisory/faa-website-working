@@ -22,12 +22,12 @@
     panel.setAttribute('aria-label', 'Mobile');
     panel.hidden = true;
     panel.innerHTML = [
-      '<a href="foundation.html">Data Curation &amp; Governance</a>',
-      '<a href="operations.html">Workflow Optimization</a>',
-      '<a href="agentic-ai.html">AI Design &amp; Implementation</a>',
-      '<a href="industries.html">Where We Work</a>',
-      '<a href="insights.html">Insights</a>',
-      '<a href="about.html">About</a>',
+      '<a href="/foundation/">Data Curation &amp; Governance</a>',
+      '<a href="/operations/">Workflow Optimization</a>',
+      '<a href="/agentic-ai/">AI Design &amp; Implementation</a>',
+      '<a href="/industries/">Where We Work</a>',
+      '<a href="/insights/">Insights</a>',
+      '<a href="/about/">About</a>',
       '<a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-menu-cta">Business Systems Assessment</a>'
     ].join('');
     header.appendChild(panel);
