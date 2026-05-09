@@ -1907,6 +1907,24 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 @media (min-width: 1024px) {
   .methodology-hero { min-height: 800px; }
 }
+
+/* Methodology hero text block — anchored consistently to the left of the
+   container on all three methodology pages so the text always sits in
+   the quiet zone of the background image, away from the image's busiest
+   area. Overrides the global .hero-text-block xl negative margin so the
+   three pages render the same layout regardless of viewport math. */
+.methodology-hero .hero-text-block {
+  width: min(38vw, 540px);
+  max-width: 540px;
+  margin-left: 0;
+}
+@media (min-width: 1280px) {
+  .methodology-hero .hero-text-block {
+    width: min(36vw, 540px);
+    max-width: 540px;
+    margin-left: 0;
+  }
+}
 .page-hero-image {
   position: absolute; inset: 0;
   background-color: var(--faa-navy-deep);
