@@ -6,6 +6,25 @@
 <title>Page Not Found — Foundation AI Advisory</title>
 <meta name="description" content="The page you tried to reach is not available. Return to the Foundation AI Advisory homepage or browse Insights." />
 <meta name="robots" content="noindex,follow" />
+<script>
+  // Defensive recovery for browsers running a stale (cached) nav.js that
+  // still emits relative <foo>.html hrefs. After the clean-URL migration
+  // every page lives at /<slug>/, but a phone with old JS caching might
+  // build a hamburger href that resolves to e.g. /foundation/operations.html
+  // -> 404. Detect that pattern on the 404 page and bounce the user to
+  // the correct clean URL before any pixels render.
+  (function () {
+    var path = window.location.pathname;
+    // Pattern: /<anything>/<slug>.html  ->  /<slug>/
+    var m = path.match(/^\/.+\/([a-zA-Z0-9_-]+)\.html$/);
+    if (m) { window.location.replace('/' + m[1] + '/'); return; }
+    // Fallback: /<slug>.html (without nesting) -> /<slug>/
+    var m2 = path.match(/^\/([a-zA-Z0-9_-]+)\.html$/);
+    if (m2 && m2[1] !== '404' && m2[1] !== 'index') {
+      window.location.replace('/' + m2[1] + '/');
+    }
+  })();
+</script>
 <link rel="icon" type="image/png" href="/assets/favicon.png" />
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
 <link rel="stylesheet" href="/tailwind-static.css" />
