@@ -1908,6 +1908,136 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .methodology-hero { min-height: 800px; }
 }
 
+/* Hero proof list — small caps-anchored list under the dek paragraphs
+   on methodology heroes; restrained, dark-surface treatment that keeps
+   the hero feeling editorial, not feature-marketing. */
+.hero-proof-list {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 18px 0 0;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  display: grid;
+  gap: 10px;
+}
+.hero-proof-list li {
+  position: relative;
+  padding-left: 22px;
+  color: rgba(255,255,255,0.86);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.hero-proof-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 12px;
+  height: 1px;
+  background: var(--faa-blue-light);
+}
+.hero-trust-line {
+  margin-top: 18px;
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  line-height: 1.5;
+  font-style: italic;
+  max-width: 56ch;
+}
+
+/* Outcomes strip — narrow band between hero and Executive Answer on the
+   foundation methodology page. Editorial small-caps label on the left,
+   subtle 6-item grid on the right, hairline rules. */
+.outcomes-strip {
+  background: var(--faa-white);
+  border-bottom: 1px solid var(--faa-gray-100);
+}
+.outcomes-strip-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 28px 0;
+}
+@media (min-width: 1024px) {
+  .outcomes-strip-inner {
+    grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+    padding: 32px 0;
+  }
+}
+.outcomes-strip-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faa-navy);
+  line-height: 1.4;
+}
+.outcomes-strip-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 24px;
+}
+@media (min-width: 768px) {
+  .outcomes-strip-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1280px) {
+  .outcomes-strip-list { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+.outcomes-strip-list li {
+  position: relative;
+  padding-left: 14px;
+  color: var(--faa-gray-600);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.outcomes-strip-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 1px;
+  background: var(--faa-blue);
+}
+
+/* Common Data Problems grid — sits below the Executive Answer on the
+   foundation page. Restrained card treatment, blue top rule, navy
+   title, body-text dek. No icons. */
+.data-problems-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .data-problems-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+}
+@media (min-width: 1024px) {
+  .data-problems-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+}
+.data-problem-card {
+  position: relative;
+  padding: 24px 0 0;
+  border-top: 2px solid var(--faa-blue);
+}
+.data-problem-card__title {
+  color: var(--faa-navy);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.35;
+  margin: 0;
+}
+.data-problem-card__dek {
+  color: var(--faa-gray-600);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 12px 0 0;
+}
+
 /* Methodology hero text block — positioned in the LEFT zone of the
    viewport on all three methodology pages so the text sits centered
    between the left edge of the hero image and the busy zone of each
