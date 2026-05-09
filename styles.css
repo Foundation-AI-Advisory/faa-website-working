@@ -1437,6 +1437,28 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
+/* Page-level FAQ block (used on pillar + engagement pages). Body-text
+   sized; renders as a content section inside the standard container. */
+.page-faq { margin-top: 32px; }
+.page-faq-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--faa-gray-200);
+}
+.page-faq-item:last-of-type { border-bottom: 0; padding-bottom: 8px; }
+.page-faq dt {
+  color: var(--faa-navy);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+}
+.page-faq dd {
+  margin: 12px 0 0;
+  color: var(--faa-gray-600);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
 /* Methodology section — two-column intro layout (narrative + AEO panel) */
 .methodology-intro-grid {
   display: grid;
@@ -1500,6 +1522,16 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   color: var(--faa-gray-600);
   font-size: 14px;
   line-height: 1.55;
+}
+.methodology-aeo dd a {
+  color: var(--faa-blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 180ms ease-out;
+}
+.methodology-aeo dd a:hover {
+  color: var(--faa-navy);
 }
 .methodology-aeo .aeo-cta {
   display: inline-block;

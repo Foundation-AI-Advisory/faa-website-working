@@ -1,6 +1,6 @@
 # Foundation AI Advisory
 
-> Foundation AI Advisory (FAA) is a business-first AI advisory firm for mid-market operators. FAA fixes the business foundation — data, workflows, and systems — before applying AI. The firm does not lead with tools.
+> Foundation AI Advisory is a business-first AI advisory firm for mid-market operators. FAA fixes the data, workflow, and system foundation before applying AI. The firm does not lead with tools.
 
 ## Positioning
 
