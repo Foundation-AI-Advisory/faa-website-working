@@ -226,9 +226,18 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 .hero-text-block {
   position: relative;
   padding-left: 24px;
-  width: min(34vw, 500px);
+  /* Mobile/tablet: respect the container's content width. The previous
+     rule used min(34vw, 500px) which evaluated to ~127px on a 375px
+     phone viewport — too narrow, forcing the headline to wrap word by
+     word. width: 100% + max-width: 500px keeps the block readable on
+     every breakpoint without overflowing the container. */
+  width: 100%;
   max-width: 500px;
-  margin-left: clamp(-96px, -4vw, -44px);
+}
+@media (min-width: 1024px) {
+  /* Desktop: re-enable the editorial negative margin-left shift so the
+     hero text block sits in the page-hero's quiet left zone. */
+  .hero-text-block { margin-left: clamp(-96px, -4vw, -44px); }
 }
 .hero-text-block::before {
   content: "";
