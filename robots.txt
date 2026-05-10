@@ -4,14 +4,16 @@
 # Standard search crawlers — full access
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /robots.txt
 Disallow: /assets/podcasts/
 Disallow: /content/insights/
+Disallow: /scripts/
 Disallow: /AGENTS.md
 Disallow: /IMAGE-GENERATION.md
 Disallow: /_build_pages.sh
 Disallow: /server.js
 Disallow: /*.md$
-Disallow: /*.txt$
 
 # AI / answer-engine crawlers — explicitly allowed for AEO
 # (Remove or set Disallow: / if you want to opt out of any of these.)
