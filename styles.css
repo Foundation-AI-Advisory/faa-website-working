@@ -673,6 +673,21 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   height: 14px;
 }
 
+/* Footer attribution: in-house build line that sits as a centered,
+   hairline-divided second row inside the navy footer. Visible but
+   secondary to the copyright + legal links above it. No new fonts,
+   no new colors — just lower-opacity white over the navy surface. */
+.footer-attribution {
+  margin: 28px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.55);
+  font-size: 12px;
+  line-height: 1.55;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
 /* Cookie consent */
 .cookie-consent {
   position: fixed;
