@@ -1040,6 +1040,30 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   color: var(--faa-navy);
   font-weight: 700;
 }
+
+/* Inline FAQ block at the end of a long-form insight article. Reuses
+   the article body's color/size language so it reads as part of the
+   piece, not a separate widget — but uses semantic <dl><dt><dd> so
+   FAQPage JSON-LD on the page can mirror visible content exactly. */
+.insight-detail-body .insight-detail-faq {
+  margin: 24px 0 0;
+  border-top: 1px solid var(--faa-gray-100);
+  padding-top: 8px;
+}
+.insight-detail-body .insight-detail-faq dt {
+  color: var(--faa-navy);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 24px;
+}
+.insight-detail-body .insight-detail-faq dd {
+  margin: 10px 0 0;
+  color: var(--faa-gray-600);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
 .insight-article-cta {
   margin-top: 44px;
   padding-top: 34px;
