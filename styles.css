@@ -3262,3 +3262,43 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     font-size: 13px;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   Methodology page — paired In Brief / Why It Matters cards.
+   Two-column grid directly below the hero. Cards use the existing
+   FAA card surface tokens with a soft FAA-blue tinted background
+   so the pair reads as a single executive-summary unit, then stack
+   cleanly on mobile.
+───────────────────────────────────────────────────────────────── */
+.methodology-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (min-width: 900px) {
+  .methodology-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+.methodology-summary-card {
+  background: var(--faa-blue-50);
+  border: 1px solid var(--faa-blue);
+  border-radius: 8px;
+  padding: 28px 28px 30px;
+}
+@media (min-width: 1280px) {
+  .methodology-summary-card { padding: 36px 36px 36px; }
+}
+/* Slight visual distinction so the two cards don't look identical
+   while still feeling like a matched pair: the Why card gets a
+   warmer near-white surface (gray-50) so the In Brief card on
+   blue tint reads as the primary summary and the Why card reads
+   as supporting context. Matches the gray-50 / blue-50 alternation
+   used elsewhere on the site. */
+.methodology-summary-card--why {
+  background: var(--faa-gray-50);
+  border-color: var(--faa-gray-200);
+}
