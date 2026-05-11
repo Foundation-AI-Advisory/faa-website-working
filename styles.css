@@ -1135,10 +1135,7 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   background-image: url('/assets/navigation/ai-training/ai-training-bootcamp.webp');
 }
 .mega-ai-training-card--workforce .mega-ai-training-card__image {
-  /* Matches the hero image on /ai-training-workforce-development/
-     so the Workforce Development dropdown card reads as a direct
-     preview of that page. */
-  background-image: url('/assets/global-page-hero-background-flow.webp');
+  background-image: url('/assets/navigation/ai-training/ai-training-workforce-development.webp');
 }
 
 /* ─────────────────────────────────────────────────────────────────
