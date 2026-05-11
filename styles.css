@@ -910,38 +910,44 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   inset: 0;
   z-index: 1;
   background-size: cover;
-  background-position: center bottom;
+  /* Show the top of each image — the strongest part of the
+     compositions sits near the upper-middle of the frame. */
+  background-position: center top;
   background-repeat: no-repeat;
   transition: transform 600ms ease-out;
 }
-/* Soft white-to-transparent gradient: text area stays clean at the
-   top, the image keeps its natural color toward the bottom. Sits
-   above the image, below the content. */
+/* Inverted gradient: image stays open at the top, wash thickens
+   toward the bottom so the four text rows (num, title, dek, copy)
+   read cleanly. Sits above the image, below the content. */
 .mega-pillar-card__image::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* White zone extended deeper so all four text rows (num, title,
-     dek, description copy) sit on near-opaque white before the
-     gradient fades into the image. */
   background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.99) 0%,
-    rgba(255, 255, 255, 0.97) 48%,
-    rgba(255, 255, 255, 0.65) 72%,
-    rgba(255, 255, 255, 0.12) 100%
+    to top,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.92) 42%,
+    rgba(255, 255, 255, 0.55) 64%,
+    rgba(255, 255, 255, 0.12) 86%,
+    rgba(255, 255, 255, 0.00) 100%
   );
 }
+/* Content block pinned to the bottom of the tile so the image
+   reveals more of itself at the top. Padding hugs all four sides
+   of the content area inside the tile. */
 .mega-pillar-card__content {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 2;
-  padding: 32px 32px 28px;
+  padding: 32px 32px 30px;
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 @media (min-width: 1280px) {
-  .mega-pillar-card__content { padding: 40px 44px 32px; }
+  .mega-pillar-card__content { padding: 40px 44px 34px; }
 }
 .mega-pillar-card__num {
   display: inline-block;
@@ -983,13 +989,17 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 @media (max-width: 1023px) {
   .mega-pillar-card__copy { display: none; }
 }
+.mega-pillar-card:hover,
+.mega-pillar-card:focus-visible {
+  transform: translateY(-2px);
+}
 .mega-pillar-card:hover .mega-pillar-card__title,
 .mega-pillar-card:focus-visible .mega-pillar-card__title {
   color: var(--faa-blue);
 }
 .mega-pillar-card:hover .mega-pillar-card__image,
 .mega-pillar-card:focus-visible .mega-pillar-card__image {
-  transform: scale(1.03);
+  transform: scale(1.025);
 }
 .mega-pillar-card:focus-visible {
   outline: 2px solid var(--faa-blue);
