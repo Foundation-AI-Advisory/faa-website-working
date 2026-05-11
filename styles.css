@@ -839,6 +839,132 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   background: var(--faa-blue-50);
 }
 
+/* ─────────────────────────────────────────────────────────────────
+   Methodology pillar mega-menu — premium image-card variant.
+   Three equal columns, each card has its content (number + title +
+   dek) sitting on a near-white field at the top and a faint
+   landscape image fading in toward the bottom. Lives inside the
+   existing full-width .mega-menu drop so it keeps the FAA nav
+   pattern; it does not become a floating rounded card.
+   Used only by the Methodology dropdown — AI Training still uses
+   the lighter .mega-method-cards/.mega-method-card pattern above.
+───────────────────────────────────────────────────────────────── */
+.mega-pillar-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .mega-pillar-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    border: 1px solid var(--faa-gray-100);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--faa-white);
+  }
+}
+.mega-pillar-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  min-height: 380px;
+  text-decoration: none;
+  background: var(--faa-white);
+  transition: transform 220ms ease-out;
+  isolation: isolate;
+}
+@media (min-width: 1280px) {
+  .mega-pillar-card { min-height: 420px; }
+}
+@media (min-width: 1536px) {
+  .mega-pillar-card { min-height: 460px; }
+}
+@media (min-width: 768px) {
+  .mega-pillar-card + .mega-pillar-card {
+    border-left: 1px solid var(--faa-gray-100);
+  }
+}
+.mega-pillar-card__image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  transition: transform 600ms ease-out;
+}
+/* Soft white-to-transparent gradient: text area stays clean at the
+   top, the image keeps its natural color toward the bottom. Sits
+   above the image, below the content. */
+.mega-pillar-card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(255, 255, 255, 0.92) 32%,
+    rgba(255, 255, 255, 0.55) 62%,
+    rgba(255, 255, 255, 0.10) 100%
+  );
+}
+.mega-pillar-card__content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media (min-width: 1280px) {
+  .mega-pillar-card__content { padding: 40px 44px 32px; }
+}
+.mega-pillar-card__num {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faa-blue);
+}
+.mega-pillar-card__title {
+  margin: 0;
+  color: var(--faa-navy);
+  font-size: clamp(22px, 1.6vw, 28px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  transition: color 200ms ease-out;
+}
+.mega-pillar-card__dek {
+  margin: 0;
+  color: var(--faa-gray-600);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.mega-pillar-card:hover .mega-pillar-card__title,
+.mega-pillar-card:focus-visible .mega-pillar-card__title {
+  color: var(--faa-blue);
+}
+.mega-pillar-card:hover .mega-pillar-card__image,
+.mega-pillar-card:focus-visible .mega-pillar-card__image {
+  transform: scale(1.03);
+}
+.mega-pillar-card:focus-visible {
+  outline: 2px solid var(--faa-blue);
+  outline-offset: -2px;
+}
+.mega-pillar-card--01 .mega-pillar-card__image {
+  background-image: url('/assets/navigation/methodology/methodology-data-curation-governance.webp');
+}
+.mega-pillar-card--02 .mega-pillar-card__image {
+  background-image: url('/assets/navigation/methodology/methodology-workflow-optimization.webp');
+}
+.mega-pillar-card--03 .mega-pillar-card__image {
+  background-image: url('/assets/navigation/methodology/methodology-ai-design-implementation.webp');
+}
+
 /* Mobile menu section group — used to label the four methodology
    destinations under a single "Methodology" eyebrow heading inside
    the hamburger panel. Keeps the panel flat (no nested collapse) so
