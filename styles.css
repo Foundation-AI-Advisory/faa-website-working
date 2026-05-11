@@ -736,6 +736,28 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
     align-items: stretch;
   }
 }
+.mega-method-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+@media (min-width: 768px) {
+  .mega-method-cards {
+    gap: 16px;
+  }
+  /* Three-card layout — Methodology mega-menu (Data Curation /
+     Workflow / AI Design pillars). */
+  .mega-method-cards--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  /* Two-card layout — AI Training mega-menu (Bootcamp / Workforce
+     Development). */
+  .mega-method-cards--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* Backward compatibility: keep the old scoped selector in case any
+   page still references the .mega-method-core wrapper structure. */
 .mega-method-core .mega-method-cards {
   display: grid;
   grid-template-columns: 1fr;

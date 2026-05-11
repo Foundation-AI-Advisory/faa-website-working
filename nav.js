@@ -22,18 +22,21 @@
     panel.setAttribute('aria-label', 'Mobile');
     panel.hidden = true;
     // Mobile menu is intentionally flat (no nested collapse) so every
-    // destination is one tap away on small screens. The Methodology
-    // group is labeled with an eyebrow heading so visitors understand
-    // the four methodology destinations belong together — but they
-    // remain direct links to each individual page, not a single
-    // landing page (which does not exist as a separate URL).
+    // destination is one tap away on small screens. Methodology and
+    // AI Training are each labeled with an eyebrow heading so visitors
+    // understand the sub-items belong together — but they remain
+    // direct links to each individual page.
     panel.innerHTML = [
       '<div class="mobile-menu-section">',
       '  <span class="mobile-menu-label">Methodology</span>',
       '  <a href="/foundation/">Data Curation &amp; Governance</a>',
       '  <a href="/operations/">Workflow Optimization</a>',
       '  <a href="/agentic-ai/">AI Design &amp; Implementation</a>',
-      '  <a href="/ai-training-workforce-development/">AI Training &amp; Workforce Development</a>',
+      '</div>',
+      '<div class="mobile-menu-section">',
+      '  <span class="mobile-menu-label">AI Training</span>',
+      '  <a href="/ai-training-workforce-development/">AI Training Bootcamp</a>',
+      '  <a href="/ai-training-workforce-development/">AI Workforce Development</a>',
       '</div>',
       '<a href="/industries/">Where We Work</a>',
       '<a href="/insights/">Insights</a>',
