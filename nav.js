@@ -42,7 +42,7 @@
       '  <a href="/ai-training-workforce-development/#workforce-development">AI Workforce Development</a>',
       '</div>',
       '<a href="/industries/">Where We Work</a>',
-      '<a href="/insights/">Insights</a>',
+      '<a href="/insights/">AI Advisory</a>',
       '<a href="/about/">About</a>',
       '<a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-menu-cta">Business Systems Assessment</a>'
     ].join('');
@@ -123,7 +123,7 @@
         return;
       }
       const email = input.value.trim();
-      const subject = encodeURIComponent('Subscribe to FAA Insights');
+      const subject = encodeURIComponent('Subscribe to FAA AI Advisory');
       const body = encodeURIComponent('Please add ' + email + ' to the FAA insights list.');
       status.textContent = 'Thanks. Your email client will open so we can add you to the list.';
       window.location.href = 'mailto:blueprint@foundationaiadvisory.com?subject=' + subject + '&body=' + body;

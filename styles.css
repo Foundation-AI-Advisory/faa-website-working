@@ -2457,7 +2457,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 /* In-action image is slightly larger 16:9 */
 .in-action-image { aspect-ratio: 16 / 9; }
 
-/* Filter bar (Insights page) */
+/* Filter bar (AI Advisory page) */
 .filter-bar {
   position: sticky;
   top: 97px;
