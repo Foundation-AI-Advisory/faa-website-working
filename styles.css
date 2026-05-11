@@ -194,6 +194,20 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   border-color: var(--faa-gray-100);
   border-top-color: var(--faa-blue);
 }
+/* The card title (<h3>) is now a link to the dedicated page. Inherit
+   the navy color from the parent style so the visual stays consistent
+   with the non-link version, but pick up a subtle FAA-blue color shift
+   on hover/focus so the affordance is visible without underlining the
+   title (which would look noisy). */
+.engagement-card h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 180ms ease-out;
+}
+.engagement-card h3 a:hover,
+.engagement-card h3 a:focus-visible {
+  color: var(--faa-blue);
+}
 /* Faint watermark layer — themed image at very low opacity, sits
    behind all card content. Inline --engagement-bg supplies the URL
    per card so this rule is content-agnostic. */
