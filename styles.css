@@ -3170,31 +3170,41 @@ a:focus-visible, button:focus-visible, input:focus-visible {
    AI Design & Implementation): each image carries its visual
    weight on the right (data architecture grid / highway flow /
    team-around-a-decision-table), which leaves the left zone of
-   the hero as the natural place for copy. This modifier centers
-   the .hero-text-block horizontally within the left ~40% of the
-   viewport instead of the standard methodology-hero left-anchored
-   placement, so the text reads as a contained editorial column.
+   the hero as the natural place for copy. Mirrors the homepage
+   carousel hero pattern — clamp-based fluid scaling so the text
+   slides leftward smoothly as the viewport widens, with no sharp
+   breakpoint snap.
    Vertical centering is already handled by .methodology-hero's
    flex / justify-content: center / min-height: 800px. */
 
-@media (min-width: 1440px) {
+/* Inside .methodology-hero (which is display:flex; flex-direction:column),
+   the auto horizontal margins on .container-faa collapse the container
+   to content width instead of letting it stretch to its max-width. Force
+   it to behave like normal block flow so the centered 1280px container
+   re-establishes — without this, every downstream margin-left calc
+   measures from a shrunken container and the text ends up far right of
+   the intended position. */
+.methodology-hero > .container-faa {
+  width: 100%;
+  align-self: stretch;
+}
+
+@media (min-width: 1024px) {
   .foundation-hero .hero-text-block,
   .operations-hero .hero-text-block,
   .agentic-ai-hero .hero-text-block {
-    /* Center a 540px text column inside the left 40vw of the viewport.
-       Math: target left edge in viewport coords = (40vw - 540px) / 2.
-       The text block lives inside .container-faa (centered, max-width
-       1280px), so the negative margin escapes the container leftward.
-         text-block left  = container-content-left + margin-left
-         (20vw - 270)     = ((100vw - 1280)/2 + 24) + margin-left
-         margin-left      = -30vw + 346px
-       Verified at 1440 / 1920 / 2560 — text always centers in left
-       40vw with a 540px column. Falls back to the standard
-       methodology-hero placement at <1440 because below that the left
-       40vw is too narrow to hold a 540px column without clipping. */
-    width: 540px;
-    max-width: 540px;
-    margin-left: calc(-30vw + 346px);
+    /* Width scales: ~370px on a 1024 laptop, capping at 520px once
+       the viewport can hold it. */
+    width: min(38vw, 520px);
+    max-width: 520px;
+    /* Pulls the text leftward as the viewport widens. Math:
+         target text-left = (0.4*W - text_width) / 2
+         container_content_left = max(24, (W - 1280)/2 + 48)
+         margin = target - container_content_left
+       Clamped between 0 (so text never drifts into the container at
+       small widths) and -420 (so on 3K+ monitors the text doesn't
+       slide off the left edge). */
+    margin-left: clamp(-420px, calc(-30vw + 352px), 0px);
   }
 }
 
