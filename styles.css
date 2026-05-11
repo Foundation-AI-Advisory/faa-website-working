@@ -868,17 +868,20 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   position: relative;
   display: block;
   overflow: hidden;
-  min-height: 380px;
+  /* Heights bumped to accommodate larger card typography (num/title/
+     dek/copy were all scaled ~47%). Image area still gets enough
+     room to read as imagery, not a stripe. */
+  min-height: 440px;
   text-decoration: none;
   background: var(--faa-white);
   transition: transform 220ms ease-out;
   isolation: isolate;
 }
 @media (min-width: 1280px) {
-  .mega-pillar-card { min-height: 420px; }
+  .mega-pillar-card { min-height: 480px; }
 }
 @media (min-width: 1536px) {
-  .mega-pillar-card { min-height: 460px; }
+  .mega-pillar-card { min-height: 520px; }
 }
 @media (min-width: 768px) {
   .mega-pillar-card + .mega-pillar-card {
@@ -925,7 +928,7 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 }
 .mega-pillar-card__num {
   display: inline-block;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -934,7 +937,7 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 .mega-pillar-card__title {
   margin: 0;
   color: var(--faa-navy);
-  font-size: clamp(22px, 1.6vw, 28px);
+  font-size: clamp(32px, 2.35vw, 41px);
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
@@ -943,7 +946,7 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 .mega-pillar-card__dek {
   margin: 0;
   color: var(--faa-gray-700);
-  font-size: 14px;
+  font-size: 21px;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -955,9 +958,9 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
    collapse into a vertical stack inside the mobile hamburger panel. */
 .mega-pillar-card__copy {
   margin: -6px 0 0;
-  max-width: 34ch;
+  max-width: 36ch;
   color: var(--faa-gray-700);
-  font-size: 13px;
+  font-size: 19px;
   line-height: 1.5;
 }
 @media (max-width: 1023px) {
@@ -983,6 +986,134 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 }
 .mega-pillar-card--03 .mega-pillar-card__image {
   background-image: url('/assets/navigation/methodology/methodology-ai-design-implementation.webp');
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Industries mega-menu — image-backed tile grid.
+   Replaces the previous .mega-grid / .mega-link text-only layout.
+   Reuses the homepage industry card .webp images as faint
+   backgrounds so the dropdown visually echoes the homepage section
+   while staying compact enough for nav.
+───────────────────────────────────────────────────────────────── */
+.mega-industry-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .mega-industry-tiles {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+.mega-industry-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 130px;
+  padding: 16px 18px;
+  border: 1px solid var(--faa-gray-100);
+  border-radius: 6px;
+  background-color: var(--faa-white);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  overflow: hidden;
+  isolation: isolate;
+  transition: border-color 180ms ease-out, transform 180ms ease-out,
+              box-shadow 180ms ease-out;
+}
+@media (min-width: 1280px) {
+  .mega-industry-tile { min-height: 150px; padding: 18px 20px; }
+}
+/* Soft white wash so the photo reads as atmosphere, not noise.
+   Sits above the background image but below the text content. */
+.mega-industry-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(255, 255, 255, 0.86) 100%
+  );
+  z-index: 1;
+  transition: background 180ms ease-out;
+}
+.mega-industry-tile__title,
+.mega-industry-tile__meta {
+  position: relative;
+  z-index: 2;
+}
+.mega-industry-tile__title {
+  color: var(--faa-navy);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  transition: color 180ms ease-out;
+}
+.mega-industry-tile__meta {
+  color: var(--faa-gray-700);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.mega-industry-tile:hover,
+.mega-industry-tile:focus-visible {
+  border-color: var(--faa-blue);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+.mega-industry-tile:hover::before,
+.mega-industry-tile:focus-visible::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.86) 0%,
+    rgba(255, 255, 255, 0.74) 100%
+  );
+}
+.mega-industry-tile:hover .mega-industry-tile__title,
+.mega-industry-tile:focus-visible .mega-industry-tile__title {
+  color: var(--faa-blue);
+}
+.mega-industry-tile:focus-visible {
+  outline: 2px solid var(--faa-blue);
+  outline-offset: -2px;
+}
+/* Per-industry image bindings — reuses the homepage industry card
+   .webp files already in /assets/. */
+.mega-industry-tile--manufacturing {
+  background-image: url('/assets/homepage-industry-manufacturing-industrial-production.webp');
+}
+.mega-industry-tile--eci {
+  background-image: url('/assets/homepage-industry-engineering-construction-infrastructure.webp');
+}
+.mega-industry-tile--logistics {
+  background-image: url('/assets/homepage-industry-transportation-logistics.webp');
+}
+.mega-industry-tile--energy {
+  background-image: url('/assets/homepage-industry-energy-natural-resources.webp');
+}
+.mega-industry-tile--distribution {
+  background-image: url('/assets/homepage-industry-distribution-wholesale.webp');
+}
+.mega-industry-tile--equipment {
+  background-image: url('/assets/homepage-industry-industrial-equipment.webp');
+}
+.mega-industry-tile--specialty {
+  background-image: url('/assets/homepage-industry-specialty-manufacturing.webp');
+}
+.mega-industry-tile--professional {
+  background-image: url('/assets/homepage-industry-professional-technical-services.webp');
+}
+.mega-industry-tile--financial {
+  background-image: url('/assets/homepage-industry-financial-services-banking.webp');
+}
+.mega-industry-tile--ai-data {
+  background-image: url('/assets/homepage-industry-ai-data-it-systems.webp');
 }
 
 /* Mobile menu section group — used to label the four methodology
