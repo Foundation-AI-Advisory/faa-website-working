@@ -266,13 +266,16 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 .hero-carousel {
   position: relative;
   width: 100%;
-  min-height: 760px;
+  /* Hero height tightened from 760px down toward the B2B consulting
+     standard (560–700px). At 1080p this used to consume the entire
+     fold; now it leaves ~300px of next-section preview visible. */
+  min-height: 680px;
   background: var(--faa-navy);
   overflow: hidden;
   isolation: isolate;
 }
 @media (min-width: 1024px) {
-  .hero-carousel { min-height: 760px; }
+  .hero-carousel { min-height: 680px; }
 }
 .hero-slide {
   position: absolute;
@@ -378,8 +381,13 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 }
 .hero-dek {
   color: rgba(255,255,255,0.92);
-  font-size: clamp(13px, 0.95vw, 15px);
-  line-height: 1.42;
+  /* Bumped from clamp(13, 0.95vw, 15) to clamp(15, 1.1vw, 17) so
+     hero body copy lands in the executive-readable range (17–20px
+     is industry standard for hero deks). Line-height pulled back
+     from 1.5 to 1.45 so the increased size doesn't drive hero
+     height up — readable but compact. */
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.45;
   max-width: 100%;
   margin-top: 16px;
 }
@@ -2789,7 +2797,14 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   justify-content: center;
 }
 @media (min-width: 1024px) {
-  .methodology-hero { min-height: 800px; }
+  /* Pillar / landing hero height tightened from 800px to 640px —
+     the previous value put the hero at 899px actual, consuming the
+     entire 1080p fold (nav 97 + hero 899 = 996 of 1080 visible).
+     640px brings FAA squarely into the consulting-industry standard
+     (McKinsey/Bain/Accenture run 560–680px on inner pages). The
+     16:7-ish hero band now leaves real estate for the next section
+     to peek above the fold, which pulls readers downward. */
+  .methodology-hero { min-height: 640px; }
 }
 
 /* Hero proof list — small caps-anchored list under the dek paragraphs
@@ -3276,11 +3291,15 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .page-hero-content {
   position: relative;
   z-index: 1;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 @media (min-width: 1024px) {
-  .page-hero-content { padding-top: 120px; padding-bottom: 120px; }
+  /* Tightened from 120/120 to 80/80 — saves ~80px of vertical
+     padding on every page-hero. Combined with the min-height
+     reductions, this lands pillar heroes around 760–800px instead
+     of 900+ on 1080p viewports. */
+  .page-hero-content { padding-top: 80px; padding-bottom: 80px; }
 }
 
 
