@@ -140,6 +140,114 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   letter-spacing: 0.02em;
 }
 
+/* ─────────────────────────────────────────────────────────────────
+   Engagement Model section (homepage "How to Engage")
+   Three-card progression: Assessment → Sprint → Ongoing Expansion.
+   Adds a subtle horizontal connector through the .method-num boxes
+   on desktop, a faint per-card watermark image, and a featured
+   treatment on card 02. Mobile stacks cleanly without the connector
+   (vertical order already implies sequence).
+───────────────────────────────────────────────────────────────── */
+.engagement-grid {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  /* Hairline connector behind the cards, passing through the vertical
+     center of the .method-num boxes (card padding 28px + half of the
+     56px number box = 56px from card top). Sits at z-index 0 with the
+     cards lifted to z-index 1, so the line is only visible in the
+     gap-6 between cards. Reads as a single editorial path. */
+  .engagement-grid::before {
+    content: '';
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--faa-gray-200);
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+.engagement-card {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  background: var(--faa-white);
+  overflow: hidden;
+}
+/* These cards are informational, not clickable. The .card:hover state's
+   lift + tint would falsely suggest the whole card is a link (it's
+   not — only the .read-link inside is interactive) and would create a
+   visual gap between the card and the connector line. Hold the card
+   still and let the interior .read-link's underline carry the hover
+   affordance. */
+.engagement-card:hover {
+  transform: none;
+  background: var(--faa-white);
+  border-color: var(--faa-gray-100);
+  box-shadow: none;
+}
+.engagement-card--featured:hover {
+  /* Preserve the featured card's elevated shadow + blue top rule. */
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.08);
+  border-color: var(--faa-gray-100);
+  border-top-color: var(--faa-blue);
+}
+/* Faint watermark layer — themed image at very low opacity, sits
+   behind all card content. Inline --engagement-bg supplies the URL
+   per card so this rule is content-agnostic. */
+.engagement-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--engagement-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.09;
+  z-index: -1;
+  pointer-events: none;
+}
+/* Card 02 featured treatment: stronger top rule (faa-blue), slightly
+   deeper shadow, small uppercase eyebrow label above the number box.
+   Restrained — should read as 'the primary engagement,' not as a
+   pricing-card upsell. */
+.engagement-card--featured {
+  border-top: 3px solid var(--faa-blue);
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.08);
+}
+.engagement-featured-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--faa-blue);
+  margin-bottom: 14px;
+}
+/* Editorial guidance line under the three cards. Centered, restrained
+   color, with subtle inline link styling. */
+.engagement-guidance {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--faa-gray-600);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.engagement-guidance a {
+  color: var(--faa-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 180ms ease-out;
+}
+.engagement-guidance a:hover {
+  color: var(--faa-navy);
+}
+
 /* Hero carousel — EY-style 4-slide feature */
 .hero-carousel {
   position: relative;
