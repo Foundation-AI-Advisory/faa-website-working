@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Designing for Human-in-the-Loop Before You Design for AI | Foundation AI Advisory</title>
+<meta name="description" content="The human-in-the-loop architecture is not a deployment-time decision. It is a design-time one — and where most AI deployments quietly lose trust." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://foundationaiadvisory.com/insights/designing-for-human-in-the-loop-before-you-design-for-ai/" />
+<link rel="icon" type="image/png" href="/assets/favicon.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Designing for Human-in-the-Loop Before You Design for AI | Foundation AI Advisory" />
+<meta property="og:description" content="The human-in-the-loop architecture is not a deployment-time decision. It is a design-time one — and where most AI deployments quietly lose trust." />
+<meta property="og:url" content="https://foundationaiadvisory.com/insights/designing-for-human-in-the-loop-before-you-design-for-ai/" />
+<meta property="og:image" content="https://foundationaiadvisory.com/assets/insights/human-in-the-loop-decision-workflow-design.webp" />
+<meta property="og:site_name" content="Foundation AI Advisory" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Foundation AI Advisory","legalName":"Foundation AI Advisory, LLC","url":"https://foundationaiadvisory.com/","logo":"https://foundationaiadvisory.com/assets/global-header-logo-wordmark.png","description":"A business-first AI advisory firm for mid-market operators. FAA fixes the data, workflow, and system foundation before applying AI.","founder":{"@type":"Person","name":"Ben DeMichael"},"foundingLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressRegion":"OH","addressCountry":"US"}},"knowsAbout":["Data Curation and Governance","Workflow Optimization","AI Design and Implementation","Mid-Market AI Strategy","Applied AI for Industrial Operations"],"sameAs":["https://www.linkedin.com/company/foundation-ai-advisory"],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"privacy@foundationaiadvisory.com","url":"https://foundationaiadvisory.com/contact/","availableLanguage":["English"]}}</script>
+<link rel="stylesheet" href="/tailwind-static.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://foundationaiadvisory.com/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://foundationaiadvisory.com/insights/"},{"@type":"ListItem","position":3,"name":"Designing for Human-in-the-Loop Before You Design for AI","item":"https://foundationaiadvisory.com/insights/designing-for-human-in-the-loop-before-you-design-for-ai/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Designing for Human-in-the-Loop Before You Design for AI","description":"The human-in-the-loop architecture is not a deployment-time decision. It is a design-time one — and where most AI deployments quietly lose trust.","image":"https://foundationaiadvisory.com/assets/insights/human-in-the-loop-decision-workflow-design.webp","author":{"@type":"Person","name":"Ben DeMichael","jobTitle":"Founder & Managing Partner","worksFor":{"@type":"Organization","name":"Foundation AI Advisory","url":"https://foundationaiadvisory.com/"}},"publisher":{"@type":"Organization","name":"Foundation AI Advisory","url":"https://foundationaiadvisory.com/","logo":"https://foundationaiadvisory.com/assets/global-header-logo-wordmark.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://foundationaiadvisory.com/insights/designing-for-human-in-the-loop-before-you-design-for-ai/"},"articleSection":"Workflow Optimization","inLanguage":"en"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What does human-in-the-loop mean in agentic AI deployments?","acceptedAnswer":{"@type":"Answer","text":"Human-in-the-loop is the architecture that decides where humans need to be in an AI workflow and why. Most AI design conversations start with the wrong question — 'What can the AI do?' — which frames the deployment as a capability search. The frontier operator's conversation starts somewhere else: 'Where do humans need to be in this workflow, and why?' The AI gets designed to support the human architecture, not to replace it. A recommender's bad output gets caught by the human who consumes it. An agent's bad output runs to ground autonomously. The handoff between human judgment and machine action is no longer a UX consideration; it is the control system, and like every control system, it has to be designed before the machine it controls."}},
+{"@type":"Question","name":"What are the three operating modes — autonomous, recommend, escalate — and when should each be used?","acceptedAnswer":{"@type":"Answer","text":"Autonomous: the agent runs end-to-end with no human review per transaction. Used for high-volume, low-risk, well-bounded decisions like routine invoice coding, standard tier-one customer service responses, and inventory reorder triggers within defined parameters. Recommend: the agent produces an output and a named human reviews, modifies, or rejects. Used where the model is capable but accountability is too consequential to delegate — credit approvals, hiring decisions, pricing on strategic accounts. The human is the decision-maker; the agent is the analyst. Escalate: the agent surfaces the case to a defined owner with the context and reasoning needed to decide. Used for cases outside the agent's operating envelope or above its confidence threshold. The agent does not guess; it hands off. The design decision is not which mode is 'right' but which decisions belong in which mode and what triggers a move between them."}},
+{"@type":"Question","name":"Why are exception paths critical to AI deployment design?","acceptedAnswer":{"@type":"Answer","text":"Exceptions are where AI deployments live or die. Pilot demos never include them. Production runs are dominated by them. The laggard pattern is that the agent guesses — it applies its best inference to a case it was not designed to handle, the output looks normal, and the error is invisible until it shows up downstream as a wrong invoice or misrouted ticket. The frontier pattern is a defined exception handler that does three things: detects (confidence thresholds, out-of-distribution signals, missing inputs, or rule-based triggers flag the case), surfaces (the case routes to a named owner with the context and the agent's reasoning preserved), and learns (exceptions are tracked, patterns surfaced, the operating envelope updated). Exceptions are not edge cases to ignore; they are the signal the agent was built to surface."}},
+{"@type":"Question","name":"Why is accountability harder with agents than with traditional AI?","acceptedAnswer":{"@type":"Answer","text":"Every output the agent produces or surfaces must map to a named human. Frontier operators answer four questions before the agent goes live. Who owns the decision the agent made or recommended — not the team, but a named person with authority to override, retract, or reverse. Who reviews the agent's performance — someone whose job is to look at error rates, drift, exceptions, and outcomes. Who hears the appeal when the agent gets it wrong from the customer's perspective — a defined escalation path a customer, employee, or counterparty can reach. Who owns the data, the model, and the workflow change — often three different people, all three named. Laggards skip these questions and discover them after the first incident, when the answers are improvised under pressure and rarely survive scrutiny. AI without an appeal path is AI without trust."}},
+{"@type":"Question","name":"Why does handoff design need to happen before agent design, not after?","acceptedAnswer":{"@type":"Answer","text":"The pattern across stalled AI deployments is the same: strong model, strong demo, no handoff. The team built the agent first and figured out the human's role after. By the time the first edge case hit production, there was no architecture to fall back on. The right sequence is the reverse — map the decision points, define the exception paths, name the accountability lines, then build the agent into the structure that already exists. Handoff design before agent design is not the conservative path; it is the only path where the deployment survives the first month of production. Three forces are widening the gap: speed (agents run faster than human review cycles), scope creep (agents that start narrow get expanded without redesigning the control surface), and composability (agents call other agents, and the human is no longer in the loop until an output reaches a customer, regulator, or P&L)."}}
+]}</script>
+</head>
+<body class="bg-white"><a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="sticky top-0 z-40 bg-white border-b" style="border-color: var(--faa-gray-100);" id="site-header">
+  <div class="container-faa flex items-center justify-between relative" style="height:96px;">
+    <a href="/" class="flex items-center shrink-0" aria-label="Foundation AI Advisory home">
+      <img src="/assets/global-header-logo-wordmark.png" alt="Foundation AI Advisory" style="height:48px;width:auto;max-width:none;display:block;" />
+    </a>
+    <nav class="hidden xl:flex items-center gap-6 h-full mx-6" aria-label="Primary">
+      <a href="/foundation/" class="utilnav-link" style="height:96px;">Data Curation &amp; Governance</a>
+      <a href="/operations/" class="utilnav-link" style="height:96px;">Workflow Optimization</a>
+      <a href="/agentic-ai/" class="utilnav-link" style="height:96px;">AI Design &amp; Implementation</a>
+      <a href="/industries/" class="utilnav-link" style="height:96px;">Where We Work</a>
+      <a href="/insights/" class="utilnav-link is-active" style="height:96px;" aria-current="page">Insights</a>
+      <a href="/about/" class="utilnav-link" style="height:96px;">About</a>
+    </nav>
+    <div class="flex items-center shrink-0">
+      <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary hidden sm:inline-flex">Business Systems Assessment</a>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+<!--PRERENDERED-->
+  <section class="insight-detail-hero">
+    <div class="container-faa">
+      <a href="/insights/" class="read-link">Insights &larr;</a>
+      <div class="insight-detail-meta mt-8">
+        <span data-insight-category>WORKFLOW OPTIMIZATION</span>
+        <span data-insight-format>Article</span>
+        <span data-insight-pillar>02 &mdash; Workflow Optimization</span>
+      </div>
+      <h1 class="insight-detail-title mt-5" data-insight-title>Designing for Human-in-the-Loop Before You Design for AI</h1>
+      <p class="insight-detail-byline mt-4">By Ben DeMichael, Founder &amp; Managing Partner, Foundation AI Advisory</p>
+      <p class="insight-detail-excerpt mt-6" data-insight-excerpt>Decision points, exceptions, and accountability lines that must exist before you write a single agent. The handoff design is not a deployment-time decision &mdash; it is the control system, and where most AI deployments quietly lose trust.</p>
+    </div>
+  </section>
+  <section class="bg-white">
+    <div class="container-faa insight-detail-layout">
+      <figure class="insight-detail-image">
+        <img src="/assets/insights/human-in-the-loop-decision-workflow-design.webp" alt="Two operators mapping decision points, exception paths, and accountability lines for a human-AI workflow on a printed process diagram covered in handwritten annotations." />
+      </figure>
+      <article class="insight-detail-body" data-insight-body>
+        <p>An operator stands up an AI agent. Pilot is clean. The first month in production looks promising. Then an edge case hits &mdash; a transaction the agent has not seen before, an exception the workflow did not anticipate. The agent does what it was built to do. It acts on its best inference. The output is confidently wrong, and no one notices for two days. The operations team spends the next two weeks unwinding the damage and rebuilding trust with the customer.</p>
+        <p>The root cause is not the model. The model performed as designed. The cause is upstream &mdash; no one decided, before the agent was built, where the human belonged in the loop.</p>
+
+        <h2>The Core Claim</h2>
+        <p>Most AI design conversations start with the wrong question. &ldquo;What can the AI do?&rdquo; frames the deployment as a capability search &mdash; find a use case the model handles, then build around it. The frontier operator&rsquo;s conversation starts somewhere else. &ldquo;Where do humans need to be in this workflow, and why?&rdquo; The AI gets designed to support the human architecture, not to replace it.</p>
+        <p>The shift matters because of what AI has become. A recommender&rsquo;s bad output gets caught by the human who consumes it. An agent&rsquo;s bad output runs to ground autonomously. The handoff between human judgment and machine action is no longer a UX consideration. It is the control system. And like every control system, it has to be designed before the machine it controls.</p>
+        <p><strong>The contrarian point:</strong> the human-in-the-loop architecture is not a deployment-time decision. It is a design-time decision. Treating it as the former is where AI deployments lose trust.</p>
+
+        <h2>Decision Points</h2>
+        <p>Most AI deployments collapse three different operating modes into one. The agent runs. The output is produced. The user accepts or rejects.</p>
+        <p>Frontier operators design three explicit modes, with defined triggers between them.</p>
+        <p><strong>Autonomous.</strong> The agent runs end-to-end. No human review per transaction. Used for high-volume, low-risk, well-bounded decisions where the cost of any individual error is small and the cost of human review per transaction would destroy the productivity case. Routine invoice coding. Standard tier-one customer service responses. Inventory reorder triggers within defined parameters.</p>
+        <p><strong>Recommend.</strong> The agent produces an output. A named human reviews and accepts, modifies, or rejects. Used where the model is capable but the accountability is too consequential to delegate. Credit approvals. Hiring decisions. Pricing on strategic accounts. The human is the decision-maker. The agent is the analyst.</p>
+        <p><strong>Escalate.</strong> The agent surfaces the case to a defined owner with the context and reasoning needed to decide. Used for cases outside the agent&rsquo;s operating envelope or above its confidence threshold. The agent does not guess. It hands off.</p>
+        <p>The design decision is not which mode is &ldquo;right.&rdquo; It is which decisions belong in which mode, and what triggers a move between them. Most deployments never specify this. The frontier ones specify it before the first line of code.</p>
+
+        <h2>Exception Paths</h2>
+        <p>Exceptions are where AI deployments live or die. The pilot demo never includes them. Production runs are dominated by them.</p>
+        <p>The exception path question is simple. When the agent encounters something outside its operating envelope, what does it do?</p>
+        <p><strong>Laggard pattern:</strong> the agent guesses. It applies its best inference to a case it was not designed to handle. The output looks like a normal output. The error is invisible until it shows up downstream &mdash; a wrong invoice, a misrouted ticket, a customer told something contradictory to a contract clause the agent never saw.</p>
+        <p><strong>Frontier pattern:</strong> the agent has a defined exception handler. The handler does three things. It <strong>detects</strong> &mdash; confidence thresholds, out-of-distribution signals, missing input attributes, or rule-based triggers flag the case. It <strong>surfaces</strong> &mdash; the case routes to a named owner with the context and the agent&rsquo;s reasoning preserved. It <strong>learns</strong> &mdash; exceptions are tracked, patterns surfaced, and the operating envelope updated. The agent gets better because exceptions are treated as design feedback, not noise.</p>
+        <p>The gap between these two patterns is the gap between an agent that compounds capability over time and one that quietly accumulates errors until trust collapses. Exceptions are not edge cases to ignore. They are the signal the agent was built to surface.</p>
+
+        <h2>Accountability Lines</h2>
+        <p>Every output the agent produces or surfaces maps to a named human. That is the rule. Without it, &ldquo;the AI did it&rdquo; becomes the accountability model, and &ldquo;the AI did it&rdquo; is not a model.</p>
+        <p>Frontier operators answer four questions before the agent goes live.</p>
+        <p><strong>Who owns the decision</strong> the agent made or recommended? Not the team. A named person, with authority to override, retract, or reverse.</p>
+        <p><strong>Who reviews the agent&rsquo;s performance?</strong> Someone whose job it is to look at error rates, drift, exceptions, and outcomes. The operator of the operator.</p>
+        <p><strong>Who hears the appeal</strong> when the agent gets it wrong from the customer&rsquo;s perspective? A defined escalation path that a customer, employee, or counterparty can reach. <strong>AI without an appeal path is AI without trust.</strong></p>
+        <p><strong>Who owns the data, the model, and the workflow change?</strong> Often three different people. All three named.</p>
+        <p>Laggards skip these questions and discover them after the first incident. By then the answers are improvised under pressure, and the improvised answers usually do not survive scrutiny. The deployment loses credibility not because the agent was wrong &mdash; it will be wrong sometimes &mdash; but because no one could say who was responsible for being right.</p>
+
+        <h2>Why This Compounds in the Agentic Era</h2>
+        <p>A recommender is forgiving. The human in front of it acts as the final filter. An agent is not forgiving. The agent acts. The action propagates. The error compounds before anyone reviews it.</p>
+        <p>The industry has spent the last two years building agents. The handoff design has not kept up. Most agentic deployments we evaluate have model architecture documented in detail and human-AI handoff documented in a single sentence buried in a project plan. The asymmetry is the risk.</p>
+        <p>Three forces are widening the gap.</p>
+        <p><strong>Speed.</strong> Agents run faster than human review cycles. By the time a weekly audit catches a pattern, the agent has executed it thousands of times.</p>
+        <p><strong>Scope creep.</strong> Agents that start in a narrow envelope get expanded. The handoff design that was adequate for the original scope is silently inadequate for the expanded one. No one redesigns it. The control surface erodes.</p>
+        <p><strong>Composability.</strong> Agents call other agents. Each agent&rsquo;s handoff design assumed a human consumer. When the consumer becomes another agent, the human is no longer in the loop anywhere &mdash; until the output reaches a customer, a regulator, or a P&amp;L.</p>
+        <p>Agentic AI raises the cost of bad handoff design, and the cost is borne by the operator who deployed it.</p>
+
+        <h2>What Right Looks Like</h2>
+        <p>The sequence holds, and the weight in this article sits on Pillar 3.</p>
+        <p><a href="/foundation/">Data Curation &amp; Governance</a>. The agent cannot reason on data it cannot trust. Handoff design begins by knowing which data the agent operates on, where that data comes from, and what the system of record says when the agent gets it wrong. Without this, the audit trail is missing the most important record &mdash; the input.</p>
+        <p><a href="/operations/">Workflow Optimization</a>. The handoff design is workflow design. It is not separate from it. Decision points, exception paths, and accountability lines are workflow questions before they are AI questions. The workflow gets redesigned for the agent before the agent gets built &mdash; handoffs explicit, owners named, escalation paths defined, exception handlers designed. The companion piece on this is <a href="/insights/your-workflows-werent-built-for-agents/">Your Workflows Weren&rsquo;t Built for Agents</a>.</p>
+        <p><a href="/agentic-ai/">AI Design &amp; Implementation</a>. Now the agent gets built into a control system that already exists. Autonomous, recommend, and escalate modes are configured. The exception handler is wired to the named owners. The accountability lines are documented and visible to the team that will operate the system. Instrumentation tracks the handoff quality &mdash; not just model performance, but how often the agent surfaced correctly, how often it escalated when it should have, and how often it should have and did not.</p>
+        <p>Closing the loop on human-in-the-loop design moves margin (no rework cycles from agent errors), throughput (agents that scale instead of capping at pilot), cycle time (faster escalation when it matters), risk exposure (controlled action paths instead of unbounded autonomy), and visibility (named accountability for every output).</p>
+        <p><strong>The tool is not the control system. The handoff design is.</strong></p>
+
+        <h2>The Real Question</h2>
+        <p>The pattern across stalled AI deployments is the same. Strong model. Strong demo. No handoff. The team built the agent first and figured out the human&rsquo;s role after. By the time the first edge case hit production, there was no architecture to fall back on.</p>
+        <p>The right sequence is the reverse. Map the decision points. Define the exception paths. Name the accountability lines. Then build the agent into the structure that already exists.</p>
+        <p><strong>Handoff design before agent design is not the conservative path. It is the only path where the deployment survives the first month of production.</strong></p>
+        <p>FAA&rsquo;s <a href="/business-systems-assessment/">Business Systems Assessment</a> starts with the architecture before the build. Most operators have not asked these questions before deploying. The ones that have are running agents that compound.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <dl class="insight-detail-faq">
+          <dt>What does human-in-the-loop mean in agentic AI deployments?</dt>
+          <dd>Human-in-the-loop is the architecture that decides where humans need to be in an AI workflow and why. Most AI design conversations start with the wrong question &mdash; &ldquo;What can the AI do?&rdquo; &mdash; which frames the deployment as a capability search. The frontier operator&rsquo;s conversation starts somewhere else: &ldquo;Where do humans need to be in this workflow, and why?&rdquo; The AI gets designed to support the human architecture, not to replace it. A recommender&rsquo;s bad output gets caught by the human who consumes it. An agent&rsquo;s bad output runs to ground autonomously. The handoff between human judgment and machine action is no longer a UX consideration; it is the control system, and like every control system, it has to be designed before the machine it controls.</dd>
+
+          <dt>What are the three operating modes &mdash; autonomous, recommend, escalate &mdash; and when should each be used?</dt>
+          <dd><strong>Autonomous:</strong> the agent runs end-to-end with no human review per transaction. Used for high-volume, low-risk, well-bounded decisions like routine invoice coding, standard tier-one customer service responses, and inventory reorder triggers within defined parameters. <strong>Recommend:</strong> the agent produces an output and a named human reviews, modifies, or rejects. Used where the model is capable but accountability is too consequential to delegate &mdash; credit approvals, hiring decisions, pricing on strategic accounts. The human is the decision-maker; the agent is the analyst. <strong>Escalate:</strong> the agent surfaces the case to a defined owner with the context and reasoning needed to decide. Used for cases outside the agent&rsquo;s operating envelope or above its confidence threshold. The agent does not guess; it hands off. The design decision is not which mode is &ldquo;right&rdquo; but which decisions belong in which mode and what triggers a move between them.</dd>
+
+          <dt>Why are exception paths critical to AI deployment design?</dt>
+          <dd>Exceptions are where AI deployments live or die. Pilot demos never include them. Production runs are dominated by them. The laggard pattern is that the agent guesses &mdash; it applies its best inference to a case it was not designed to handle, the output looks normal, and the error is invisible until it shows up downstream as a wrong invoice or misrouted ticket. The frontier pattern is a defined exception handler that does three things: detects (confidence thresholds, out-of-distribution signals, missing inputs, or rule-based triggers flag the case), surfaces (the case routes to a named owner with the context and the agent&rsquo;s reasoning preserved), and learns (exceptions are tracked, patterns surfaced, the operating envelope updated). Exceptions are not edge cases to ignore; they are the signal the agent was built to surface.</dd>
+
+          <dt>Why is accountability harder with agents than with traditional AI?</dt>
+          <dd>Every output the agent produces or surfaces must map to a named human. Frontier operators answer four questions before the agent goes live. Who owns the decision the agent made or recommended &mdash; not the team, but a named person with authority to override, retract, or reverse. Who reviews the agent&rsquo;s performance &mdash; someone whose job is to look at error rates, drift, exceptions, and outcomes. Who hears the appeal when the agent gets it wrong from the customer&rsquo;s perspective &mdash; a defined escalation path a customer, employee, or counterparty can reach. Who owns the data, the model, and the workflow change &mdash; often three different people, all three named. Laggards skip these questions and discover them after the first incident, when the answers are improvised under pressure and rarely survive scrutiny. AI without an appeal path is AI without trust.</dd>
+
+          <dt>Why does handoff design need to happen before agent design, not after?</dt>
+          <dd>The pattern across stalled AI deployments is the same: strong model, strong demo, no handoff. The team built the agent first and figured out the human&rsquo;s role after. By the time the first edge case hit production, there was no architecture to fall back on. The right sequence is the reverse &mdash; map the decision points, define the exception paths, name the accountability lines, then build the agent into the structure that already exists. Handoff design before agent design is not the conservative path; it is the only path where the deployment survives the first month of production. Three forces are widening the gap: speed (agents run faster than human review cycles), scope creep (agents that start narrow get expanded without redesigning the control surface), and composability (agents call other agents, and the human is no longer in the loop until an output reaches a customer, regulator, or P&amp;L).</dd>
+        </dl>
+
+        <div class="insight-article-cta">
+          <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary">Start with a Business Systems Assessment</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer style="background: var(--faa-navy); padding: 34px 0;">
+  <div class="container-faa">
+    <p class="footer-attribution">Built in-house by Foundation AI Advisory - where finance, governance, operations, and AI meet practical execution.</p>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+      <div class="flex items-center gap-4" style="color: var(--faa-white);">
+        <img src="/assets/global-footer-logo-wordmark.png" alt="Foundation AI Advisory" style="height:32px;width:auto;display:block;opacity:0.95;" />
+        <span style="color: rgba(255,255,255,0.6); font-size: 13px;">&copy; 2026 Foundation AI Advisory. All rights reserved.</span>
+      </div>
+      <nav aria-label="Legal" class="flex flex-wrap items-center gap-6">
+        <a href="/privacy-policy/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Privacy</a>
+        <a href="/terms/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Terms</a>
+        <a href="/contact/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/nav.js" defer></script>
+<script src="/cookie-consent.js" defer></script>
+</body>
+</html>
