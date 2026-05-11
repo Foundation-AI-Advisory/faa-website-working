@@ -1,21 +1,18 @@
 #!/usr/bin/env node
-// One-shot sweep: append a version query string to the /styles.css
-// reference in every HTML page. Forces every browser (including
-// Chrome mobile's aggressive disk cache) to fetch the latest file
-// rather than serve a stale copy.
+// One-shot sweep: replace the dek line on the Workflow Optimization
+// methodology card across every page that contains it. "Fix process
+// before applying AI" -> "Optimize workflows before applying AI" —
+// matches the pillar name's verb (Optimize) and reads as a
+// deliberate operating action, not a repair job.
 //
-// The version uses today's date so subsequent edits can bump it
-// trivially.
+// Idempotent — re-running it is a no-op once converted.
 //
-// Idempotent — re-running it just replaces the existing ?v=... value.
-//
-// Run from repo root:  node scripts/_stylesheet-cachebust.mjs
+// Run from repo root:  node scripts/_methodology-dek-copy-refine.mjs
 
 import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const VERSION = '20260511o'; // bump on every cache-bust pass
 
 async function walk(dir) {
   const out = [];
@@ -32,29 +29,27 @@ async function walk(dir) {
   return out;
 }
 
-// Matches /styles.css with an optional existing ?v=... suffix.
-const RE = /href="\/styles\.css(?:\?v=[^"]*)?"/g;
+const OLD = '<p class="mega-pillar-card__dek">Fix process before applying AI</p>';
+const NEW = '<p class="mega-pillar-card__dek">Optimize workflows before applying AI</p>';
 
 const files = await walk(ROOT);
 let updated = 0;
-let skipped = 0;
+let already = 0;
 
 for (const file of files) {
   const rel = path.relative(ROOT, file);
   if (rel.startsWith('scripts' + path.sep)) continue;
 
   const src = await readFile(file, 'utf8');
-  if (!RE.test(src)) continue;
-
-  const next = src.replace(RE, `href="/styles.css?v=${VERSION}"`);
-  if (next === src) {
-    skipped++;
+  if (!src.includes(OLD)) {
+    if (src.includes(NEW)) already++;
     continue;
   }
 
+  const next = src.split(OLD).join(NEW);
   await writeFile(file, next, 'utf8');
   updated++;
   console.log('UPDATED', rel);
 }
 
-console.log(`\nDone. updated=${updated}, skipped=${skipped}, version=${VERSION}`);
+console.log(`\nDone. updated=${updated}, already-converted=${already}`);
