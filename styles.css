@@ -1132,7 +1132,9 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   outline-offset: -2px;
 }
 .mega-ai-training-card--bootcamp .mega-ai-training-card__image {
-  background-image: url('/assets/navigation/ai-training/ai-training-bootcamp.webp');
+  /* Matches the hero image on /ai-training-workforce-development/
+     so the dropdown card reads as a direct preview of that page. */
+  background-image: url('/assets/global-page-hero-background-flow.webp');
 }
 .mega-ai-training-card--workforce .mega-ai-training-card__image {
   background-image: url('/assets/navigation/ai-training/ai-training-workforce-development.webp');
