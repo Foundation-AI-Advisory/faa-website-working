@@ -2582,6 +2582,46 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .pillar-card.pillar-card--ai:hover {
     background-color: var(--faa-white);
   }
+
+  /* Stronger typography for legibility over the photo backgrounds.
+     Scoped to the three image-backed pillar cards only — desktop
+     and any other .pillar-card usage stays untouched. */
+  .pillar-card.pillar-card--data .pillar-card-num,
+  .pillar-card.pillar-card--workflow .pillar-card-num,
+  .pillar-card.pillar-card--ai .pillar-card-num {
+    color: var(--faa-navy);
+    font-weight: 700;
+  }
+  .pillar-card.pillar-card--data .pillar-card-num::before,
+  .pillar-card.pillar-card--workflow .pillar-card-num::before,
+  .pillar-card.pillar-card--ai .pillar-card-num::before {
+    color: var(--faa-gray-700);
+    font-weight: 700;
+  }
+  .pillar-card.pillar-card--data .pillar-card-body .kicker,
+  .pillar-card.pillar-card--workflow .pillar-card-body .kicker,
+  .pillar-card.pillar-card--ai .pillar-card-body .kicker {
+    color: var(--faa-navy);
+    font-weight: 700;
+  }
+  .pillar-card.pillar-card--data .pillar-card-headline,
+  .pillar-card.pillar-card--workflow .pillar-card-headline,
+  .pillar-card.pillar-card--ai .pillar-card-headline {
+    color: var(--faa-navy);
+    font-weight: 700;
+  }
+  .pillar-card.pillar-card--data .pillar-card-dek,
+  .pillar-card.pillar-card--workflow .pillar-card-dek,
+  .pillar-card.pillar-card--ai .pillar-card-dek {
+    color: var(--faa-gray-700);
+    font-weight: 500;
+  }
+  .pillar-card.pillar-card--data .pillar-card-body .read-link,
+  .pillar-card.pillar-card--workflow .pillar-card-body .read-link,
+  .pillar-card.pillar-card--ai .pillar-card-body .read-link {
+    color: var(--faa-blue);
+    font-weight: 700;
+  }
 }
 
 /* Simple page hero (non-carousel) */
