@@ -1074,32 +1074,44 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   background-repeat: no-repeat;
   transition: transform 600ms ease-out;
 }
+/* Wash extended into the lower-middle so the content block (now
+   pinned at ~52% from the top) sits on a strong white backdrop.
+   Above ~55% the image reads clearly — mirrors the Methodology
+   dropdown treatment for visual family. */
 .mega-ai-training-card__image::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.97) 0%,
-    rgba(255, 255, 255, 0.94) 38%,
-    rgba(255, 255, 255, 0.62) 68%,
-    rgba(255, 255, 255, 0.12) 100%
+    to top,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(255, 255, 255, 0.90) 40%,
+    rgba(255, 255, 255, 0.72) 55%,
+    rgba(255, 255, 255, 0.20) 75%,
+    rgba(255, 255, 255, 0.00) 100%
   );
 }
+/* Content pinned at a fixed offset from the top of the card so the
+   Foundations / Applied labels align across both cards, with image
+   showing in the upper ~52% of the tile. */
 .mega-ai-training-card__content {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 52%;
+  bottom: auto;
   z-index: 2;
-  padding: 32px 32px 28px;
+  padding: 0 32px 28px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
 }
 @media (min-width: 1280px) {
-  .mega-ai-training-card__content { padding: 40px 44px 32px; }
+  .mega-ai-training-card__content { padding: 0 44px 32px; gap: 10px; }
 }
 .mega-ai-training-card__num {
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1108,7 +1120,7 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 .mega-ai-training-card__title {
   margin: 0;
   color: var(--faa-navy);
-  font-size: clamp(26px, 1.9vw, 34px);
+  font-size: clamp(22px, 1.6vw, 28px);
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
@@ -1118,9 +1130,9 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   margin: 0;
   max-width: 44ch;
   color: var(--faa-gray-700);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 .mega-ai-training-card:hover .mega-ai-training-card__title,
 .mega-ai-training-card:focus-visible .mega-ai-training-card__title {
