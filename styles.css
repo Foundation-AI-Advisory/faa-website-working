@@ -2366,7 +2366,11 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .pillar-card {
   display: grid;
   grid-template-columns: 120px 1fr 38%;
-  background: var(--faa-white);
+  /* Longhand on purpose — the shorthand `background:` resets
+     background-image to none, which under iOS Safari's style
+     recovery can fight the mobile-only background-image override
+     defined later in this file. Setting color-only avoids that. */
+  background-color: var(--faa-white);
   border: 1px solid var(--faa-gray-200);
   text-decoration: none;
   transition: border-color 220ms ease-out, transform 220ms ease-out, box-shadow 220ms ease-out;
@@ -2376,7 +2380,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .pillar-card:hover {
   border-color: var(--faa-blue);
-  background: var(--faa-blue-50);
+  /* Longhand — same reason as the base rule above. */
+  background-color: var(--faa-blue-50);
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(15,23,42,0.08);
 }
@@ -2510,18 +2515,25 @@ a:focus-visible, button:focus-visible, input:focus-visible {
    with the dropdown. White wash matches the mega-menu treatment
    so text stays dark and readable. Hides the stacked visual below
    the body since it would now duplicate the same image. Desktop
-   and tablet (≥768px) are untouched. */
+   and tablet (>=768px) are untouched.
+
+   Selectors use the compound form (.pillar-card.pillar-card--data)
+   to raise specificity above the base .pillar-card rule, so iOS
+   Safari can't quietly drop the background-image back to the base
+   value during style recalculation. */
 @media (max-width: 767px) {
-  .pillar-card--data,
-  .pillar-card--workflow,
-  .pillar-card--ai {
+  .pillar-card.pillar-card--data,
+  .pillar-card.pillar-card--workflow,
+  .pillar-card.pillar-card--ai {
     position: relative;
+    background-color: var(--faa-white);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: scroll;
     isolation: isolate;
   }
-  .pillar-card--data {
+  .pillar-card.pillar-card--data {
     background-image:
       linear-gradient(
         180deg,
@@ -2530,7 +2542,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
       ),
       url('/assets/navigation/methodology/methodology-data-curation-governance.webp');
   }
-  .pillar-card--workflow {
+  .pillar-card.pillar-card--workflow {
     background-image:
       linear-gradient(
         180deg,
@@ -2539,7 +2551,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
       ),
       url('/assets/navigation/methodology/methodology-workflow-optimization.webp');
   }
-  .pillar-card--ai {
+  .pillar-card.pillar-card--ai {
     background-image:
       linear-gradient(
         180deg,
@@ -2549,26 +2561,26 @@ a:focus-visible, button:focus-visible, input:focus-visible {
       url('/assets/navigation/methodology/methodology-ai-design-implementation.webp');
   }
   /* Pillar number rail: keep its top/bottom rhythm but make the
-     fill translucent so the image shows through subtly. */
-  .pillar-card--data .pillar-card-num,
-  .pillar-card--workflow .pillar-card-num,
-  .pillar-card--ai .pillar-card-num {
-    background: rgba(255, 255, 255, 0.32);
+     fill translucent so the image shows through subtly. Longhand
+     property so it doesn't wipe a possibly inherited image stack. */
+  .pillar-card.pillar-card--data .pillar-card-num,
+  .pillar-card.pillar-card--workflow .pillar-card-num,
+  .pillar-card.pillar-card--ai .pillar-card-num {
+    background-color: rgba(255, 255, 255, 0.32);
     border-right-color: rgba(15, 23, 42, 0.08);
   }
   /* Stacked visual at the bottom is now redundant with the card
      background — hide it on phones only. */
-  .pillar-card--data .pillar-card-visual,
-  .pillar-card--workflow .pillar-card-visual,
-  .pillar-card--ai .pillar-card-visual {
+  .pillar-card.pillar-card--data .pillar-card-visual,
+  .pillar-card.pillar-card--workflow .pillar-card-visual,
+  .pillar-card.pillar-card--ai .pillar-card-visual {
     display: none;
   }
-  /* Hover effect would invert the wash unpleasantly on touch
-     devices — keep the wash steady on tap. */
-  .pillar-card--data:hover,
-  .pillar-card--workflow:hover,
-  .pillar-card--ai:hover {
-    background-color: transparent;
+  /* Touch devices: keep the wash steady on tap (no hover swap). */
+  .pillar-card.pillar-card--data:hover,
+  .pillar-card.pillar-card--workflow:hover,
+  .pillar-card.pillar-card--ai:hover {
+    background-color: var(--faa-white);
   }
 }
 
