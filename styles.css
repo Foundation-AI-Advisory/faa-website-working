@@ -3166,18 +3166,21 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   color: var(--faa-navy);
 }
 
-/* Foundation page hero: the data-curation source image carries its
-   visual weight on the right (the layered data architecture grid),
-   which leaves the left zone of the hero as the natural place for
-   copy. This modifier centers the .hero-text-block horizontally
-   within the left ~40% of the viewport instead of the standard
-   methodology-hero left-aligned placement, so the text reads as a
-   contained editorial column rather than a left-anchored block.
+/* Methodology pillar heroes (Data Curation, Workflow Optimization,
+   AI Design & Implementation): each image carries its visual
+   weight on the right (data architecture grid / highway flow /
+   team-around-a-decision-table), which leaves the left zone of
+   the hero as the natural place for copy. This modifier centers
+   the .hero-text-block horizontally within the left ~40% of the
+   viewport instead of the standard methodology-hero left-anchored
+   placement, so the text reads as a contained editorial column.
    Vertical centering is already handled by .methodology-hero's
    flex / justify-content: center / min-height: 800px. */
 
 @media (min-width: 1440px) {
-  .foundation-hero .hero-text-block {
+  .foundation-hero .hero-text-block,
+  .operations-hero .hero-text-block,
+  .agentic-ai-hero .hero-text-block {
     /* Center a 540px text column inside the left 40vw of the viewport.
        Math: target left edge in viewport coords = (40vw - 540px) / 2.
        The text block lives inside .container-faa (centered, max-width
