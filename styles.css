@@ -3479,3 +3479,45 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   color: var(--faa-gray-400);
   font-size: 12px;
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   Client Workspace placeholder login page — two-column layout.
+   Uses explicit named classes rather than Tailwind grid-cols-12 /
+   col-span-6 utilities because col-span-6 isn't compiled into
+   tailwind-static.css (the static build only includes classes
+   that were detected in source; col-span-3/9 are compiled but 6
+   was not). Named classes guarantee the layout renders correctly
+   regardless of which Tailwind variants happened to be tree-shaken.
+───────────────────────────────────────────────────────────────── */
+.client-workspace-section {
+  padding-top: clamp(56px, 7vw, 96px);
+  padding-bottom: clamp(56px, 7vw, 96px);
+}
+.client-workspace-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .client-workspace-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 440px);
+    gap: clamp(40px, 5vw, 80px);
+  }
+}
+.client-workspace-copy {
+  max-width: 640px;
+}
+.client-workspace-copy p {
+  max-width: 56ch;
+}
+.client-workspace-login-card {
+  width: 100%;
+  max-width: 440px;
+  justify-self: stretch;
+}
+@media (min-width: 900px) {
+  .client-workspace-login-card {
+    justify-self: end;
+  }
+}
