@@ -638,19 +638,17 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   padding: 13px 0;
   border-bottom: 1px solid var(--faa-gray-100);
 }
-.mobile-menu-panel a:last-child {
+.mobile-menu-panel > a:last-child {
   border-bottom: 0;
 }
 /* Inside a section group (Methodology / AI Training), every nested
-   link should have its own bottom divider — the :last-child rule
-   above otherwise drops the divider on the last anchor of each
-   section, which made the boundary between Methodology and AI
-   Training look uneven. */
+   link keeps its own bottom divider — including the last anchor in
+   the section. The section wrapper itself adds no extra padding or
+   border, so the rhythm of dividers matches top-level items above
+   and below and the last item in each section (e.g. "AI Workforce
+   Development") aligns visually with the rest. */
 .mobile-menu-section a {
   border-bottom: 1px solid var(--faa-gray-100);
-}
-.mobile-menu-section a:last-child {
-  border-bottom: 0;
 }
 .mobile-menu-panel .mobile-menu-cta {
   display: flex;
@@ -1292,12 +1290,12 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 /* Mobile menu section group — used to label the four methodology
    destinations under a single "Methodology" eyebrow heading inside
    the hamburger panel. Keeps the panel flat (no nested collapse) so
-   every destination is one tap away. */
+   every destination is one tap away. The section itself adds no
+   padding/margin/border — the eyebrow label provides the grouping
+   and each anchor's own bottom divider maintains an even rhythm
+   that matches top-level items above and below. */
 .mobile-menu-section {
   display: block;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 .mobile-menu-label {
   display: block;
