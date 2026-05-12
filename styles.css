@@ -2849,33 +2849,50 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   max-width: 56ch;
 }
 
-/* Outcomes strip — narrow band between hero and Executive Answer on the
-   foundation methodology page. Editorial small-caps label on the left,
-   subtle 6-item grid on the right, hairline rules. */
+/* Outcomes strip — executive outcome band between hero and Executive
+   Answer on the foundation methodology page. A subtle gray-50 surface
+   with hairline rules top and bottom frames it as an intentional
+   transition. Two-line editorial label on the left; outcomes locked
+   to a 3-column x 2-row grid at >=768px so items group coherently
+   rather than stretching thinly across the page width. */
 .outcomes-strip {
-  background: var(--faa-white);
+  background: var(--faa-gray-50);
+  border-top: 1px solid var(--faa-gray-100);
   border-bottom: 1px solid var(--faa-gray-100);
 }
 .outcomes-strip-inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 28px 0;
+  gap: 18px;
+  padding: 24px 0;
 }
 @media (min-width: 1024px) {
   .outcomes-strip-inner {
-    grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
-    gap: 48px;
-    align-items: center;
-    padding: 32px 0;
+    grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+    gap: 56px;
+    align-items: start;
+    padding: 28px 0;
   }
 }
 .outcomes-strip-label {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.outcomes-strip-label-primary {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--faa-navy);
+  line-height: 1.3;
+}
+.outcomes-strip-label-secondary {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faa-gray-600);
   line-height: 1.4;
 }
 .outcomes-strip-list {
@@ -2884,27 +2901,33 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px 24px;
+  column-gap: 24px;
+  row-gap: 10px;
 }
 @media (min-width: 768px) {
-  .outcomes-strip-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .outcomes-strip-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 32px;
+    row-gap: 12px;
+  }
 }
-@media (min-width: 1280px) {
-  .outcomes-strip-list { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-}
+/* Deliberately NOT expanding to 6 columns on >=1280px — keeping a
+   3 x 2 block keeps the outcomes grouped as a single coherent
+   component rather than scattering them across the full page width. */
 .outcomes-strip-list li {
   position: relative;
-  padding-left: 14px;
-  color: var(--faa-gray-600);
-  font-size: 14px;
+  padding-left: 16px;
+  color: var(--faa-gray-700);
+  font-size: 15px;
+  font-weight: 500;
   line-height: 1.45;
 }
 .outcomes-strip-list li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 9px;
-  width: 6px;
+  top: 10px;
+  width: 8px;
   height: 1px;
   background: var(--faa-blue);
 }
