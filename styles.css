@@ -2932,6 +2932,66 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   background: var(--faa-blue);
 }
 
+/* AI Workforce Development section — spacing refinements for executive
+   readability. The content was readable but visually cramped: intro
+   paragraphs too tight, the Format and Outcomes columns too close to
+   each other on desktop, bullet rows packed, and the Topics
+   subsection starting too soon after the bullets. These rules add
+   intentional breathing room without changing the design system,
+   font scale, or color palette. */
+#workforce-development .body-lg + .body-lg {
+  /* Intro paragraphs: 24px between them instead of Tailwind's 16px
+     (mt-4). Loosens the rhythm without enlarging type. */
+  margin-top: 24px;
+}
+.workforce-positioning {
+  /* The Key Positioning callout. Background, border-left, and
+     border-radius remain on the element as inline styles so the
+     existing visual treatment is preserved; the class adds
+     padding, max-width, and margin-top. (mt-10 is not in the
+     static Tailwind build, so the margin lives here.) */
+  margin-top: 36px;
+  padding: 30px 34px;
+  max-width: 920px;
+}
+@media (max-width: 639px) {
+  .workforce-positioning {
+    padding: 24px 22px;
+  }
+}
+.workforce-detail-grid {
+  /* Replaces the previous .grid .grid-cols-1 .lg:grid-cols-2 .gap-10
+     combo on the Format / Outcomes block. Generous column gap on
+     desktop so the two lists read as deliberate, parallel components
+     rather than a cramped table. */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+@media (min-width: 1024px) {
+  .workforce-detail-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 0;
+  }
+}
+.workforce-detail-grid > div > ul > li {
+  /* Slightly more breathing room between bullets than Tailwind's py-2
+     (8px) — 10px feels more editorial without becoming wasteful. */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.workforce-topics {
+  /* Generous transition into the question-card grid below. Replaces
+     the previous mt-14 (56px) inline utility. */
+  margin-top: 72px;
+}
+@media (max-width: 767px) {
+  .workforce-topics {
+    margin-top: 56px;
+  }
+}
+
 /* Workforce Development Topics — question-card grid on the AI Training
    page. Editorial FAQ feel: small eyebrow + h3 + lead-in, then an
    ordered list of numbered question cards in 1/2/3 columns. Each card
