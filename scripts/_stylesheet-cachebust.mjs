@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-// One-shot sweep: append a version query string to the /styles.css
-// reference in every HTML page. Forces every browser (including
-// Chrome mobile's aggressive disk cache) to fetch the latest file
-// rather than serve a stale copy.
+// One-shot sweep: append a version query string to /styles.css and
+// /tailwind-static.css references in every HTML page. Forces every
+// browser (including Chrome mobile's aggressive disk cache) to fetch
+// the latest files rather than serve stale copies.
 //
 // The version uses today's date so subsequent edits can bump it
 // trivially.
@@ -15,7 +15,7 @@ import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const VERSION = '20260512d'; // bump on every cache-bust pass
+const VERSION = '20260512e'; // bump on every cache-bust pass
 
 async function walk(dir) {
   const out = [];
@@ -32,8 +32,12 @@ async function walk(dir) {
   return out;
 }
 
-// Matches /styles.css with an optional existing ?v=... suffix.
-const RE = /href="\/styles\.css(?:\?v=[^"]*)?"/g;
+// Both stylesheets get the same version. Each regex accepts an
+// optional existing ?v=... suffix so the sweep is idempotent.
+const TARGETS = [
+  { name: 'styles.css',          re: /href="\/styles\.css(?:\?v=[^"]*)?"/g,          replacement: `href="/styles.css?v=${VERSION}"` },
+  { name: 'tailwind-static.css', re: /href="\/tailwind-static\.css(?:\?v=[^"]*)?"/g, replacement: `href="/tailwind-static.css?v=${VERSION}"` },
+];
 
 const files = await walk(ROOT);
 let updated = 0;
@@ -44,9 +48,10 @@ for (const file of files) {
   if (rel.startsWith('scripts' + path.sep)) continue;
 
   const src = await readFile(file, 'utf8');
-  if (!RE.test(src)) continue;
-
-  const next = src.replace(RE, `href="/styles.css?v=${VERSION}"`);
+  let next = src;
+  for (const t of TARGETS) {
+    if (t.re.test(next)) next = next.replace(t.re, t.replacement);
+  }
   if (next === src) {
     skipped++;
     continue;
