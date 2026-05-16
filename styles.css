@@ -3933,6 +3933,125 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
+/* AI Frontiers hero CTA — "Frontier Signal" treatment.
+   Page-scoped under .ai-frontiers-hero so this premium blue/cyan
+   gradient button only appears here. Pairs visually with the
+   AlphaFold-inspired ribbon image: the gradient picks up the same
+   blue→cyan range as the ribbons on the right side of the hero,
+   making the CTA feel native to the frontier theme rather than the
+   default flat navy primary button used elsewhere.
+   Built on .btn.btn-primary so the base layout (display, font,
+   padding) is inherited; we override the visual treatment only. */
+.ai-frontiers-hero .hero-cta-frontier {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 54px;
+  padding: 0 22px;
+  border-radius: 10px;
+  border: 1px solid rgba(88, 214, 238, 0.55);
+  background:
+    linear-gradient(135deg, #0b5f9f 0%, #0d75bd 52%, #11a4c2 100%);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  box-shadow:
+    0 14px 32px rgba(0, 35, 80, 0.32),
+    0 0 22px rgba(17, 164, 194, 0.18);
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+/* Right-side angled signal accent — a subtle cyan-skewed wedge that
+   reads as a "frontier" cue without crossing into SaaS gimmick
+   territory. clip-path keeps it tight to the right edge so the
+   label always reads cleanly over the deeper navy on the left. */
+.ai-frontiers-hero .hero-cta-frontier::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 78px;
+  height: 100%;
+  background:
+    linear-gradient(135deg,
+      rgba(32, 205, 230, 0.72),
+      rgba(36, 130, 204, 0.58));
+  clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+/* Soft diagonal highlight that sweeps right on hover. Sits below
+   the label/icon via z-index: -1 + isolation on the parent. */
+.ai-frontiers-hero .hero-cta-frontier::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.26), transparent 36%),
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  opacity: 0.5;
+  transform: translateX(-40%);
+  transition: transform 280ms ease, opacity 280ms ease;
+  z-index: -1;
+  pointer-events: none;
+}
+.ai-frontiers-hero .hero-cta-frontier:hover {
+  transform: translateY(-2px);
+  border-color: rgba(134, 232, 255, 0.92);
+  /* Re-declare the gradient on hover so the .btn-primary:hover
+     fallback (background: var(--faa-navy)) can't take over via
+     cascade-order tiebreak. Slightly brighter mid-stop for the
+     lift cue. */
+  background:
+    linear-gradient(135deg, #0c69ad 0%, #0f81cf 52%, #14b6d6 100%);
+  box-shadow:
+    0 20px 44px rgba(0, 35, 80, 0.42),
+    0 0 30px rgba(17, 164, 194, 0.32);
+}
+.ai-frontiers-hero .hero-cta-frontier:hover::before {
+  transform: translateX(22%);
+  opacity: 0.7;
+}
+.ai-frontiers-hero .hero-cta-frontier:focus-visible {
+  outline: 3px solid rgba(156, 207, 243, 0.95);
+  outline-offset: 4px;
+}
+/* Label + icon both need z-index > 0 so they sit above the ::before
+   and ::after layers. */
+.ai-frontiers-hero .hero-cta-frontier .hero-cta-label,
+.ai-frontiers-hero .hero-cta-frontier .hero-cta-icon {
+  position: relative;
+  z-index: 1;
+}
+.ai-frontiers-hero .hero-cta-frontier .hero-cta-icon {
+  font-size: 1.05em;
+  line-height: 1;
+  transform: translateY(-1px);
+  transition: transform 200ms ease;
+}
+.ai-frontiers-hero .hero-cta-frontier:hover .hero-cta-icon {
+  transform: translate(2px, -3px);
+}
+@media (max-width: 767px) {
+  .ai-frontiers-hero .hero-cta-frontier {
+    min-height: 50px;
+    padding: 0 18px;
+    border-radius: 9px;
+    font-size: 15px;
+    max-width: 100%;
+  }
+  .ai-frontiers-hero .hero-cta-frontier::after {
+    width: 64px;
+  }
+}
+
 /* AI Decision Questions page — primary-content Q&A treatment.
    Reuses the FAQ <dl>/<dt>/<dd> semantics already used by the
    methodology AEO panel, but at body-text scale and full-content
