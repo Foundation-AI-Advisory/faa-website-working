@@ -3820,6 +3820,22 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   transform: translateX(2px);
 }
 
+/* Align the BY BUSINESS FOUNDATION and BY FORMAT column headings
+   with the FEATURED PERSPECTIVE heading inside the featured card.
+   The featured card has 22px padding + a ~18px "Start here" chip +
+   8px margin-bottom = ~48px of vertical offset before its
+   .mega-group-heading appears. Add that same offset to the two
+   right-column headings on desktop so all three column headers
+   land on the same horizontal line. The "Start here" chip stays
+   in the featured card; it visually sits above the row of
+   aligned headers. */
+@media (min-width: 768px) {
+  .mega-insights-pillars > .mega-group-heading,
+  .mega-insights-format > .mega-group-heading {
+    margin-top: 55px;
+  }
+}
+
 /* By Business Foundation column: the methodology pillars get a
    numbered marker treatment (01/02/03) so the sequence reads at a
    glance. Number sits in a small serif badge; body text wraps to
