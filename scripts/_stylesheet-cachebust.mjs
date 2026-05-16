@@ -15,7 +15,7 @@ import { readFile, writeFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const VERSION = '20260517n'; // bump on every cache-bust pass
+const VERSION = '20260517o'; // bump on every cache-bust pass
 
 async function walk(dir) {
   const out = [];

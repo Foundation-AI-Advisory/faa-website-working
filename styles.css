@@ -573,6 +573,18 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
    stacked vertically, mirroring the methodology sequence visually
    while keeping the body copy lean and outcome-focused on the left.
 ───────────────────────────────────────────────────────────────── */
+/* Bottom padding override for the homepage methodology section. The
+   inline padding-bottom: 0 used previously made the outcome chips at
+   the end of the left column visually collide with the dark
+   Foundation Sequence band that follows. This restores a moderate
+   bottom gap (smaller than the section-y default 96px so the
+   white -> dark transition still reads as deliberate, but large
+   enough to give the chips real breathing room above the next
+   section). */
+.home-methodology-section__container {
+  padding-bottom: clamp(48px, 5vw, 72px);
+}
+
 .home-methodology-inner {
   display: grid;
   grid-template-columns: 1fr;
@@ -583,7 +595,11 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   .home-methodology-inner {
     grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
     gap: clamp(48px, 6vw, 88px);
-    align-items: center;
+    /* align-items: start (inherited) — both columns share the same
+       top edge, so the dark sequence card aligns flush with the
+       eyebrow on the left rather than vertically centering against
+       the longer left column and floating awkwardly in the middle. */
+    align-items: start;
   }
 }
 .home-methodology-copy {
