@@ -981,14 +981,34 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 .subnav-link.active { color: var(--faa-white); }
 .subnav-link.active::after { background: var(--faa-blue-light); }
 
-/* Primary nav block — add extra breathing room between the FAA
-   wordmark logo and the first nav item ("Home"). The HTML uses
-   `mx-6` (24px each side) which leaves Home visually crowded
-   against the logo on wide screens. Higher specificity than the
-   Tailwind utility so we override only the left margin and leave
-   the right margin (24px) intact for the CTA cluster. */
+/* Primary nav block — clamp-based responsive spacing.
+   The HTML uses `mx-6 gap-6` (24px each side, 24px between items)
+   which is too tight on wide screens (Home crowds the logo, the
+   utility cluster crowds About). Higher specificity than the
+   Tailwind utilities so we override the left+right margins AND
+   the inter-link gap with clamp() values that scale with the
+   viewport. The nav only renders at >=1280px (`hidden xl:flex`),
+   so the clamp range is tuned for desktop widths. */
 #site-header nav[aria-label="Primary"] {
-  margin-left: 48px;
+  margin-left: clamp(32px, 4vw, 56px);
+  margin-right: clamp(24px, 3vw, 44px);
+  gap: clamp(18px, 1.7vw, 30px);
+}
+@media (max-width: 1366px) {
+  /* Narrow desktop — tighten the inter-link gap a touch so the six
+     primary links + right utility cluster never wrap. */
+  #site-header nav[aria-label="Primary"] {
+    margin-left: clamp(24px, 3vw, 40px);
+    margin-right: clamp(16px, 2vw, 28px);
+    gap: clamp(14px, 1.4vw, 22px);
+  }
+}
+/* Caret on dropdown triggers — small extra breathing room between
+   the label text and the caret arrow. The .utilnav-link gap:6px
+   already handles base spacing; this nudge prevents the caret from
+   visually fusing with the last letter at certain font weights. */
+.utilnav-link .caret {
+  margin-left: 1px;
 }
 
 /* Utility nav links */
