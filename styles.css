@@ -877,108 +877,89 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 }
 
 /* ─────────────────────────────────────────────────────────────────
-   Methodology pillar mega-menu — premium image-card variant.
-   Three equal columns, each card has its content (number + title +
-   dek) sitting on a near-white field at the top and a faint
-   landscape image fading in toward the bottom. Lives inside the
-   existing full-width .mega-menu drop so it keeps the FAA nav
-   pattern; it does not become a floating rounded card.
+   Methodology pillar mega-menu — side-by-side image + copy layout.
+   Three horizontal cards stacked vertically inside the dropdown.
+   Each card: photographic thumbnail on the left (~38%), executive
+   copy on the right (~62%). Replaces the prior full-card image-
+   with-overlay treatment so the photography reads clearly and the
+   copy is no longer washed out by a gradient.
    Used only by the Methodology dropdown — AI Training still uses
-   the lighter .mega-method-cards/.mega-method-card pattern above.
+   the .mega-method-cards/.mega-method-card pattern above.
 ───────────────────────────────────────────────────────────────── */
 .mega-pillar-cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
-}
-@media (min-width: 768px) {
-  .mega-pillar-cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0;
-    border: 1px solid var(--faa-gray-100);
-    border-radius: 8px;
-    overflow: hidden;
-    background: var(--faa-white);
-  }
+  gap: 14px;
 }
 .mega-pillar-card {
-  position: relative;
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr;
   overflow: hidden;
-  /* Heights bumped to accommodate larger card typography (num/title/
-     dek/copy were all scaled ~47%). Image area still gets enough
-     room to read as imagery, not a stripe. */
-  min-height: 440px;
   text-decoration: none;
   background: var(--faa-white);
-  transition: transform 220ms ease-out;
-  isolation: isolate;
-}
-@media (min-width: 1280px) {
-  .mega-pillar-card { min-height: 480px; }
-}
-@media (min-width: 1536px) {
-  .mega-pillar-card { min-height: 520px; }
+  border: 1px solid var(--faa-gray-100);
+  border-radius: 8px;
+  transition: transform 220ms ease-out, border-color 200ms ease-out, box-shadow 220ms ease-out;
 }
 @media (min-width: 768px) {
-  .mega-pillar-card + .mega-pillar-card {
-    border-left: 1px solid var(--faa-gray-100);
+  .mega-pillar-card {
+    /* Image ~38% / content ~62% — within the design spec's 34-42%
+       / 58-66% range. */
+    grid-template-columns: 38% minmax(0, 1fr);
+    align-items: stretch;
+    /* Equalize card heights across the three pillars so the image
+       aspect ratios match even though the copy lengths differ. */
+    min-height: 200px;
+  }
+}
+@media (min-width: 1280px) {
+  .mega-pillar-card {
+    min-height: 220px;
   }
 }
 .mega-pillar-card__image {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+  position: relative;
+  aspect-ratio: 16 / 10;
   background-size: cover;
-  /* Show the top of each image — the strongest part of the
-     compositions sits near the upper-middle of the frame. */
-  background-position: center top;
+  background-position: center;
   background-repeat: no-repeat;
   transition: transform 600ms ease-out;
+  /* Photographs stand on their own — no overlay wash. The slight
+     border-right keeps a hairline between image and copy at the
+     seam. */
+  border-right: 1px solid var(--faa-gray-100);
 }
-/* Inverted gradient: image stays open at the top, wash thickens
-   toward the bottom so the four text rows (num, title, dek, copy)
-   read cleanly. Sits above the image, below the content. */
-.mega-pillar-card__image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* Wash extended into the lower-middle so the content block (which
-     now starts at ~52% from the top of the card) sits on a strong
-     white backdrop. Above ~55% the image reads clearly. */
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.94) 0%,
-    rgba(255, 255, 255, 0.90) 40%,
-    rgba(255, 255, 255, 0.72) 55%,
-    rgba(255, 255, 255, 0.20) 75%,
-    rgba(255, 255, 255, 0.00) 100%
-  );
-}
-/* Content block pinned at a fixed offset from the TOP of the tile
-   so the step number (01/02/03), title, dek, and copy on all three
-   cards line up at exactly the same Y. The image still reveals
-   itself in the upper ~52% of each card; the lower half carries
-   the wash + content. A previous bottom-anchored variant let
-   subtle content-height differences misalign the numbers. */
-.mega-pillar-card__content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 52%;
-  bottom: auto;
-  z-index: 2;
-  padding: 0 28px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+@media (min-width: 768px) {
+  .mega-pillar-card__image {
+    /* Stretch to card height on desktop so image and copy column
+       are always equal-height. */
+    aspect-ratio: auto;
+    min-height: 160px;
+  }
 }
 @media (min-width: 1280px) {
-  .mega-pillar-card__content { padding: 0 36px 28px; gap: 10px; }
+  .mega-pillar-card__image { min-height: 180px; }
+}
+/* Drop the previous gradient wash — image is no longer text-bearing. */
+.mega-pillar-card__image::after {
+  display: none;
+}
+.mega-pillar-card__content {
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .mega-pillar-card__content {
+    padding: 22px 28px;
+    gap: 8px;
+  }
 }
 .mega-pillar-card__num {
   display: inline-block;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -987,38 +968,38 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 .mega-pillar-card__title {
   margin: 0;
   color: var(--faa-navy);
-  font-size: clamp(22px, 1.6vw, 28px);
+  font-size: 19px;
   font-weight: 600;
-  line-height: 1.15;
+  line-height: 1.2;
   letter-spacing: -0.01em;
   transition: color 200ms ease-out;
+}
+@media (min-width: 1280px) {
+  .mega-pillar-card__title { font-size: 21px; }
 }
 .mega-pillar-card__dek {
   margin: 0;
   color: var(--faa-gray-700);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1.4;
 }
-/* Secondary explanatory sentence: visually grouped with the dek
-   above it via a small negative margin. Color matches the dek;
-   hierarchy comes from font-size/weight, not from a faded color.
-   Hidden on narrow viewports where the cards collapse into the
-   mobile hamburger panel. */
 .mega-pillar-card__copy {
-  margin: -2px 0 0;
-  max-width: 36ch;
-  color: var(--faa-gray-700);
+  margin: 0;
+  max-width: 56ch;
+  color: var(--faa-gray-600);
   font-size: 13px;
-  font-weight: 500;
-  line-height: 1.45;
+  font-weight: 400;
+  line-height: 1.5;
 }
 @media (max-width: 1023px) {
   .mega-pillar-card__copy { display: none; }
 }
 .mega-pillar-card:hover,
 .mega-pillar-card:focus-visible {
-  transform: translateY(-2px);
+  border-color: var(--faa-blue);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
 }
 .mega-pillar-card:hover .mega-pillar-card__title,
 .mega-pillar-card:focus-visible .mega-pillar-card__title {
@@ -1026,11 +1007,11 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 }
 .mega-pillar-card:hover .mega-pillar-card__image,
 .mega-pillar-card:focus-visible .mega-pillar-card__image {
-  transform: scale(1.025);
+  transform: scale(1.03);
 }
 .mega-pillar-card:focus-visible {
   outline: 2px solid var(--faa-blue);
-  outline-offset: -2px;
+  outline-offset: 2px;
 }
 .mega-pillar-card--01 .mega-pillar-card__image {
   background-image: url('/assets/navigation/methodology/methodology-data-curation-governance.webp');
