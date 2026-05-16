@@ -2709,14 +2709,21 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   /* Restore the .pillar-card-visual on mobile and place it on top.
      The base 1023px breakpoint already sized this 16:7; tweak to
      16:9 for mobile so the image reads taller relative to the
-     narrower card width. */
+     narrower card width.
+
+     Use BOTH aspect-ratio and an explicit min-height (180px) so the
+     cell always has height even on mobile browsers where
+     aspect-ratio fails to compute on grid items with min-height: 0
+     (observed on Chrome Android and older iOS Safari). With both
+     declarations, modern browsers use the aspect-ratio intrinsic
+     height; legacy browsers fall back to the 180px floor. */
   .pillar-card.pillar-card--data .pillar-card-visual,
   .pillar-card.pillar-card--workflow .pillar-card-visual,
   .pillar-card.pillar-card--ai .pillar-card-visual {
     display: block;
     grid-area: visual;
     aspect-ratio: 16 / 9;
-    min-height: 0;
+    min-height: 180px;
     border-left: 0;
     border-top: 0;
     border-bottom: 1px solid var(--faa-gray-200);
