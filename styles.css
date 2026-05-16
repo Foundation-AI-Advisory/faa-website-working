@@ -3865,6 +3865,36 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
+/* AI Frontiers page hero — uses a custom AlphaFold-inspired ribbon
+   image with its own dark navy negative space baked into the left
+   half. The global .page-hero-overlay default is too heavy here (it
+   was tuned for brighter abstract flow imagery), so we replace it
+   with a lighter horizontal wash that just adds enough contrast over
+   the already-dark left zone for the white headline to read, and
+   stays nearly transparent over the colorful right half so the
+   ribbon structures show in near-natural color. */
+.ai-frontiers-hero .page-hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(5, 15, 32, 0.78) 0%,
+      rgba(5, 15, 32, 0.56) 34%,
+      rgba(5, 15, 32, 0.22) 62%,
+      rgba(5, 15, 32, 0.06) 100%);
+}
+@media (max-width: 1023px) {
+  /* Mobile: hero stacks and text sits over the full image width, so
+     swap the horizontal wash for a top-down wash that protects the
+     headline and dek without burying the colorful ribbons in the
+     lower portion of the frame. */
+  .ai-frontiers-hero .page-hero-overlay {
+    background:
+      linear-gradient(180deg,
+        rgba(5, 15, 32, 0.80) 0%,
+        rgba(5, 15, 32, 0.62) 55%,
+        rgba(5, 15, 32, 0.42) 100%);
+  }
+}
+
 /* AI Decision Questions page — primary-content Q&A treatment.
    Reuses the FAQ <dl>/<dt>/<dd> semantics already used by the
    methodology AEO panel, but at body-text scale and full-content
