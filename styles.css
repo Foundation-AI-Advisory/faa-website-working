@@ -59,10 +59,96 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 .body-lg { font-size: 18px; line-height: 1.6; }
 .body { font-size: 16px; line-height: 1.6; }
 
-/* CTA buttons */
-.btn { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 20px; font-size: 14px; font-weight: 600; border-radius: 4px; transition: all 180ms ease-out; letter-spacing: 0.01em; white-space: nowrap; }
-.btn-primary { background: var(--faa-blue); color: var(--faa-white); border: 1px solid var(--faa-blue); }
-.btn-primary:hover { background: var(--faa-navy); border-color: var(--faa-navy); }
+/* CTA buttons
+   ----------
+   Frontier Signal CTA system. The primary button uses a blue->cyan
+   gradient with a subtle cyan rim, a soft glow shadow, a right-side
+   angled "signal" wedge, and a moderate 10px radius — the same
+   treatment that originated on the /ai-frontiers/ hero CTA, now
+   applied site-wide for consistency. Existing button sizes
+   (44px .btn height, .mobile-header-cta compact size, etc.) are
+   preserved — only the visual treatment is unified. */
+
+/* Shared CTA design tokens. Centralized so the gradient, rim, and
+   glow can be tuned once and propagated to every primary CTA
+   variant (global .btn-primary, .mobile-header-cta, .mobile-menu-cta,
+   and the page-scoped .hero-cta-frontier). */
+:root {
+  --faa-cta-radius: 10px;
+  --faa-cta-bg: linear-gradient(135deg, #0b5f9f 0%, #0d75bd 52%, #11a4c2 100%);
+  --faa-cta-bg-hover: linear-gradient(135deg, #0c69ad 0%, #0f81cf 52%, #14b6d6 100%);
+  --faa-cta-border: rgba(88, 214, 238, 0.55);
+  --faa-cta-border-hover: rgba(134, 232, 255, 0.92);
+  --faa-cta-text: #ffffff;
+  --faa-cta-shadow: 0 12px 28px rgba(0, 35, 80, 0.28), 0 0 18px rgba(17, 164, 194, 0.16);
+  --faa-cta-shadow-hover: 0 18px 38px rgba(0, 35, 80, 0.38), 0 0 26px rgba(17, 164, 194, 0.28);
+  --faa-cta-focus: rgba(156, 207, 243, 0.95);
+}
+
+.btn { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 20px; font-size: 14px; font-weight: 600; border-radius: var(--faa-cta-radius); transition: all 180ms ease-out; letter-spacing: 0.01em; white-space: nowrap; }
+
+/* Primary CTA — the Frontier Signal treatment.
+   isolation: isolate is required so the ::before and ::after layers
+   stack under the label (via z-index: -1) but don't punch through
+   the parent's stacking context. overflow: hidden clips the wedge
+   to the rounded corners. */
+.btn-primary {
+  position: relative;
+  background: var(--faa-cta-bg);
+  color: var(--faa-cta-text);
+  border: 1px solid var(--faa-cta-border);
+  box-shadow: var(--faa-cta-shadow);
+  overflow: hidden;
+  isolation: isolate;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: var(--faa-cta-bg-hover);
+  border-color: var(--faa-cta-border-hover);
+  box-shadow: var(--faa-cta-shadow-hover);
+  transform: translateY(-2px);
+  color: var(--faa-cta-text);
+}
+.btn-primary:focus-visible {
+  outline: 3px solid var(--faa-cta-focus);
+  outline-offset: 4px;
+}
+/* Right-side angled signal accent — a brighter cyan-blue wedge
+   clipped at the top-left so the label always reads cleanly over
+   the darker left side of the gradient. width: clamp() so the wedge
+   scales with the button instead of dominating short labels. */
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: clamp(44px, 22%, 78px);
+  height: 100%;
+  background: linear-gradient(135deg, rgba(32, 205, 230, 0.72), rgba(36, 130, 204, 0.58));
+  clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+/* Diagonal highlight that sweeps left -> right on hover. Subtle
+   "signal" cue, no JS required. */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.22), transparent 36%),
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+  opacity: 0.45;
+  transform: translateX(-40%);
+  transition: transform 280ms ease, opacity 280ms ease;
+  z-index: -1;
+  pointer-events: none;
+}
+.btn-primary:hover::before {
+  transform: translateX(22%);
+  opacity: 0.7;
+}
+
 .btn-outline-navy { background: transparent; color: var(--faa-navy); border: 1px solid var(--faa-navy); }
 .btn-outline-navy:hover { background: var(--faa-navy); color: var(--faa-white); }
 .btn-outline-white { background: transparent; color: var(--faa-white); border: 1px solid var(--faa-white); }
@@ -1019,24 +1105,38 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   border-bottom: 1px solid var(--faa-gray-100);
 }
 .mobile-menu-panel .mobile-menu-cta {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin-top: 12px;
   padding: 14px 16px;
-  background: var(--faa-blue);
-  color: var(--faa-white);
+  /* Shares the Frontier Signal treatment with the rest of the CTA
+     system. Full-width inside the hamburger panel so we keep the
+     wedge accent suppressed (a polygon doesn't look right under a
+     full-width pill on small screens). */
+  background: var(--faa-cta-bg);
+  color: var(--faa-cta-text);
   font-weight: 600;
   font-size: 15px;
-  border: 1px solid var(--faa-blue);
-  border-radius: 4px;
+  border: 1px solid var(--faa-cta-border);
+  border-radius: var(--faa-cta-radius);
   text-align: center;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(0, 35, 80, 0.24), 0 0 14px rgba(17, 164, 194, 0.18);
+  transition: background 180ms ease-out, border-color 180ms ease-out, box-shadow 180ms ease-out;
 }
-.mobile-menu-panel .mobile-menu-cta:hover {
-  background: var(--faa-navy);
-  border-color: var(--faa-navy);
-  color: var(--faa-white);
+.mobile-menu-panel .mobile-menu-cta:hover,
+.mobile-menu-panel .mobile-menu-cta:focus-visible {
+  background: var(--faa-cta-bg-hover);
+  border-color: var(--faa-cta-border-hover);
+  color: var(--faa-cta-text);
+  box-shadow: 0 14px 28px rgba(0, 35, 80, 0.32), 0 0 18px rgba(17, 164, 194, 0.26);
+}
+.mobile-menu-panel .mobile-menu-cta:focus-visible {
+  outline: 2px solid var(--faa-cta-focus);
+  outline-offset: 2px;
 }
 @media (min-width: 1280px) {
   .mobile-menu-toggle,
@@ -4351,28 +4451,37 @@ a:focus-visible, button:focus-visible, input:focus-visible {
    Links to the same mailto destination as the desktop BSA button
    so the mobile and desktop CTAs behave identically. */
 .mobile-header-cta {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-right: 12px;
-  padding: 8px 12px;
-  background: var(--faa-blue);
-  color: var(--faa-white);
+  padding: 8px 14px;
+  /* Frontier Signal gradient — shared with the global .btn-primary so
+     the mobile header CTA reads as part of the same CTA system. The
+     wedge accent is suppressed here because the button is too
+     compact (sub-32px tall) for the polygon to render cleanly. */
+  background: var(--faa-cta-bg);
+  color: var(--faa-cta-text);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.02em;
-  border-radius: 4px;
+  border: 1px solid var(--faa-cta-border);
+  border-radius: var(--faa-cta-radius);
   white-space: nowrap;
   text-decoration: none;
-  transition: background-color 180ms ease-out;
+  box-shadow: 0 6px 16px rgba(0, 35, 80, 0.22), 0 0 12px rgba(17, 164, 194, 0.16);
+  transition: background 180ms ease-out, border-color 180ms ease-out, box-shadow 180ms ease-out, transform 180ms ease-out;
 }
 .mobile-header-cta:hover,
 .mobile-header-cta:focus-visible {
-  background: var(--faa-navy);
-  color: var(--faa-white);
+  background: var(--faa-cta-bg-hover);
+  border-color: var(--faa-cta-border-hover);
+  color: var(--faa-cta-text);
+  box-shadow: 0 8px 20px rgba(0, 35, 80, 0.30), 0 0 16px rgba(17, 164, 194, 0.26);
 }
 .mobile-header-cta:focus-visible {
-  outline: 2px solid var(--faa-blue);
+  outline: 2px solid var(--faa-cta-focus);
   outline-offset: 2px;
 }
 @media (min-width: 640px) {
