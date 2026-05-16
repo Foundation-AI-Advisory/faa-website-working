@@ -2700,13 +2700,15 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .pillar-card.pillar-card--workflow,
   .pillar-card.pillar-card--ai {
     background-color: var(--faa-white);
-    /* Full-bleed card: image stretches edge-to-edge of the viewport,
-       body text beneath has standard mobile padding. Negative-margin
-       trick (calc(50% - 50vw)) lets the card escape the container
-       padding without restructuring the parent. */
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    /* Full-bleed card: extend beyond the .container-faa 24px padding
+       with simple negative margins so the card hits the screen edges.
+       The previous width: 100vw + calc() approach worked in Chrome
+       but failed inside iOS Safari flex columns — the flex parent
+       constrained the child despite the vw declaration. Plain
+       negative margins always win because they don't depend on the
+       child's own width being expanded. */
+    margin-left: -24px;
+    margin-right: -24px;
     border-left: 0;
     border-right: 0;
     border-radius: 0;
