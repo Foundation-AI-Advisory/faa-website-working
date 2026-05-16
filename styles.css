@@ -141,6 +141,188 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
 }
 
 /* ─────────────────────────────────────────────────────────────────
+   Foundation Sequence Band — home page transition section that sits
+   between the hero carousel and the white methodology block. Deep
+   navy surface with a thin FAA-blue accent rule along the top,
+   three numbered methodology cards in a row at desktop / stacked at
+   mobile, plus a single restrained "See the methodology" text link.
+
+   The band exists to add color and visual rhythm between two large
+   editorial sections — it should read as a confident executive
+   checkpoint, not a marketing banner. Imagery is pure
+   typography + color + thin rules; no icons, no illustrations.
+───────────────────────────────────────────────────────────────── */
+.foundation-sequence-band {
+  position: relative;
+  background: var(--faa-navy);
+  color: var(--faa-white);
+  /* Top accent rule in FAA blue — signals the section identity
+     without needing a heavy header treatment. */
+  border-top: 3px solid var(--faa-blue);
+}
+.foundation-sequence-band__inner {
+  /* container-faa already supplies horizontal padding and
+     max-width; here we just add the vertical rhythm. */
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+@media (min-width: 1024px) {
+  .foundation-sequence-band__inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+.foundation-sequence-band__copy {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+.foundation-sequence-band__eyebrow {
+  margin: 0 0 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faa-blue);
+  line-height: 1.3;
+}
+.foundation-sequence-band__headline {
+  margin: 0;
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  color: var(--faa-white);
+}
+.foundation-sequence-band__body {
+  margin: 18px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  /* Soft blue-gray for supporting copy so it reads as secondary
+     against the white headline above. */
+  color: rgba(255, 255, 255, 0.78);
+}
+@media (min-width: 1024px) {
+  .foundation-sequence-band__body {
+    font-size: 17px;
+    margin-top: 20px;
+  }
+}
+
+.foundation-sequence-band__cards {
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+@media (min-width: 768px) {
+  .foundation-sequence-band__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 44px;
+  }
+}
+@media (min-width: 1280px) {
+  .foundation-sequence-band__cards {
+    gap: 20px;
+    margin-top: 52px;
+  }
+}
+
+.foundation-sequence-card {
+  position: relative;
+  padding: 22px 22px 24px;
+  /* Lift the card off the navy surface with a slightly lighter
+     translucent fill + a faint 1px rule. Holds together as a
+     premium executive card without competing with the headline. */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 6px;
+  transition: border-color 200ms ease-out, background-color 200ms ease-out, transform 220ms ease-out;
+}
+.foundation-sequence-card:hover,
+.foundation-sequence-card:focus-within {
+  border-color: rgba(86, 156, 214, 0.55);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+.foundation-sequence-card__num {
+  display: inline-block;
+  font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--faa-blue);
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: 0;
+}
+@media (min-width: 1024px) {
+  .foundation-sequence-card__num {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+}
+.foundation-sequence-card__title {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--faa-white);
+  letter-spacing: -0.005em;
+}
+@media (min-width: 1024px) {
+  .foundation-sequence-card__title {
+    font-size: 18px;
+  }
+}
+.foundation-sequence-card__copy {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.foundation-sequence-band__cta {
+  display: inline-flex;
+  align-items: center;
+  margin: 28px auto 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--faa-blue);
+  text-decoration: none;
+  transition: color 180ms ease-out;
+  /* Center the CTA under the cards block; .copy block above is
+     also centered so the band reads as a single column of
+     centered content. */
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+}
+.foundation-sequence-band__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foundation-sequence-band__cta:hover,
+.foundation-sequence-band__cta:focus-visible {
+  color: var(--faa-white);
+}
+.foundation-sequence-band__cta:focus-visible {
+  outline: 2px solid var(--faa-blue);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+@media (min-width: 1024px) {
+  .foundation-sequence-band__cta {
+    margin-top: 36px;
+    font-size: 15px;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────
    Engagement Model section (homepage "How to Engage")
    Editorial pathway: three large horizontal panels representing the
    diagnose → execute → scale sequence. Alternating image/copy
