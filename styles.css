@@ -1781,6 +1781,21 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   padding-top: 34px;
   border-top: 1px solid var(--faa-gray-100);
 }
+/* Italicized footer paragraph at the end of an article body
+   (e.g. "Foundation AI Advisory works with..."). Visually separated
+   from the body with a hairline rule and a softer gray, marking the
+   transition from article voice to firm voice. */
+.insight-detail-footer-note {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--faa-gray-100);
+  color: var(--faa-gray-600);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.insight-detail-footer-note em {
+  font-style: italic;
+}
 .insight-audio {
   margin: 0 0 42px;
   padding: 24px;
