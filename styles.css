@@ -2692,87 +2692,52 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
 }
 
-/* Mobile only: apply the Methodology mega-menu pillar images as
-   faint card backgrounds so the homepage pillars feel continuous
-   with the dropdown. White wash matches the mega-menu treatment
-   so text stays dark and readable. Hides the stacked visual below
-   the body since it would now duplicate the same image. Desktop
-   and tablet (>=768px) are untouched.
+/* Mobile (<=767px): stack the home pillar visual ABOVE the body so
+   the home page pillar cards behave like the insights article cards
+   on mobile — image first, then number + content beneath. Replaces
+   an earlier treatment that painted the Methodology dropdown image
+   as a washed-out card background; that read as too soft, so it has
+   been removed.
 
-   Selectors use the compound form (.pillar-card.pillar-card--data)
-   to raise specificity above the base .pillar-card rule, so iOS
-   Safari can't quietly drop the background-image back to the base
-   value during style recalculation. */
+   The image shown is the home page pillar visual itself
+   (homepage-pillar-*.webp), already lightened by the .pillar-card-
+   visual img filter so the cinematic shots feel open on small
+   screens too. */
 @media (max-width: 767px) {
   .pillar-card.pillar-card--data,
   .pillar-card.pillar-card--workflow,
   .pillar-card.pillar-card--ai {
-    position: relative;
     background-color: var(--faa-white);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    isolation: isolate;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "visual visual"
+      "num body";
   }
-  .pillar-card.pillar-card--data {
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.80) 0%,
-        rgba(255, 255, 255, 0.70) 100%
-      ),
-      url('/assets/navigation/methodology/methodology-data-curation-governance.webp');
-  }
-  .pillar-card.pillar-card--workflow {
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.80) 0%,
-        rgba(255, 255, 255, 0.70) 100%
-      ),
-      url('/assets/navigation/methodology/methodology-workflow-optimization.webp');
-  }
-  .pillar-card.pillar-card--ai {
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.80) 0%,
-        rgba(255, 255, 255, 0.70) 100%
-      ),
-      url('/assets/navigation/methodology/methodology-ai-design-implementation.webp');
-  }
-  /* Pillar number rail: keep its top/bottom rhythm but make the
-     fill translucent so the image shows through subtly. Longhand
-     property so it doesn't wipe a possibly inherited image stack. */
-  .pillar-card.pillar-card--data .pillar-card-num,
-  .pillar-card.pillar-card--workflow .pillar-card-num,
-  .pillar-card.pillar-card--ai .pillar-card-num {
-    background-color: rgba(255, 255, 255, 0.32);
-    border-right-color: rgba(15, 23, 42, 0.08);
-  }
-  /* Stacked visual at the bottom is now redundant with the card
-     background — hide it on phones only. */
+  /* Restore the .pillar-card-visual on mobile and place it on top.
+     The base 1023px breakpoint already sized this 16:7; tweak to
+     16:9 for mobile so the image reads taller relative to the
+     narrower card width. */
   .pillar-card.pillar-card--data .pillar-card-visual,
   .pillar-card.pillar-card--workflow .pillar-card-visual,
   .pillar-card.pillar-card--ai .pillar-card-visual {
-    display: none;
+    display: block;
+    grid-area: visual;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid var(--faa-gray-200);
   }
-  /* Touch devices: keep the wash steady on tap (no hover swap). */
-  .pillar-card.pillar-card--data:hover,
-  .pillar-card.pillar-card--workflow:hover,
-  .pillar-card.pillar-card--ai:hover {
-    background-color: var(--faa-white);
-  }
-
-  /* Stronger typography for legibility over the photo backgrounds.
-     Scoped to the three image-backed pillar cards only — desktop
-     and any other .pillar-card usage stays untouched. */
+  /* Number rail back to a clean white treatment now that no photo
+     bleeds through. */
   .pillar-card.pillar-card--data .pillar-card-num,
   .pillar-card.pillar-card--workflow .pillar-card-num,
   .pillar-card.pillar-card--ai .pillar-card-num {
+    background-color: transparent;
     color: var(--faa-navy);
     font-weight: 700;
+    border-right: 1px solid var(--faa-gray-200);
   }
   .pillar-card.pillar-card--data .pillar-card-num::before,
   .pillar-card.pillar-card--workflow .pillar-card-num::before,
@@ -2780,6 +2745,10 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     color: var(--faa-gray-700);
     font-weight: 700;
   }
+  /* Body typography stays slightly heavier than desktop for mobile
+     readability — same treatment the earlier washed-background
+     version used, kept because it scans well on phones regardless
+     of background. */
   .pillar-card.pillar-card--data .pillar-card-body .kicker,
   .pillar-card.pillar-card--workflow .pillar-card-body .kicker,
   .pillar-card.pillar-card--ai .pillar-card-body .kicker {
