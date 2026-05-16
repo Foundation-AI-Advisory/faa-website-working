@@ -2700,24 +2700,74 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .pillar-card.pillar-card--workflow,
   .pillar-card.pillar-card--ai {
     background-color: var(--faa-white);
-    /* Single column on mobile — full-bleed image on top, body
-       beneath, no separate PILLAR/01 rail. Matches the insights
-       article card pattern, removes the narrow left column and
-       its vertical divider that wasted horizontal space and
-       awkwardly split each card. */
+    /* Full-bleed card: image stretches edge-to-edge of the viewport,
+       body text beneath has standard mobile padding. Negative-margin
+       trick (calc(50% - 50vw)) lets the card escape the container
+       padding without restructuring the parent. */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
       "visual"
       "body";
+    position: relative;
   }
-  /* Hide the PILLAR/01 number column on mobile. Sequence is implied
-     by card order; the kicker ("DATA CURATION & GOVERNANCE", etc.)
-     already labels each pillar. */
+  /* Repurpose .pillar-card-num as a "PILLAR 0X" pill badge anchored
+     to the top-right corner of the image. The element already carries
+     the number ("01"/"02"/"03") as its text and "PILLAR" as a
+     ::before pseudo-element; reset the column styles and re-style as
+     an inline pill so both pieces read as a single horizontal label. */
   .pillar-card.pillar-card--data .pillar-card-num,
   .pillar-card.pillar-card--workflow .pillar-card-num,
   .pillar-card.pillar-card--ai .pillar-card-num {
-    display: none;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 6px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 3;
+    padding: 7px 12px;
+    background: var(--faa-white);
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faa-navy);
+    line-height: 1;
+  }
+  .pillar-card.pillar-card--data .pillar-card-num::before,
+  .pillar-card.pillar-card--workflow .pillar-card-num::before,
+  .pillar-card.pillar-card--ai .pillar-card-num::before {
+    content: "Pillar";
+    display: inline;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faa-navy);
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
+  /* Body padding on mobile — single column, no left rail, so the
+     standard horizontal gutter is reasonable. */
+  .pillar-card.pillar-card--data .pillar-card-body,
+  .pillar-card.pillar-card--workflow .pillar-card-body,
+  .pillar-card.pillar-card--ai .pillar-card-body {
+    grid-area: body;
+    padding: 24px 24px 28px;
   }
   /* Restore the .pillar-card-visual on mobile and place it on top.
      The base 1023px breakpoint already sized this 16:7; tweak to
@@ -2740,22 +2790,6 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     border-left: 0;
     border-top: 0;
     border-bottom: 1px solid var(--faa-gray-200);
-  }
-  /* Number rail back to a clean white treatment now that no photo
-     bleeds through. */
-  .pillar-card.pillar-card--data .pillar-card-num,
-  .pillar-card.pillar-card--workflow .pillar-card-num,
-  .pillar-card.pillar-card--ai .pillar-card-num {
-    background-color: transparent;
-    color: var(--faa-navy);
-    font-weight: 700;
-    border-right: 1px solid var(--faa-gray-200);
-  }
-  .pillar-card.pillar-card--data .pillar-card-num::before,
-  .pillar-card.pillar-card--workflow .pillar-card-num::before,
-  .pillar-card.pillar-card--ai .pillar-card-num::before {
-    color: var(--faa-gray-700);
-    font-weight: 700;
   }
   /* Body typography stays slightly heavier than desktop for mobile
      readability — same treatment the earlier washed-background
