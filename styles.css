@@ -2051,6 +2051,28 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   font-weight: 600;
   line-height: 1.45;
 }
+/* Lede typography is inherited from .insight-detail-body p (font-size
+   18px, line-height 1.72) which has higher specificity than the
+   single-class .capital-scorecard__lede above. Override with a
+   compound selector so the min-height fires correctly.
+
+   In the narrow 194px scorecard columns at desktop, the three ledes
+   wrap to different line counts: Green and Red wrap to 2 lines each
+   (~62px), Yellow wraps to 4 lines (~124px) because its copy is
+   roughly twice as long. Without intervention, the Yellow column's
+   first bullet sits ~62px lower than the other two, making the row
+   of first bullets read jagged.
+
+   Reserve 4 lines of vertical space on desktop so all three ledes
+   occupy the same height block and the first bullet aligns across
+   columns. Green and Red carry empty space below their lede text;
+   the bullets line up — which is what the visual rhythm requires.
+   Stacked mobile layout has no alignment concern. */
+@media (min-width: 1024px) {
+  .insight-detail-body p.capital-scorecard__lede {
+    min-height: calc(4 * 1.72em);
+  }
+}
 .capital-scorecard__list {
   margin: 0;
   padding-left: 18px;
