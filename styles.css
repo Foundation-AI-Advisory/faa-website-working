@@ -2786,6 +2786,85 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   padding-top: 34px;
   border-top: 1px solid var(--faa-gray-100);
 }
+/* Optional supporting copy that sits above the CTA buttons. Used on
+   long-form insights that frame the CTA with an executive lede
+   before the action row. */
+.insight-article-cta__lede {
+  margin: 0 0 22px;
+  color: var(--faa-gray-700);
+  font-size: 17px;
+  line-height: 1.62;
+  max-width: 60ch;
+}
+.insight-article-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 22px;
+}
+.insight-article-cta__secondary {
+  color: var(--faa-blue);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Inline Key Questions / Executive FAQ section near the bottom of a
+   long-form insight article. Sits inside .insight-detail-body so it
+   inherits article width + typography, but uses a light-tinted card
+   with a navy left rule to read as a distinct AEO/FAQ block — both
+   for human readers and for the FAQPage JSON-LD that mirrors it. */
+.insight-key-questions {
+  margin: 56px 0 24px;
+  padding: 28px 28px 12px;
+  background: linear-gradient(180deg, rgba(247, 251, 255, 0.95), rgba(238, 245, 251, 0.85));
+  border-left: 3px solid var(--faa-blue);
+  border-radius: 6px;
+}
+.insight-key-questions__eyebrow {
+  margin: 0 0 8px;
+  color: var(--faa-blue);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.insight-key-questions__heading {
+  margin: 0 0 22px;
+  color: var(--faa-navy);
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.insight-key-questions__list {
+  margin: 0;
+}
+.insight-key-questions__item {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(45, 104, 158, 0.16);
+}
+.insight-key-questions__item:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 12px;
+}
+.insight-key-questions__item dt {
+  margin: 0 0 8px;
+  color: var(--faa-navy);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.insight-key-questions__item dd {
+  margin: 0;
+  color: var(--faa-gray-700);
+  font-size: 15px;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  .insight-key-questions {
+    padding: 22px 18px 6px;
+  }
+}
 /* Article hero image — sits inside the .insight-detail-hero block
    between the meta row and the H1 title. Used on long-form executive
    guides where the photo establishes the subject visually before the
