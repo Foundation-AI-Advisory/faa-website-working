@@ -1896,6 +1896,176 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   padding-top: 34px;
   border-top: 1px solid var(--faa-gray-100);
 }
+/* Capital Decisions executive guide — page-specific blocks layered
+   on top of the insight-detail-* base. Adds a stronger CTA pair on
+   the hero, an executive-question pull style for the framework
+   sections, a 3-column Readiness Scorecard (green/yellow/red), and
+   a final CTA block with an objective/owner/next-step meta list.
+   Used only on /insights/capital-decisions/. */
+.capital-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.capital-hero-ctas .btn {
+  font-size: 14px;
+}
+
+/* Executive question callout — pulls the "what to ask" question
+   underneath each framework step out of the body flow with a left
+   rule and a small uppercase label. Restrained — meant to feel
+   like a margin note, not a banner. */
+.capital-executive-question {
+  margin: 24px 0;
+  padding: 14px 0 14px 18px;
+  border-left: 3px solid var(--faa-blue);
+  color: var(--faa-navy);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+.capital-executive-question__label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faa-blue);
+}
+
+/* AI Investment Readiness Scorecard — 3 cards (green/yellow/red).
+   Stacks on mobile, 3 columns on desktop. Each card uses its signal
+   color as the top accent rule and a matching color tint behind the
+   signal label. No traffic-light-only hierarchy; the signal label is
+   also real text so screen readers and color-blind users get the
+   information without relying on hue. */
+.capital-scorecard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 28px 0;
+}
+@media (min-width: 1024px) {
+  .capital-scorecard {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+.capital-scorecard__card {
+  padding: 22px 22px 24px;
+  background: var(--faa-white);
+  border: 1px solid var(--faa-gray-200);
+  border-radius: 4px;
+  border-top: 4px solid var(--faa-gray-400);
+}
+.capital-scorecard__card--green { border-top-color: #2e8b57; }
+.capital-scorecard__card--yellow { border-top-color: #c79a2e; }
+.capital-scorecard__card--red { border-top-color: #b3493d; }
+.capital-scorecard__signal {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  line-height: 1;
+}
+.capital-scorecard__card--green .capital-scorecard__signal {
+  background: rgba(46, 139, 87, 0.12);
+  color: #2e8b57;
+}
+.capital-scorecard__card--yellow .capital-scorecard__signal {
+  background: rgba(199, 154, 46, 0.14);
+  color: #8a6a14;
+}
+.capital-scorecard__card--red .capital-scorecard__signal {
+  background: rgba(179, 73, 61, 0.12);
+  color: #b3493d;
+}
+.capital-scorecard__lede {
+  margin: 0 0 10px;
+  color: var(--faa-navy);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.capital-scorecard__list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--faa-gray-700);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.capital-scorecard__list li {
+  margin-bottom: 4px;
+}
+.capital-scorecard__list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Capital Decisions final CTA block — extends .insight-article-cta
+   with a heading, a meta list (Objective / Owner / Next step /
+   Timeline / Business impact), and a stacked CTA pair. */
+.capital-final-cta__title {
+  margin: 0 0 14px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--faa-navy);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 1024px) {
+  .capital-final-cta__title { font-size: 28px; }
+}
+.capital-final-cta__lede {
+  margin: 0 0 22px;
+  color: var(--faa-gray-600);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.capital-final-cta__meta {
+  margin: 0 0 26px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+@media (min-width: 768px) {
+  .capital-final-cta__meta {
+    grid-template-columns: 140px 1fr;
+    gap: 12px 24px;
+  }
+  .capital-final-cta__meta > div {
+    display: contents;
+  }
+}
+.capital-final-cta__meta dt {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faa-navy);
+  line-height: 1.4;
+}
+.capital-final-cta__meta dd {
+  margin: 0;
+  color: var(--faa-gray-700);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.capital-final-cta__meta dd a {
+  color: var(--faa-blue);
+  font-weight: 600;
+}
+.capital-final-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 /* Italicized footer paragraph at the end of an article body
    (e.g. "Foundation AI Advisory works with..."). Visually separated
    from the body with a hairline rule and a softer gray, marking the
