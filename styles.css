@@ -3581,6 +3581,34 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   letter-spacing: 0.02em;
 }
 
+/* Article-level byline on insight detail pages. Sits between the
+   hero <figure class="insight-detail-image"> and the <article>
+   body, on the white body background — distinct from the existing
+   .insight-detail-byline class which is white-on-dark and lives
+   inside the hero section. Premium editorial treatment: small navy
+   author + middot + lighter date, with a hairline rule below to
+   separate it from the first paragraph of the article. */
+.insight-article-byline {
+  margin: 4px 0 28px;
+  padding: 0 0 18px;
+  border-bottom: 1px solid var(--faa-gray-100);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--faa-navy);
+  line-height: 1.45;
+  max-width: 760px;
+}
+.insight-article-byline__sep {
+  margin: 0 8px;
+  color: var(--faa-gray-400);
+  font-weight: 400;
+}
+.insight-article-byline__date {
+  color: var(--faa-gray-600);
+  font-weight: 500;
+}
+
 /* Italicized footer paragraph at the end of an article body
    (e.g. "Foundation AI Advisory works with..."). Visually separated
    from the body with a hairline rule and a softer gray, marking the
