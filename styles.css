@@ -635,6 +635,50 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
     justify-content: center;
   }
 }
+
+/* Homepage conversion block — mobile spacing for the dual-CTA
+   Business Systems Assessment / 90-Day AI Execution Sprint
+   panels. On desktop the panels sit side-by-side with a vertical
+   rule between them; on mobile they stack and the buttons feel
+   cramped against the body copy and the next panel. These rules
+   give the buttons real breathing room and make them feel like
+   substantial mobile tap targets without changing desktop. */
+@media (max-width: 1023px) {
+  .home-conversion-block .home-conversion-block__cta {
+    /* Pull the button further away from the body paragraph above. */
+    padding-top: 28px;
+  }
+  .home-conversion-block .home-conversion-block__cta .btn {
+    /* Bigger tap target on mobile — taller and wider than the
+       global 44px/20px default. Width: 100% lets the button span
+       the available column width so both stacked CTAs feel
+       balanced and finger-friendly. */
+    width: 100%;
+    min-height: 52px;
+    height: auto;
+    padding: 14px 20px;
+    font-size: 15px;
+    line-height: 1.25;
+    /* Allow long labels ("Start with a Business Systems
+       Assessment") to wrap rather than overflow the container or
+       shrink to two-thirds of viewport width. */
+    white-space: normal;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  /* Phone-class viewport — tighten the section padding from the
+     desktop 96px to a less wasteful 64px so the two panels don't
+     feel oceanic, and widen the gap between them so the second
+     panel reads as a deliberate alternative, not a continuation. */
+  .home-conversion-block > .container-faa {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+  .home-conversion-block .grid {
+    row-gap: 56px;
+  }
+}
 .home-methodology-outcomes {
   margin-top: clamp(28px, 3vw, 40px);
 }
