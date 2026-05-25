@@ -619,6 +619,22 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
      executive editorial feel on this hero-of-second-fold headline. */
   letter-spacing: -0.025em;
 }
+@media (max-width: 1023px) {
+  /* On mobile the section stacks to a single column. Center the
+     entire copy block (eyebrow, headline, body, outcome label, and
+     chips) so the layout reads as deliberate rather than
+     left-stranded under the dark sequence card. The block stays
+     left-aligned at >=1024px where it's the left column of the
+     two-column grid. */
+  .home-methodology-copy {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .home-methodology-outcomes__chips {
+    justify-content: center;
+  }
+}
 .home-methodology-outcomes {
   margin-top: clamp(28px, 3vw, 40px);
 }
