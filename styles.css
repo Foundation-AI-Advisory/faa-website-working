@@ -1188,6 +1188,27 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
     margin-bottom: 10px;
   }
 }
+
+/* Hero carousel image focal position on mobile.
+   ----------------------------------------------
+   The slide images are 1920x1097 landscape. Each slide's inline
+   `background-position: center center` works on desktop (where the
+   container itself is roughly landscape) but on a 390x880-ish phone
+   the image gets scaled to fill the 880px height, becoming ~1540px
+   wide — and "center center" trims ~575px from each side, leaving
+   only the dead-center 25% of the image visible. That dead-center
+   strip frequently misses the editorial subject (faces, monitors,
+   desks, document arrangements) which sits slightly above the
+   middle of the frame in this set.
+   The override pulls the focal point up to the 35% line — closer
+   to where the subject actually sits in each slide — without
+   changing desktop behavior. !important is required to defeat the
+   inline style attribute on each .hero-slide-image div. */
+@media (max-width: 1023px) {
+  .hero-carousel .hero-slide-image {
+    background-position: center 35% !important;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1180px) {
   .hero-text-block {
     width: min(34vw, 430px);
