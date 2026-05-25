@@ -513,6 +513,15 @@ h1, h2, h3, h4 { color: var(--faa-navy); }
   align-self: end;
   width: 100%;
   padding: 22px 22px 24px;
+  /* Critical: the content div sits at z-index 2, ABOVE the
+     stretched-link anchor (z-index 1). Without pointer-events: none
+     here, clicks on the visible text/number/CTA area land on the
+     content div (which has no href) instead of the underlying
+     anchor. Letting pointer events pass through restores
+     full-card clickability while keeping the text visually on top.
+     No interactive children live inside __content, so there's
+     nothing that needs to capture clicks on its own. */
+  pointer-events: none;
 }
 .foundation-sequence-card--image .foundation-sequence-card__num {
   /* Override the base card's navy left-rule num — over imagery the
