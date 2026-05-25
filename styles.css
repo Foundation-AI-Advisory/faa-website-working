@@ -5794,8 +5794,13 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
-  padding: 8px 14px;
+  /* Spacing — more room between the Assessment button and the
+     hamburger menu on the right, plus a touch more space from the
+     logo on the left so the button doesn't feel pinned between
+     the two adjacent elements on phone-class viewports. */
+  margin-right: 18px;
+  margin-left: 8px;
+  padding: 9px 16px;
   /* Frontier Signal gradient — shared with the global .btn-primary so
      the mobile header CTA reads as part of the same CTA system. The
      wedge accent is suppressed here because the button is too
