@@ -3162,6 +3162,25 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     justify-self: end;
   }
 }
+@media (max-width: 899px) {
+  /* On mobile the callout becomes single-column. The CTA label
+     "Explore the full Foundation AI Advisory methodology ->" is too
+     long for `white-space: nowrap` to fit inside the card on phone
+     widths — without this override the button overflows the right
+     edge of the callout card, producing a thin colored bar that
+     extends past the card boundary (visible in mobile screenshots).
+     Allow the label to wrap, give the button real height for two
+     lines, and let it span the available column width so the tap
+     target reads as deliberate. */
+  .about-methodology-callout__cta {
+    white-space: normal;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 14px 18px;
+    line-height: 1.3;
+  }
+}
 
 /* ─────────────────────────────────────────────────────────────────
    About page — Operating Charter (Mission, Vision, Values).
