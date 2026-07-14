@@ -55,6 +55,7 @@ CEO / President, CFO / Controller, CIO / IT Leader. Secondary: COO / VP Operatio
 
 ## Featured Insights
 
+- Your Token Bill Is a Workflow Problem: https://foundationaiadvisory.com/insights/your-token-bill-is-a-workflow-problem/
 - Where Agents Earn Their Keep: https://foundationaiadvisory.com/insights/where-agents-earn-their-keep/
 - The Mid-Market Case for Platform-Agnostic AI: https://foundationaiadvisory.com/insights/mid-market-case-for-platform-agnostic/
 - Data Governance for Non-Enterprise Teams: https://foundationaiadvisory.com/insights/data-governance-non-enterprise-teams/
