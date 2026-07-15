@@ -6307,3 +6307,9 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   color: var(--faa-navy);
   border: 1px solid var(--faa-gray-200);
 }
+
+
+/* Fix: hide compact CTA variant on desktop so only one header CTA shows at >=640px. The compact trigger's .mobile-header-cta hide rule was being overridden by the dropdown flex base rule, so hide the whole compact container here. */
+@media (min-width: 640px) {
+  .assessment-dd--compact { display: none !important; }
+}
