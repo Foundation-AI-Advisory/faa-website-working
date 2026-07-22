@@ -55,6 +55,7 @@ CEO / President, CFO / Controller, CIO / IT Leader. Secondary: COO / VP Operatio
 
 ## Featured Insights
 
+- Agent Overlays Don't Skip the ERP Problem: https://foundationaiadvisory.com/insights/agent-overlays-dont-skip-the-erp-problem/
 - Your Token Bill Is a Workflow Problem: https://foundationaiadvisory.com/insights/your-token-bill-is-a-workflow-problem/
 - Where Agents Earn Their Keep: https://foundationaiadvisory.com/insights/where-agents-earn-their-keep/
 - The Mid-Market Case for Platform-Agnostic AI: https://foundationaiadvisory.com/insights/mid-market-case-for-platform-agnostic/
