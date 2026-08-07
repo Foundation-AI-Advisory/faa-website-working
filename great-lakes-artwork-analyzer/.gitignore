@@ -1,0 +1,8 @@
+node_modules/
+dist/
+data/*.db
+data/*.db-*
+storage/
+*.log
+.DS_Store
+*.tsbuildinfo
