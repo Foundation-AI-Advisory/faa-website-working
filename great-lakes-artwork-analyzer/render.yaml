@@ -1,0 +1,22 @@
+# One-click deploy on Render (https://render.com).
+#
+# The persistent disk matters: without it every redeploy wipes the uploaded
+# artwork and the database. Disks require a paid instance type — Render's free
+# tier has ephemeral storage only.
+services:
+  - type: web
+    name: gll-artwork-analyzer
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 4180
+      - key: GLL_DATA_DIR
+        value: /var/gll/data
+      - key: GLL_STORAGE_DIR
+        value: /var/gll/storage
+    disk:
+      name: gll-storage
+      mountPath: /var/gll
+      sizeGB: 5

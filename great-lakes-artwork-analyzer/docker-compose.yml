@@ -1,0 +1,17 @@
+# Simplest way to run the analyzer on a server or a workstation:
+#   docker compose up -d   →  http://localhost:4180
+#
+# The named volume keeps uploaded artwork and the database across restarts and
+# rebuilds. Remove it only if you want to start from an empty system.
+services:
+  artwork-analyzer:
+    build: .
+    image: gll-artwork-analyzer:latest
+    ports:
+      - "4180:4180"
+    volumes:
+      - gll-data:/var/gll
+    restart: unless-stopped
+
+volumes:
+  gll-data:
