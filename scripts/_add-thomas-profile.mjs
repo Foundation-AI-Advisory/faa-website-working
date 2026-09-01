@@ -22,11 +22,11 @@ const thomasRow = `
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start" style="max-width: 1080px; margin-top: 64px;">
       <div class="lg:col-span-3">
         <div class="relative" style="width:100%; max-width:240px; aspect-ratio: 1/1; background: var(--faa-gray-100); border-radius: 4px; overflow: hidden;">
-          <img src="assets/about-leadership-thomas-wagenberg-headshot.webp" alt="Thomas Wagenberg, AI Business Analyst at Foundation AI Advisory" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <img src="assets/about-leadership-thomas-wagenberg-headshot.webp" alt="Thomas Wagenberg, Partner & Lead AI Business Analyst at Foundation AI Advisory" style="width:100%;height:100%;object-fit:cover;display:block;" />
         </div>
       </div>
       <div class="lg:col-span-9">
-        <div class="kicker" style="color: var(--faa-blue);">AI BUSINESS ANALYST</div>
+        <div class="kicker" style="color: var(--faa-blue);">PARTNER &amp; LEAD AI BUSINESS ANALYST</div>
         <div class="mt-2 flex items-center gap-3" style="color: var(--faa-navy); font-size: 26px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2;">
           <span>Thomas Wagenberg</span>
           <a href="https://www.linkedin.com/in/thomaswagenberg/" class="linkedin-link" target="_blank" rel="noopener noreferrer" aria-label="View Thomas Wagenberg on LinkedIn">
@@ -35,7 +35,7 @@ const thomasRow = `
             </svg>
           </a>
         </div>
-        <div class="italic mt-1" style="color: var(--faa-gray-400); font-size: 15px;">AI Business Analyst, Finance &amp; Operations, Foundation AI Advisory</div>
+        <div class="italic mt-1" style="color: var(--faa-gray-400); font-size: 15px;">Partner &amp; Lead AI Business Analyst, Foundation AI Advisory</div>
         <blockquote class="mt-7 border-l-2 pl-6" style="border-color: var(--faa-blue); color: var(--faa-navy); font-size: clamp(20px, 2.2vw, 26px); font-weight: 500; line-height: 1.35; letter-spacing: -0.01em; max-width: 56ch;">
           &ldquo;AI only helps when the business can explain the work, the data, and the decision it wants to improve. The value is not in adding another tool. The value is in making the operating system clearer, faster, and easier to control.&rdquo;
         </blockquote>
@@ -71,8 +71,8 @@ const thomasSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Thomas Wagenberg',
-  jobTitle: 'AI Business Analyst, Finance & Operations',
-  description: "AI Business Analyst at Foundation AI Advisory. Translates how work actually gets done into clear process maps, data requirements, decision points, and implementation priorities for mid-market operators. Brings a finance-and-operations lens to FAA's methodology, connecting business problems to measurable outcomes such as margin, cycle time, cash flow, risk exposure, throughput, and operational visibility.",
+  jobTitle: 'Partner & Lead AI Business Analyst',
+  description: "Partner & Lead AI Business Analyst at Foundation AI Advisory. Translates how work actually gets done into clear process maps, data requirements, decision points, and implementation priorities for mid-market operators. Brings a finance-and-operations lens to FAA's methodology, connecting business problems to measurable outcomes such as margin, cycle time, cash flow, risk exposure, throughput, and operational visibility.",
   image: SITE + '/assets/about-leadership-thomas-wagenberg-headshot.webp',
   url: 'https://www.linkedin.com/in/thomaswagenberg/',
   sameAs: ['https://www.linkedin.com/in/thomaswagenberg/'],
