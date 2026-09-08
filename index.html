@@ -893,7 +893,11 @@
     if (!total) return;
     let idx = slides.findIndex(s => s.classList.contains('is-active'));
     if (idx < 0) idx = 0;
-    const AUTO_MS = 7000;
+    // Allow more reading time on phones and devices without hover.
+    const AUTO_MS = window.matchMedia &&
+      window.matchMedia('(max-width: 640px), (hover: none)').matches
+      ? 12000
+      : 7000;
     let timer = null;
 
     function setActive(n) {
