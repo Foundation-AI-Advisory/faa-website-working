@@ -217,7 +217,6 @@
 (function() {
   var SELF_ASSESSMENT_HREF = "/assessment/?utm_source=site_nav";
   var INQUIRY_HREF = "mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry";
-  var DATA_TRIAGE_HREF = "/data-triage/?utm_source=site_nav";
   var caretSvg = '<svg class="assessment-dd__caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>';
 
   var idSeq = 0;
@@ -259,15 +258,8 @@
     inquiryLink.setAttribute('role', 'menuitem');
     inquiryLink.textContent = 'Business Systems Assessment Inquiry';
 
-    var triageLink = document.createElement('a');
-    triageLink.href = DATA_TRIAGE_HREF;
-    triageLink.className = 'assessment-dd__item';
-    triageLink.setAttribute('role', 'menuitem');
-    triageLink.textContent = 'Data Triage';
-
     menu.appendChild(selfLink);
     menu.appendChild(inquiryLink);
-    menu.appendChild(triageLink);
     wrap.appendChild(trigger);
     wrap.appendChild(menu);
 
@@ -363,14 +355,8 @@
         inqA.className = 'mobile-menu-cta mobile-menu-cta--secondary';
         inqA.textContent = 'Business Systems Assessment Inquiry';
 
-        var triageA = document.createElement('a');
-        triageA.href = DATA_TRIAGE_HREF;
-        triageA.className = 'mobile-menu-cta mobile-menu-cta--secondary';
-        triageA.textContent = 'Data Triage';
-
         group.appendChild(selfA);
         group.appendChild(inqA);
-        group.appendChild(triageA);
         menuCta.parentNode.replaceChild(group, menuCta);
 
         // Keep the existing "close menu on link tap" behavior.
