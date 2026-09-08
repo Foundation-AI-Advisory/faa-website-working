@@ -26,18 +26,26 @@
 <link rel="stylesheet" href="/styles.css?v=20260525a" />
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Industries Foundation AI Advisory Serves","description":"Mid-market industries where Foundation AI Advisory applies its data-, workflow-, and AI-readiness methodology.","itemListElement":[{"@type":"ListItem","position":1,"name":"Manufacturing & Industrial Production","url":"https://foundationaiadvisory.com/industry-manufacturing-industrial-production/"},{"@type":"ListItem","position":2,"name":"Engineering, Construction & Infrastructure","url":"https://foundationaiadvisory.com/industry-engineering-construction-infrastructure/"},{"@type":"ListItem","position":3,"name":"Transportation & Logistics","url":"https://foundationaiadvisory.com/industry-transportation-logistics/"},{"@type":"ListItem","position":4,"name":"Energy & Natural Resources","url":"https://foundationaiadvisory.com/industry-energy-natural-resources/"},{"@type":"ListItem","position":5,"name":"Distribution & Wholesale","url":"https://foundationaiadvisory.com/industry-distribution-wholesale/"},{"@type":"ListItem","position":6,"name":"Industrial Equipment","url":"https://foundationaiadvisory.com/industry-industrial-equipment/"},{"@type":"ListItem","position":7,"name":"Specialty Manufacturing","url":"https://foundationaiadvisory.com/industry-specialty-manufacturing/"},{"@type":"ListItem","position":8,"name":"Professional & Technical Services","url":"https://foundationaiadvisory.com/industry-professional-technical-services/"},{"@type":"ListItem","position":9,"name":"Financial Services & Banking","url":"https://foundationaiadvisory.com/industry-financial-services-banking/"},{"@type":"ListItem","position":10,"name":"AI, Data & IT Systems","url":"https://foundationaiadvisory.com/industry-ai-data-it-systems/"}]}</script>
 <style>
-/* Keep each opening statement on one line on phones. */
+/* Let the opening headline use more of the image without widening body copy. */
+#hero-carousel .hero-headline--business {
+  width: max-content;
+  max-width: calc(100vw - 96px);
+}
+.hero-headline--business > span {
+  display: block;
+  white-space: nowrap;
+}
+.hero-headline--business > br {
+  display: none;
+}
+.hero-headline--business > span + br + span {
+  margin-top: 0.35em;
+}
 @media (max-width: 640px) {
   #hero-carousel .hero-headline--business {
-    font-size: clamp(18px, 6vw, 32px);
-    max-width: 100%;
-  }
-  .hero-headline--business > span {
-    display: block;
-    white-space: nowrap;
-  }
-  .hero-headline--business > br {
-    display: none;
+    font-size: clamp(20px, 7vw, 36px);
+    width: calc(100vw - 64px);
+    max-width: none;
   }
   .hero-headline--business > span + br + span {
     margin-top: 0.65em;
