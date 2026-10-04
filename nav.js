@@ -250,7 +250,7 @@
     selfLink.href = SELF_ASSESSMENT_HREF;
     selfLink.className = 'assessment-dd__item';
     selfLink.setAttribute('role', 'menuitem');
-    selfLink.textContent = 'Foundations Self-Assessment';
+    selfLink.textContent = 'Foundation’s - AI Self-Assessment';
 
     var inquiryLink = document.createElement('a');
     inquiryLink.href = INQUIRY_HREF;
@@ -348,7 +348,7 @@
         var selfA = document.createElement('a');
         selfA.href = SELF_ASSESSMENT_HREF;
         selfA.className = 'mobile-menu-cta';
-        selfA.textContent = 'Foundations Self-Assessment';
+        selfA.textContent = 'Foundation’s - AI Self-Assessment';
 
         var inqA = document.createElement('a');
         inqA.href = INQUIRY_HREF;
