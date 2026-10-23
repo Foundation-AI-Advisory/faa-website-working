@@ -28,40 +28,45 @@
     panel.className = 'mobile-menu-panel';
     panel.setAttribute('aria-label', 'Mobile');
     panel.hidden = true;
-    // Mobile menu is intentionally flat (no nested collapse) so every
-    // destination is one tap away on small screens. Methodology and
-    // AI Training are each labeled with an eyebrow heading so visitors
-    // understand the sub-items belong together — but they remain
-    // direct links to each individual page.
+    // Native disclosures keep the menu compact and keyboard-accessible.
+    // The methodology starts open to preserve the three-step sequence.
     panel.innerHTML = [
-      '<a href="/">Home</a>',
-      '<div class="mobile-menu-section">',
-      '  <span class="mobile-menu-label">Methodology</span>',
-      '  <a href="/methodology/">View Methodology Overview</a>',
-      '  <a href="/foundation/">Data Curation &amp; Governance</a>',
-      '  <a href="/operations/">Workflow Optimization</a>',
-      '  <a href="/agentic-ai/">AI Design &amp; Implementation</a>',
-      '</div>',
-      '<div class="mobile-menu-section">',
-      '  <span class="mobile-menu-label">AI Training</span>',
-      '  <a href="/ai-training-workforce-development/">View AI Training Overview</a>',
+      '<p class="mobile-menu-eyebrow">Explore Foundation</p>',
+      '<a href="/" class="mobile-menu-direct">Home<span aria-hidden="true">&rarr;</span></a>',
+      '<details class="mobile-menu-group" open>',
+      '  <summary>Methodology</summary>',
+      '  <div class="mobile-menu-links">',
+      '  <a href="/methodology/" class="mobile-menu-overview">View methodology overview<span aria-hidden="true">&rarr;</span></a>',
+      '  <a href="/foundation/"><span class="mobile-menu-step" aria-hidden="true">01</span><span>Data Curation &amp; Governance</span></a>',
+      '  <a href="/operations/"><span class="mobile-menu-step" aria-hidden="true">02</span><span>Workflow Optimization</span></a>',
+      '  <a href="/agentic-ai/"><span class="mobile-menu-step" aria-hidden="true">03</span><span>AI Design &amp; Implementation</span></a>',
+      '  </div>',
+      '</details>',
+      '<details class="mobile-menu-group mobile-menu-group--training">',
+      '  <summary>AI Training</summary>',
+      '  <div class="mobile-menu-links">',
+      '  <a href="/ai-training-workforce-development/" class="mobile-menu-overview">View AI Training overview</a>',
       '  <a href="/ai-training-workforce-development/#ai-bootcamp">AI Training Bootcamp</a>',
       '  <a href="/ai-training-workforce-development/#workforce-development">AI Workforce Development</a>',
-      '</div>',
-      '<a href="/industries/">Where We Work</a>',
-      '<div class="mobile-menu-section">',
-      '  <span class="mobile-menu-label">AI Perspectives</span>',
-      '  <a href="/insights/">All AI Perspectives</a>',
+      '  </div>',
+      '</details>',
+      '<a href="/industries/" class="mobile-menu-direct">Where We Work<span aria-hidden="true">&rarr;</span></a>',
+      '<details class="mobile-menu-group mobile-menu-group--perspectives">',
+      '  <summary>AI Perspectives</summary>',
+      '  <div class="mobile-menu-links">',
+      '  <a href="/insights/" class="mobile-menu-overview">All AI Perspectives</a>',
       '  <a href="/ai-frontiers/">AI Frontiers</a>',
       '  <a href="/insights/#foundations-series">Foundations Series</a>',
       '  <a href="/insights/#subscribe">Subscribe</a>',
-      '</div>',
-      '<a href="/about/">About</a>',
+      '  </div>',
+      '</details>',
+      '<a href="/about/" class="mobile-menu-direct">About<span aria-hidden="true">&rarr;</span></a>',
       '<a href="/client-workspace/" class="mobile-menu-workspace">',
       '  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.2" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7V5a2.5 2.5 0 1 1 5 0v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
       '  <span>Client Workspace</span>',
       '</a>',
-      '<a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-menu-cta">Business Systems Assessment</a>'
+      '<a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-menu-cta">Business Systems Assessment</a>',
+      '<p class="mobile-menu-footer">Business First. AI Applied.</p>'
     ].join('');
     header.appendChild(panel);
 
@@ -108,9 +113,17 @@
     panel.addEventListener('click', (e) => e.stopPropagation());
     panel.addEventListener('pointerenter', clearMobileCloseTimer);
     panel.addEventListener('pointerleave', scheduleMobileClose);
-    panel.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMobileOpen(false)));
+    // Delegate so assessment links added by the enhancement below close
+    // the same state as the original links, including on a second visit.
+    panel.addEventListener('click', (e) => {
+      if (e.target.closest('a')) setMobileOpen(false);
+    });
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') setMobileOpen(false);
+      if (e.key === 'Escape' && isMobileMenuOpen) {
+        const returnFocus = panel.contains(document.activeElement);
+        setMobileOpen(false);
+        if (returnFocus) toggle.focus();
+      }
     });
     document.addEventListener('click', (e) => {
       if (!isInsideMobileMenu(e.target)) setMobileOpen(false);
@@ -335,9 +348,7 @@
       else ctaWrap.appendChild(ddC2);
     }
 
-    // 3. Mobile slide-out menu link -> two stacked links. The slide-out
-    //    menu is a flat list, so a nested dropdown there is awkward; two
-    //    labeled links is the consistent, tap-friendly equivalent.
+    // 3. Preserve both assessment destinations as stacked links.
     var mobileMenu = document.getElementById('mobile-menu');
     if (mobileMenu) {
       var menuCta = mobileMenu.querySelector('a.mobile-menu-cta');
@@ -359,15 +370,7 @@
         group.appendChild(inqA);
         menuCta.parentNode.replaceChild(group, menuCta);
 
-        // Keep the existing "close menu on link tap" behavior.
-        group.querySelectorAll('a').forEach(function(a) {
-          a.addEventListener('click', function() {
-            var panel = document.getElementById('mobile-menu');
-            var toggle = document.querySelector('[data-mobile-menu-toggle]');
-            if (panel) { panel.hidden = true; panel.setAttribute('data-open', 'false'); }
-            if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open site navigation'); }
-          });
-        });
+        // The mobile panel's delegated link handler owns close state.
       }
     }
   }
@@ -378,3 +381,4 @@
     enhanceHeader();
   }
 })();
+
