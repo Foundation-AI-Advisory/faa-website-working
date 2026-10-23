@@ -55,6 +55,7 @@ CEO / President, CFO / Controller, CIO / IT Leader. Secondary: COO / VP Operatio
 
 ## Featured Insights
 
+- Culture Is the Best Indicator of Whether AI Will Succeed: https://foundationaiadvisory.com/insights/culture-is-the-best-indicator-of-ai-success/
 - Agent Overlays Don't Skip the ERP Problem: https://foundationaiadvisory.com/insights/agent-overlays-dont-skip-the-erp-problem/
 - Your Token Bill Is a Workflow Problem: https://foundationaiadvisory.com/insights/your-token-bill-is-a-workflow-problem/
 - Where Agents Earn Their Keep: https://foundationaiadvisory.com/insights/where-agents-earn-their-keep/
