@@ -83,11 +83,15 @@
     function setMobileOpen(open) {
       clearMobileCloseTimer();
       isMobileMenuOpen = Boolean(open);
+      if (isMobileMenuOpen) document.dispatchEvent(new CustomEvent('faa:navigation-open', { detail: 'mobile' }));
       panel.hidden = !isMobileMenuOpen;
       panel.setAttribute('data-open', isMobileMenuOpen ? 'true' : 'false');
       toggle.setAttribute('aria-expanded', isMobileMenuOpen ? 'true' : 'false');
       toggle.setAttribute('aria-label', isMobileMenuOpen ? 'Close site navigation' : 'Open site navigation');
     }
+    document.addEventListener('faa:navigation-open', (e) => {
+      if (e.detail !== 'mobile') setMobileOpen(false);
+    });
 
     function isInsideMobileMenu(target) {
       return target && (toggle.contains(target) || panel.contains(target));
@@ -169,6 +173,7 @@
     clearTimeout(closeTimer);
     if (openId === id) return;
     closeMenu(true);
+    document.dispatchEvent(new CustomEvent('faa:navigation-open', { detail: 'mega' }));
     openId = id;
     const menu = document.getElementById('mega-' + id);
     const trigger = document.querySelector('.utilnav-link[data-mega="' + id + '"]');
@@ -216,6 +221,9 @@
   document.querySelectorAll('.mega-link').forEach(link => {
     link.addEventListener('click', () => closeMenu(true));
   });
+  document.addEventListener('faa:navigation-open', (e) => {
+    if (e.detail !== 'mega') closeMenu(true);
+  });
 })();
 
 
@@ -249,47 +257,67 @@
     var trigger = document.createElement('button');
     trigger.type = 'button';
     trigger.className = triggerClass + ' assessment-dd__trigger';
-    trigger.setAttribute('aria-haspopup', 'true');
     trigger.setAttribute('aria-expanded', 'false');
     trigger.setAttribute('aria-controls', menuId);
     trigger.innerHTML = triggerLabel + caretSvg;
 
-    var menu = document.createElement('div');
+    var menu = document.createElement('nav');
     menu.className = 'assessment-dd__menu';
     menu.id = menuId;
-    menu.setAttribute('role', 'menu');
+    menu.hidden = true;
+    menu.setAttribute('aria-label', 'Choose your assessment');
+    menu.innerHTML = '<p class="assessment-dd__eyebrow">Assessments</p><h2 class="assessment-dd__heading">Where would you like to start?</h2>';
+
+    var checklist = '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="8" y="6" width="19" height="23" rx="2"/><path d="M13 6V3h9v3M12 14l2 2 4-4M12 22l2 2 4-4M21 14h2M21 22h2"/></svg>';
+    var conversation = '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M18 22a10 10 0 1 0-11-2l-2 7 7-3a10 10 0 0 0 6-2Z"/><path d="M20 13a9 9 0 0 1 7 14l2 4-6-2a9 9 0 0 1-10-5"/></svg>';
+    var arrow = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+    var chevron = '<svg class="assessment-dd__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>';
 
     var selfLink = document.createElement('a');
     selfLink.href = SELF_ASSESSMENT_HREF;
-    selfLink.className = 'assessment-dd__item';
-    selfLink.setAttribute('role', 'menuitem');
-    selfLink.textContent = 'Foundation’s - AI Self-Assessment';
+    selfLink.className = 'assessment-dd__item assessment-dd__item--self';
+    selfLink.innerHTML = '<span class="assessment-dd__icon">' + checklist + '</span><span class="assessment-dd__copy"><span class="assessment-dd__title">Foundation’s AI Self-Assessment</span><span class="assessment-dd__description">Explore your AI readiness.</span><span class="assessment-dd__action">Start self-assessment ' + arrow + '</span></span>' + chevron;
 
     var inquiryLink = document.createElement('a');
     inquiryLink.href = INQUIRY_HREF;
-    inquiryLink.className = 'assessment-dd__item';
-    inquiryLink.setAttribute('role', 'menuitem');
-    inquiryLink.textContent = 'Business Systems Assessment Inquiry';
+    inquiryLink.className = 'assessment-dd__item assessment-dd__item--inquiry';
+    inquiryLink.innerHTML = '<span class="assessment-dd__icon">' + conversation + '</span><span class="assessment-dd__copy"><span class="assessment-dd__title">Business Systems Assessment</span><span class="assessment-dd__description">Discuss your business with FAA.</span><span class="assessment-dd__action">Start an inquiry ' + arrow + '</span></span>' + chevron;
 
     menu.appendChild(selfLink);
     menu.appendChild(inquiryLink);
     wrap.appendChild(trigger);
+    var backdrop = document.createElement('div');
+    backdrop.className = 'assessment-dd__backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    backdrop.hidden = true;
+    wrap.appendChild(backdrop);
     wrap.appendChild(menu);
 
-    wireDropdown(wrap, trigger, menu);
+    wireDropdown(wrap, trigger, menu, backdrop);
     return wrap;
   }
 
-  function wireDropdown(wrap, trigger, menu) {
+  function wireDropdown(wrap, trigger, menu, backdrop) {
     var open = false;
     var hoverCapable = window.matchMedia('(hover: hover) and (pointer: fine)');
     var closeTimer = null;
+    var header = document.getElementById('site-header');
+
+    function positionPanel() {
+      if (!open || !header) return;
+      menu.style.setProperty('--assessment-top', Math.max(0, header.getBoundingClientRect().bottom) + 'px');
+      backdrop.style.setProperty('--assessment-top', Math.max(0, header.getBoundingClientRect().bottom) + 'px');
+    }
 
     function setOpen(next) {
       if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
       open = Boolean(next);
+      if (open) document.dispatchEvent(new CustomEvent('faa:navigation-open', { detail: menu.id }));
+      menu.hidden = !open;
+      backdrop.hidden = !open;
       wrap.setAttribute('data-open', open ? 'true' : 'false');
       trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      positionPanel();
     }
     function scheduleClose() {
       if (closeTimer) clearTimeout(closeTimer);
@@ -308,11 +336,34 @@
       if (hoverCapable.matches) scheduleClose();
     });
     menu.addEventListener('click', function(e) { e.stopPropagation(); });
+    backdrop.addEventListener('click', function() { setOpen(false); });
+    document.addEventListener('faa:navigation-open', function(e) {
+      if (e.detail !== menu.id) setOpen(false);
+    });
+    trigger.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        setOpen(true);
+        menu.querySelector('a').focus();
+      }
+    });
+    wrap.addEventListener('focusout', function() {
+      setTimeout(function() {
+        if (open && !wrap.contains(document.activeElement)) setOpen(false);
+      }, 0);
+    });
+    window.addEventListener('scroll', positionPanel, { passive: true });
+    window.addEventListener('resize', function() { setOpen(false); });
+    if (window.visualViewport) window.visualViewport.addEventListener('resize', positionPanel);
     document.addEventListener('click', function(e) {
       if (!wrap.contains(e.target)) setOpen(false);
     });
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') setOpen(false);
+      if (e.key === 'Escape' && open) {
+        var returnFocus = menu.contains(document.activeElement);
+        setOpen(false);
+        if (returnFocus) trigger.focus();
+      }
     });
     // Close on selection so the menu does not linger after navigating.
     menu.querySelectorAll('a').forEach(function(a) {
@@ -381,4 +432,5 @@
     enhanceHeader();
   }
 })();
+
 

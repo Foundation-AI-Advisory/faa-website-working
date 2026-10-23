@@ -6254,48 +6254,135 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  min-width: 260px;
-  background: #ffffff;
-  border: 1px solid var(--faa-gray-200);
-  border-radius: 8px;
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
-  padding: 6px;
+  width: 480px;
+  max-width: calc(100vw - 32px);
+  min-width: 0;
+  box-sizing: border-box;
+  background: #1c293e;
+  color: #fff;
+  border: 1px solid #2c4660;
+  border-top: 2px solid #35bce6;
+  border-bottom: 4px solid #35bce6;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.2);
+  padding: 22px;
   display: none;
   flex-direction: column;
+  gap: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  max-height: calc(100vh - 120px);
+  max-height: calc(100dvh - 120px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   z-index: 60;
 }
 
-.assessment-dd[data-open="true"] .assessment-dd__menu {
+.assessment-dd[data-open="true"] .assessment-dd__menu:not([hidden]) {
   display: flex;
+}
+.assessment-dd__menu[hidden], .assessment-dd__backdrop[hidden] { display: none; }
+.assessment-dd__backdrop { display: none; }
+.assessment-dd__eyebrow {
+  margin: 0;
+  color: #d7e5f2;
+  font: 600 11px/1.4 Arial, Helvetica, sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.assessment-dd__heading {
+  margin: 0 0 6px;
+  color: #fff;
+  font: 700 24px/1.2 Arial, Helvetica, sans-serif;
+  letter-spacing: -0.025em;
 }
 
 .assessment-dd__item {
-  display: block;
-  padding: 10px 12px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  line-height: 1.3;
-  color: var(--faa-navy);
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  flex: none;
+  min-height: 104px;
+  box-sizing: border-box;
+  font: 400 15px/1.4 Arial, Helvetica, sans-serif;
   text-decoration: none;
-  white-space: nowrap;
+  white-space: normal;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
-
-.assessment-dd__item:hover,
-.assessment-dd__item:focus-visible {
-  background: var(--faa-gray-100);
-  color: var(--faa-blue);
+.assessment-dd__item--self { background: #e5f3fc; color: #142742; }
+.assessment-dd__item--inquiry { background: #1c293e; color: #fff; border: 2px solid #35bce6; }
+.assessment-dd__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #c8e8fa;
+  color: #206597;
 }
+.assessment-dd__item--inquiry .assessment-dd__icon { background: #203d57; color: #49c8ed; }
+.assessment-dd__icon svg { width: 28px; height: 28px; }
+.assessment-dd__menu svg { stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.assessment-dd__copy { display: flex; flex-direction: column; min-width: 0; gap: 5px; }
+.assessment-dd__title { font-size: 17px; line-height: 1.25; font-weight: 700; overflow-wrap: break-word; }
+.assessment-dd__description { color: #4b6380; font-size: 14px; line-height: 1.4; }
+.assessment-dd__item--inquiry .assessment-dd__description { color: #a9c8e6; }
+.assessment-dd__action { display: flex; align-items: center; gap: 6px; margin-top: 3px; font-size: 14px; font-weight: 700; color: #206597; }
+.assessment-dd__action svg { width: 18px; height: 18px; }
+.assessment-dd__arrow { width: 18px; height: 22px; color: #206597; }
+.assessment-dd__item--inquiry .assessment-dd__action,
+.assessment-dd__item--inquiry .assessment-dd__arrow { color: #49c8ed; }
+.assessment-dd__item--self:hover { background: #d4ebfa; color: #142742; }
+.assessment-dd__item--inquiry:hover { background: #243b54; color: #fff; }
+.assessment-dd__item:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.assessment-dd__item:hover .assessment-dd__action { text-decoration: underline; text-underline-offset: 3px; }
 
-/* Compact variant (mobile header CTA). The menu aligns to the
-   right edge and can size down on very small screens. */
-.assessment-dd--compact .assessment-dd__menu {
-  min-width: 240px;
-}
-
-@media (max-width: 400px) {
+/* Mobile drawer attaches to the actual bottom of the sticky header.
+   nav.js updates this offset; it does not assume a fixed header height. */
+@media (max-width: 639px) {
   .assessment-dd--compact .assessment-dd__menu {
-    min-width: 200px;
+    position: fixed;
+    top: var(--assessment-top, 96px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    max-height: calc(100vh - var(--assessment-top, 96px));
+    max-height: calc(100dvh - var(--assessment-top, 96px));
+    padding: 20px 16px max(20px, env(safe-area-inset-bottom));
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    gap: 12px;
   }
+  .assessment-dd--compact .assessment-dd__backdrop:not([hidden]) {
+    display: block;
+    position: fixed;
+    top: var(--assessment-top, 96px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.35);
+    z-index: 59;
+  }
+  .assessment-dd__heading { font-size: clamp(22px, 5.8vw, 28px); }
+  .assessment-dd__item { grid-template-columns: 44px minmax(0, 1fr) 16px; padding: 16px 12px; gap: 10px; }
+  .assessment-dd__icon { width: 44px; height: 44px; }
+  .assessment-dd__title { font-size: 16px; }
+}
+@media (max-width: 359px) {
+  .assessment-dd__item { grid-template-columns: 36px minmax(0, 1fr) 14px; gap: 8px; padding: 14px 10px; }
+  .assessment-dd__icon { width: 36px; height: 36px; }
+  .assessment-dd__icon svg { width: 24px; height: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .assessment-dd__item, .assessment-dd__caret { transition: none; }
 }
 
 /* Secondary link inside the mobile slide-out menu. Keeps the
@@ -6494,4 +6581,5 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   }
   #site-header .mobile-menu-toggle { margin-left: 8px; }
 }
+
 
