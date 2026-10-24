@@ -62,10 +62,14 @@
 .editorial-library .ed-story-grid {gap:30px;}
 .editorial-library .ed-featured-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:30px;}
 .editorial-library main a.card {box-shadow:none;border:0;border-bottom:1px solid #cad5df;background:#fff;border-radius:0;color:#10283e;display:flex;flex-direction:column;}
-.editorial-library main a.card .p-6 {padding:22px 0 28px;}
+.editorial-library main a.card .p-6 {padding:24px;min-width:0;}
+.editorial-library main a.card,.editorial-library main a.card:hover {text-decoration:none;}
+.editorial-library main a.card .read-link {align-self:flex-start;width:fit-content;border-bottom:0;padding-bottom:0;}
+.editorial-library main a.card .kicker {overflow-wrap:anywhere;}
 .editorial-library main .card h3 {font-size:25px;line-height:1.16;}
-.editorial-library main a.card:hover h3 {text-decoration:underline;text-underline-offset:4px;}
-.editorial-library main .card .pill {position:absolute;bottom:14px;left:14px;background:#fff;color:#15567c;padding:7px 10px;}
+.editorial-library main a.card:hover h3 {text-decoration:none;}
+@media (hover:hover) and (pointer:fine) {.editorial-library main a.card:hover h3 {text-decoration:underline;text-underline-offset:4px;}}
+.editorial-library main .card .pill {position:absolute;inset:12px auto auto 12px;width:max-content;height:auto;max-width:calc(100% - 24px);padding:6px 10px;line-height:1.4;z-index:1;background:#fff;color:#15567c;}
 .editorial-library main .card-image {position:relative;overflow:hidden;height:auto;aspect-ratio:16/9;margin:0;}
 .editorial-library main .insight-card-author {font-size:12px;color:#506071;margin:0;}
 .editorial-library main [data-pillar]>.container-faa>.flex {flex-direction:row;align-items:flex-start;gap:26px;}
@@ -122,6 +126,7 @@
  .editorial-article main .ed-reading-body blockquote {font-size:23px;padding:20px;}
  .editorial-library .ed-featured-grid {grid-template-columns:1fr;}
  .editorial-library main .card h3 {font-size:25px;}
+ .editorial-library main a.card .p-6 {padding:20px;}
  .editorial-library .filter-label {width:100%;margin-bottom:2px;}
  .editorial-library .filter-chip {padding-inline:13px;}
  .editorial-complete main .foundations-card-grid {grid-template-columns:1fr;}
