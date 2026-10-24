@@ -98,7 +98,7 @@
     }
 
     function scheduleMobileClose(e) {
-      if (!hoverCapableCompact.matches) return;
+      if (!hoverCapableCompact.matches || document.body.classList.contains('homepage-redesign')) return;
       const nextTarget = e.relatedTarget;
       if (isInsideMobileMenu(nextTarget)) return;
       clearMobileCloseTimer();
@@ -111,7 +111,7 @@
       setMobileOpen(!isMobileMenuOpen);
     });
     toggle.addEventListener('pointerenter', () => {
-      if (hoverCapableCompact.matches) setMobileOpen(true);
+      if (hoverCapableCompact.matches && !document.body.classList.contains('homepage-redesign')) setMobileOpen(true);
     });
     toggle.addEventListener('pointerleave', scheduleMobileClose);
     panel.addEventListener('click', (e) => e.stopPropagation());
@@ -300,6 +300,9 @@
   function wireDropdown(wrap, trigger, menu, backdrop) {
     var open = false;
     var hoverCapable = window.matchMedia('(hover: hover) and (pointer: fine)');
+    // The editorial homepage uses one assessment control at every width.
+    // Keep click/tap deterministic; hover must not open immediately before click.
+    var allowHover = !document.body.classList.contains('homepage-redesign');
     var closeTimer = null;
     var header = document.getElementById('site-header');
 
@@ -330,10 +333,10 @@
       setOpen(!open);
     });
     wrap.addEventListener('mouseenter', function() {
-      if (hoverCapable.matches) setOpen(true);
+      if (allowHover && hoverCapable.matches) setOpen(true);
     });
     wrap.addEventListener('mouseleave', function() {
-      if (hoverCapable.matches) scheduleClose();
+      if (allowHover && hoverCapable.matches) scheduleClose();
     });
     menu.addEventListener('click', function(e) { e.stopPropagation(); });
     backdrop.addEventListener('click', function() { setOpen(false); });
@@ -432,5 +435,6 @@
     enhanceHeader();
   }
 })();
+
 
 

@@ -25,35 +25,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/styles.css?v=20261023-assessment" />
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Industries Foundation AI Advisory Serves","description":"Mid-market industries where Foundation AI Advisory applies its data-, workflow-, and AI-readiness methodology.","itemListElement":[{"@type":"ListItem","position":1,"name":"Manufacturing & Industrial Production","url":"https://foundationaiadvisory.com/industry-manufacturing-industrial-production/"},{"@type":"ListItem","position":2,"name":"Engineering, Construction & Infrastructure","url":"https://foundationaiadvisory.com/industry-engineering-construction-infrastructure/"},{"@type":"ListItem","position":3,"name":"Transportation & Logistics","url":"https://foundationaiadvisory.com/industry-transportation-logistics/"},{"@type":"ListItem","position":4,"name":"Energy & Natural Resources","url":"https://foundationaiadvisory.com/industry-energy-natural-resources/"},{"@type":"ListItem","position":5,"name":"Distribution & Wholesale","url":"https://foundationaiadvisory.com/industry-distribution-wholesale/"},{"@type":"ListItem","position":6,"name":"Industrial Equipment","url":"https://foundationaiadvisory.com/industry-industrial-equipment/"},{"@type":"ListItem","position":7,"name":"Specialty Manufacturing","url":"https://foundationaiadvisory.com/industry-specialty-manufacturing/"},{"@type":"ListItem","position":8,"name":"Professional & Technical Services","url":"https://foundationaiadvisory.com/industry-professional-technical-services/"},{"@type":"ListItem","position":9,"name":"Financial Services & Banking","url":"https://foundationaiadvisory.com/industry-financial-services-banking/"},{"@type":"ListItem","position":10,"name":"AI, Data & IT Systems","url":"https://foundationaiadvisory.com/industry-ai-data-it-systems/"}]}</script>
-<style>
-/* Let the opening headline use more of the image without widening body copy. */
-#hero-carousel .hero-headline--business {
-  width: max-content;
-  max-width: calc(100vw - 96px);
-}
-.hero-headline--business > span {
-  display: block;
-  white-space: nowrap;
-}
-.hero-headline--business > br {
-  display: none;
-}
-.hero-headline--business > span + br + span {
-  margin-top: 0.35em;
-}
-@media (max-width: 640px) {
-  #hero-carousel .hero-headline--business {
-    font-size: clamp(20px, 7vw, 36px);
-    width: calc(100vw - 64px);
-    max-width: none;
-  }
-  .hero-headline--business > span + br + span {
-    margin-top: 0.65em;
-  }
-}
-</style>
+
+<link rel="stylesheet" href="/homepage.css?v=20261024-editorial" />
 </head>
-<body class="bg-white"><a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="bg-white homepage-redesign"><a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- ============================================================= -->
 <!-- 1. UTILITY NAV (sticky)                                        -->
@@ -65,7 +40,6 @@
     </a>
 
     <nav class="hidden xl:flex items-center gap-6 h-full mx-6" aria-label="Primary">
-      <a href="/" class="utilnav-link" style="height:96px;">Home</a>
             <a href="/methodology/" class="utilnav-link" data-mega="methodology" aria-expanded="false" aria-controls="mega-methodology" aria-haspopup="true" style="height:96px;">
         Methodology
         <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
@@ -75,11 +49,11 @@
         <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
       </a>
       <a href="/industries/" class="utilnav-link" data-mega="industries" aria-expanded="false" aria-controls="mega-industries" aria-haspopup="true" style="height:96px;">
-        Where We Work
+        Industries
         <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
       </a>
       <a href="/insights/" class="utilnav-link" data-mega="insights" aria-expanded="false" aria-controls="mega-insights" aria-haspopup="true" style="height:96px;">
-        AI Perspectives
+        Perspectives
         <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
       </a>
       <a href="/about/" class="utilnav-link" style="height:96px;">About</a>
@@ -255,610 +229,82 @@
 </header>
 
 <main id="main-content">
-
-<!-- ============================================================= -->
-<!-- 3. HERO — EY-style 4-slide carousel                            -->
-<!-- ============================================================= -->
-<section class="hero-carousel" id="hero-carousel" aria-roledescription="carousel" aria-label="Featured insights">
-
-  <!-- Slide 1 -->
-  <div class="hero-slide is-active" data-slide="0" role="group" aria-roledescription="slide" aria-label="1 of 4">
-    <div class="hero-slide-image" style="background-image: url('/assets/homepage-hero-ai-adoption-boardroom.webp'); background-position: center center;" aria-hidden="true"></div>
-    <div class="hero-slide-overlay" aria-hidden="true"></div>
-    <div class="container-faa hero-slide-content">
-      <div class="hero-text-block">
-        <h1 class="hero-headline hero-headline--business"><span>Business Leaders First.</span><br><span>AI for the Mid-Market.</span></h1>
-        <div class="hero-dek">
-          <p>We bring decades of experience running businesses to the work of improving yours. We understand the decisions, operating pressures, and accountability that come with leading a company.</p>
-          <p>Our work starts with your business goals and how work actually gets done. We strengthen and govern your data, optimize workflows, and then design and implement AI with clear ownership, controls, and a path to production.</p>
-          <p>Platform-agnostic and execution-focused, we measure success through business results: stronger margins, greater throughput, shorter cycle times, improved cash flow, reduced risk exposure, and better operational visibility.</p>
-        </div>
+  <section class="home-masthead home-container" aria-labelledby="home-title">
+    <h1 id="home-title">Business First.<br>AI Applied<span class="home-period">.</span></h1>
+    <div class="home-intro">
+      <h2>AI for the mid-market.</h2>
+      <p>Strengthen your data. Improve your workflows.<br class="home-desktop-break"> Apply AI where it creates measurable value.</p>
+      <div class="home-actions">
+        <a class="home-button" href="/business-systems-assessment/">Start with an assessment <span aria-hidden="true">&rarr;</span></a>
+        <a class="home-text-link" href="/methodology/">Explore our approach <span aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Slide 2 -->
-  <div class="hero-slide" data-slide="1" role="group" aria-roledescription="slide" aria-label="2 of 4">
-    <div class="hero-slide-image" style="background-image: url('/assets/homepage-hero-data-governance-document-organization.webp'); background-position: center center;" aria-hidden="true"></div>
-    <div class="hero-slide-overlay" aria-hidden="true"></div>
-    <div class="container-faa hero-slide-content">
-      <div class="hero-text-block">
-        <h2 class="hero-headline">Data Curation<br>&amp; Governance</h2>
-        <p class="hero-subhead">The Foundation of Reliable AI</p>
-        <div class="hero-dek">
-          <p>Data is the constraint in every AI initiative. When it is fragmented, inconsistent, or unmanaged, it does not improve with automation&mdash;it becomes amplified.</p>
-          <p>Organizations that achieve measurable results from AI start by establishing clean, structured, and governed data. Without that foundation, reporting degrades, workflows break down, and decision quality suffers.</p>
-          <p>This is where most deployments fail&mdash;not at the model, but at the data layer.</p>
-        </div>
-      </div>
+  <section class="home-container home-perspectives" aria-labelledby="perspectives-heading">
+    <h2 class="home-section-label" id="perspectives-heading"><span>Ideas for the people running the business.</span></h2>
+    <div class="home-story-grid">
+      <a class="home-story home-story--lead" href="/insights/culture-is-the-best-indicator-of-ai-success/">
+        <img src="/assets/homepage-editorial/factory.webp" alt="Two manufacturing operators reviewing equipment together" width="1536" height="1024" fetchpriority="high" decoding="async">
+        <div class="home-story-caption"><span class="home-story-rule" aria-hidden="true"></span><h3>Culture determines<br class="home-desktop-break"> whether AI takes hold</h3><span class="home-story-arrow" aria-hidden="true">&rarr;</span></div>
+      </a>
+      <a class="home-story" href="/insights/your-workflows-werent-built-for-agents/">
+        <img src="/assets/homepage-editorial/construction.webp" alt="Construction supervisors discussing work at a job site" width="1536" height="1024" decoding="async">
+        <div class="home-story-caption"><span class="home-story-rule" aria-hidden="true"></span><h3>Your workflows<br>weren’t built for agents</h3><span class="home-story-arrow" aria-hidden="true">&rarr;</span></div>
+      </a>
+      <a class="home-story" href="/insights/master-data-is-the-bottleneck-nobody-wants-to-own/">
+        <img src="/assets/homepage-editorial/data.webp" alt="Operations analyst reviewing business records" width="1536" height="1024" decoding="async">
+        <div class="home-story-caption"><span class="home-story-rule" aria-hidden="true"></span><h3>Master data is the<br>bottleneck nobody wants to own</h3><span class="home-story-arrow" aria-hidden="true">&rarr;</span></div>
+      </a>
     </div>
-  </div>
+    <a class="home-text-link home-all-insights" href="/insights/">All AI Perspectives <span aria-hidden="true">&rarr;</span></a>
+  </section>
 
-  <!-- Slide 3 -->
-  <div class="hero-slide" data-slide="2" role="group" aria-roledescription="slide" aria-label="3 of 4">
-    <div class="hero-slide-image" style="background-image: url('/assets/homepage-hero-workflow-optimization-people-flow.webp'); background-position: center center;" aria-hidden="true"></div>
-    <div class="hero-slide-overlay" aria-hidden="true"></div>
-    <div class="container-faa hero-slide-content">
-      <div class="hero-text-block">
-        <h2 class="hero-headline">Workflow<br>Optimization</h2>
-        <p class="hero-subhead">Align How Work Actually Runs</p>
-        <div class="hero-dek">
-          <p>In most mid-market environments, process design is the constraint&mdash;not the technology.</p>
-          <p>Workflows often evolve around system limitations, manual workarounds, and inconsistent ownership. The result is duplication, delay, and reduced visibility into how work is actually performed.</p>
-          <p>Optimizing the workflow means aligning it to real execution&mdash;clarifying ownership, removing unnecessary steps, and standardizing how information moves across systems. This creates the conditions for more reliable output, faster cycle times, and improved throughput.</p>
-          <p>AI applied to an unstructured workflow amplifies inconsistency. Applied to a well-defined workflow, it improves execution and decision quality in ways that are measurable and repeatable.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Slide 4 -->
-  <div class="hero-slide" data-slide="3" role="group" aria-roledescription="slide" aria-label="4 of 4">
-    <div class="hero-slide-image" style="background-image: url('/assets/homepage-hero-applied-ai-control-room.webp'); background-position: center center;" aria-hidden="true"></div>
-    <div class="hero-slide-overlay" aria-hidden="true"></div>
-    <div class="container-faa hero-slide-content">
-      <div class="hero-text-block">
-        <h2 class="hero-headline">AI Design &amp;<br>Implementation</h2>
-        <p class="hero-subhead">Apply AI Where It Improves Execution</p>
-        <div class="hero-dek">
-          <p>AI delivers value only when it is applied to workflows that are already structured, governed, and aligned to how the business actually operates.</p>
-          <p>In most mid-market environments, the failure point is not model capability&mdash;it is the absence of clear ownership, defined inputs, and reliable system outputs. Without those conditions, AI introduces additional complexity and reduces confidence in the result.</p>
-          <p>Effective AI implementation focuses on specific workflows, defined outcomes, and measurable impact. This requires clear inputs, controlled outputs, and human oversight at key decision points.</p>
-          <p>When applied in this context, AI improves execution&mdash;supporting faster cycle times, increased throughput, stronger visibility, and more consistent decision-making.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Prev / Next arrows -->
-  <button type="button" class="hero-arrow prev" data-hero-prev aria-label="Previous slide">
-    <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
-      <path d="M11 3 5 9l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
-    </svg>
-  </button>
-  <button type="button" class="hero-arrow next" data-hero-next aria-label="Next slide">
-    <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
-      <path d="M7 3l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
-    </svg>
-  </button>
-
-  <!-- Bottom slide-tab nav -->
-  <div class="hero-tabs">
-    <div class="container-faa">
-      <div class="hero-tabs-inner" role="tablist" aria-label="Choose featured insight">
-        <button type="button" class="hero-tab is-active" data-hero-tab="0" role="tab" aria-selected="true">Business First. AI Applied.</button>
-        <button type="button" class="hero-tab" data-hero-tab="1" role="tab" aria-selected="false">Data Curation &amp; Governance</button>
-        <button type="button" class="hero-tab" data-hero-tab="2" role="tab" aria-selected="false">Workflow Optimization</button>
-        <button type="button" class="hero-tab" data-hero-tab="3" role="tab" aria-selected="false">AI Design &amp; Implementation</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- 4. METHODOLOGY PREVIEW (wide pillar cards)                     -->
-<!-- ============================================================= -->
-<section id="methodology" class="bg-white border-t home-methodology-section" style="border-color: var(--faa-gray-100);">
-  <div class="container-faa section-y home-methodology-section__container">
-    <div class="home-methodology-inner">
-      <div class="home-methodology-copy">
-        <div class="eyebrow" style="color: var(--faa-navy);">Foundation AI Advisory Methodology</div>
-        <h2 class="h2 mt-3">The Operating Sequence Behind Reliable AI</h2>
-        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
-          AI is the visible layer. The operating system underneath determines whether it produces measurable value or creates new risk. Foundation AI Advisory works the foundation in sequence: govern the data, improve the workflow, then design AI around clear ownership, controls, and business outcomes.
-        </p>
-        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
-          Skipping the sequence does not accelerate results. It moves failure downstream. Bad data scales bad reporting. Unclear workflows scale rework. Weak ownership scales risk. Reliable AI starts with the business foundation.
-        </p>
-        <div class="home-methodology-outcomes" aria-label="Business outcomes Foundation AI Advisory methodology is designed to improve">
-          <p class="home-methodology-outcomes__label">Designed to improve</p>
-          <ul class="home-methodology-outcomes__chips">
-            <li>Margin</li>
-            <li>Throughput</li>
-            <li>Cycle time</li>
-            <li>Cash flow</li>
-            <li>Risk exposure</li>
-            <li>Operational visibility</li>
-          </ul>
-        </div>
-      </div>
-
-      <aside class="home-methodology-sequence" aria-label="Foundation AI Advisory methodology sequence">
-        <a href="/foundation/" class="home-methodology-step">
-          <span class="home-methodology-step__num">01</span>
-          <span class="home-methodology-step__label">Data Curation &amp; Governance</span>
-          <span class="home-methodology-step__copy">Trusted data, ownership, controls, and structure before automation.</span>
-        </a>
-        <a href="/operations/" class="home-methodology-step">
-          <span class="home-methodology-step__num">02</span>
-          <span class="home-methodology-step__label">Workflow Optimization</span>
-          <span class="home-methodology-step__copy">Real workflows mapped, simplified, and controlled before AI is applied.</span>
-        </a>
-        <a href="/agentic-ai/" class="home-methodology-step">
-          <span class="home-methodology-step__num">03</span>
-          <span class="home-methodology-step__label">AI Design &amp; Implementation</span>
-          <span class="home-methodology-step__copy">AI designed around measurable outcomes, oversight, and operating adoption.</span>
-        </a>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- 4b. FOUNDATION SEQUENCE BAND                                   -->
-<!-- Edge-to-edge dark band that sits directly above the Executive  -->
-<!-- Answers Q&A. Summarizes the three foundation steps with        -->
-<!-- numbered, fully clickable tiles linking into each pillar page. -->
-<!-- ============================================================= -->
-<section class="foundation-sequence-band" aria-labelledby="foundation-sequence-heading">
-  <div class="container-faa foundation-sequence-band__inner">
-    <div class="foundation-sequence-band__copy">
-      <p class="foundation-sequence-band__eyebrow">The Foundation Before AI</p>
-      <h2 id="foundation-sequence-heading" class="foundation-sequence-band__headline">AI only performs as well as the system beneath it.</h2>
-      <p class="foundation-sequence-band__body">Foundation AI Advisory evaluates the data, workflow, ownership, and controls that determine whether AI creates measurable value or scales operating risk.</p>
-    </div>
-    <ol class="foundation-sequence-band__cards foundation-sequence-band__cards--image">
-      <li class="foundation-sequence-card foundation-sequence-card--image">
-        <a class="foundation-sequence-card__link" href="/foundation/" aria-label="Read about Data Curation and Governance"></a>
-        <div class="foundation-sequence-card__image" aria-hidden="true">
-          <img src="/assets/navigation/methodology/methodology-data-curation-governance.webp" width="1600" height="1067" alt="" loading="lazy" decoding="async" />
-        </div>
-        <div class="foundation-sequence-card__content">
-          <span class="foundation-sequence-card__num">01</span>
-          <h3 class="foundation-sequence-card__title">Data Curation &amp; Governance</h3>
-          <p class="foundation-sequence-card__copy">Clean, structured, owned data before automation.</p>
-          <span class="foundation-sequence-card__cta" aria-hidden="true">Explore&nbsp;<span class="arrow">&rarr;</span></span>
-        </div>
-      </li>
-      <li class="foundation-sequence-card foundation-sequence-card--image">
-        <a class="foundation-sequence-card__link" href="/operations/" aria-label="Read about Workflow Optimization"></a>
-        <div class="foundation-sequence-card__image" aria-hidden="true">
-          <img src="/assets/navigation/methodology/methodology-workflow-optimization.webp" width="1600" height="1067" alt="" loading="lazy" decoding="async" />
-        </div>
-        <div class="foundation-sequence-card__content">
-          <span class="foundation-sequence-card__num">02</span>
-          <h3 class="foundation-sequence-card__title">Workflow Optimization</h3>
-          <p class="foundation-sequence-card__copy">Real workflows mapped, simplified, and controlled.</p>
-          <span class="foundation-sequence-card__cta" aria-hidden="true">Explore&nbsp;<span class="arrow">&rarr;</span></span>
-        </div>
-      </li>
-      <li class="foundation-sequence-card foundation-sequence-card--image">
-        <a class="foundation-sequence-card__link" href="/agentic-ai/" aria-label="Read about AI Design and Implementation"></a>
-        <div class="foundation-sequence-card__image" aria-hidden="true">
-          <img src="/assets/navigation/methodology/methodology-ai-design-implementation.webp" width="1600" height="1067" alt="" loading="lazy" decoding="async" />
-        </div>
-        <div class="foundation-sequence-card__content">
-          <span class="foundation-sequence-card__num">03</span>
-          <h3 class="foundation-sequence-card__title">AI Design &amp; Implementation</h3>
-          <p class="foundation-sequence-card__copy">AI applied only where the business can measure value.</p>
-          <span class="foundation-sequence-card__cta" aria-hidden="true">Explore&nbsp;<span class="arrow">&rarr;</span></span>
-        </div>
-      </li>
+  <section class="home-container home-methodology" aria-labelledby="methodology-heading">
+    <p class="home-section-label"><span>Our methodology</span></p>
+    <h2 class="home-heading" id="methodology-heading">The foundation comes first.</h2>
+    <ol class="home-steps" role="list">
+      <li class="home-step"><span class="home-step-number" aria-hidden="true">1</span><div class="home-step-copy"><h3><a href="/foundation/">Data Curation &amp; Governance</a></h3><p>Build clean, trusted, and well-structured data as the foundation for AI.</p></div><img src="/assets/homepage-editorial/data.webp" alt="Analyst reviewing structured data across two monitors" width="1536" height="1024" loading="lazy" decoding="async"></li>
+      <li class="home-step"><span class="home-step-number" aria-hidden="true">2</span><div class="home-step-copy"><h3><a href="/operations/">Workflow Optimization</a></h3><p>Streamline and standardize how work gets done to unlock greater efficiency and AI value.</p></div><img src="/assets/homepage-editorial/factory.webp" alt="Manufacturing team examining how work gets done" width="1536" height="1024" loading="lazy" decoding="async"></li>
+      <li class="home-step"><span class="home-step-number" aria-hidden="true">3</span><div class="home-step-copy"><h3><a href="/agentic-ai/">AI Design &amp; Implementation</a></h3><p>Design and deploy practical AI solutions that solve real business problems.</p></div><img src="/assets/homepage-editorial/implementation.webp" alt="Business operators reviewing an implementation workflow" width="1536" height="1024" loading="lazy" decoding="async"></li>
     </ol>
-    <a href="/methodology/" class="foundation-sequence-band__cta">See the methodology&nbsp;<span aria-hidden="true">&rarr;</span></a>
-  </div>
-</section>
+  </section>
 
-<!-- ============================================================= -->
-<!-- 4c. EXECUTIVE ANSWERS + PILLAR PREVIEW                         -->
-<!-- Continuation of the methodology preview. Executive Answers     -->
-<!-- Q&A now sits as a standalone, full-width section directly      -->
-<!-- under the Foundation Sequence band, followed by the three      -->
-<!-- pillar cards.                                                  -->
-<!-- ============================================================= -->
-<section class="bg-white">
-  <div class="container-faa section-y">
-    <aside class="methodology-aeo methodology-aeo--standalone" aria-labelledby="executive-answers-heading">
-      <div class="eyebrow" style="color: var(--faa-navy);">Executive Answers</div>
-      <h3 id="executive-answers-heading" class="aeo-heading">What makes Foundation AI Advisory&rsquo;s AI methodology different?</h3>
-      <p class="aeo-lede">
-        Foundation AI Advisory helps mid-market companies prepare their data, workflows, and operating model before applying AI. The work starts with business outcomes, not tools. Foundation AI Advisory identifies where data breaks, where workflows create friction, and where ownership is unclear before designing AI systems that can be governed, measured, and scaled.
-      </p>
-      <dl class="aeo-faq">
-        <div class="aeo-faq-item">
-          <dt>What is Foundation AI Advisory?</dt>
-          <dd>Foundation AI Advisory is a business-first AI advisory firm for mid-market operators. Foundation AI Advisory fixes the data, workflow, and system foundation before applying AI.</dd>
-        </div>
-        <div class="aeo-faq-item">
-          <dt>What is Foundation AI Advisory&rsquo;s AI implementation methodology?</dt>
-          <dd>Foundation AI Advisory follows three steps in order: <a href="/foundation/">Data Curation &amp; Governance</a>, <a href="/operations/">Workflow Optimization</a>, and <a href="/agentic-ai/">AI Design &amp; Implementation</a>.</dd>
-        </div>
-        <div class="aeo-faq-item">
-          <dt>Why does Foundation AI Advisory start with data and workflows before AI?</dt>
-          <dd>AI depends on the system underneath it. If the data is incomplete, the workflow is undefined, or the owner of the output is unclear, AI will amplify those problems instead of solving them.</dd>
-        </div>
-        <div class="aeo-faq-item">
-          <dt>Who does Foundation AI Advisory serve?</dt>
-          <dd>Foundation AI Advisory serves CEOs, Presidents, CFOs, Controllers, CIOs, and IT leaders in mid-market companies across <a href="/industries/">industrial, construction, logistics, financial services, professional services, AI, data, and IT systems environments</a>.</dd>
-        </div>
-        <div class="aeo-faq-item">
-          <dt>What outcomes should AI produce?</dt>
-          <dd>AI should improve margin, throughput, cycle time, cash flow, risk exposure, or operational visibility. Foundation AI Advisory does not recommend AI work without a <a href="/business-systems-assessment/">clear business outcome and path to production</a>.</dd>
-        </div>
-      </dl>
-      <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="aeo-cta read-link">Start with a Business Systems Assessment&nbsp;<span class="arrow">&rarr;</span></a>
-    </aside>
-
-    <div class="flex flex-col gap-6 lg:gap-8 mt-12 lg:mt-16">
-
-      <!-- Pillar 01 -->
-      <a href="/foundation/" class="pillar-card pillar-card--data">
-        <div class="pillar-card-num">01</div>
-        <div class="pillar-card-body">
-          <span class="kicker">Data Curation &amp; Governance</span>
-          <h3 class="pillar-card-headline">The Foundation of Reliable AI</h3>
-          <p class="pillar-card-dek">Clean, structured, and governed data creates the conditions for reporting confidence, workflow stability, and reliable decision quality.</p>
-          <span class="read-link">See how it works&nbsp;<span class="arrow">&rarr;</span></span>
-        </div>
-        <div class="pillar-card-visual">
-          <img src="/assets/navigation/methodology/methodology-data-curation-governance.webp" width="1600" height="1067" alt="Office data architecture visualization — database, cloud, and dashboard icons connecting through governed pipelines to a workstation display" loading="lazy" />
-        </div>
-      </a>
-
-      <!-- Pillar 02 -->
-      <a href="/operations/" class="pillar-card pillar-card--workflow">
-        <div class="pillar-card-num">02</div>
-        <div class="pillar-card-body">
-          <span class="kicker">Workflow Optimization</span>
-          <h3 class="pillar-card-headline">Align How Work Actually Runs</h3>
-          <p class="pillar-card-dek">Clarify ownership, remove unnecessary steps, and standardize how information moves across systems.</p>
-          <span class="read-link">See how it works&nbsp;<span class="arrow">&rarr;</span></span>
-        </div>
-        <div class="pillar-card-visual">
-          <img src="/assets/navigation/methodology/methodology-workflow-optimization.webp" width="1600" height="1067" alt="Team reviewing a workflow process diagram across desks and dashboards in a daylit office" loading="lazy" />
-        </div>
-      </a>
-
-      <!-- Pillar 03 -->
-      <a href="/agentic-ai/" class="pillar-card pillar-card--ai">
-        <div class="pillar-card-num">03</div>
-        <div class="pillar-card-body">
-          <span class="kicker">AI Design &amp; Implementation</span>
-          <h3 class="pillar-card-headline">Apply AI Where It Improves Execution</h3>
-          <p class="pillar-card-dek">Specific workflows, defined outcomes, controlled outputs, and human oversight at key decision points.</p>
-          <span class="read-link">See how it works&nbsp;<span class="arrow">&rarr;</span></span>
-        </div>
-        <div class="pillar-card-visual">
-          <img src="/assets/navigation/methodology/methodology-ai-design-implementation.webp" width="1600" height="1067" alt="AI implementation environment with a neural network linking decision dashboards, metrics, and human review points across an office workstation" loading="lazy" />
-        </div>
-      </a>
-
+  <section class="home-industries" aria-labelledby="industries-heading">
+    <img class="home-industries-photo" src="/assets/homepage-editorial/construction.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+    <div class="home-container home-industries-content">
+      <p class="home-section-label"><span>Our industries</span></p>
+      <h2 class="home-heading" id="industries-heading">Built for the way<br>your industry works.</h2>
+      <nav class="home-industry-links" aria-label="Featured industries">
+        <a href="/industry-manufacturing-industrial-production/">Manufacturing <span aria-hidden="true">&rarr;</span></a>
+        <a href="/industry-engineering-construction-infrastructure/">Construction <span aria-hidden="true">&rarr;</span></a>
+        <a href="/industry-transportation-logistics/">Logistics &amp; Distribution <span aria-hidden="true">&rarr;</span></a>
+        <a href="/industry-professional-technical-services/">Professional Services <span aria-hidden="true">&rarr;</span></a>
+      </nav>
+      <a class="home-industries-all" href="/industries/">Explore all industries <span aria-hidden="true">&rarr;</span></a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============================================================= -->
-<!-- 5. HOW TO ENGAGE                                               -->
-<!-- ============================================================= -->
-<section id="how-to-engage" style="background: var(--faa-gray-50);" aria-labelledby="engagement-pathway-heading">
-  <div class="container-faa section-y">
-    <div class="max-w-3xl mb-12 lg:mb-14">
-      <div class="eyebrow" style="color: var(--faa-navy);">Engagement Model</div>
-      <h2 id="engagement-pathway-heading" class="h2 mt-3">How to Engage</h2>
-      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
-        Foundation AI Advisory engagements are structured to move from diagnosis to execution to scale&mdash;each step tied to measurable business outcomes.
-      </p>
-      <p class="mt-4" style="color: var(--faa-gray-600); font-size: 16px; line-height: 1.65;">
-        The work starts by understanding how the business actually operates, where data and workflow constraints create risk, and which improvements can produce measurable gains in margin, throughput, cycle time, cash flow, risk exposure, and operational visibility.
-      </p>
+  <section class="home-assessment" aria-labelledby="assessment-heading">
+    <div class="home-container home-assessment-grid">
+      <div><p class="home-eyebrow">Business Systems Assessment</p><h2 id="assessment-heading">Start with the business problem.</h2></div>
+      <p>A practical assessment to help you identify opportunities, prioritize use cases, and build a roadmap for impact.</p>
+      <a class="home-button" href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry">Let’s talk <span aria-hidden="true">&rarr;</span></a>
     </div>
+  </section>
 
-    <ol class="engagement-pathway">
-      <li class="engagement-step engagement-step--01">
-        <figure class="engagement-step__media">
-          <img src="/assets/engagement/engagement-business-systems-assessment.webp" width="1600" height="900" alt="Team comparing documented workflow to how work actually gets done during a business systems assessment." loading="lazy" />
-        </figure>
-        <div class="engagement-step__content">
-          <div class="engagement-step__header">
-            <span class="engagement-step__num">01</span>
-            <span class="engagement-step__phase">Diagnose</span>
-          </div>
-          <h3 class="engagement-step__title"><a href="/business-systems-assessment/">Business Systems Assessment</a></h3>
-          <p class="engagement-step__lede">A focused evaluation of how the business actually operates across data, workflows, systems, ownership, and controls.</p>
-          <ul class="engagement-step__list">
-            <li>Identifies where data, workflow, and ownership break down</li>
-            <li>Assesses reporting reliability and decision confidence</li>
-            <li>Clarifies process ownership and control gaps</li>
-            <li>Produces a prioritized execution roadmap</li>
-          </ul>
-          <a href="/business-systems-assessment/" class="read-link engagement-step__cta">Start with an Assessment&nbsp;<span class="arrow">&rarr;</span></a>
-        </div>
-      </li>
-
-      <li class="engagement-step engagement-step--02 engagement-step--featured">
-        <figure class="engagement-step__media">
-          <img src="/assets/engagement/engagement-90-day-ai-execution-sprint.webp" width="1600" height="1067" alt="Executives reviewing workflow maps and operating data during a 90-day AI execution sprint." loading="lazy" />
-        </figure>
-        <div class="engagement-step__content">
-          <div class="engagement-step__header">
-            <span class="engagement-step__num">02</span>
-            <span class="engagement-step__phase">Execute</span>
-            <span class="engagement-step__featured-label">Core Execution Engagement</span>
-          </div>
-          <h3 class="engagement-step__title"><a href="/90-day-ai-execution-sprint/">90-Day AI Execution Sprint</a></h3>
-          <p class="engagement-step__lede">A targeted engagement to redesign a high-value workflow and deliver a measurable operating outcome.</p>
-          <ul class="engagement-step__list">
-            <li>Redesigns one high-value workflow</li>
-            <li>Aligns data, ownership, and controls</li>
-            <li>Implements AI where it improves execution</li>
-            <li>Measures ROI, payback, and operating impact</li>
-          </ul>
-          <a href="/90-day-ai-execution-sprint/" class="read-link engagement-step__cta">See the Approach&nbsp;<span class="arrow">&rarr;</span></a>
-        </div>
-      </li>
-
-      <li class="engagement-step engagement-step--03">
-        <figure class="engagement-step__media">
-          <img src="/assets/engagement/engagement-ongoing-execution-expansion.webp" width="1600" height="1067" alt="Executive operations environment showing dashboards and teams scaling improved workflows across the business." loading="lazy" />
-        </figure>
-        <div class="engagement-step__content">
-          <div class="engagement-step__header">
-            <span class="engagement-step__num">03</span>
-            <span class="engagement-step__phase">Scale</span>
-          </div>
-          <h3 class="engagement-step__title"><a href="/ongoing-execution-expansion/">Ongoing Execution &amp; Expansion</a></h3>
-          <p class="engagement-step__lede">Extends successful work across the business and builds internal capability.</p>
-          <ul class="engagement-step__list">
-            <li>Expands proven improvements into adjacent workflows</li>
-            <li>Builds governance and internal capability</li>
-            <li>Improves system reliability over time</li>
-            <li>Compounds margin, cycle time, and visibility gains</li>
-          </ul>
-          <a href="/ongoing-execution-expansion/" class="read-link engagement-step__cta">Explore Ongoing Work&nbsp;<span class="arrow">&rarr;</span></a>
-        </div>
-      </li>
-    </ol>
-
-    <p class="engagement-guidance mt-10 lg:mt-12">
-      Not sure where to start? Begin with the <a href="/business-systems-assessment/">Business Systems Assessment</a>. If the operating constraints are already clear, move directly into a <a href="/90-day-ai-execution-sprint/">90-Day AI Execution Sprint</a>.
-    </p>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- 6. INSIGHTS TEASER                                             -->
-<!-- ============================================================= -->
-<section style="background: var(--faa-white);">
-  <div class="container-faa section-y">
-    <div class="flex items-end justify-between flex-wrap gap-6 mb-10 lg:mb-12">
-      <div class="max-w-2xl">
-        <div class="eyebrow" style="color: var(--faa-navy);">AI Advisory</div>
-        <h2 class="h2 mt-3">Foundation AI Advisory&rsquo;s Running Record</h2>
-        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
-          Briefs, field notes, infographics, and working sessions on what is actually moving in agentic AI for the mid-market. Published when there is something worth publishing.
-        </p>
-        <p class="mt-4" style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.6;">
-          Funding AI? Start with the <a href="/ai-decision-questions/" style="color: var(--faa-blue); font-weight: 600;">AI Decision Questions</a> mid-market executives should answer before approving the work.
-        </p>
-      </div>
-      <a href="/insights/" class="btn btn-outline-navy">View all insights &rarr;</a>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <a href="/insights/#pillar-01" class="card">
-        <div class="card-image">
-          <img src="/assets/homepage-insights-data-governance-structured-system.webp" width="1200" height="2729" alt="Structured operational data environment with clean architectural organization" loading="lazy" />
-          <span class="pill">Pillar 01</span>
-        </div>
-        <div class="p-6 flex flex-col gap-3 flex-1">
-          <span class="kicker">Data Curation &amp; Governance</span>
-          <h3 style="font-size: 19px; font-weight: 600; line-height: 1.3;">Why Applied AI Fails Without Clean Data</h3>
-          <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Most failed AI deployments are not AI problems. They are data problems wearing an AI label.</p>
-          <span class="read-link mt-auto">Read &rarr;</span>
-        </div>
-      </a>
-
-      <a href="/insights/#your-workflows-werent-built-for-agents" class="card">
-        <div class="card-image">
-          <img src="/assets/insights/your-workflows-werent-built-for-agents.webp" width="1600" height="900" alt="Engineering drawing on a workshop bench with a coffee ring partially obscuring a critical dimension — illustrating the gap between documented workflows and how operations actually run." loading="lazy" />
-          <span class="pill">Pillar 02</span>
-        </div>
-        <div class="p-6 flex flex-col gap-3 flex-1">
-          <span class="kicker">Workflow Optimization</span>
-          <h3 style="font-size: 19px; font-weight: 600; line-height: 1.3;">Your Workflows Weren&rsquo;t Built for Agents</h3>
-          <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Documented workflows and actual workflows are two different things. Hand an agent the documented version and it executes the dysfunction at machine speed.</p>
-          <span class="read-link mt-auto">Read &rarr;</span>
-        </div>
-      </a>
-
-      <a href="/insights/where-agents-earn-their-keep/" class="card">
-        <div class="card-image">
-          <img src="/assets/insights/where-agents-earn-their-keep-card.webp" width="1200" height="800" alt="Abstract visualization of unstructured data flowing through filtering gates into an ordered grid output." loading="lazy" />
-          <span class="pill">Pillar 03</span>
-        </div>
-        <div class="p-6 flex flex-col gap-3 flex-1">
-          <span class="kicker">AI Design &amp; Implementation</span>
-          <h3 style="font-size: 19px; font-weight: 600; line-height: 1.3;">Where Agents Earn Their Keep &mdash; and Where They Don&rsquo;t</h3>
-          <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">A decision framework grounded in margin, throughput, cycle time, and risk. Built for operators making capital decisions, not for teams chasing demos.</p>
-          <span class="read-link mt-auto">Read &rarr;</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- 8. BY INDUSTRY                                                 -->
-<!-- ============================================================= -->
-<section id="industries" style="background: var(--faa-gray-50);">
-  <div class="container-faa section-y">
-    <div class="flex flex-col gap-4 mb-12 max-w-3xl">
-      <div class="eyebrow" style="color: var(--faa-navy);">Where We Work</div>
-      <h2 class="h2">Where the Methodology Meets the Operating Reality</h2>
-      <p class="body-lg" style="color: var(--faa-gray-600);">
-        Foundation AI Advisory delivers across operating environments where data, process, and risk look different in every plant, branch, depot, or office. The methodology stays the same. The application doesn't.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-
-      <!-- Industry 1 -->
-      <a href="/industry-manufacturing-industrial-production/" class="card industry-card p-6" style="display:flex; flex-direction:column; gap: 16px;">
-        <img class="industry-card-bg" src="/assets/homepage-industry-manufacturing-industrial-production.webp" width="1600" height="1600" alt="Operational visualization for manufacturing and industrial production" loading="lazy" />
-        <h3 style="color: var(--faa-navy); font-size: 18px; font-weight: 600; line-height: 1.3;">Manufacturing &amp; Industrial Production</h3>
-        <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Throughput, yield, master data hygiene, supply chain visibility, and the agents that survive the plant floor.</p>
-        <span class="read-link mt-auto">Explore →</span>
-      </a>
-
-      <!-- Industry 2 -->
-      <a href="/industry-engineering-construction-infrastructure/" class="card industry-card p-6" style="display:flex; flex-direction:column; gap: 16px;">
-        <img class="industry-card-bg" src="/assets/homepage-industry-engineering-construction-infrastructure.webp" width="1254" height="1254" alt="Operational visualization for engineering, construction and infrastructure" loading="lazy" />
-        <h3 style="color: var(--faa-navy); font-size: 18px; font-weight: 600; line-height: 1.3;">Engineering, Construction &amp; Infrastructure (ECI)</h3>
-        <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Project schedule, field-to-office data flow, change-order discipline, and accountable project controls.</p>
-        <span class="read-link mt-auto">Explore →</span>
-      </a>
-
-      <!-- Industry 3 -->
-      <a href="/industry-transportation-logistics/" class="card industry-card p-6" style="display:flex; flex-direction:column; gap: 16px;">
-        <img class="industry-card-bg" src="/assets/homepage-industry-transportation-logistics.webp" width="1600" height="1600" alt="Operational visualization for transportation and logistics" loading="lazy" />
-        <h3 style="color: var(--faa-navy); font-size: 18px; font-weight: 600; line-height: 1.3;">Transportation &amp; Logistics</h3>
-        <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Forecasting, dispatch, freight intelligence, exception handling, and the data foundation under all of it.</p>
-        <span class="read-link mt-auto">Explore →</span>
-      </a>
-
-      <!-- Industry 4 -->
-      <a href="/industry-energy-natural-resources/" class="card industry-card p-6" style="display:flex; flex-direction:column; gap: 16px;">
-        <img class="industry-card-bg" src="/assets/homepage-industry-energy-natural-resources.webp" width="1600" height="1600" alt="Operational visualization for energy and natural resources" loading="lazy" />
-        <h3 style="color: var(--faa-navy); font-size: 18px; font-weight: 600; line-height: 1.3;">Energy &amp; Natural Resources</h3>
-        <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Asset reliability, field operations, regulatory data trails, and the human-in-the-loop architecture this sector demands.</p>
-        <span class="read-link mt-auto">Explore →</span>
-      </a>
-
-      <!-- Industry 5 -->
-      <a href="/industry-distribution-wholesale/" class="card industry-card p-6" style="display:flex; flex-direction:column; gap: 16px;">
-        <img class="industry-card-bg" src="/assets/homepage-industry-distribution-wholesale.webp" width="1600" height="1600" alt="Operational visualization for distribution and wholesale" loading="lazy" />
-        <h3 style="color: var(--faa-navy); font-size: 18px; font-weight: 600; line-height: 1.3;">Distribution &amp; Wholesale</h3>
-        <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Inventory, demand, exception flow, and order discipline across branches, systems, and customer commitments.</p>
-        <span class="read-link mt-auto">Explore →</span>
-      </a>
-
-      <!-- Industry 6 -->
-      <a href="/industry-industrial-equipment/" class="card industry-card p-6" style="display:flex; flex-direction:column; gap: 16px;">
-        <img class="industry-card-bg" src="/assets/homepage-industry-industrial-equipment.webp" width="1599" height="1599" alt="Operational visualization for industrial equipment" loading="lazy" />
-        <h3 style="color: var(--faa-navy); font-size: 18px; font-weight: 600; line-height: 1.3;">Industrial Equipment</h3>
-        <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Aftermarket data, parts intelligence, service workflows, and margin recovery where equipment records drive outcomes.</p>
-        <span class="read-link mt-auto">Explore →</span>
-      </a>
-
-      <!-- Industry 7 -->
-      <a href="/industry-specialty-manufacturing/" class="card industry-card p-6" style="display:flex; flex-direction:column; gap: 16px;">
-        <img class="industry-card-bg" src="/assets/homepage-industry-specialty-manufacturing.webp" width="1600" height="1600" alt="Operational visualization for specialty manufacturing" loading="lazy" />
-        <h3 style="color: var(--faa-navy); font-size: 18px; font-weight: 600; line-height: 1.3;">Specialty Manufacturing</h3>
-        <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">High-mix, low-volume operations where quoting, routing, scheduling, and exception handling carry the business.</p>
-        <span class="read-link mt-auto">Explore →</span>
-      </a>
-
-      <!-- Industry 8 -->
-      <a href="/industry-professional-technical-services/" class="card industry-card p-6" style="display:flex; flex-direction:column; gap: 16px;">
-        <img class="industry-card-bg" src="/assets/homepage-industry-professional-technical-services.webp" width="1600" height="1600" alt="Operational visualization for professional and technical services" loading="lazy" />
-        <h3 style="color: var(--faa-navy); font-size: 18px; font-weight: 600; line-height: 1.3;">Professional &amp; Technical Services</h3>
-        <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Delivery systems, utilization visibility, client documentation, and decision workflows for knowledge-led operators.</p>
-        <span class="read-link mt-auto">Explore →</span>
-      </a>
-
-      <!-- Industry 9 -->
-      <a href="/industry-financial-services-banking/" class="card industry-card p-6" style="display:flex; flex-direction:column; gap: 16px;">
-        <img class="industry-card-bg" src="/assets/homepage-industry-financial-services-banking.webp" width="1595" height="1595" alt="Operational visualization for financial services and banking" loading="lazy" />
-        <h3 style="color: var(--faa-navy); font-size: 18px; font-weight: 600; line-height: 1.3;">Financial Services &amp; Banking</h3>
-        <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Controls, reporting confidence, risk visibility, and governed AI use in environments where accountability matters.</p>
-        <span class="read-link mt-auto">Explore →</span>
-      </a>
-
-      <!-- Industry 10 -->
-      <a href="/industry-ai-data-it-systems/" class="card industry-card p-6" style="display:flex; flex-direction:column; gap: 16px;">
-        <img class="industry-card-bg" src="/assets/homepage-industry-ai-data-it-systems.webp" width="1600" height="1600" alt="Operational visualization for AI, data and IT systems" loading="lazy" />
-        <h3 style="color: var(--faa-navy); font-size: 18px; font-weight: 600; line-height: 1.3;">AI, Data &amp; IT Systems</h3>
-        <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">System owners, data teams, architecture clarity, and implementation discipline for AI-ready operating systems.</p>
-        <span class="read-link mt-auto">Explore →</span>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- 9. CONVERSION BLOCK                                            -->
-<!-- ============================================================= -->
-<section class="home-conversion-block" style="background: var(--faa-navy);">
-  <div class="container-faa" style="padding-top:96px; padding-bottom:96px;">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 relative">
-      <div class="lg:pr-12 flex flex-col home-conversion-block__panel">
-        <div class="eyebrow" style="color: rgba(255,255,255,0.7);">Start Here</div>
-        <h3 class="mt-3" style="color: var(--faa-white); font-size: 28px; font-weight: 600; line-height: 1.2;">Business Systems Assessment</h3>
-        <p class="mt-5" style="color: rgba(255,255,255,0.85); font-size: 17px; line-height: 1.6; max-width: 50ch;">
-          A focused evaluation of how the business actually operates across data, workflows, and systems. Output: a prioritized execution path tied to measurable business outcomes.
-        </p>
-        <div class="mt-auto pt-8 home-conversion-block__cta">
-          <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary">Start with a Business Systems Assessment</a>
-        </div>
-      </div>
-      <div class="hidden lg:block absolute left-1/2 top-0 bottom-0" style="width:1px;background: rgba(255,255,255,0.20);"></div>
-      <div class="lg:pl-12 flex flex-col home-conversion-block__panel">
-        <div class="eyebrow" style="color: rgba(255,255,255,0.7);">Or Explore</div>
-        <h3 class="mt-3" style="color: var(--faa-white); font-size: 28px; font-weight: 600; line-height: 1.2;">90-Day AI Execution Sprint</h3>
-        <p class="mt-5" style="color: rgba(255,255,255,0.85); font-size: 17px; line-height: 1.6; max-width: 50ch;">
-          A targeted conversation about the 90-Day AI Execution Sprint and the workflow where execution should start.
-        </p>
-        <div class="mt-auto pt-8 home-conversion-block__cta">
-          <a href="mailto:blueprint@foundationaiadvisory.com?subject=90-Day%20AI%20Execution%20Sprint%20Inquiry" class="btn btn-outline-white">Discuss the 90-Day AI Execution Sprint</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- 10. SUBSCRIBE FOOTER                                           -->
-<!-- ============================================================= -->
-<section style="background: var(--faa-gray-50);">
-  <div class="container-faa" style="padding-top:64px; padding-bottom:64px;">
-    <div class="text-center mx-auto" style="max-width: 640px;">
-      <h3 style="color: var(--faa-navy); font-size: 24px; font-weight: 600; line-height: 1.3;">Get Foundation AI Advisory&rsquo;s running record on mid-market AI execution.</h3>
-      <p class="mt-3" style="color: var(--faa-gray-600); font-size: 16px; line-height: 1.6;">
-        Insight assets for mid-market operators. Published when there is something worth publishing.
-      </p>
-      <form class="mt-7 flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center" data-subscribe-form>
-        <label for="subscribe-email" class="sr-only">Email address</label>
-        <input id="subscribe-email" type="email" placeholder="you@company.com" required
-          class="bg-white"
-          style="height:44px; padding: 0 14px; border:1px solid var(--faa-gray-200); border-radius:4px; font-size:15px; color: var(--faa-gray-600); width:100%; max-width: 380px;" />
-        <button type="submit" class="btn btn-primary">Subscribe</button>
-      </form>
-      <p class="mt-4" style="color: var(--faa-gray-400); font-size: 13px;">
-        We do not share your information. Unsubscribe any time.
-      </p>
-    </div>
-  </div>
-</section>
-
+  <section class="home-container home-faq" aria-labelledby="faq-heading">
+    <div><p class="home-eyebrow">Executive answers</p><h2 id="faq-heading">A few practical answers.</h2><p class="home-faq-intro">Business outcomes first.<br>Data, workflows, then applied AI.</p></div>
+    <div class="home-faq-list"><details class="home-faq-item"><summary>What is Foundation AI Advisory?</summary><p>Foundation AI Advisory is a business-first AI advisory firm for mid-market operators. Foundation AI Advisory fixes the data, workflow, and system foundation before applying AI.</p></details>
+<details class="home-faq-item"><summary>What is Foundation AI Advisory’s AI implementation methodology?</summary><p>Foundation AI Advisory follows three steps in order: Data Curation & Governance, Workflow Optimization, and AI Design & Implementation.</p></details>
+<details class="home-faq-item"><summary>Why does Foundation AI Advisory start with data and workflows before AI?</summary><p>AI depends on the system underneath it. If the data is incomplete, the workflow is undefined, or the owner of the output is unclear, AI will amplify those problems instead of solving them.</p></details>
+<details class="home-faq-item"><summary>Who does Foundation AI Advisory serve?</summary><p>Foundation AI Advisory serves CEOs, Presidents, CFOs, Controllers, CIOs, and IT leaders in mid-market companies across industrial, construction, logistics, financial services, professional services, AI, data, and IT systems environments.</p></details>
+<details class="home-faq-item"><summary>What outcomes should AI produce?</summary><p>AI should improve margin, throughput, cycle time, cash flow, risk exposure, or operational visibility. Foundation AI Advisory does not recommend AI work without a clear business outcome and path to production.</p></details></div>
+  </section>
 </main>
-
-<!-- ============================================================= -->
-<!-- 11. LEGAL FOOTER                                               -->
-<!-- ============================================================= -->
-<footer style="background: var(--faa-navy);">
+<footer class="home-footer" style="background: var(--faa-navy);">
   <div class="container-faa" style="padding-top:48px; padding-bottom:48px;">
-    <p class="footer-attribution">Built in-house by Foundation AI Advisory - where finance, governance, operations, and AI meet practical execution.</p>
+    <p class="footer-attribution">Business First. AI Applied.</p>
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
       <div class="flex items-center gap-4" style="color: var(--faa-white);">
         <img src="/assets/global-footer-logo-wordmark.png" width="512" height="140" alt="Foundation AI Advisory" style="height:32px;width:auto;display:block;opacity:0.95;" />
@@ -879,73 +325,7 @@
     </div>
   </div>
 </footer>
-
-<script>
-  // Hero carousel controller
-  (function() {
-    const root = document.getElementById('hero-carousel');
-    if (!root) return;
-    const slides = Array.from(root.querySelectorAll('.hero-slide'));
-    const tabs   = Array.from(root.querySelectorAll('.hero-tab'));
-    const prev   = root.querySelector('[data-hero-prev]');
-    const next   = root.querySelector('[data-hero-next]');
-    const total  = slides.length;
-    if (!total) return;
-    let idx = slides.findIndex(s => s.classList.contains('is-active'));
-    if (idx < 0) idx = 0;
-    // Allow more reading time on phones and devices without hover.
-    const AUTO_MS = window.matchMedia &&
-      window.matchMedia('(max-width: 640px), (hover: none)').matches
-      ? 12000
-      : 7000;
-    let timer = null;
-
-    function setActive(n) {
-      idx = (n + total) % total;
-      slides.forEach((s, i) => s.classList.toggle('is-active', i === idx));
-      tabs.forEach((t, i) => {
-        const on = i === idx;
-        t.classList.toggle('is-active', on);
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
-    }
-    function start() {
-      stop();
-      timer = setInterval(() => setActive(idx + 1), AUTO_MS);
-    }
-    function stop() {
-      if (timer) { clearInterval(timer); timer = null; }
-    }
-    function reset() { start(); }
-
-    if (prev) prev.addEventListener('click', () => { setActive(idx - 1); reset(); });
-    if (next) next.addEventListener('click', () => { setActive(idx + 1); reset(); });
-    tabs.forEach(t => {
-      t.addEventListener('click', () => {
-        const n = parseInt(t.getAttribute('data-hero-tab'), 10);
-        if (!Number.isNaN(n)) { setActive(n); reset(); }
-      });
-    });
-
-    root.addEventListener('mouseenter', stop);
-    root.addEventListener('mouseleave', start);
-    root.addEventListener('focusin', stop);
-    root.addEventListener('focusout', start);
-
-    // Keyboard arrow nav when carousel has focus
-    root.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft')  { setActive(idx - 1); reset(); }
-      if (e.key === 'ArrowRight') { setActive(idx + 1); reset(); }
-    });
-
-    if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      start();
-    }
-  })();
-
-</script>
-<script src="/nav.js?v=20261023-assessment" defer></script>
+<script src="/nav.js?v=20261024-editorial" defer></script>
 <script src="/cookie-consent.js" defer></script>
-
 </body>
 </html>
