@@ -56,3 +56,4 @@
 
   return { QUIZ_VERSION: QUIZ_VERSION, TIERS: TIERS, computeTotal: computeTotal, computeTier: computeTier, computeFlags: computeFlags, scoreSubmission: scoreSubmission };
 }));
+

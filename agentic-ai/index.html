@@ -1,415 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AI Design &amp; Implementation &mdash; Foundation AI Advisory</title>
-<meta name="description" content="AI Design &amp; Implementation for the mid-market: where AI belongs in the workflow, where it does not, and how Foundation AI Advisory moves operators from experimentation to controlled production capability." />
-<meta name="robots" content="index,follow" />
-<link rel="canonical" href="https://foundationaiadvisory.com/agentic-ai/" />
-<link rel="icon" type="image/png" href="/assets/favicon.png" />
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="AI Design &amp; Implementation &mdash; Foundation AI Advisory" />
-<meta property="og:description" content="AI Design &amp; Implementation for the mid-market: where AI belongs in the workflow, where it does not, and how Foundation AI Advisory moves operators from experimentation to controlled production capability." />
-<meta property="og:url" content="https://foundationaiadvisory.com/agentic-ai/" />
-<meta property="og:image" content="https://foundationaiadvisory.com/assets/homepage-pillar-applied-ai-operations-monitoring.webp" />
-<meta property="og:site_name" content="Foundation AI Advisory" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Design &amp; Implementation — Foundation AI Advisory</title>
+<meta name="description" content="AI Design &amp; Implementation for the mid-market: where AI belongs in the workflow, where it does not, and how Foundation AI Advisory moves operators from experimentation to controlled production capability.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://foundationaiadvisory.com/agentic-ai/">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Design &amp; Implementation — Foundation AI Advisory">
+<meta property="og:description" content="AI Design &amp; Implementation for the mid-market: where AI belongs in the workflow, where it does not, and how Foundation AI Advisory moves operators from experimentation to controlled production capability.">
+<meta property="og:url" content="https://foundationaiadvisory.com/agentic-ai/">
+<meta property="og:image" content="https://foundationaiadvisory.com/assets/homepage-pillar-applied-ai-operations-monitoring.webp">
+<meta property="og:site_name" content="Foundation AI Advisory">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Foundation AI Advisory","legalName":"Foundation AI Advisory, LLC","url":"https://foundationaiadvisory.com/","logo":"https://foundationaiadvisory.com/assets/global-header-logo-wordmark.png","description":"A business-first AI advisory firm for mid-market operators. Foundation AI Advisory fixes the data, workflow, and system foundation before applying AI.","founder":{"@type":"Person","name":"Ben DeMichael"},"foundingLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressRegion":"OH","addressCountry":"US"}},"knowsAbout":["Data Curation and Governance","Workflow Optimization","AI Design and Implementation","Mid-Market AI Strategy","Applied AI for Industrial Operations"],"sameAs":["https://www.linkedin.com/company/foundation-ai-advisory"],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"privacy@foundationaiadvisory.com","url":"https://foundationaiadvisory.com/contact/","availableLanguage":["English"]}}</script>
-<link rel="stylesheet" href="/tailwind-static.css?v=20260525a" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=20261023-assessment" />
+<link rel="stylesheet" href="/tailwind-static.css?v=20260525a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=20261023-assessment">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://foundationaiadvisory.com/"},{"@type":"ListItem","position":2,"name":"AI Design & Implementation","item":"https://foundationaiadvisory.com/agentic-ai/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is AI Design & Implementation?","acceptedAnswer":{"@type":"Answer","text":"AI Design & Implementation is the process of choosing where AI fits inside an operating model, defining its inputs and outputs, setting human-in-the-loop controls, and deploying it inside a workflow tied to a measurable business outcome."}},{"@type":"Question","name":"How does Foundation AI Advisory design AI for measurable business outcomes?","acceptedAnswer":{"@type":"Answer","text":"Every use case Foundation AI Advisory recommends is tied to one of six outcomes: margin, throughput, cycle time, cash flow, risk exposure, or operational visibility. The use case must have a clear owner, defined inputs, controlled outputs, and a path to production — not a pilot that ends in a slide deck."}},{"@type":"Question","name":"Who should own AI implementation?","acceptedAnswer":{"@type":"Answer","text":"Ownership should sit with the business function whose outcome the AI affects, supported by IT for architecture and security. AI without a named business owner becomes orphaned infrastructure."}},{"@type":"Question","name":"What outcomes should AI produce?","acceptedAnswer":{"@type":"Answer","text":"AI should improve margin, throughput, cycle time, cash flow, risk exposure, or operational visibility. Foundation AI Advisory does not recommend AI work without a clear business outcome and a path to production."}},{"@type":"Question","name":"How does Foundation AI Advisory approach AI implementation in mid-market companies?","acceptedAnswer":{"@type":"Answer","text":"Foundation AI Advisory implements AI inside the existing operating environment, on top of curated data and aligned workflows, with human oversight at decision points that affect financial or operational risk. The goal is AI that behaves like infrastructure — quiet, dependable, and tied to what the business already measures."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"AI Design and Implementation","name":"AI Design & Implementation Advisory","provider":{"@type":"Organization","name":"Foundation AI Advisory","url":"https://foundationaiadvisory.com/","logo":"https://foundationaiadvisory.com/assets/global-header-logo-wordmark.png"},"areaServed":"United States","audience":{"@type":"BusinessAudience","name":"Mid-Market Operators"},"description":"Foundation AI Advisory's AI Design & Implementation practice deploys AI inside the existing operating environment, on top of curated data and aligned workflows, with human oversight at decision points that affect financial or operational risk. Every use case is tied to a measurable business outcome and a path to production.","serviceOutput":"AI that behaves like infrastructure — quiet, dependable, governed, and tied to one of six outcomes: margin, throughput, cycle time, cash flow, risk exposure, or operational visibility.","url":"https://foundationaiadvisory.com/agentic-ai/"}</script>
-</head>
-<body class="bg-white"><a href="#main-content" class="skip-link">Skip to main content</a>
+<link rel="stylesheet" href="/homepage.css?v=20261024-milestone2"><link rel="stylesheet" href="/navigation-editorial.css?v=20261024-milestone2"><link rel="stylesheet" href="/editorial-pages.css?v=20261024-milestone2"></head>
+<body class="homepage-redesign editorial-page "><a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="sticky top-0 z-40 bg-white border-b" style="border-color: var(--faa-gray-100);" id="site-header">
   <div class="container-faa flex items-center justify-between relative" style="height:96px;">
     <a href="/" class="flex items-center shrink-0" aria-label="Foundation AI Advisory home">
-      <img src="/assets/global-header-logo-wordmark.png" width="512" height="140" alt="Foundation AI Advisory" class="site-header-logo" />
+      <img src="/assets/global-header-logo-wordmark.png" width="512" height="140" alt="Foundation AI Advisory" class="site-header-logo">
     </a>
 
     <nav class="hidden xl:flex items-center gap-6 h-full mx-6" aria-label="Primary">
-      <a href="/" class="utilnav-link" style="height:96px;">Home</a>
-            <a href="/methodology/" class="utilnav-link" data-mega="methodology" aria-expanded="false" aria-controls="mega-methodology" aria-haspopup="true" aria-current="page" style="height:96px;">
+            <button type="button" class="utilnav-link" data-mega="methodology" aria-expanded="false" aria-controls="mega-methodology" style="height:96px;">
         Methodology
-        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </a>
-      <a href="/ai-training-workforce-development/" class="utilnav-link" data-mega="ai-training" aria-expanded="false" aria-controls="mega-ai-training" aria-haspopup="true" style="height:96px;">
+        <svg class="caret" viewbox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>
+      </button>
+      <button type="button" class="utilnav-link" data-mega="ai-training" aria-expanded="false" aria-controls="mega-ai-training" style="height:96px;">
         AI Training
-        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </a>
-      <a href="/industries/" class="utilnav-link" data-mega="industries" aria-expanded="false" aria-controls="mega-industries" aria-haspopup="true" style="height:96px;">
-        Where We Work
-        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </a>
-      <a href="/insights/" class="utilnav-link" data-mega="insights" aria-expanded="false" aria-controls="mega-insights" aria-haspopup="true" style="height:96px;">
-        AI Perspectives
-        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </a>
+        <svg class="caret" viewbox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>
+      </button>
+      <button type="button" class="utilnav-link" data-mega="industries" aria-expanded="false" aria-controls="mega-industries" style="height:96px;">
+        Industries
+        <svg class="caret" viewbox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>
+      </button>
+      <button type="button" class="utilnav-link" data-mega="insights" aria-expanded="false" aria-controls="mega-insights" style="height:96px;">
+        Perspectives
+        <svg class="caret" viewbox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>
+      </button>
       <a href="/about/" class="utilnav-link" style="height:96px;">About</a>
-
+      
     </nav>
 
     <div class="flex items-center shrink-0">
-      <a href="/client-workspace/" class="utility-access-link"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.2" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7V5a2.5 2.5 0 1 1 5 0v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span>Client Workspace</span></a>
+      <a href="/client-workspace/" class="utility-access-link"><svg width="14" height="14" viewbox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.2" stroke="currentColor" stroke-width="1.4"></rect><path d="M5.5 7V5a2.5 2.5 0 1 1 5 0v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg><span>Client Workspace</span></a>
       <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-header-cta" aria-label="Start a Business Systems Assessment">Assessment</a>
       <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary hidden sm:inline-flex">Business Systems Assessment</a>
     </div>
   </div>
 
+<div id="mega-methodology" class="mega-menu editorial-nav-panel" role="region" aria-label="Our methodology">
+ <div class="editorial-nav-inner"><div class="editorial-nav-intro"><p class="editorial-nav-eyebrow">Our methodology</p><h2>The foundation comes first.</h2><p>Three steps. In sequence. Built around the way your business operates.</p><a href="/methodology/" class="editorial-nav-overview">Explore our methodology <span aria-hidden="true">→</span></a></div><div class="editorial-nav-content"><a class="editorial-nav-link" href="/foundation/"><span class="editorial-nav-number" aria-hidden="true">1</span><span><strong>Data Curation &amp; Governance</strong><small>Build clean, governed data that the business can trust.</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/operations/"><span class="editorial-nav-number" aria-hidden="true">2</span><span><strong>Workflow Optimization</strong><small>Improve how work gets done before applying AI.</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/agentic-ai/"><span class="editorial-nav-number" aria-hidden="true">3</span><span><strong>AI Design &amp; Implementation</strong><small>Apply AI with ownership, controls, and measurable outcomes.</small></span><span aria-hidden="true">→</span></a></div></div>
+ </div><div id="mega-ai-training" class="mega-menu editorial-nav-panel" role="region" aria-label="AI training">
+ <div class="editorial-nav-inner"><div class="editorial-nav-intro"><p class="editorial-nav-eyebrow">AI training</p><h2>Build capability in your people.</h2><p>Practical training for executives, managers, and teams.</p><a href="/ai-training-workforce-development/" class="editorial-nav-overview">Explore AI training <span aria-hidden="true">→</span></a></div><div class="editorial-nav-content"><a class="editorial-nav-link" href="/ai-training-workforce-development/#ai-bootcamp"><span><strong>AI Training Bootcamp</strong><small>Build practical skills around real business problems.</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/ai-training-workforce-development/#workforce-development"><span><strong>AI Workforce Development</strong><small>Develop the skills your people need to put AI to work.</small></span><span aria-hidden="true">→</span></a></div></div>
+ </div><div id="mega-industries" class="mega-menu editorial-nav-panel" role="region" aria-label="Industries">
+ <div class="editorial-nav-inner"><div class="editorial-nav-intro"><p class="editorial-nav-eyebrow">Industries</p><h2>Built for your operating reality.</h2><p>The same foundation. Applied to the data, workflows, and constraints in your industry.</p><a href="/industries/" class="editorial-nav-overview">Explore all industries <span aria-hidden="true">→</span></a></div><div class="editorial-nav-content"><div class="editorial-nav-industries"><a class="editorial-nav-link" href="/industry-manufacturing-industrial-production/"><span><strong>Manufacturing &amp; Industrial Production</strong><small>Throughput, yield, plant floor</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-engineering-construction-infrastructure/"><span><strong>Engineering, Construction &amp; Infrastructure (ECI)</strong><small>Field-to-office, project controls</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-transportation-logistics/"><span><strong>Transportation &amp; Logistics</strong><small>Forecasting, dispatch, freight</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-energy-natural-resources/"><span><strong>Energy &amp; Natural Resources</strong><small>Asset reliability, regulatory trails</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-distribution-wholesale/"><span><strong>Distribution &amp; Wholesale</strong><small>Inventory, demand, exception flow</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-industrial-equipment/"><span><strong>Industrial Equipment</strong><small>Aftermarket, parts, service</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-specialty-manufacturing/"><span><strong>Specialty Manufacturing</strong><small>High-mix, low-volume reality</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-professional-technical-services/"><span><strong>Professional &amp; Technical Services</strong><small>Knowledge work, delivery systems</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-financial-services-banking/"><span><strong>Financial Services &amp; Banking</strong><small>Controls, reporting, risk</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-ai-data-it-systems/"><span><strong>AI, Data &amp; IT Systems</strong><small>System owners, data teams</small></span><span aria-hidden="true">→</span></a></div></div></div>
+ </div><div id="mega-insights" class="mega-menu editorial-nav-panel" role="region" aria-label="Perspectives">
+ <div class="editorial-nav-inner"><div class="editorial-nav-intro"><p class="editorial-nav-eyebrow">Perspectives</p><h2>Ideas for the people running the business.</h2><p>Practical perspectives on data, workflows, and applied AI.</p><a href="/insights/" class="editorial-nav-overview">Explore all perspectives <span aria-hidden="true">→</span></a></div><div class="editorial-nav-content"><div class="editorial-nav-perspectives"><div><h3>Explore</h3><a class="editorial-nav-link" href="/insights/"><span><strong>All Perspectives</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/ai-frontiers/"><span><strong>AI Frontiers</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/capital-decisions/"><span><strong>Capital Decisions</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/#foundations-series"><span><strong>Foundations Series</strong></span><span aria-hidden="true">→</span></a></div><div><h3>Read &amp; watch</h3><a class="editorial-nav-link" href="/insights/?format=article"><span><strong>Articles</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=brief"><span><strong>Briefs</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=field-note"><span><strong>Field Notes</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=infographic"><span><strong>Infographics</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=podcast"><span><strong>Podcast</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=video"><span><strong>Video</strong></span><span aria-hidden="true">→</span></a></div></div></div></div>
+ </div>
 
-  <div id="mega-methodology" class="mega-menu" role="region" aria-label="Methodology">
-    <div class="mega-menu-inner">
-      <div class="mega-pillar-cards">
-        <a href="/foundation/" class="mega-pillar-card mega-pillar-card--01">
-          <div class="mega-pillar-card__image" aria-hidden="true"></div>
-          <div class="mega-pillar-card__content">
-            <span class="mega-pillar-card__num">01</span>
-            <h3 class="mega-pillar-card__title">Data Curation<br />&amp; Governance</h3>
-            <p class="mega-pillar-card__dek">Data before anything else</p>
-            <p class="mega-pillar-card__copy">Clean, governed, accessible data creates the foundation for reliable reporting, workflow stability, and AI readiness.</p>
-          </div>
-        </a>
-        <a href="/operations/" class="mega-pillar-card mega-pillar-card--02">
-          <div class="mega-pillar-card__image" aria-hidden="true"></div>
-          <div class="mega-pillar-card__content">
-            <span class="mega-pillar-card__num">02</span>
-            <h3 class="mega-pillar-card__title">Workflow<br />Optimization</h3>
-            <p class="mega-pillar-card__dek">Optimize workflows before applying AI</p>
-            <p class="mega-pillar-card__copy">Map how work actually gets done, remove friction, clarify ownership, and improve flow before automation scales the process.</p>
-          </div>
-        </a>
-        <a href="/agentic-ai/" class="mega-pillar-card mega-pillar-card--03">
-          <div class="mega-pillar-card__image" aria-hidden="true"></div>
-          <div class="mega-pillar-card__content">
-            <span class="mega-pillar-card__num">03</span>
-            <h3 class="mega-pillar-card__title">AI Design<br />&amp; Implementation</h3>
-            <p class="mega-pillar-card__dek">Designed around measurable outcomes</p>
-            <p class="mega-pillar-card__copy">Apply AI to optimized workflows with defined ownership, controls, ROI logic, and a path to production.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div id="mega-ai-training" class="mega-menu" role="region" aria-label="AI Training">
-    <div class="mega-menu-inner">
-      <div class="mega-ai-training-cards">
-        <a href="/ai-training-workforce-development/#ai-bootcamp" class="mega-ai-training-card mega-ai-training-card--bootcamp">
-          <div class="mega-ai-training-card__image" aria-hidden="true"></div>
-          <div class="mega-ai-training-card__content">
-            <span class="mega-ai-training-card__num">Foundations</span>
-            <h3 class="mega-ai-training-card__title">AI Training Bootcamp</h3>
-            <p class="mega-ai-training-card__dek">Learning the basics of AI &mdash; from foundations to using AI to solve real business problems.</p>
-          </div>
-        </a>
-        <a href="/ai-training-workforce-development/#workforce-development" class="mega-ai-training-card mega-ai-training-card--workforce">
-          <div class="mega-ai-training-card__image" aria-hidden="true"></div>
-          <div class="mega-ai-training-card__content">
-            <span class="mega-ai-training-card__num">Applied</span>
-            <h3 class="mega-ai-training-card__title">AI Workforce Development</h3>
-            <p class="mega-ai-training-card__dek">Practical, hands-on, domain-specific training for executives, managers, and teams.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div id="mega-industries" class="mega-menu mega-menu--industries" role="region" aria-label="Industries">
-    <div class="mega-menu-inner">
-      <aside class="mega-menu-context">
-        <p class="mega-menu-context__eyebrow">Where We Work</p>
-        <h3 class="mega-menu-context__heading">Industries where operations determine AI value.</h3>
-        <p class="mega-menu-context__copy">Foundation AI Advisory works with mid-market operators where data quality, workflow discipline, systems, and ownership decide whether AI creates measurable value or scales existing friction.</p>
-        <a class="mega-menu-context__link" href="/industries/">Explore all industries&nbsp;<span aria-hidden="true">&rarr;</span></a>
-      </aside>
-      <div class="mega-menu-context__right">
-        <div class="mega-industry-tiles">
-        <a href="/industry-manufacturing-industrial-production/" class="mega-industry-tile mega-industry-tile--manufacturing">
-          <span class="mega-industry-tile__title">Manufacturing &amp; Industrial Production</span>
-          <span class="mega-industry-tile__meta">Throughput, yield, plant floor</span>
-        </a>
-        <a href="/industry-engineering-construction-infrastructure/" class="mega-industry-tile mega-industry-tile--eci">
-          <span class="mega-industry-tile__title">Engineering, Construction &amp; Infrastructure (ECI)</span>
-          <span class="mega-industry-tile__meta">Field-to-office, project controls</span>
-        </a>
-        <a href="/industry-transportation-logistics/" class="mega-industry-tile mega-industry-tile--logistics">
-          <span class="mega-industry-tile__title">Transportation &amp; Logistics</span>
-          <span class="mega-industry-tile__meta">Forecasting, dispatch, freight</span>
-        </a>
-        <a href="/industry-energy-natural-resources/" class="mega-industry-tile mega-industry-tile--energy">
-          <span class="mega-industry-tile__title">Energy &amp; Natural Resources</span>
-          <span class="mega-industry-tile__meta">Asset reliability, regulatory trails</span>
-        </a>
-        <a href="/industry-distribution-wholesale/" class="mega-industry-tile mega-industry-tile--distribution">
-          <span class="mega-industry-tile__title">Distribution &amp; Wholesale</span>
-          <span class="mega-industry-tile__meta">Inventory, demand, exception flow</span>
-        </a>
-        <a href="/industry-industrial-equipment/" class="mega-industry-tile mega-industry-tile--equipment">
-          <span class="mega-industry-tile__title">Industrial Equipment</span>
-          <span class="mega-industry-tile__meta">Aftermarket, parts, service</span>
-        </a>
-        <a href="/industry-specialty-manufacturing/" class="mega-industry-tile mega-industry-tile--specialty">
-          <span class="mega-industry-tile__title">Specialty Manufacturing</span>
-          <span class="mega-industry-tile__meta">High-mix, low-volume reality</span>
-        </a>
-        <a href="/industry-professional-technical-services/" class="mega-industry-tile mega-industry-tile--professional">
-          <span class="mega-industry-tile__title">Professional &amp; Technical Services</span>
-          <span class="mega-industry-tile__meta">Knowledge work, delivery systems</span>
-        </a>
-        <a href="/industry-financial-services-banking/" class="mega-industry-tile mega-industry-tile--financial">
-          <span class="mega-industry-tile__title">Financial Services &amp; Banking</span>
-          <span class="mega-industry-tile__meta">Controls, reporting, risk</span>
-        </a>
-        <a href="/industry-ai-data-it-systems/" class="mega-industry-tile mega-industry-tile--ai-data">
-          <span class="mega-industry-tile__title">AI, Data &amp; IT Systems</span>
-          <span class="mega-industry-tile__meta">System owners, data teams</span>
-        </a>
-      </div>
-      </div>
-      <div class="mega-menu-insight-strip">
-        <p class="mega-menu-insight-strip__copy">Same methodology. Different operating realities. Foundation AI Advisory starts with data, workflow, ownership, and controls before AI is applied.</p>
-        <a class="mega-menu-insight-strip__link" href="/methodology/">View the Foundation AI Advisory methodology&nbsp;<span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </div>
-  </div>
-
-  <div id="mega-insights" class="mega-menu" role="region" aria-label="AI Perspectives">
-    <div class="mega-menu-inner">
-      <p class="mega-insights-intro">Practical AI perspectives for executives improving data, workflows, and operating systems before automation.</p>
-      <div class="mega-grid-3 mega-insights-grid">
-        <div class="mega-insights-featured">
-          <span class="mega-insights-featured__eyebrow">Start here</span>
-          <h4 class="mega-group-heading">Featured Perspective</h4>
-          <a href="/insights/" class="mega-link mega-insights-featured__primary">All AI Perspectives<span class="mega-link-dek">The full executive hub</span></a>
-          <a href="/insights/capital-decisions/" class="mega-link">Capital Decisions<span class="mega-link-dek">Evaluate ROI, risk, and payback</span></a>
-          <a href="/insights/#foundations-series" class="mega-link">Foundations Series<span class="mega-link-dek">Five-part field series</span></a>
-          <a href="/insights/#subscribe" class="mega-link">Subscribe<span class="mega-link-dek">Get the running record</span></a>
-          <a href="/ai-frontiers/" class="mega-link mega-insights-featured__hub">AI Frontiers <span class="mega-insights-featured__arrow" aria-hidden="true">&rarr;</span><span class="mega-link-dek">Beyond the obvious use cases</span></a>
-        </div>
-        <div class="mega-insights-pillars">
-          <h4 class="mega-group-heading">By Business Foundation</h4>
-          <a href="/foundation/" class="mega-link mega-insights-pillar"><span class="mega-insights-pillar__num">01</span><span class="mega-insights-pillar__body">Data Curation &amp; Governance<span class="mega-link-dek">Fix the records AI depends on</span></span></a>
-          <a href="/operations/" class="mega-link mega-insights-pillar"><span class="mega-insights-pillar__num">02</span><span class="mega-insights-pillar__body">Workflow Optimization<span class="mega-link-dek">Remove friction before automation</span></span></a>
-          <a href="/agentic-ai/" class="mega-link mega-insights-pillar"><span class="mega-insights-pillar__num">03</span><span class="mega-insights-pillar__body">AI Design &amp; Implementation<span class="mega-link-dek">Deploy AI with ownership and controls</span></span></a>
-        </div>
-        <div class="mega-insights-format">
-          <h4 class="mega-group-heading">By Format</h4>
-          <div class="mega-insights-format__grid">
-            <a href="/insights/?format=article" class="mega-link">Articles<span class="mega-link-dek">Long-form analysis</span></a>
-            <a href="/insights/?format=brief" class="mega-link">Briefs<span class="mega-link-dek">Short-form executive reads</span></a>
-            <a href="/insights/?format=field-note" class="mega-link">Field Notes<span class="mega-link-dek">Lessons from the engagement floor</span></a>
-            <a href="/insights/?format=infographic" class="mega-link">Infographics<span class="mega-link-dek">Visual operating explainers</span></a>
-            <a href="/insights/?format=podcast" class="mega-link">Podcast<span class="mega-link-dek">Operator conversations</span></a>
-            <a href="/insights/?format=video" class="mega-link">Video<span class="mega-link-dek">Working sessions</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="mega-insights-footer">
-        <p class="mega-insights-footer__copy">New to Foundation AI Advisory perspectives? Start with the foundation: data, workflow, and AI design before automation.</p>
-        <a href="/insights/" class="mega-insights-footer__cta">Explore all perspectives <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </div>
-  </div>
-    </div>
-  </div>
-  </div>
 </header>
 
 <main id="main-content">
 
-<!-- ============================================================= -->
-<!-- HERO                                                          -->
-<!-- ============================================================= -->
-<section class="page-hero methodology-hero agentic-ai-hero">
-  <div class="page-hero-image" style="background-image: url('/assets/ai-design-implementation-hero-team-decision-table.webp'); background-position: 70% center;" aria-hidden="true"></div>
-  <div class="page-hero-overlay" aria-hidden="true"></div>
-  <div class="container-faa page-hero-content">
-    <div class="hero-text-block">
-      <div class="eyebrow" style="color: rgba(255,255,255,0.85);">Methodology &middot; 03 &mdash; AI Design &amp; Implementation</div>
-      <h1 class="hero-headline mt-5">AI Works. Just Not Where Most Companies Put It.</h1>
-      <p class="hero-dek">AI creates leverage only when the operating system underneath it can support the work. It can reduce handoff drag, improve decision speed, tighten review cycles, and expose where execution breaks down.</p>
-      <p class="hero-dek">But when AI is applied to fragmented data, unclear ownership, and unmanaged workflows, it does not fix the business. It scales the failure pattern faster.</p>
+<section class="ed-hero"><div class="container-faa"><nav class="ed-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Methodology · 3 — AI Design &amp; Implementation</span></nav><div class="ed-masthead"><div><p class="ed-eyebrow">Methodology · 3 — AI Design &amp; Implementation</p><h1>AI Works. Just Not Where Most Companies Put It.</h1></div><div class="ed-intro"><p>AI creates leverage only when the operating system underneath it can support the work. It can reduce handoff drag, improve decision speed, tighten review cycles, and expose where execution breaks down.</p><div class="ed-actions"><a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary">Start with a Business Systems Assessment</a>
+      </div></div></div><div class="ed-hero-photo"><img alt="" decoding="async" fetchpriority="high" src="/assets/ai-design-implementation-hero-team-decision-table.webp"></div></div></section><nav class="ed-jump container-faa" aria-label="On this page"><span>On this page</span><a href="#section-1">Executive Answer</a><a href="#section-2">Most AI Isn’t Failing. It’s Being Misapplied.</a><a href="#section-3">How AI Is Actually Used</a><a href="#section-4">This Is Where Value Gets Destroyed.</a><a href="#approach">What We Actually Do.</a><a href="#section-6">Put AI Where the Business Can Support It.</a></nav><section class="ed-context"><div class="container-faa"><div class="ed-context-copy"><p class="hero-dek">But when AI is applied to fragmented data, unclear ownership, and unmanaged workflows, it does not fix the business. It scales the failure pattern faster.</p>
       <ul class="hero-proof-list">
         <li>Design AI around governed data, clear ownership, and measurable outcomes</li>
         <li>Apply automation only where workflow and decision rights are ready</li>
         <li>Build controls, review loops, and production paths from the start</li>
       </ul>
-      <div class="mt-8">
-        <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary">Start with a Business Systems Assessment</a>
-      </div>
       <p class="hero-trust-line">Foundation AI Advisory applies AI only where the business foundation can support measurable operating results.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================= -->
-<!-- EXECUTIVE ANSWER (AEO)                                        -->
-<!-- ============================================================= -->
-<section class="bg-white">
+    </div></div></section><section class="bg-white ed-section" id="section-1">
   <div class="container-faa section-y">
     <div class="methodology-intro-grid">
       <div class="methodology-intro-text">
-        <div class="eyebrow" style="color: var(--faa-navy);">Executive Answer</div>
+        <div class="eyebrow">Executive Answer</div>
         <h2 class="h2 mt-3">AI Design &amp; Implementation Tied to Measurable Outcomes</h2>
-        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
-          AI Design &amp; Implementation is the work of placing AI inside an operating environment that can support it &mdash; choosing the use case, defining the inputs, setting the controls, deciding where humans review, and tying the output to a metric the business already tracks. It is the third step in the Foundation AI Advisory methodology, never the first.
+        <p class="body-lg mt-5">
+          AI Design &amp; Implementation is the work of placing AI inside an operating environment that can support it — choosing the use case, defining the inputs, setting the controls, deciding where humans review, and tying the output to a metric the business already tracks. It is the third step in the Foundation AI Advisory methodology, never the first.
         </p>
-        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+        <p class="body-lg mt-5">
           In mid-market companies, AI fails most often not at the model layer but at the seams between AI and the business. Use cases are picked for visibility instead of readiness. Inputs are unstable. Outputs land somewhere no one owns. Controls are improvised after the fact. The model performs; the operating system around it does not.
         </p>
-        <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
-          Foundation AI Advisory designs and implements AI inside the existing operating environment, on top of curated data and aligned workflows, with human oversight at decision points that affect financial or operational risk. The goal is AI that behaves like infrastructure &mdash; quiet, dependable, and tied to outcomes the business already measures.
+        <p class="body-lg mt-5">
+          Foundation AI Advisory designs and implements AI inside the existing operating environment, on top of curated data and aligned workflows, with human oversight at decision points that affect financial or operational risk. The goal is AI that behaves like infrastructure — quiet, dependable, and tied to outcomes the business already measures.
         </p>
-        <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="read-link" style="display: inline-block; margin-top: 28px; font-size: 15px; font-weight: 600;">Plan your first AI use case&nbsp;<span class="arrow">&rarr;</span></a>
+        <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="read-link" style="display: inline-block;margin-top: 28px">Plan your first AI use case <span class="arrow">→</span></a>
       </div>
 
       <aside class="methodology-aeo" aria-label="What this answers about AI Design and Implementation">
-        <div class="eyebrow" style="color: var(--faa-navy);">What This Answers</div>
-        <dl class="aeo-faq" style="margin-top: 20px;">
-          <div class="aeo-faq-item">
-            <dt>What is AI Design &amp; Implementation?</dt>
-            <dd>AI Design &amp; Implementation is the process of choosing where AI fits inside an operating model, defining its inputs and outputs, setting human-in-the-loop controls, and deploying it inside a workflow tied to a measurable business outcome.</dd>
-          </div>
-          <div class="aeo-faq-item">
-            <dt>How does Foundation AI Advisory design AI for measurable business outcomes?</dt>
-            <dd>Every use case Foundation AI Advisory recommends is tied to one of six outcomes: margin, throughput, cycle time, cash flow, risk exposure, or operational visibility. The use case must have a clear owner, defined inputs, controlled outputs, and a path to production &mdash; not a pilot that ends in a slide deck.</dd>
-          </div>
-          <div class="aeo-faq-item">
-            <dt>Who should own AI implementation?</dt>
-            <dd>Ownership should sit with the business function whose outcome the AI affects, supported by IT for architecture and security. AI without a named business owner becomes orphaned infrastructure.</dd>
-          </div>
-          <div class="aeo-faq-item">
-            <dt>What outcomes should AI produce?</dt>
-            <dd>AI should improve margin, throughput, cycle time, cash flow, risk exposure, or operational visibility. Foundation AI Advisory does not recommend AI work without a <a href="/business-systems-assessment/">clear business outcome and a path to production</a>.</dd>
-          </div>
-          <div class="aeo-faq-item">
-            <dt>How does Foundation AI Advisory approach AI implementation in mid-market companies?</dt>
-            <dd>Foundation AI Advisory implements AI inside the existing operating environment, on top of <a href="/foundation/">curated data</a> and <a href="/operations/">aligned workflows</a>, with human oversight at decision points that affect financial or operational risk. The goal is AI that behaves like infrastructure &mdash; quiet, dependable, and tied to what the business already measures.</dd>
-          </div>
-        </dl>
+        <div class="eyebrow">What This Answers</div>
+        <div class="aeo-faq" style="margin-top: 20px">
+          <details class="ed-faq"><summary>What is AI Design &amp; Implementation?</summary><div class="ed-faq-answer"><div>AI Design &amp; Implementation is the process of choosing where AI fits inside an operating model, defining its inputs and outputs, setting human-in-the-loop controls, and deploying it inside a workflow tied to a measurable business outcome.</div>
+          </div></details><details class="ed-faq"><summary>How does Foundation AI Advisory design AI for measurable business outcomes?</summary><div class="ed-faq-answer"><div>Every use case Foundation AI Advisory recommends is tied to one of six outcomes: margin, throughput, cycle time, cash flow, risk exposure, or operational visibility. The use case must have a clear owner, defined inputs, controlled outputs, and a path to production — not a pilot that ends in a slide deck.</div>
+          </div></details><details class="ed-faq"><summary>Who should own AI implementation?</summary><div class="ed-faq-answer"><div>Ownership should sit with the business function whose outcome the AI affects, supported by IT for architecture and security. AI without a named business owner becomes orphaned infrastructure.</div>
+          </div></details><details class="ed-faq"><summary>What outcomes should AI produce?</summary><div class="ed-faq-answer"><div>AI should improve margin, throughput, cycle time, cash flow, risk exposure, or operational visibility. Foundation AI Advisory does not recommend AI work without a <a href="/business-systems-assessment/">clear business outcome and a path to production</a>.</div>
+          </div></details><details class="ed-faq"><summary>How does Foundation AI Advisory approach AI implementation in mid-market companies?</summary><div class="ed-faq-answer"><div>Foundation AI Advisory implements AI inside the existing operating environment, on top of <a href="/foundation/">curated data</a> and <a href="/operations/">aligned workflows</a>, with human oversight at decision points that affect financial or operational risk. The goal is AI that behaves like infrastructure — quiet, dependable, and tied to what the business already measures.</div>
+          </div></details></div>
         <p class="aeo-closing">The goal is not more AI for its own sake. The goal is AI applied where it earns its keep, after the system underneath it has been built to hold weight.</p>
       </aside>
     </div>
   </div>
 </section>
 
-<!-- ============================================================= -->
-<!-- SECTION 1: WHAT WE SEE IN THE FIELD                           -->
-<!-- ============================================================= -->
-<section class="bg-white">
+<section class="bg-white ed-section" id="section-2">
   <div class="container-faa section-y">
     <div class="max-w-3xl mb-12 lg:mb-16">
-      <div class="eyebrow" style="color: var(--faa-navy);">What We See in the Field</div>
-      <h2 class="h2 mt-3">Most AI Isn&rsquo;t Failing. It&rsquo;s Being Misapplied.</h2>
-      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+      <div class="eyebrow">What We See in the Field</div>
+      <h2 class="h2 mt-3">Most AI Isn’t Failing. It’s Being Misapplied.</h2>
+      <p class="body-lg mt-5">
         Most AI problems start before a model is ever selected. Teams apply AI to work that has no clean data source, no defined workflow, no decision owner, and no control layer.
       </p>
-      <p class="body-lg mt-4" style="color: var(--faa-gray-600);">
+      <p class="body-lg mt-4">
         The result looks modern, but the operating risk is familiar: bad inputs, unclear accountability, duplicated work, missed exceptions, and decisions that cannot be explained after the fact.
       </p>
     </div>
 
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10" style="list-style:none;padding:0;margin:0;">
-      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
-        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Pilots everywhere. Production nowhere.</div>
-        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Teams launch experiments without defining what happens after the demo. There is no owner for the output, no exception path, no review cadence, and no operating metric tied to the work. The pilot creates activity, but not throughput, margin improvement, or control.</p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10" style="list-style:none;padding:0;margin:0">
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light)">
+        <div>Pilots everywhere. Production nowhere.</div>
+        <p class="mt-2">Teams launch experiments without defining what happens after the demo. There is no owner for the output, no exception path, no review cadence, and no operating metric tied to the work. The pilot creates activity, but not throughput, margin improvement, or control.</p>
       </li>
-      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
-        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">The agent doesn&rsquo;t own the outcome.</div>
-        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">AI can recommend, classify, summarize, route, or execute. It cannot own the business result. When ownership is unclear, operations assumes IT is accountable, IT assumes the function is accountable, and leadership inherits the risk.</p>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light)">
+        <div>The agent doesn’t own the outcome.</div>
+        <p class="mt-2">AI can recommend, classify, summarize, route, or execute. It cannot own the business result. When ownership is unclear, operations assumes IT is accountable, IT assumes the function is accountable, and leadership inherits the risk.</p>
       </li>
-      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
-        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">AI is replacing judgment, not supporting it.</div>
-        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">The wrong work gets automated because it is visible, repetitive, or easy to demo. High-impact decisions still require human judgment, business context, and review discipline. AI should narrow the decision space, not remove accountability from it.</p>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light)">
+        <div>AI is replacing judgment, not supporting it.</div>
+        <p class="mt-2">The wrong work gets automated because it is visible, repetitive, or easy to demo. High-impact decisions still require human judgment, business context, and review discipline. AI should narrow the decision space, not remove accountability from it.</p>
       </li>
-      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
-        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Good outputs, wrong inputs.</div>
-        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">A clear response can still be built on stale pricing, duplicated customer records, incomplete job history, bad inventory data, or a workflow exception that never entered the system. Confidence becomes the risk because the output sounds more reliable than the source data actually is.</p>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light)">
+        <div>Good outputs, wrong inputs.</div>
+        <p class="mt-2">A clear response can still be built on stale pricing, duplicated customer records, incomplete job history, bad inventory data, or a workflow exception that never entered the system. Confidence becomes the risk because the output sounds more reliable than the source data actually is.</p>
       </li>
-      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
-        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">No control layer.</div>
-        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">There is no checkpoint, escalation path, approval queue, or audit trail. Exceptions move through the business informally. When the issue appears later, leadership has a conversation trail instead of a decision record.</p>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light)">
+        <div>No control layer.</div>
+        <p class="mt-2">There is no checkpoint, escalation path, approval queue, or audit trail. Exceptions move through the business informally. When the issue appears later, leadership has a conversation trail instead of a decision record.</p>
       </li>
-      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light);">
-        <div style="color: var(--faa-navy); font-weight:600; font-size:18px; line-height:1.3;">Tool-first decisions.</div>
-        <p class="mt-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">The platform gets selected before the use case is designed. The buying process moves faster than the operating design. Six months later, the company owns capability it cannot deploy cleanly because the workflow, data, and ownership model were never prepared.</p>
+      <li class="border-l-2 pl-5" style="border-color: var(--faa-blue-light)">
+        <div>Tool-first decisions.</div>
+        <p class="mt-2">The platform gets selected before the use case is designed. The buying process moves faster than the operating design. Six months later, the company owns capability it cannot deploy cleanly because the workflow, data, and ownership model were never prepared.</p>
       </li>
     </ul>
   </div>
 </section>
 
-<!-- ============================================================= -->
-<!-- SECTION 2: HOW AI IS ACTUALLY USED                            -->
-<!-- ============================================================= -->
-<section style="background: var(--faa-gray-50);">
+<section class="ed-section" id="section-3">
   <div class="container-faa section-y">
     <div class="max-w-3xl mb-12 lg:mb-14">
-      <div class="eyebrow" style="color: var(--faa-navy);">How AI Is Actually Used</div>
+      <div class="eyebrow">How AI Is Actually Used</div>
       <h2 class="h2 mt-3">AI Has Two Operating Roles. Most Teams Confuse Them.</h2>
-      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+      <p class="body-lg mt-5">
         Inside a business, AI usually plays one of two roles.
       </p>
-      <p class="body-lg mt-4" style="color: var(--faa-gray-600);">
+      <p class="body-lg mt-4">
         It can help people move faster toward a known outcome, or it can become part of the workflow that produces the outcome. Those are different operating models. They require different data quality, different controls, different owners, and different risk thresholds.
       </p>
-      <p class="body-lg mt-4" style="color: var(--faa-gray-600);">
+      <p class="body-lg mt-4">
         Confusing them leads to weak implementation, unclear accountability, and automation in places where the business is not ready for it.
       </p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
 
-      <div class="card p-7 lg:p-8" style="border-color: var(--faa-gray-200); background: var(--faa-white);">
-        <div class="eyebrow" style="color: var(--faa-blue);">01</div>
-        <h3 class="mt-3" style="color: var(--faa-navy); font-size:24px; font-weight:600; line-height:1.25;">AI as an Accelerator</h3>
-        <p class="mt-4" style="color: var(--faa-gray-600); font-size:15px; line-height:1.65;">
+      <div class="card p-7 lg:p-8" style="border-color: var(--faa-gray-200)">
+        <div class="eyebrow">01</div>
+        <h3 class="mt-3">AI as an Accelerator</h3>
+        <p class="mt-4">
           AI helps people complete existing work faster. It supports analysis, synthesis, drafting, summarization, reporting, documentation, and decision preparation.
         </p>
-        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.65;">
+        <p class="mt-3">
           The business owner still owns the result. The human still reviews the work. The workflow does not depend on AI to execute correctly.
         </p>
-        <ul class="mt-5" style="list-style:none;padding:0;margin-bottom:0;">
-          <li class="flex gap-3 py-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.5;"><span class="shrink-0 mt-2" style="width:5px;height:5px;border-radius:50%;background: var(--faa-blue);"></span><span>Drafting and reviewing working material</span></li>
-          <li class="flex gap-3 py-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.5;"><span class="shrink-0 mt-2" style="width:5px;height:5px;border-radius:50%;background: var(--faa-blue);"></span><span>Summarizing meetings, documents, and customer history</span></li>
-          <li class="flex gap-3 py-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.5;"><span class="shrink-0 mt-2" style="width:5px;height:5px;border-radius:50%;background: var(--faa-blue);"></span><span>Accelerating reporting, planning, and analysis</span></li>
-          <li class="flex gap-3 py-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.5;"><span class="shrink-0 mt-2" style="width:5px;height:5px;border-radius:50%;background: var(--faa-blue);"></span><span>Preparing decisions with better context</span></li>
-          <li class="flex gap-3 py-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.5;"><span class="shrink-0 mt-2" style="width:5px;height:5px;border-radius:50%;background: var(--faa-blue);"></span><span>Reducing cycle time on administrative and analytical work</span></li>
+        <ul class="mt-5" style="list-style:none;padding:0;margin-bottom:0">
+          <li class="flex gap-3 py-2"><span class="shrink-0 mt-2" style="width:5px;height:5px;background: var(--faa-blue)"></span><span>Drafting and reviewing working material</span></li>
+          <li class="flex gap-3 py-2"><span class="shrink-0 mt-2" style="width:5px;height:5px;background: var(--faa-blue)"></span><span>Summarizing meetings, documents, and customer history</span></li>
+          <li class="flex gap-3 py-2"><span class="shrink-0 mt-2" style="width:5px;height:5px;background: var(--faa-blue)"></span><span>Accelerating reporting, planning, and analysis</span></li>
+          <li class="flex gap-3 py-2"><span class="shrink-0 mt-2" style="width:5px;height:5px;background: var(--faa-blue)"></span><span>Preparing decisions with better context</span></li>
+          <li class="flex gap-3 py-2"><span class="shrink-0 mt-2" style="width:5px;height:5px;background: var(--faa-blue)"></span><span>Reducing cycle time on administrative and analytical work</span></li>
         </ul>
-        <p style="margin-top:22px; padding-top:16px; border-top:1px solid var(--faa-gray-200); color: var(--faa-gray-600); font-size:14px; line-height:1.6;">
-          <strong style="color: var(--faa-navy);">Business impact:</strong> shorter cycle times, better preparation, less administrative drag, and improved throughput without removing ownership.
+        <p style="margin-top:22px;padding-top:16px;border-top:1px solid var(--faa-gray-200)">
+          <strong>Business impact:</strong> shorter cycle times, better preparation, less administrative drag, and improved throughput without removing ownership.
         </p>
-        <p class="mt-6 border-l-2 pl-4" style="border-color: var(--faa-blue); color: var(--faa-navy); font-size:17px; font-weight:600; line-height:1.45;">
+        <p class="mt-6 border-l-2 pl-4" style="border-color: var(--faa-blue)">
           AI speeds up the work. It is not the work.
         </p>
       </div>
 
-      <div class="card p-7 lg:p-8" style="border-color: var(--faa-gray-200); background: var(--faa-white);">
-        <div class="eyebrow" style="color: var(--faa-blue);">02</div>
-        <h3 class="mt-3" style="color: var(--faa-navy); font-size:24px; font-weight:600; line-height:1.25;">AI as the Solution</h3>
-        <p class="mt-4" style="color: var(--faa-gray-600); font-size:15px; line-height:1.65;">
+      <div class="card p-7 lg:p-8" style="border-color: var(--faa-gray-200)">
+        <div class="eyebrow">02</div>
+        <h3 class="mt-3">AI as the Solution</h3>
+        <p class="mt-4">
           AI is embedded into the workflow itself. It classifies, routes, reconciles, drafts, decides, recommends, or executes work that the business acts on.
         </p>
-        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.65;">
+        <p class="mt-3">
           This requires stronger foundations: structured data, defined ownership, exception handling, review thresholds, auditability, and a measurable operating outcome.
         </p>
-        <ul class="mt-5" style="list-style:none;padding:0;margin-bottom:0;">
-          <li class="flex gap-3 py-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.5;"><span class="shrink-0 mt-2" style="width:5px;height:5px;border-radius:50%;background: var(--faa-blue);"></span><span>Automated classification, routing, or decision support</span></li>
-          <li class="flex gap-3 py-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.5;"><span class="shrink-0 mt-2" style="width:5px;height:5px;border-radius:50%;background: var(--faa-blue);"></span><span>Agent-supported order entry, quoting, billing, or reconciliation</span></li>
-          <li class="flex gap-3 py-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.5;"><span class="shrink-0 mt-2" style="width:5px;height:5px;border-radius:50%;background: var(--faa-blue);"></span><span>Exception detection and escalation</span></li>
-          <li class="flex gap-3 py-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.5;"><span class="shrink-0 mt-2" style="width:5px;height:5px;border-radius:50%;background: var(--faa-blue);"></span><span>Workflow execution across systems</span></li>
-          <li class="flex gap-3 py-2" style="color: var(--faa-gray-600); font-size:15px; line-height:1.5;"><span class="shrink-0 mt-2" style="width:5px;height:5px;border-radius:50%;background: var(--faa-blue);"></span><span>Outputs that trigger operational, financial, or customer-facing action</span></li>
+        <ul class="mt-5" style="list-style:none;padding:0;margin-bottom:0">
+          <li class="flex gap-3 py-2"><span class="shrink-0 mt-2" style="width:5px;height:5px;background: var(--faa-blue)"></span><span>Automated classification, routing, or decision support</span></li>
+          <li class="flex gap-3 py-2"><span class="shrink-0 mt-2" style="width:5px;height:5px;background: var(--faa-blue)"></span><span>Agent-supported order entry, quoting, billing, or reconciliation</span></li>
+          <li class="flex gap-3 py-2"><span class="shrink-0 mt-2" style="width:5px;height:5px;background: var(--faa-blue)"></span><span>Exception detection and escalation</span></li>
+          <li class="flex gap-3 py-2"><span class="shrink-0 mt-2" style="width:5px;height:5px;background: var(--faa-blue)"></span><span>Workflow execution across systems</span></li>
+          <li class="flex gap-3 py-2"><span class="shrink-0 mt-2" style="width:5px;height:5px;background: var(--faa-blue)"></span><span>Outputs that trigger operational, financial, or customer-facing action</span></li>
         </ul>
-        <p style="margin-top:22px; padding-top:16px; border-top:1px solid var(--faa-gray-200); color: var(--faa-gray-600); font-size:14px; line-height:1.6;">
-          <strong style="color: var(--faa-navy);">Business impact:</strong> higher throughput, lower manual effort, improved control, reduced rework, and faster execution when the workflow is ready.
+        <p style="margin-top:22px;padding-top:16px;border-top:1px solid var(--faa-gray-200)">
+          <strong>Business impact:</strong> higher throughput, lower manual effort, improved control, reduced rework, and faster execution when the workflow is ready.
         </p>
-        <p class="mt-6 border-l-2 pl-4" style="border-color: var(--faa-blue); color: var(--faa-navy); font-size:17px; font-weight:600; line-height:1.45;">
+        <p class="mt-6 border-l-2 pl-4" style="border-color: var(--faa-blue)">
           AI now affects the output. The system has to be right.
         </p>
       </div>
@@ -418,91 +229,82 @@
   </div>
 </section>
 
-<!-- ============================================================= -->
-<!-- OPERATING PRINCIPLE                                           -->
-<!-- ============================================================= -->
-<section class="bg-white">
-  <div class="container-faa" style="padding-top:64px; padding-bottom:64px;">
-    <div class="max-w-3xl border-l-2 pl-6" style="border-color: var(--faa-blue);">
-      <div class="eyebrow" style="color: var(--faa-navy);">Operating Principle</div>
-      <p class="mt-4" style="color: var(--faa-navy); font-size:22px; font-weight:600; line-height:1.35; letter-spacing:-0.01em;">
+<section class="bg-white ed-section">
+  <div class="container-faa" style="padding-top:64px;padding-bottom:64px">
+    <div class="max-w-3xl border-l-2 pl-6" style="border-color: var(--faa-blue)">
+      <div class="eyebrow">Operating Principle</div>
+      <p class="mt-4" style="letter-spacing:-0.01em">
         Most companies try to use AI as the solution before they have used it as an accelerator. That is where the implementation breaks.
       </p>
-      <p class="mt-4" style="color: var(--faa-gray-600); font-size:16px; line-height:1.6;">
+      <p class="mt-4">
         Acceleration should come first. It helps expose the work, clarify the data, identify friction, and reveal where ownership is unclear. Solution design comes second, only where the workflow and data can support production use.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ============================================================= -->
-<!-- SECTION 3: WHY IT MATTERS                                     -->
-<!-- ============================================================= -->
-<section style="background: var(--faa-gray-50);">
+<section class="ed-section" id="section-4">
   <div class="container-faa section-y">
     <div class="max-w-3xl mb-12 lg:mb-14">
-      <div class="eyebrow" style="color: var(--faa-navy);">Why It Matters</div>
+      <div class="eyebrow">Why It Matters</div>
       <h2 class="h2 mt-3">This Is Where Value Gets Destroyed.</h2>
-      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
-        AI failure rarely appears as &ldquo;AI failure.&rdquo; It appears as operational drag: bad decisions, unmanaged exceptions, slower teams, duplicated work, compliance exposure, customer frustration, and margin leakage.
+      <p class="body-lg mt-5">
+        AI failure rarely appears as “AI failure.” It appears as operational drag: bad decisions, unmanaged exceptions, slower teams, duplicated work, compliance exposure, customer frustration, and margin leakage.
       </p>
-      <p class="body-lg mt-4" style="color: var(--faa-gray-600);">
+      <p class="body-lg mt-4">
         The risk is not that AI makes one mistake. The risk is that it repeats the same weak process at operating speed.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card p-6 flex flex-col" style="border-color: var(--faa-gray-200); background: var(--faa-white);">
-        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">False Confidence</div>
-        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Clear language makes weak conclusions feel stronger. Leadership sees polish and assumes reliability, even when the underlying data is incomplete, stale, or poorly governed.</p>
-        <p class="mt-auto" style="margin-top:18px; padding-top:14px; border-top:1px solid var(--faa-gray-200); color: var(--faa-gray-600); font-size:14px; line-height:1.55;">
-          <strong style="color: var(--faa-navy);">Business impact:</strong> poor decisions move faster and become harder to challenge.
+      <div class="card p-6 flex flex-col" style="border-color: var(--faa-gray-200)">
+        <div style="letter-spacing:0.04em;text-transform:uppercase">False Confidence</div>
+        <p class="mt-3">Clear language makes weak conclusions feel stronger. Leadership sees polish and assumes reliability, even when the underlying data is incomplete, stale, or poorly governed.</p>
+        <p class="mt-auto" style="margin-top:18px;padding-top:14px;border-top:1px solid var(--faa-gray-200)">
+          <strong>Business impact:</strong> poor decisions move faster and become harder to challenge.
         </p>
       </div>
-      <div class="card p-6 flex flex-col" style="border-color: var(--faa-gray-200); background: var(--faa-white);">
-        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Bad Decisions at Scale</div>
-        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">A bad recommendation becomes expensive when it affects pricing, scheduling, procurement, customer commitments, working capital, or production planning.</p>
-        <p class="mt-auto" style="margin-top:18px; padding-top:14px; border-top:1px solid var(--faa-gray-200); color: var(--faa-gray-600); font-size:14px; line-height:1.55;">
-          <strong style="color: var(--faa-navy);">Business impact:</strong> margin erosion, rework, service failures, and avoidable cash flow pressure.
+      <div class="card p-6 flex flex-col" style="border-color: var(--faa-gray-200)">
+        <div style="letter-spacing:0.04em;text-transform:uppercase">Bad Decisions at Scale</div>
+        <p class="mt-3">A bad recommendation becomes expensive when it affects pricing, scheduling, procurement, customer commitments, working capital, or production planning.</p>
+        <p class="mt-auto" style="margin-top:18px;padding-top:14px;border-top:1px solid var(--faa-gray-200)">
+          <strong>Business impact:</strong> margin erosion, rework, service failures, and avoidable cash flow pressure.
         </p>
       </div>
-      <div class="card p-6 flex flex-col" style="border-color: var(--faa-gray-200); background: var(--faa-white);">
-        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Operational Drift</div>
-        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Teams adapt around the tool instead of improving the process. Workarounds become the new workflow, and leadership loses visibility into how work is actually getting done.</p>
-        <p class="mt-auto" style="margin-top:18px; padding-top:14px; border-top:1px solid var(--faa-gray-200); color: var(--faa-gray-600); font-size:14px; line-height:1.55;">
-          <strong style="color: var(--faa-navy);">Business impact:</strong> lower throughput, longer cycle times, and weaker operational control.
+      <div class="card p-6 flex flex-col" style="border-color: var(--faa-gray-200)">
+        <div style="letter-spacing:0.04em;text-transform:uppercase">Operational Drift</div>
+        <p class="mt-3">Teams adapt around the tool instead of improving the process. Workarounds become the new workflow, and leadership loses visibility into how work is actually getting done.</p>
+        <p class="mt-auto" style="margin-top:18px;padding-top:14px;border-top:1px solid var(--faa-gray-200)">
+          <strong>Business impact:</strong> lower throughput, longer cycle times, and weaker operational control.
         </p>
       </div>
-      <div class="card p-6 flex flex-col" style="border-color: var(--faa-gray-200); background: var(--faa-white);">
-        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Compliance Risk</div>
-        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Outputs enter the business without evidence, approval, review, or ownership. The control environment falls behind operating reality.</p>
-        <p class="mt-auto" style="margin-top:18px; padding-top:14px; border-top:1px solid var(--faa-gray-200); color: var(--faa-gray-600); font-size:14px; line-height:1.55;">
-          <strong style="color: var(--faa-navy);">Business impact:</strong> audit exposure, customer risk, financial risk, and avoidable escalation.
+      <div class="card p-6 flex flex-col" style="border-color: var(--faa-gray-200)">
+        <div style="letter-spacing:0.04em;text-transform:uppercase">Compliance Risk</div>
+        <p class="mt-3">Outputs enter the business without evidence, approval, review, or ownership. The control environment falls behind operating reality.</p>
+        <p class="mt-auto" style="margin-top:18px;padding-top:14px;border-top:1px solid var(--faa-gray-200)">
+          <strong>Business impact:</strong> audit exposure, customer risk, financial risk, and avoidable escalation.
         </p>
       </div>
-      <div class="card p-6 flex flex-col" style="border-color: var(--faa-gray-200); background: var(--faa-white);">
-        <div style="color: var(--faa-blue); font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase;">Wasted Investment</div>
-        <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">Budgets go to platforms before use cases are production-ready. The spend is real, but the operating leverage never arrives.</p>
-        <p class="mt-auto" style="margin-top:18px; padding-top:14px; border-top:1px solid var(--faa-gray-200); color: var(--faa-gray-600); font-size:14px; line-height:1.55;">
-          <strong style="color: var(--faa-navy);">Business impact:</strong> sunk cost, internal fatigue, and delayed return on AI investment.
+      <div class="card p-6 flex flex-col" style="border-color: var(--faa-gray-200)">
+        <div style="letter-spacing:0.04em;text-transform:uppercase">Wasted Investment</div>
+        <p class="mt-3">Budgets go to platforms before use cases are production-ready. The spend is real, but the operating leverage never arrives.</p>
+        <p class="mt-auto" style="margin-top:18px;padding-top:14px;border-top:1px solid var(--faa-gray-200)">
+          <strong>Business impact:</strong> sunk cost, internal fatigue, and delayed return on AI investment.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================= -->
-<!-- SECTION 4: FAA'S APPROACH                                     -->
-<!-- ============================================================= -->
-<section id="approach" class="bg-white">
+<section id="approach" class="bg-white ed-section">
   <div class="container-faa section-y">
     <div class="max-w-3xl mb-12 lg:mb-16">
-      <div class="eyebrow" style="color: var(--faa-navy);">Foundation AI Advisory&rsquo;s Approach</div>
+      <div class="eyebrow">Foundation AI Advisory’s Approach</div>
       <h2 class="h2 mt-3">What We Actually Do.</h2>
-      <p class="body-lg mt-5" style="color: var(--faa-gray-600);">
+      <p class="body-lg mt-5">
         We do not start with tools. We start with the operating decision, the workflow around it, and the data required to support it.
       </p>
-      <p class="body-lg mt-4" style="color: var(--faa-gray-600);">
+      <p class="body-lg mt-4">
         Then we define where AI can reduce cycle time, increase throughput, improve visibility, protect margin, or reduce risk without hiding accountability. The goal is not a better demo. The goal is a production capability leadership can measure, govern, and defend.
       </p>
     </div>
@@ -510,116 +312,116 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-12">
 
       <div class="flex gap-5">
-        <div class="method-num shrink-0">01</div>
+        <div class="method-num shrink-0 ed-number">1</div>
         <div>
-          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Use Case Identification</h3>
-          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">
+          <h3>Use Case Identification</h3>
+          <p class="mt-3">
             We identify where AI actually belongs inside the workflow. Decision support, exception handling, document review, routing, summarization, analysis, and execution are evaluated against business impact, risk, and ownership.
           </p>
-          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">
+          <p class="mt-3">
             If the use case cannot be tied to a measurable operating outcome, it does not move forward.
           </p>
-          <dl style="margin-top:18px; padding-top:16px; border-top:1px solid var(--faa-gray-100); display:grid; grid-template-columns: max-content 1fr; column-gap:14px; row-gap:8px; font-size:14px; line-height:1.55; margin-bottom:0;">
-            <dt style="color: var(--faa-blue); font-weight:600;">Owner</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">Business function leader with Foundation AI Advisory facilitation</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Next steps</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">Define the decision, workflow, data inputs, output, user, owner, and success metric</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Timeline</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">1&ndash;2 weeks</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Business impact</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">prioritizes use cases that affect margin, throughput, cycle time, cash flow, risk, or visibility</dd>
+          <dl style="margin-top:18px;padding-top:16px;border-top:1px solid var(--faa-gray-100);display:grid;grid-template-columns: max-content 1fr;column-gap:14px;row-gap:8px;margin-bottom:0">
+            <dt>Owner</dt>
+            <dd style="margin:0">Business function leader with Foundation AI Advisory facilitation</dd>
+            <dt>Next steps</dt>
+            <dd style="margin:0">Define the decision, workflow, data inputs, output, user, owner, and success metric</dd>
+            <dt>Timeline</dt>
+            <dd style="margin:0">1–2 weeks</dd>
+            <dt>Business impact</dt>
+            <dd style="margin:0">prioritizes use cases that affect margin, throughput, cycle time, cash flow, risk, or visibility</dd>
           </dl>
         </div>
       </div>
 
       <div class="flex gap-5">
-        <div class="method-num shrink-0">02</div>
+        <div class="method-num shrink-0 ed-number">2</div>
         <div>
-          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Readiness Validation</h3>
-          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">
+          <h3>Readiness Validation</h3>
+          <p class="mt-3">
             Before deployment, we test whether the business can support the use case. Source data, definitions, handoffs, exceptions, decision rights, and system dependencies are checked against how the work actually happens.
           </p>
-          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">
+          <p class="mt-3">
             If readiness is weak, the answer is not more AI. The answer is foundation work.
           </p>
-          <dl style="margin-top:18px; padding-top:16px; border-top:1px solid var(--faa-gray-100); display:grid; grid-template-columns: max-content 1fr; column-gap:14px; row-gap:8px; font-size:14px; line-height:1.55; margin-bottom:0;">
-            <dt style="color: var(--faa-blue); font-weight:600;">Owner</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">Operations leader, data owner, and functional process owner</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Next steps</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">Validate data sources, workflow steps, exception paths, approval points, and operating controls</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Timeline</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">2&ndash;4 weeks</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Business impact</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">reduces failed deployments, bad outputs, rework, and implementation drag</dd>
+          <dl style="margin-top:18px;padding-top:16px;border-top:1px solid var(--faa-gray-100);display:grid;grid-template-columns: max-content 1fr;column-gap:14px;row-gap:8px;margin-bottom:0">
+            <dt>Owner</dt>
+            <dd style="margin:0">Operations leader, data owner, and functional process owner</dd>
+            <dt>Next steps</dt>
+            <dd style="margin:0">Validate data sources, workflow steps, exception paths, approval points, and operating controls</dd>
+            <dt>Timeline</dt>
+            <dd style="margin:0">2–4 weeks</dd>
+            <dt>Business impact</dt>
+            <dd style="margin:0">reduces failed deployments, bad outputs, rework, and implementation drag</dd>
           </dl>
         </div>
       </div>
 
       <div class="flex gap-5">
-        <div class="method-num shrink-0">03</div>
+        <div class="method-num shrink-0 ed-number">3</div>
         <div>
-          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Agent Design &amp; Role Definition</h3>
-          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">
+          <h3>Agent Design &amp; Role Definition</h3>
+          <p class="mt-3">
             Each AI-enabled workflow gets a defined role, boundary, owner, and escalation model. We clarify what AI can recommend, what it can decide, what data it can use, when it must stop, and who reviews the result.
           </p>
-          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">
+          <p class="mt-3">
             The system supports the operating model instead of becoming an informal workaround.
           </p>
-          <dl style="margin-top:18px; padding-top:16px; border-top:1px solid var(--faa-gray-100); display:grid; grid-template-columns: max-content 1fr; column-gap:14px; row-gap:8px; font-size:14px; line-height:1.55; margin-bottom:0;">
-            <dt style="color: var(--faa-blue); font-weight:600;">Owner</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">Business process owner with IT/data support</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Next steps</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">Define agent role, permissions, data access, decision limits, review rules, and escalation paths</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Timeline</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">2&ndash;5 weeks depending on workflow complexity</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Business impact</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">improves control, reduces ambiguity, and prevents AI from operating outside business intent</dd>
+          <dl style="margin-top:18px;padding-top:16px;border-top:1px solid var(--faa-gray-100);display:grid;grid-template-columns: max-content 1fr;column-gap:14px;row-gap:8px;margin-bottom:0">
+            <dt>Owner</dt>
+            <dd style="margin:0">Business process owner with IT/data support</dd>
+            <dt>Next steps</dt>
+            <dd style="margin:0">Define agent role, permissions, data access, decision limits, review rules, and escalation paths</dd>
+            <dt>Timeline</dt>
+            <dd style="margin:0">2–5 weeks depending on workflow complexity</dd>
+            <dt>Business impact</dt>
+            <dd style="margin:0">improves control, reduces ambiguity, and prevents AI from operating outside business intent</dd>
           </dl>
         </div>
       </div>
 
       <div class="flex gap-5">
-        <div class="method-num shrink-0">04</div>
+        <div class="method-num shrink-0 ed-number">4</div>
         <div>
-          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Human-in-the-Loop Control</h3>
-          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">
+          <h3>Human-in-the-Loop Control</h3>
+          <p class="mt-3">
             Review is designed into the workflow before launch. High-impact outputs require checkpoints, exception paths, named reviewers, and decision records.
           </p>
-          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">
+          <p class="mt-3">
             Human control stays where judgment, customer impact, financial exposure, compliance, or operational risk require it.
           </p>
-          <dl style="margin-top:18px; padding-top:16px; border-top:1px solid var(--faa-gray-100); display:grid; grid-template-columns: max-content 1fr; column-gap:14px; row-gap:8px; font-size:14px; line-height:1.55; margin-bottom:0;">
-            <dt style="color: var(--faa-blue); font-weight:600;">Owner</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">Functional leader accountable for the business outcome</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Next steps</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">Define review thresholds, approval rules, exception categories, reviewer ownership, and audit trail requirements</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Timeline</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">1&ndash;3 weeks</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Business impact</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">reduces risk exposure, improves accountability, and protects decision quality</dd>
+          <dl style="margin-top:18px;padding-top:16px;border-top:1px solid var(--faa-gray-100);display:grid;grid-template-columns: max-content 1fr;column-gap:14px;row-gap:8px;margin-bottom:0">
+            <dt>Owner</dt>
+            <dd style="margin:0">Functional leader accountable for the business outcome</dd>
+            <dt>Next steps</dt>
+            <dd style="margin:0">Define review thresholds, approval rules, exception categories, reviewer ownership, and audit trail requirements</dd>
+            <dt>Timeline</dt>
+            <dd style="margin:0">1–3 weeks</dd>
+            <dt>Business impact</dt>
+            <dd style="margin:0">reduces risk exposure, improves accountability, and protects decision quality</dd>
           </dl>
         </div>
       </div>
 
       <div class="flex gap-5 lg:col-span-2">
-        <div class="method-num shrink-0">05</div>
+        <div class="method-num shrink-0 ed-number">5</div>
         <div>
-          <h3 style="color: var(--faa-navy); font-size:20px; font-weight:600; line-height:1.3;">Deployment &amp; Measurement</h3>
-          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">
+          <h3>Deployment &amp; Measurement</h3>
+          <p class="mt-3">
             Production rollout is tied to measurable outcomes: cycle time, throughput, error reduction, working capital, customer response time, margin protection, control quality, or visibility.
           </p>
-          <p class="mt-3" style="color: var(--faa-gray-600); font-size:15px; line-height:1.6;">
+          <p class="mt-3">
             We define what should improve, how it will be measured, and who owns the result after launch.
           </p>
-          <dl style="margin-top:18px; padding-top:16px; border-top:1px solid var(--faa-gray-100); display:grid; grid-template-columns: max-content 1fr; column-gap:14px; row-gap:8px; font-size:14px; line-height:1.55; margin-bottom:0;">
-            <dt style="color: var(--faa-blue); font-weight:600;">Owner</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">Executive sponsor and operating owner</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Next steps</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">Establish baseline metrics, rollout sequence, adoption cadence, review rhythm, and performance reporting</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Timeline</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">4&ndash;8 weeks after readiness validation</dd>
-            <dt style="color: var(--faa-blue); font-weight:600;">Business impact</dt>
-            <dd style="color: var(--faa-gray-600); margin:0;">turns AI from a pilot into an operating capability with measurable return</dd>
+          <dl style="margin-top:18px;padding-top:16px;border-top:1px solid var(--faa-gray-100);display:grid;grid-template-columns: max-content 1fr;column-gap:14px;row-gap:8px;margin-bottom:0">
+            <dt>Owner</dt>
+            <dd style="margin:0">Executive sponsor and operating owner</dd>
+            <dt>Next steps</dt>
+            <dd style="margin:0">Establish baseline metrics, rollout sequence, adoption cadence, review rhythm, and performance reporting</dd>
+            <dt>Timeline</dt>
+            <dd style="margin:0">4–8 weeks after readiness validation</dd>
+            <dt>Business impact</dt>
+            <dd style="margin:0">turns AI from a pilot into an operating capability with measurable return</dd>
           </dl>
         </div>
       </div>
@@ -628,17 +430,14 @@
   </div>
 </section>
 
-<!-- ============================================================= -->
-<!-- CLOSING CTA                                                   -->
-<!-- ============================================================= -->
-<section style="background: var(--faa-navy);">
-  <div class="container-faa" style="padding-top:96px; padding-bottom:96px;">
-    <div class="mx-auto" style="max-width:760px;">
-      <h2 class="h2" style="color: var(--faa-white);">Put AI Where the Business Can Support It.</h2>
-      <p class="body-lg mt-5" style="color: rgba(255,255,255,0.85);">
+<section class="ed-section" id="section-6">
+  <div class="container-faa" style="padding-top:96px;padding-bottom:96px">
+    <div class="mx-auto" style="max-width:760px">
+      <h2 class="h2">Put AI Where the Business Can Support It.</h2>
+      <p class="body-lg mt-5">
         AI should not be deployed because a task is repetitive or a tool makes it easy. It should be deployed where the workflow is understood, the data can be trusted, the owner is clear, and the business outcome is measurable.
       </p>
-      <p class="body-lg mt-4" style="color: rgba(255,255,255,0.85);">
+      <p class="body-lg mt-4">
         Foundation AI Advisory helps mid-market operators move from AI experimentation to controlled production capability.
       </p>
       <div class="mt-9 flex flex-col sm:flex-row flex-wrap gap-4">
@@ -649,81 +448,71 @@
   </div>
 </section>
 
-<!-- ============================================================= -->
-<!-- SUBSCRIBE                                                     -->
-<!-- ============================================================= -->
-
-
-<!-- ============================================================= -->
-<!-- RELATED INSIGHTS                                              -->
-<!-- ============================================================= -->
-<section class="bg-white border-t" style="border-color: var(--faa-gray-100);">
+<section class="bg-white border-t ed-section" style="border-color: var(--faa-gray-100)" id="section-7">
   <div class="container-faa section-y">
     <div class="flex flex-col gap-3 mb-10 lg:mb-12 max-w-3xl">
-      <div class="eyebrow" style="color: var(--faa-navy);">Related AI Advisory</div>
+      <div class="eyebrow">Related AI Advisory</div>
       <h2 class="h2">Recent Thinking on AI Implementation</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <a href="/insights-foundations-ai-architecture/" class="card">
         <div class="card-image">
-          <img src="/assets/insights/foundations-series-03-system-architecture.webp" width="1920" height="1398" alt="System-of-systems architecture diagram with controlled integration boundaries" loading="lazy" />
+          <img src="/assets/insights/foundations-series-03-system-architecture.webp" width="1920" height="1398" alt="System-of-systems architecture diagram with controlled integration boundaries" loading="lazy">
           <span class="pill">Part 3 of 5</span>
         </div>
         <div class="p-6 flex flex-col gap-3 flex-1">
           <span class="kicker">Foundations Series</span>
-          <h3 style="font-size: 19px; font-weight: 600; line-height: 1.3;">Architecture: The System Behind the System</h3>
-          <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">The operating layers behind reliable applied AI in mid-market environments.</p>
-          <span class="read-link mt-auto">Read &rarr;</span>
+          <h3>Architecture: The System Behind the System</h3>
+          <p>The operating layers behind reliable applied AI in mid-market environments.</p>
+          <span class="read-link mt-auto">Read →</span>
         </div>
       </a>
 
       <a href="/insights/where-agents-earn-their-keep/" class="card">
         <div class="card-image">
-          <img src="/assets/insights/where-agents-earn-their-keep-card.webp" width="1200" height="800" alt="Abstract visualization of unstructured data flowing through filtering gates" loading="lazy" />
+          <img src="/assets/insights/where-agents-earn-their-keep-card.webp" width="1200" height="800" alt="Abstract visualization of unstructured data flowing through filtering gates" loading="lazy">
           <span class="pill">Article</span>
         </div>
         <div class="p-6 flex flex-col gap-3 flex-1">
           <span class="kicker">AI Design &amp; Implementation</span>
-          <h3 style="font-size: 19px; font-weight: 600; line-height: 1.3;">Where Agents Earn Their Keep &mdash; and Where They Don&rsquo;t</h3>
-          <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">A decision framework grounded in margin, throughput, cycle time, and risk. Built for operators making capital decisions, not for teams chasing demos.</p>
-          <span class="read-link mt-auto">Read &rarr;</span>
+          <h3>Where Agents Earn Their Keep — and Where They Don’t</h3>
+          <p>A decision framework grounded in margin, throughput, cycle time, and risk. Built for operators making capital decisions, not for teams chasing demos.</p>
+          <span class="read-link mt-auto">Read →</span>
         </div>
       </a>
 
       <a href="/insights/mid-market-case-for-platform-agnostic/" class="card">
         <div class="card-image">
-          <img src="/assets/insights/mid-market-case-for-platform-agnostic-card.webp" width="1200" height="801" alt="Abstract visualization of complex data flowing through layered architecture panels" loading="lazy" />
+          <img src="/assets/insights/mid-market-case-for-platform-agnostic-card.webp" width="1200" height="801" alt="Abstract visualization of complex data flowing through layered architecture panels" loading="lazy">
           <span class="pill">Article</span>
         </div>
         <div class="p-6 flex flex-col gap-3 flex-1">
           <span class="kicker">AI Design &amp; Implementation</span>
-          <h3 style="font-size: 19px; font-weight: 600; line-height: 1.3;">The Mid-Market Case for Platform-Agnostic AI</h3>
-          <p style="color: var(--faa-gray-600); font-size: 15px; line-height: 1.55;">Azure. OpenAI. Claude. Google. The right answer is the stack your business can run, govern, and scale &mdash; not the one a vendor is selling this quarter.</p>
-          <span class="read-link mt-auto">Read &rarr;</span>
+          <h3>The Mid-Market Case for Platform-Agnostic AI</h3>
+          <p>Azure. OpenAI. Claude. Google. The right answer is the stack your business can run, govern, and scale — not the one a vendor is selling this quarter.</p>
+          <span class="read-link mt-auto">Read →</span>
         </div>
       </a>
     </div>
     <div class="mt-10">
-      <a href="/insights/" class="read-link">View all insights&nbsp;<span class="arrow">&rarr;</span></a>
+      <a href="/insights/" class="read-link">View all insights <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
 
-<section style="background: var(--faa-gray-50);">
-  <div class="container-faa" style="padding-top:64px; padding-bottom:64px;">
-    <div class="text-center mx-auto" style="max-width: 640px;">
-      <h3 style="color: var(--faa-navy); font-size: 24px; font-weight: 600; line-height: 1.3;">Get Foundation AI Advisory&rsquo;s running record on mid-market AI execution.</h3>
-      <p class="mt-3" style="color: var(--faa-gray-600); font-size: 16px; line-height: 1.6;">
+<section class="ed-section">
+  <div class="container-faa" style="padding-top:64px;padding-bottom:64px">
+    <div class="text-center mx-auto" style="max-width: 640px">
+      <h3>Get Foundation AI Advisory’s running record on mid-market AI execution.</h3>
+      <p class="mt-3">
         Insight assets for mid-market operators. Published when there is something worth publishing.
       </p>
       <form class="mt-7 flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center" data-subscribe-form>
         <label for="subscribe-email" class="sr-only">Email address</label>
-        <input id="subscribe-email" type="email" placeholder="you@company.com" required
-          class="bg-white"
-          style="height:44px; padding: 0 14px; border:1px solid var(--faa-gray-200); border-radius:4px; font-size:15px; color: var(--faa-gray-600); width:100%; max-width: 380px;" />
+        <input id="subscribe-email" type="email" placeholder="you@company.com" required class="bg-white" style="height:44px;padding: 0 14px;border:1px solid var(--faa-gray-200);width:100%;max-width: 380px">
         <button type="submit" class="btn btn-primary">Subscribe</button>
       </form>
-      <p class="mt-4" style="color: var(--faa-gray-400); font-size: 13px;">
+      <p class="mt-4">
         We do not share your information. Unsubscribe any time.
       </p>
     </div>
@@ -732,13 +521,13 @@
 
 </main>
 
-<footer style="background: var(--faa-navy);">
+<footer class="home-footer" style="background: var(--faa-navy);">
   <div class="container-faa" style="padding-top:48px; padding-bottom:48px;">
-    <p class="footer-attribution">Built in-house by Foundation AI Advisory - where finance, governance, operations, and AI meet practical execution.</p>
+    <p class="footer-attribution">Business First. AI Applied.</p>
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
       <div class="flex items-center gap-4" style="color: var(--faa-white);">
-        <img src="/assets/global-footer-logo-wordmark.png" width="512" height="140" alt="Foundation AI Advisory" style="height:32px;width:auto;display:block;opacity:0.95;" />
-        <span style="color: rgba(255,255,255,0.6); font-size: 13px;">&copy; 2026 Foundation AI Advisory. All rights reserved.</span>
+        <img src="/assets/global-footer-logo-wordmark.png" width="512" height="140" alt="Foundation AI Advisory" style="height:32px;width:auto;display:block;opacity:0.95;">
+        <span style="color: rgba(255,255,255,0.6); font-size: 13px;">© 2026 Foundation AI Advisory. All rights reserved.</span>
       </div>
       <nav aria-label="Legal" class="flex flex-wrap items-center gap-6">
         <a href="/client-workspace/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Client Workspace</a>
@@ -746,8 +535,8 @@
         <a href="/terms/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Terms</a>
         <a href="/contact/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Contact</a>
         <a href="https://www.linkedin.com/company/foundation-ai-advisory" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Foundation AI Advisory on LinkedIn" style="font-size: 13px;">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M6.94 8.98H3.72v10.54h3.22V8.98zM5.33 7.52c1.03 0 1.86-.84 1.86-1.86S6.36 3.8 5.33 3.8s-1.86.84-1.86 1.86.83 1.86 1.86 1.86zM20.53 13.56c0-3.03-1.62-4.44-3.78-4.44-1.74 0-2.52.96-2.95 1.63V8.98h-3.08c.04.99 0 10.54 0 10.54h3.21v-5.89c0-.31.02-.63.12-.85.26-.63.86-1.28 1.86-1.28 1.31 0 1.84.99 1.84 2.45v5.57h3.22l.01-5.96z"/>
+          <svg viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.94 8.98H3.72v10.54h3.22V8.98zM5.33 7.52c1.03 0 1.86-.84 1.86-1.86S6.36 3.8 5.33 3.8s-1.86.84-1.86 1.86.83 1.86 1.86 1.86zM20.53 13.56c0-3.03-1.62-4.44-3.78-4.44-1.74 0-2.52.96-2.95 1.63V8.98h-3.08c.04.99 0 10.54 0 10.54h3.21v-5.89c0-.31.02-.63.12-.85.26-.63.86-1.28 1.86-1.28 1.31 0 1.84.99 1.84 2.45v5.57h3.22l.01-5.96z"></path>
           </svg>
           <span>LinkedIn</span>
         </a>
@@ -755,8 +544,7 @@
     </div>
   </div>
 </footer>
-
-<script src="/nav.js?v=20261023-assessment" defer></script>
+<script src="/nav.js?v=20261024-milestone2" defer></script>
 <script src="/cookie-consent.js" defer></script>
 </body>
 </html>
