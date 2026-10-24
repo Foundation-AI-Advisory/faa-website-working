@@ -3,6 +3,7 @@
   const menus = document.querySelectorAll('.mega-menu');
   const header = document.getElementById('site-header');
   if (!header) return;
+  const editorial = document.body.classList.contains('homepage-redesign');
 
   // Target the RIGHT-side container specifically (a <div>), not the
   // logo's <a> wrapper which shares the same class. Without the tag
@@ -68,6 +69,11 @@
       '<a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-menu-cta">Business Systems Assessment</a>',
       '<p class="mobile-menu-footer">Business First. AI Applied.</p>'
     ].join('');
+    if (editorial) {
+      panel.querySelectorAll('.mobile-menu-step').forEach((step, i) => step.textContent = String(i + 1));
+      panel.querySelector('a[href="/industries/"]').firstChild.textContent = 'Industries';
+      panel.querySelector('.mobile-menu-group--perspectives summary').textContent = 'Perspectives';
+    }
     header.appendChild(panel);
 
     let isMobileMenuOpen = false;
@@ -80,10 +86,17 @@
       mobileCloseTimer = null;
     }
 
+    function positionMobilePanel() {
+      panel.style.setProperty('--navigation-top', Math.max(0, header.getBoundingClientRect().bottom) + 'px');
+    }
+    window.addEventListener('resize', () => { if (isMobileMenuOpen) positionMobilePanel(); });
+    window.addEventListener('scroll', () => { if (isMobileMenuOpen) positionMobilePanel(); }, { passive: true });
+    if (window.visualViewport) window.visualViewport.addEventListener('resize', positionMobilePanel);
     function setMobileOpen(open) {
       clearMobileCloseTimer();
       isMobileMenuOpen = Boolean(open);
       if (isMobileMenuOpen) document.dispatchEvent(new CustomEvent('faa:navigation-open', { detail: 'mobile' }));
+      if (isMobileMenuOpen) positionMobilePanel();
       panel.hidden = !isMobileMenuOpen;
       panel.setAttribute('data-open', isMobileMenuOpen ? 'true' : 'false');
       toggle.setAttribute('aria-expanded', isMobileMenuOpen ? 'true' : 'false');
@@ -193,8 +206,17 @@
 
   triggers.forEach(trigger => {
     const id = trigger.getAttribute('data-mega');
-    trigger.addEventListener('mouseenter', () => openMenu(id));
-    trigger.addEventListener('focus', () => openMenu(id));
+    if (!editorial) {
+      trigger.addEventListener('mouseenter', () => openMenu(id));
+      trigger.addEventListener('focus', () => openMenu(id));
+    }
+    trigger.addEventListener('keydown', (e) => {
+      if (editorial && e.key === 'ArrowDown') {
+        e.preventDefault();
+        openMenu(id);
+        document.getElementById('mega-' + id).querySelector('a').focus();
+      }
+    });
     trigger.addEventListener('click', (e) => {
       // If the trigger is an anchor with a real href, let the
       // click navigate to the topic landing page. Hover/focus is
@@ -208,17 +230,28 @@
   });
   menus.forEach(menu => {
     menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
-    menu.addEventListener('mouseleave', () => closeMenu(false));
+    menu.addEventListener('mouseleave', () => { if (!editorial) closeMenu(false); });
   });
-  triggers.forEach(t => t.addEventListener('mouseleave', () => closeMenu(false)));
+  triggers.forEach(t => t.addEventListener('mouseleave', () => { if (!editorial) closeMenu(false); }));
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMenu(true);
+    if (e.key === 'Escape' && openId) {
+      const trigger = document.querySelector('.utilnav-link[data-mega="' + openId + '"]');
+      const returnFocus = editorial && document.getElementById('mega-' + openId).contains(document.activeElement);
+      closeMenu(true);
+      if (returnFocus) trigger.focus();
+    }
   });
   document.addEventListener('click', (e) => {
     if (!header.contains(e.target)) closeMenu(true);
   });
-  document.querySelectorAll('.mega-link').forEach(link => {
+  if (editorial) {
+    header.addEventListener('focusout', () => setTimeout(() => {
+      if (!header.contains(document.activeElement)) closeMenu(true);
+    }, 0));
+    window.addEventListener('resize', () => { if (window.innerWidth < 1280) closeMenu(true); });
+  }
+  document.querySelectorAll('.mega-link, .editorial-nav-panel a').forEach(link => {
     link.addEventListener('click', () => closeMenu(true));
   });
   document.addEventListener('faa:navigation-open', (e) => {
