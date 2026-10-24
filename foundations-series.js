@@ -17,7 +17,8 @@
       part: 1,
       title: "Data: The Constraint You Can’t Outrun",
       category: "Data Curation & Governance",
-      image: "assets/insights/foundations-series-architecture-hero.webp",
+      image: "assets/insights/editorial-art/data.webp",
+      imageAlt: "Iridescent flowing ribbons representing reliable data and connected information",
       subhead: "AI does not fail because models are wrong. It fails because the data underneath it never agreed.",
       pull: "AI does not fix data problems. It makes them operationally unavoidable.",
       operator: "Before AI can support decisions, the business has to know which data source wins, who owns it, and how changes are controlled. The goal is not perfect data. The goal is usable, governed, consistent data that the business can trust.",
@@ -50,7 +51,8 @@
       part: 2,
       title: "Process: Fix the System Before You Accelerate It",
       category: "Workflow Optimization",
-      image: "assets/insights/foundations-series-architecture-hero.webp",
+      image: "assets/insights/editorial-art/workflow.webp",
+      imageAlt: "Translucent ribbons aligning into a continuous flow, representing coordinated workflows",
       subhead: "Automating a broken process does not fix it. It makes it fail faster.",
       pull: "A bad process with AI is still a bad process — just faster, louder, and harder to unwind.",
       operator: "AI should not be used to hide process weakness. It should be applied after the workflow is visible, repeatable, and controlled. If humans cannot explain the decision path, automation will not make it stronger.",
@@ -85,7 +87,8 @@
       part: 3,
       title: "Architecture: The System Behind the System",
       category: "AI Design & Implementation",
-      image: "assets/insights/foundations-series-architecture-hero.webp",
+      image: "assets/insights/editorial-art/architecture.webp",
+      imageAlt: "Interlocking glass layers forming an open spiral, representing connected business systems",
       subhead: "Most companies do not have a system problem. They have a system interaction problem.",
       pull: "AI cannot compensate for architecture no one understands.",
       operator: "The issue is rarely one bad system. The issue is how systems interact. Before AI is deployed, the business needs to understand where data moves, where logic changes, and where manual cleanup enters the process.",
@@ -121,7 +124,8 @@
       part: 4,
       title: "ROI Sequencing: Where AI Actually Creates Value",
       category: "AI Design & Implementation",
-      image: "assets/insights/foundations-series-architecture-hero.webp",
+      image: "assets/insights/editorial-art/value.webp",
+      imageAlt: "Ascending iridescent glass folds representing sequenced progress and compounding value",
       subhead: "AI does not create value everywhere at once. It creates value where conditions are already aligned.",
       pull: "The best first AI use case is rarely the flashiest. It is the one the business is ready to absorb.",
       operator: "The first AI use case should build confidence, not create organizational drag. Start where the conditions are ready: cleaner inputs, clearer outputs, tighter process boundaries, and measurable value.",
@@ -156,7 +160,8 @@
       part: 5,
       title: "Governance: The System That Holds It Together",
       category: "Data Curation & Governance",
-      image: "assets/insights/foundations-series-architecture-hero.webp",
+      image: "assets/insights/editorial-art/governance.webp",
+      imageAlt: "Interwoven glass bands surrounding a luminous core, representing accountable AI governance",
       subhead: "Without governance, every improvement degrades over time.",
       pull: "Governance is not overhead. It is how you keep AI from turning operational noise into operational risk.",
       operator: "Governance is not a policy binder. It is the operating system for accountability. Without it, AI increases speed but reduces control.",
@@ -209,7 +214,7 @@
     document.title = hub.title + " — Foundation AI Advisory";
     root.innerHTML = `
       <section class="foundations-hub-image-section" aria-label="Foundations Series — Five Operating Layers">
-        <img class="foundations-hub-image" src="assets/insights/foundations-series-architecture-hero.webp" alt="Five layered operating planes — data, process, architecture, ROI sequencing, and governance — stacked as a single architecture for applied AI" />
+        <img class="foundations-hub-image" src="assets/insights/editorial-art/intelligence.webp" alt="Five layered operating planes — data, process, architecture, ROI sequencing, and governance — stacked as a single architecture for applied AI" />
       </section>
       <section class="foundations-hub-intro">
         <div class="container-faa foundations-hub-grid">
@@ -295,7 +300,7 @@
     document.title = article.title + " — Foundation AI Advisory";
     root.innerHTML = `
       <section class="foundations-hub-image-section" aria-label="Foundations Series — Five Operating Layers">
-        <img class="foundations-hub-image" src="assets/insights/foundations-series-architecture-hero.webp" alt="Five layered operating planes — data, process, architecture, ROI sequencing, and governance — stacked as a single architecture for applied AI" />
+        <img class="foundations-hub-image" src="${article.image}" alt="${article.imageAlt}" />
       </section>
       <section class="foundations-article-intro">
         <div class="container-faa">
@@ -343,3 +348,4 @@
   const article = pageMap.get(page);
   if (article) renderArticle(article);
 })();
+
