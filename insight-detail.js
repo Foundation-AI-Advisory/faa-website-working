@@ -118,7 +118,7 @@
   // and '' when it runs at the root (insight.html?slug=...). Frontmatter and
   // fetch paths are stored relative to project root and normalized via this.
   const inSubfolder = /\/insights\/[^/]+\.html?$/.test(window.location.pathname);
-  const pathPrefix = inSubfolder ? '../' : '';
+  const pathPrefix = '/';
   function resolveAsset(p) {
     if (!p) return p;
     if (/^https?:\/\//i.test(p) || p.startsWith('mailto:') || p.startsWith('data:')) return p;
@@ -128,13 +128,13 @@
 
   async function loadInsight() {
     if (!allowedSlugs.has(slug)) {
-      if (body) body.innerHTML = '<p>Insight not found.</p>';
+      document.querySelector('[data-insight-title]').textContent='Explore AI Perspectives'; if (body) body.innerHTML = '<p>Choose an article from our <a href="/insights/">AI Perspectives library</a>.</p>';
       return;
     }
 
     const response = await fetch(pathPrefix + 'content/insights/' + slug + '.md');
     if (!response.ok) {
-      if (body) body.innerHTML = '<p>Insight not found.</p>';
+      document.querySelector('[data-insight-title]').textContent='Explore AI Perspectives'; if (body) body.innerHTML = '<p>Choose an article from our <a href="/insights/">AI Perspectives library</a>.</p>';
       return;
     }
 
@@ -180,6 +180,7 @@
   }
 
   loadInsight().catch(() => {
-    if (body) body.innerHTML = '<p>Insight not found.</p>';
+    document.querySelector('[data-insight-title]').textContent='Explore AI Perspectives'; if (body) body.innerHTML = '<p>Choose an article from our <a href="/insights/">AI Perspectives library</a>.</p>';
   });
 })();
+

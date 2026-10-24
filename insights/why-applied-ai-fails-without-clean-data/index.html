@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Why Applied AI Fails Without Clean Data | Foundation AI Advisory</title>
-<meta name="description" content="Failed AI pilots are usually data failures wearing an AI label. Here is the 30-minute diagnostic any executive can run before approving spend." />
-<meta name="robots" content="index,follow" />
-<link rel="canonical" href="https://foundationaiadvisory.com/insights/why-applied-ai-fails-without-clean-data/" />
-<link rel="icon" type="image/png" href="/assets/favicon.png" />
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Why Applied AI Fails Without Clean Data | Foundation AI Advisory" />
-<meta property="og:description" content="Failed AI pilots are usually data failures wearing an AI label. Here is the 30-minute diagnostic any executive can run before approving spend." />
-<meta property="og:url" content="https://foundationaiadvisory.com/insights/why-applied-ai-fails-without-clean-data/" />
-<meta property="og:image" content="https://foundationaiadvisory.com/assets/insights/why-applied-ai-fails-without-clean-data.webp" />
-<meta property="og:site_name" content="Foundation AI Advisory" />
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="description" content="Failed AI pilots are usually data failures wearing an AI label. Here is the 30-minute diagnostic any executive can run before approving spend.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://foundationaiadvisory.com/insights/why-applied-ai-fails-without-clean-data/">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Applied AI Fails Without Clean Data | Foundation AI Advisory">
+<meta property="og:description" content="Failed AI pilots are usually data failures wearing an AI label. Here is the 30-minute diagnostic any executive can run before approving spend.">
+<meta property="og:url" content="https://foundationaiadvisory.com/insights/why-applied-ai-fails-without-clean-data/">
+<meta property="og:image" content="https://foundationaiadvisory.com/assets/insights/why-applied-ai-fails-without-clean-data.webp">
+<meta property="og:site_name" content="Foundation AI Advisory">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Foundation AI Advisory","legalName":"Foundation AI Advisory, LLC","url":"https://foundationaiadvisory.com/","logo":"https://foundationaiadvisory.com/assets/global-header-logo-wordmark.png","description":"A business-first AI advisory firm for mid-market operators. Foundation AI Advisory fixes the data, workflow, and system foundation before applying AI.","founder":{"@type":"Person","name":"Ben DeMichael"},"foundingLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressRegion":"OH","addressCountry":"US"}},"knowsAbout":["Data Curation and Governance","Workflow Optimization","AI Design and Implementation","Mid-Market AI Strategy","Applied AI for Industrial Operations"],"sameAs":["https://www.linkedin.com/company/foundation-ai-advisory"],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"privacy@foundationaiadvisory.com","url":"https://foundationaiadvisory.com/contact/","availableLanguage":["English"]}}</script>
-<link rel="stylesheet" href="/tailwind-static.css?v=20260525a" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=20261023-assessment" />
+<link rel="stylesheet" href="/tailwind-static.css?v=20260525a">
+<link rel="stylesheet" href="/styles.css?v=20261023-assessment">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://foundationaiadvisory.com/"},{"@type":"ListItem","position":2,"name":"AI Advisory","item":"https://foundationaiadvisory.com/insights/"},{"@type":"ListItem","position":3,"name":"Why Applied AI Fails Without Clean Data","item":"https://foundationaiadvisory.com/insights/why-applied-ai-fails-without-clean-data/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why Applied AI Fails Without Clean Data","description":"Most failed AI deployments are not AI failures. They are data failures wearing an AI label, and the fix is narrower than most teams expect.","image":"https://foundationaiadvisory.com/assets/insights/why-applied-ai-fails-without-clean-data.webp","datePublished":"2026-05-14","dateModified":"2026-05-14","author":{"@type":"Person","name":"Ben DeMichael","jobTitle":"Founder & Managing Partner","worksFor":{"@type":"Organization","name":"Foundation AI Advisory","url":"https://foundationaiadvisory.com/"}},"publisher":{"@type":"Organization","name":"Foundation AI Advisory","url":"https://foundationaiadvisory.com/","logo":"https://foundationaiadvisory.com/assets/global-header-logo-wordmark.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://foundationaiadvisory.com/insights/why-applied-ai-fails-without-clean-data/"},"articleSection":"Data Curation & Governance","inLanguage":"en"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -31,211 +28,67 @@
 {"@type":"Question","name":"What is the 30-minute diagnostic for AI readiness?","acceptedAnswer":{"@type":"Answer","text":"Before approving an AI initiative, an executive can run a short diagnostic alone or with one or two operators. Pick one decision the AI is supposed to support — cash forecasting accuracy, customer churn prediction, inventory reorder timing. Trace the data backward. What fields feed that decision? What system holds them? Who owns each field in the practical sense of who is accountable when the value is wrong? How is each field defined, and would the head of sales, the controller, and the operations lead all give the same definition if asked separately? When two systems disagree on a value, which one wins, and is that rule written down? If the answers are crisp, the data foundation is fit for the use case. If the answers wobble, the AI will amplify those gaps faster than the team can intercept them."}},
 {"@type":"Question","name":"What is the right sequence for deploying AI in an operating business?","acceptedAnswer":{"@type":"Answer","text":"The firms getting real returns from AI sequence the work correctly: Data Curation & Governance, then Workflow Optimization, then AI Design & Implementation. In that order. Not because the order is academically tidy, but because the order is operationally true. Each stage depends on the one before it. Skip one, and the rest collapses into expensive theater. The AI is the easy part. The foundation underneath it is the work."}}
 ]}</script>
-</head>
-<body class="bg-white"><a href="#main-content" class="skip-link">Skip to main content</a>
+<link rel="stylesheet" href="/homepage.css?v=20261024-milestone3"><link rel="stylesheet" href="/navigation-editorial.css?v=20261024-milestone3"><link rel="stylesheet" href="/editorial-pages.css?v=20261024-milestone3"><link rel="stylesheet" href="/editorial-content.css?v=20261024-milestone3"></head>
+<body class="homepage-redesign editorial-page editorial-complete editorial-article"><a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="sticky top-0 z-40 bg-white border-b" style="border-color: var(--faa-gray-100);" id="site-header">
   <div class="container-faa flex items-center justify-between relative" style="height:96px;">
     <a href="/" class="flex items-center shrink-0" aria-label="Foundation AI Advisory home">
-      <img src="/assets/global-header-logo-wordmark.png" width="512" height="140" alt="Foundation AI Advisory" class="site-header-logo" />
+      <img src="/assets/global-header-logo-wordmark.png" width="512" height="140" alt="Foundation AI Advisory" class="site-header-logo">
     </a>
+
     <nav class="hidden xl:flex items-center gap-6 h-full mx-6" aria-label="Primary">
-      <a href="/" class="utilnav-link" style="height:96px;">Home</a>
-            <a href="/methodology/" class="utilnav-link" data-mega="methodology" aria-expanded="false" aria-controls="mega-methodology" aria-haspopup="true" style="height:96px;">
+            <button type="button" class="utilnav-link" data-mega="methodology" aria-expanded="false" aria-controls="mega-methodology" style="height:96px;">
         Methodology
-        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </a>
-      <a href="/ai-training-workforce-development/" class="utilnav-link" data-mega="ai-training" aria-expanded="false" aria-controls="mega-ai-training" aria-haspopup="true" style="height:96px;">
+        <svg class="caret" viewbox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>
+      </button>
+      <button type="button" class="utilnav-link" data-mega="ai-training" aria-expanded="false" aria-controls="mega-ai-training" style="height:96px;">
         AI Training
-        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </a>
-      <a href="/industries/" class="utilnav-link" data-mega="industries" aria-expanded="false" aria-controls="mega-industries" aria-haspopup="true" style="height:96px;">
-        Where We Work
-        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </a>
-      <a href="/insights/" class="utilnav-link" data-mega="insights" aria-expanded="false" aria-controls="mega-insights" aria-haspopup="true" aria-current="page" style="height:96px;">
-        AI Perspectives
-        <svg class="caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </a>
+        <svg class="caret" viewbox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>
+      </button>
+      <button type="button" class="utilnav-link" data-mega="industries" aria-expanded="false" aria-controls="mega-industries" style="height:96px;">
+        Industries
+        <svg class="caret" viewbox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>
+      </button>
+      <button type="button" class="utilnav-link" data-mega="insights" aria-expanded="false" aria-controls="mega-insights" style="height:96px;">
+        Perspectives
+        <svg class="caret" viewbox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg>
+      </button>
       <a href="/about/" class="utilnav-link" style="height:96px;">About</a>
+      
     </nav>
+
     <div class="flex items-center shrink-0">
-      <a href="/client-workspace/" class="utility-access-link"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.2" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7V5a2.5 2.5 0 1 1 5 0v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span>Client Workspace</span></a>
+      <a href="/client-workspace/" class="utility-access-link"><svg width="14" height="14" viewbox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.2" stroke="currentColor" stroke-width="1.4"></rect><path d="M5.5 7V5a2.5 2.5 0 1 1 5 0v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg><span>Client Workspace</span></a>
       <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-header-cta" aria-label="Start a Business Systems Assessment">Assessment</a>
       <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary hidden sm:inline-flex">Business Systems Assessment</a>
     </div>
   </div>
 
-  <div id="mega-methodology" class="mega-menu" role="region" aria-label="Methodology">
-    <div class="mega-menu-inner">
-      <div class="mega-pillar-cards">
-        <a href="/foundation/" class="mega-pillar-card mega-pillar-card--01">
-          <div class="mega-pillar-card__image" aria-hidden="true"></div>
-          <div class="mega-pillar-card__content">
-            <span class="mega-pillar-card__num">01</span>
-            <h3 class="mega-pillar-card__title">Data Curation<br />&amp; Governance</h3>
-            <p class="mega-pillar-card__dek">Data before anything else</p>
-            <p class="mega-pillar-card__copy">Clean, governed, accessible data creates the foundation for reliable reporting, workflow stability, and AI readiness.</p>
-          </div>
-        </a>
-        <a href="/operations/" class="mega-pillar-card mega-pillar-card--02">
-          <div class="mega-pillar-card__image" aria-hidden="true"></div>
-          <div class="mega-pillar-card__content">
-            <span class="mega-pillar-card__num">02</span>
-            <h3 class="mega-pillar-card__title">Workflow<br />Optimization</h3>
-            <p class="mega-pillar-card__dek">Optimize workflows before applying AI</p>
-            <p class="mega-pillar-card__copy">Map how work actually gets done, remove friction, clarify ownership, and improve flow before automation scales the process.</p>
-          </div>
-        </a>
-        <a href="/agentic-ai/" class="mega-pillar-card mega-pillar-card--03">
-          <div class="mega-pillar-card__image" aria-hidden="true"></div>
-          <div class="mega-pillar-card__content">
-            <span class="mega-pillar-card__num">03</span>
-            <h3 class="mega-pillar-card__title">AI Design<br />&amp; Implementation</h3>
-            <p class="mega-pillar-card__dek">Designed around measurable outcomes</p>
-            <p class="mega-pillar-card__copy">Apply AI to optimized workflows with defined ownership, controls, ROI logic, and a path to production.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
+<div id="mega-methodology" class="mega-menu editorial-nav-panel" role="region" aria-label="Our methodology">
+ <div class="editorial-nav-inner"><div class="editorial-nav-intro"><p class="editorial-nav-eyebrow">Our methodology</p><h2>The foundation comes first.</h2><p>Three steps. In sequence. Built around the way your business operates.</p><a href="/methodology/" class="editorial-nav-overview">Explore our methodology <span aria-hidden="true">→</span></a></div><div class="editorial-nav-content"><a class="editorial-nav-link" href="/foundation/"><span class="editorial-nav-number" aria-hidden="true">1</span><span><strong>Data Curation &amp; Governance</strong><small>Build clean, governed data that the business can trust.</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/operations/"><span class="editorial-nav-number" aria-hidden="true">2</span><span><strong>Workflow Optimization</strong><small>Improve how work gets done before applying AI.</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/agentic-ai/"><span class="editorial-nav-number" aria-hidden="true">3</span><span><strong>AI Design &amp; Implementation</strong><small>Apply AI with ownership, controls, and measurable outcomes.</small></span><span aria-hidden="true">→</span></a></div></div>
+ </div><div id="mega-ai-training" class="mega-menu editorial-nav-panel" role="region" aria-label="AI training">
+ <div class="editorial-nav-inner"><div class="editorial-nav-intro"><p class="editorial-nav-eyebrow">AI training</p><h2>Build capability in your people.</h2><p>Practical training for executives, managers, and teams.</p><a href="/ai-training-workforce-development/" class="editorial-nav-overview">Explore AI training <span aria-hidden="true">→</span></a></div><div class="editorial-nav-content"><a class="editorial-nav-link" href="/ai-training-workforce-development/#ai-bootcamp"><span><strong>AI Training Bootcamp</strong><small>Build practical skills around real business problems.</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/ai-training-workforce-development/#workforce-development"><span><strong>AI Workforce Development</strong><small>Develop the skills your people need to put AI to work.</small></span><span aria-hidden="true">→</span></a></div></div>
+ </div><div id="mega-industries" class="mega-menu editorial-nav-panel" role="region" aria-label="Industries">
+ <div class="editorial-nav-inner"><div class="editorial-nav-intro"><p class="editorial-nav-eyebrow">Industries</p><h2>Built for your operating reality.</h2><p>The same foundation. Applied to the data, workflows, and constraints in your industry.</p><a href="/industries/" class="editorial-nav-overview">Explore all industries <span aria-hidden="true">→</span></a></div><div class="editorial-nav-content"><div class="editorial-nav-industries"><a class="editorial-nav-link" href="/industry-manufacturing-industrial-production/"><span><strong>Manufacturing &amp; Industrial Production</strong><small>Throughput, yield, plant floor</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-engineering-construction-infrastructure/"><span><strong>Engineering, Construction &amp; Infrastructure (ECI)</strong><small>Field-to-office, project controls</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-transportation-logistics/"><span><strong>Transportation &amp; Logistics</strong><small>Forecasting, dispatch, freight</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-energy-natural-resources/"><span><strong>Energy &amp; Natural Resources</strong><small>Asset reliability, regulatory trails</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-distribution-wholesale/"><span><strong>Distribution &amp; Wholesale</strong><small>Inventory, demand, exception flow</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-industrial-equipment/"><span><strong>Industrial Equipment</strong><small>Aftermarket, parts, service</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-specialty-manufacturing/"><span><strong>Specialty Manufacturing</strong><small>High-mix, low-volume reality</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-professional-technical-services/"><span><strong>Professional &amp; Technical Services</strong><small>Knowledge work, delivery systems</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-financial-services-banking/"><span><strong>Financial Services &amp; Banking</strong><small>Controls, reporting, risk</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/industry-ai-data-it-systems/"><span><strong>AI, Data &amp; IT Systems</strong><small>System owners, data teams</small></span><span aria-hidden="true">→</span></a></div></div></div>
+ </div><div id="mega-insights" class="mega-menu editorial-nav-panel" role="region" aria-label="Perspectives">
+ <div class="editorial-nav-inner"><div class="editorial-nav-intro"><p class="editorial-nav-eyebrow">Perspectives</p><h2>Ideas for the people running the business.</h2><p>Practical perspectives on data, workflows, and applied AI.</p><a href="/insights/" class="editorial-nav-overview">Explore all perspectives <span aria-hidden="true">→</span></a></div><div class="editorial-nav-content"><div class="editorial-nav-perspectives"><div><h3>Explore</h3><a class="editorial-nav-link" href="/insights/"><span><strong>All Perspectives</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/ai-frontiers/"><span><strong>AI Frontiers</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/capital-decisions/"><span><strong>Capital Decisions</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/#foundations-series"><span><strong>Foundations Series</strong></span><span aria-hidden="true">→</span></a></div><div><h3>Read &amp; watch</h3><a class="editorial-nav-link" href="/insights/?format=article"><span><strong>Articles</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=brief"><span><strong>Briefs</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=field-note"><span><strong>Field Notes</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=infographic"><span><strong>Infographics</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=podcast"><span><strong>Podcast</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=video"><span><strong>Video</strong></span><span aria-hidden="true">→</span></a></div></div></div></div>
+ </div>
 
-  <div id="mega-ai-training" class="mega-menu" role="region" aria-label="AI Training">
-    <div class="mega-menu-inner">
-      <div class="mega-ai-training-cards">
-        <a href="/ai-training-workforce-development/#ai-bootcamp" class="mega-ai-training-card mega-ai-training-card--bootcamp">
-          <div class="mega-ai-training-card__image" aria-hidden="true"></div>
-          <div class="mega-ai-training-card__content">
-            <span class="mega-ai-training-card__num">Foundations</span>
-            <h3 class="mega-ai-training-card__title">AI Training Bootcamp</h3>
-            <p class="mega-ai-training-card__dek">Learning the basics of AI &mdash; from foundations to using AI to solve real business problems.</p>
-          </div>
-        </a>
-        <a href="/ai-training-workforce-development/#workforce-development" class="mega-ai-training-card mega-ai-training-card--workforce">
-          <div class="mega-ai-training-card__image" aria-hidden="true"></div>
-          <div class="mega-ai-training-card__content">
-            <span class="mega-ai-training-card__num">Applied</span>
-            <h3 class="mega-ai-training-card__title">AI Workforce Development</h3>
-            <p class="mega-ai-training-card__dek">Practical, hands-on, domain-specific training for executives, managers, and teams.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div id="mega-industries" class="mega-menu mega-menu--industries" role="region" aria-label="Industries">
-    <div class="mega-menu-inner">
-      <aside class="mega-menu-context">
-        <p class="mega-menu-context__eyebrow">Where We Work</p>
-        <h3 class="mega-menu-context__heading">Industries where operations determine AI value.</h3>
-        <p class="mega-menu-context__copy">Foundation AI Advisory works with mid-market operators where data quality, workflow discipline, systems, and ownership decide whether AI creates measurable value or scales existing friction.</p>
-        <a class="mega-menu-context__link" href="/industries/">Explore all industries&nbsp;<span aria-hidden="true">&rarr;</span></a>
-      </aside>
-      <div class="mega-menu-context__right">
-        <div class="mega-industry-tiles">
-        <a href="/industry-manufacturing-industrial-production/" class="mega-industry-tile mega-industry-tile--manufacturing">
-          <span class="mega-industry-tile__title">Manufacturing &amp; Industrial Production</span>
-          <span class="mega-industry-tile__meta">Throughput, yield, plant floor</span>
-        </a>
-        <a href="/industry-engineering-construction-infrastructure/" class="mega-industry-tile mega-industry-tile--eci">
-          <span class="mega-industry-tile__title">Engineering, Construction &amp; Infrastructure (ECI)</span>
-          <span class="mega-industry-tile__meta">Field-to-office, project controls</span>
-        </a>
-        <a href="/industry-transportation-logistics/" class="mega-industry-tile mega-industry-tile--logistics">
-          <span class="mega-industry-tile__title">Transportation &amp; Logistics</span>
-          <span class="mega-industry-tile__meta">Forecasting, dispatch, freight</span>
-        </a>
-        <a href="/industry-energy-natural-resources/" class="mega-industry-tile mega-industry-tile--energy">
-          <span class="mega-industry-tile__title">Energy &amp; Natural Resources</span>
-          <span class="mega-industry-tile__meta">Asset reliability, regulatory trails</span>
-        </a>
-        <a href="/industry-distribution-wholesale/" class="mega-industry-tile mega-industry-tile--distribution">
-          <span class="mega-industry-tile__title">Distribution &amp; Wholesale</span>
-          <span class="mega-industry-tile__meta">Inventory, demand, exception flow</span>
-        </a>
-        <a href="/industry-industrial-equipment/" class="mega-industry-tile mega-industry-tile--equipment">
-          <span class="mega-industry-tile__title">Industrial Equipment</span>
-          <span class="mega-industry-tile__meta">Aftermarket, parts, service</span>
-        </a>
-        <a href="/industry-specialty-manufacturing/" class="mega-industry-tile mega-industry-tile--specialty">
-          <span class="mega-industry-tile__title">Specialty Manufacturing</span>
-          <span class="mega-industry-tile__meta">High-mix, low-volume reality</span>
-        </a>
-        <a href="/industry-professional-technical-services/" class="mega-industry-tile mega-industry-tile--professional">
-          <span class="mega-industry-tile__title">Professional &amp; Technical Services</span>
-          <span class="mega-industry-tile__meta">Knowledge work, delivery systems</span>
-        </a>
-        <a href="/industry-financial-services-banking/" class="mega-industry-tile mega-industry-tile--financial">
-          <span class="mega-industry-tile__title">Financial Services &amp; Banking</span>
-          <span class="mega-industry-tile__meta">Controls, reporting, risk</span>
-        </a>
-        <a href="/industry-ai-data-it-systems/" class="mega-industry-tile mega-industry-tile--ai-data">
-          <span class="mega-industry-tile__title">AI, Data &amp; IT Systems</span>
-          <span class="mega-industry-tile__meta">System owners, data teams</span>
-        </a>
-      </div>
-      </div>
-      <div class="mega-menu-insight-strip">
-        <p class="mega-menu-insight-strip__copy">Same methodology. Different operating realities. Foundation AI Advisory starts with data, workflow, ownership, and controls before AI is applied.</p>
-        <a class="mega-menu-insight-strip__link" href="/methodology/">View the Foundation AI Advisory methodology&nbsp;<span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </div>
-  </div>
-
-  <div id="mega-insights" class="mega-menu" role="region" aria-label="AI Perspectives">
-    <div class="mega-menu-inner">
-      <p class="mega-insights-intro">Practical AI perspectives for executives improving data, workflows, and operating systems before automation.</p>
-      <div class="mega-grid-3 mega-insights-grid">
-        <div class="mega-insights-featured">
-          <span class="mega-insights-featured__eyebrow">Start here</span>
-          <h4 class="mega-group-heading">Featured Perspective</h4>
-          <a href="/insights/" class="mega-link mega-insights-featured__primary">All AI Perspectives<span class="mega-link-dek">The full executive hub</span></a>
-          <a href="/insights/capital-decisions/" class="mega-link">Capital Decisions<span class="mega-link-dek">Evaluate ROI, risk, and payback</span></a>
-          <a href="/insights/#foundations-series" class="mega-link">Foundations Series<span class="mega-link-dek">Five-part field series</span></a>
-          <a href="/insights/#subscribe" class="mega-link">Subscribe<span class="mega-link-dek">Get the running record</span></a>
-          <a href="/ai-frontiers/" class="mega-link mega-insights-featured__hub">AI Frontiers <span class="mega-insights-featured__arrow" aria-hidden="true">&rarr;</span><span class="mega-link-dek">Beyond the obvious use cases</span></a>
-        </div>
-        <div class="mega-insights-pillars">
-          <h4 class="mega-group-heading">By Business Foundation</h4>
-          <a href="/foundation/" class="mega-link mega-insights-pillar"><span class="mega-insights-pillar__num">01</span><span class="mega-insights-pillar__body">Data Curation &amp; Governance<span class="mega-link-dek">Fix the records AI depends on</span></span></a>
-          <a href="/operations/" class="mega-link mega-insights-pillar"><span class="mega-insights-pillar__num">02</span><span class="mega-insights-pillar__body">Workflow Optimization<span class="mega-link-dek">Remove friction before automation</span></span></a>
-          <a href="/agentic-ai/" class="mega-link mega-insights-pillar"><span class="mega-insights-pillar__num">03</span><span class="mega-insights-pillar__body">AI Design &amp; Implementation<span class="mega-link-dek">Deploy AI with ownership and controls</span></span></a>
-        </div>
-        <div class="mega-insights-format">
-          <h4 class="mega-group-heading">By Format</h4>
-          <div class="mega-insights-format__grid">
-            <a href="/insights/?format=article" class="mega-link">Articles<span class="mega-link-dek">Long-form analysis</span></a>
-            <a href="/insights/?format=brief" class="mega-link">Briefs<span class="mega-link-dek">Short-form executive reads</span></a>
-            <a href="/insights/?format=field-note" class="mega-link">Field Notes<span class="mega-link-dek">Lessons from the engagement floor</span></a>
-            <a href="/insights/?format=infographic" class="mega-link">Infographics<span class="mega-link-dek">Visual operating explainers</span></a>
-            <a href="/insights/?format=podcast" class="mega-link">Podcast<span class="mega-link-dek">Operator conversations</span></a>
-            <a href="/insights/?format=video" class="mega-link">Video<span class="mega-link-dek">Working sessions</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="mega-insights-footer">
-        <p class="mega-insights-footer__copy">New to Foundation AI Advisory perspectives? Start with the foundation: data, workflow, and AI design before automation.</p>
-        <a href="/insights/" class="mega-insights-footer__cta">Explore all perspectives <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </div>
-  </div>
-    </div>
-  </div>
-  </div>
 </header>
 
 <main id="main-content">
-<!--PRERENDERED-->
-  <section class="insight-detail-hero">
+<section class="insight-detail-hero ed-article-hero">
     <div class="container-faa">
-      <a href="/insights/" class="read-link">AI Advisory &larr;</a>
+      <a href="/insights/" class="read-link">AI Advisory ←</a>
       <div class="insight-detail-meta mt-8">
         <span data-insight-category>DATA CURATION &amp; GOVERNANCE</span>
         <span data-insight-format>Article</span>
-        <span data-insight-pillar>01 &mdash; Data Curation &amp; Governance</span>
+        <span data-insight-pillar>01 — Data Curation &amp; Governance</span>
       </div>
       <h1 class="insight-detail-title mt-5" data-insight-title>Why Applied AI Fails Without Clean Data</h1>
-      <p class="insight-detail-byline mt-4">By Ben DeMichael, Founder &amp; Managing Partner, Foundation AI Advisory</p>
+      <p class="insight-article-byline">By Ben DeMichael<span class="insight-article-byline__sep" aria-hidden="true">·</span><span class="insight-article-byline__date">May 14, 2026</span></p>
+
       <p class="insight-detail-excerpt mt-6" data-insight-excerpt>Most failed AI deployments are not AI failures. They are data failures wearing an AI label, and the fix is narrower than most teams expect.</p>
     </div>
   </section>
@@ -244,60 +97,58 @@
       <figure class="insight-detail-image">
         <img src="/assets/insights/why-applied-ai-fails-without-clean-data.webp" width="1600" height="900" alt="Demand forecast dashboard on a warehouse desk next to a whiteboard mapping what the AI model needs against what the business actually has — three SKU masters, conflicting definitions of 'active,' duplicate records, manual overrides — with 'GARBAGE IN, GARBAGE OUT' highlighted." fetchpriority="high" loading="eager">
       </figure>
-      <p class="insight-article-byline">By Ben DeMichael<span class="insight-article-byline__sep" aria-hidden="true">&middot;</span><span class="insight-article-byline__date">May 14, 2026</span></p>
+      <div class="ed-reading-grid"><aside class="ed-reading-nav"><details open><summary>In this article</summary><nav aria-label="In this article"><a href="#article-section-1">The misdiagnosis</a><a href="#article-section-2">What “clean” actually means</a><a href="#article-section-3">Why AI exposes the problem faster than reporting did</a><a href="#article-section-4">The thirty-minute diagnostic</a><a href="#article-section-5">The reframe</a><a href="#article-section-6">Frequently Asked Questions</a></nav></details></aside><article class="insight-detail-body ed-reading-body" data-insight-body>
+        <p>Most failed AI projects do not fail for the reason the executive team thinks. The model was not wrong. The data the model was asked to think with did not agree with itself. By the time anyone notices the results look strange, the problem has had six months to compound. The AI did not underperform. It performed exactly as designed — on inputs that were never ready to be trusted.</p>
 
-      <article class="insight-detail-body" data-insight-body>
-        <p>Most failed AI projects do not fail for the reason the executive team thinks. The model was not wrong. The data the model was asked to think with did not agree with itself. By the time anyone notices the results look strange, the problem has had six months to compound. The AI did not underperform. It performed exactly as designed &mdash; on inputs that were never ready to be trusted.</p>
-
-        <h2>The misdiagnosis</h2>
-        <p>The pattern is consistent. A demand forecasting model produces guidance operations refuses to act on, because they have known for years that the SKU master is a mess and three legacy systems disagree on what &ldquo;active&rdquo; means. A customer segmentation engine groups accounts in ways the sales team finds nonsensical, because the CRM has four versions of the same logo and no rule for which one wins. An AP automation rollout flags invoices the controller has been quietly approving as exceptions for a decade, because the GL coding logic was never written down.</p>
+        <h2 id="article-section-1">The misdiagnosis</h2>
+        <p>The pattern is consistent. A demand forecasting model produces guidance operations refuses to act on, because they have known for years that the SKU master is a mess and three legacy systems disagree on what “active” means. A customer segmentation engine groups accounts in ways the sales team finds nonsensical, because the CRM has four versions of the same logo and no rule for which one wins. An AP automation rollout flags invoices the controller has been quietly approving as exceptions for a decade, because the GL coding logic was never written down.</p>
         <p>In each case, the post-mortem lands on the model. The vendor is questioned. The training data is blamed. A second pilot is scoped. Budget gets approved for a different tool.</p>
         <p>This is the misdiagnosis. The model was not the problem. The model did exactly what models do. It produced output at the speed of its inputs. The inputs were broken in ways the organization had quietly accommodated for years.</p>
         <p>The reporting layer absorbed that accommodation. Analysts reconciled. Controllers footnoted. Account managers explained. The numbers worked because humans were patching the seams in real time.</p>
         <p>AI does not patch seams. It produces.</p>
 
-        <h2>What &ldquo;clean&rdquo; actually means</h2>
-        <p>The phrase &ldquo;clean data&rdquo; creates a false standard. Executives hear it and picture a pristine warehouse no operating business has ever had. That picture is wrong, and it is the reason most data initiatives stall before they start.</p>
+        <h2 id="article-section-2">What “clean” actually means</h2>
+        <p>The phrase “clean data” creates a false standard. Executives hear it and picture a pristine warehouse no operating business has ever had. That picture is wrong, and it is the reason most data initiatives stall before they start.</p>
         <p>Usable is the standard. Not perfect.</p>
         <p>Usable means the data needed for a specific decision is structured, governed, owned, reconcilable, and defined the same way by everyone who touches it. It does not mean every record in every system is correct. It means the subset of data the AI is being asked to act on holds up under scrutiny.</p>
-        <p>A demand model does not need a perfect customer master. It needs a customer master where the definition of &ldquo;customer&rdquo; is the same in sales, finance, and operations. A cash forecasting model does not need every invoice tagged correctly. It needs the aging buckets and payment terms to mean what the controller thinks they mean.</p>
-        <p>This is a usability standard, not an aesthetic one. It is also a far smaller and more tractable problem than &ldquo;fix all of our data,&rdquo; which is the framing that kills budgets and stalls programs.</p>
+        <p>A demand model does not need a perfect customer master. It needs a customer master where the definition of “customer” is the same in sales, finance, and operations. A cash forecasting model does not need every invoice tagged correctly. It needs the aging buckets and payment terms to mean what the controller thinks they mean.</p>
+        <p>This is a usability standard, not an aesthetic one. It is also a far smaller and more tractable problem than “fix all of our data,” which is the framing that kills budgets and stalls programs.</p>
         <p>The question is not how clean the data is. The question is whether the data, as it exists today, is fit for the specific decision the AI is being asked to support. Most of the time, the answer is no. The gap is usually narrower than the leadership team fears.</p>
 
-        <h2>Why AI exposes the problem faster than reporting did</h2>
+        <h2 id="article-section-3">Why AI exposes the problem faster than reporting did</h2>
         <p>AI is an amplifier, not a corrector. That distinction is the part most executives miss until after they have approved the budget.</p>
-        <p>Reporting tolerated bad data for thirty years because reporting was consumed by humans who knew the business. When a regional sales number looked off, someone in finance opened the records, found the duplicate account, fixed the rollup in the deck, and moved on. The patch happened in the analyst&rsquo;s head, in the spreadsheet, in the footnote, in the conversation before the meeting.</p>
+        <p>Reporting tolerated bad data for thirty years because reporting was consumed by humans who knew the business. When a regional sales number looked off, someone in finance opened the records, found the duplicate account, fixed the rollup in the deck, and moved on. The patch happened in the analyst’s head, in the spreadsheet, in the footnote, in the conversation before the meeting.</p>
         <p>That patching was invisible. It was also load-bearing. It was the reason the executive team could trust a report built on top of years of accumulated inconsistency.</p>
         <p>AI removes the analyst from the loop. The output is produced, surfaced, and acted on before a human has the chance to reconcile anything. A misclassified vendor becomes a payment recommendation. A drifted SKU master becomes a procurement order. A definitional disagreement between sales and finance becomes a forecast the board is asked to approve.</p>
         <p>Bad inputs running through human review produce a slow, manageable distortion. Bad inputs running through automated decisioning produce a fast, scaled distortion at the speed of the workflow itself.</p>
-        <p>This is why AI pilots so often &ldquo;fail&rdquo; within ninety days. They did not underperform. They worked exactly as designed and revealed, in compressed time, what the reporting layer had been quietly hiding.</p>
+        <p>This is why AI pilots so often “fail” within ninety days. They did not underperform. They worked exactly as designed and revealed, in compressed time, what the reporting layer had been quietly hiding.</p>
 
-        <h2>The thirty-minute diagnostic</h2>
+        <h2 id="article-section-4">The thirty-minute diagnostic</h2>
         <p>Before approving an AI initiative, an executive can run a thirty-minute diagnostic. Alone, or with one or two operators in the room. No consultant. No vendor demo. No workshop.</p>
         <p>Pick one decision the AI is supposed to support. Cash forecasting accuracy. Customer churn prediction. Inventory reorder timing. Pick one.</p>
-        <p>Now trace the data backward. What fields feed that decision? What system holds them? Who owns each field &mdash; not in the org chart sense, but in the practical sense of who is accountable when the value is wrong? How is each field defined, and would the head of sales, the controller, and the operations lead all give the same definition if asked separately?</p>
-        <p>Then ask the harder question. When two systems disagree on a value, which one wins, and why? Is that rule written down, or is it lived in someone&rsquo;s head? When that person leaves, what happens?</p>
+        <p>Now trace the data backward. What fields feed that decision? What system holds them? Who owns each field — not in the org chart sense, but in the practical sense of who is accountable when the value is wrong? How is each field defined, and would the head of sales, the controller, and the operations lead all give the same definition if asked separately?</p>
+        <p>Then ask the harder question. When two systems disagree on a value, which one wins, and why? Is that rule written down, or is it lived in someone’s head? When that person leaves, what happens?</p>
         <p>If the answers are crisp and consistent, the data foundation is fit for the use case, and the AI initiative has a real chance of producing measured outcomes. If the answers wobble, contradict, or require translation, the AI will amplify those gaps faster than the team can intercept them.</p>
         <p>This is not a sophisticated test. It is a question of whether the organization has its house in order for the specific decision in question. Most teams have never asked it. The full set of questions worth working through before approving an initiative is collected on the <a href="/ai-decision-questions/">AI Decision Questions</a> page.</p>
 
-        <h2>The reframe</h2>
+        <h2 id="article-section-5">The reframe</h2>
         <p><strong>AI is a margin, throughput, cycle-time, and visibility decision before it is a technology decision.</strong> The question is not which model. The question is which decision, on which data, with which owner, producing which outcome.</p>
         <p>The firms getting real returns from AI are not the ones with the best vendor relationships. They are the ones who sequenced the work correctly: <a href="/foundation/">Data Curation &amp; Governance</a>, then <a href="/operations/">Workflow Optimization</a>, then <a href="/agentic-ai/">AI Design &amp; Implementation</a>. In that order. Not because the order is academically tidy, but because the order is operationally true. Each stage depends on the one before it. Skip one, and the rest collapses into expensive theater.</p>
         <p>The AI is the easy part. The foundation underneath it is the work. Get the foundation right, and the AI produces what it was bought to produce. Get it wrong, and the AI proves, quickly and publicly, that there was never a foundation to begin with. The fastest practical way to put that foundation in place is the <a href="/business-systems-assessment/">Business Systems Assessment</a>.</p>
 
-        <h2>Frequently Asked Questions</h2>
+        <h2 id="article-section-6">Frequently Asked Questions</h2>
         <dl class="insight-detail-faq">
           <dt>Why do most AI pilots fail in mid-market companies?</dt>
-          <dd>Most AI pilots fail because the data the model was asked to think with did not agree with itself. The model performed exactly as designed, but on inputs that were never ready to be trusted. The post-mortem usually lands on the model, the vendor, or the training data &mdash; and a second pilot gets scoped. The misdiagnosis is the pattern. The model produced output at the speed of its inputs, and the inputs were broken in ways the organization had quietly accommodated for years through manual reconciliation in the reporting layer.</dd>
+          <dd>Most AI pilots fail because the data the model was asked to think with did not agree with itself. The model performed exactly as designed, but on inputs that were never ready to be trusted. The post-mortem usually lands on the model, the vendor, or the training data — and a second pilot gets scoped. The misdiagnosis is the pattern. The model produced output at the speed of its inputs, and the inputs were broken in ways the organization had quietly accommodated for years through manual reconciliation in the reporting layer.</dd>
 
-          <dt>What does &ldquo;clean data&rdquo; actually mean for AI readiness?</dt>
-          <dd>Usable is the standard, not perfect. Usable means the data needed for a specific decision is structured, governed, owned, reconcilable, and defined the same way by everyone who touches it. A demand model does not need a perfect customer master &mdash; it needs a customer master where the definition of &ldquo;customer&rdquo; is the same in sales, finance, and operations. A cash forecasting model does not need every invoice tagged correctly &mdash; it needs the aging buckets and payment terms to mean what the controller thinks they mean. This is a usability standard, not an aesthetic one, and it is a far smaller and more tractable problem than &ldquo;fix all of our data.&rdquo;</dd>
+          <dt>What does “clean data” actually mean for AI readiness?</dt>
+          <dd>Usable is the standard, not perfect. Usable means the data needed for a specific decision is structured, governed, owned, reconcilable, and defined the same way by everyone who touches it. A demand model does not need a perfect customer master — it needs a customer master where the definition of “customer” is the same in sales, finance, and operations. A cash forecasting model does not need every invoice tagged correctly — it needs the aging buckets and payment terms to mean what the controller thinks they mean. This is a usability standard, not an aesthetic one, and it is a far smaller and more tractable problem than “fix all of our data.”</dd>
 
           <dt>Why does AI expose data problems faster than traditional reporting did?</dt>
-          <dd>Reporting tolerated bad data for thirty years because reporting was consumed by humans who knew the business. Analysts reconciled, controllers footnoted, account managers explained &mdash; the patching happened in a human&rsquo;s head, in a spreadsheet, in a conversation before the meeting. That patching was invisible and load-bearing. AI removes the analyst from the loop. The output is produced, surfaced, and acted on before a human has the chance to reconcile anything. Bad inputs through human review produce slow, manageable distortion. Bad inputs through automated decisioning produce fast, scaled distortion at the speed of the workflow itself.</dd>
+          <dd>Reporting tolerated bad data for thirty years because reporting was consumed by humans who knew the business. Analysts reconciled, controllers footnoted, account managers explained — the patching happened in a human’s head, in a spreadsheet, in a conversation before the meeting. That patching was invisible and load-bearing. AI removes the analyst from the loop. The output is produced, surfaced, and acted on before a human has the chance to reconcile anything. Bad inputs through human review produce slow, manageable distortion. Bad inputs through automated decisioning produce fast, scaled distortion at the speed of the workflow itself.</dd>
 
           <dt>What is the 30-minute diagnostic for AI readiness?</dt>
-          <dd>Before approving an AI initiative, an executive can run a short diagnostic alone or with one or two operators. Pick one decision the AI is supposed to support &mdash; cash forecasting accuracy, customer churn prediction, inventory reorder timing. Trace the data backward. What fields feed that decision? What system holds them? Who owns each field in the practical sense of who is accountable when the value is wrong? How is each field defined, and would the head of sales, the controller, and the operations lead all give the same definition if asked separately? When two systems disagree on a value, which one wins, and is that rule written down? If the answers are crisp, the data foundation is fit for the use case. If the answers wobble, the AI will amplify those gaps faster than the team can intercept them.</dd>
+          <dd>Before approving an AI initiative, an executive can run a short diagnostic alone or with one or two operators. Pick one decision the AI is supposed to support — cash forecasting accuracy, customer churn prediction, inventory reorder timing. Trace the data backward. What fields feed that decision? What system holds them? Who owns each field in the practical sense of who is accountable when the value is wrong? How is each field defined, and would the head of sales, the controller, and the operations lead all give the same definition if asked separately? When two systems disagree on a value, which one wins, and is that rule written down? If the answers are crisp, the data foundation is fit for the use case. If the answers wobble, the AI will amplify those gaps faster than the team can intercept them.</dd>
 
           <dt>What is the right sequence for deploying AI in an operating business?</dt>
           <dd>The firms getting real returns from AI sequence the work correctly: Data Curation &amp; Governance, then Workflow Optimization, then AI Design &amp; Implementation. In that order. Not because the order is academically tidy, but because the order is operationally true. Each stage depends on the one before it. Skip one, and the rest collapses into expensive theater. The AI is the easy part. The foundation underneath it is the work.</dd>
@@ -307,17 +158,17 @@
           <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary">Start with a Business Systems Assessment</a>
         </div>
       </article>
-    </div>
+    </div></div>
   </section>
 </main>
 
-<footer style="background: var(--faa-navy); padding: 34px 0;">
-  <div class="container-faa">
-    <p class="footer-attribution">Built in-house by Foundation AI Advisory - where finance, governance, operations, and AI meet practical execution.</p>
+<footer class="home-footer" style="background: var(--faa-navy);">
+  <div class="container-faa" style="padding-top:48px; padding-bottom:48px;">
+    <p class="footer-attribution">Business First. AI Applied.</p>
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
       <div class="flex items-center gap-4" style="color: var(--faa-white);">
-        <img src="/assets/global-footer-logo-wordmark.png" width="512" height="140" alt="Foundation AI Advisory" style="height:32px;width:auto;display:block;opacity:0.95;" />
-        <span style="color: rgba(255,255,255,0.6); font-size: 13px;">&copy; 2026 Foundation AI Advisory. All rights reserved.</span>
+        <img src="/assets/global-footer-logo-wordmark.png" width="512" height="140" alt="Foundation AI Advisory" style="height:32px;width:auto;display:block;opacity:0.95;">
+        <span style="color: rgba(255,255,255,0.6); font-size: 13px;">© 2026 Foundation AI Advisory. All rights reserved.</span>
       </div>
       <nav aria-label="Legal" class="flex flex-wrap items-center gap-6">
         <a href="/client-workspace/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Client Workspace</a>
@@ -325,8 +176,8 @@
         <a href="/terms/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Terms</a>
         <a href="/contact/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Contact</a>
         <a href="https://www.linkedin.com/company/foundation-ai-advisory" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Foundation AI Advisory on LinkedIn" style="font-size: 13px;">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M6.94 8.98H3.72v10.54h3.22V8.98zM5.33 7.52c1.03 0 1.86-.84 1.86-1.86S6.36 3.8 5.33 3.8s-1.86.84-1.86 1.86.83 1.86 1.86 1.86zM20.53 13.56c0-3.03-1.62-4.44-3.78-4.44-1.74 0-2.52.96-2.95 1.63V8.98h-3.08c.04.99 0 10.54 0 10.54h3.21v-5.89c0-.31.02-.63.12-.85.26-.63.86-1.28 1.86-1.28 1.31 0 1.84.99 1.84 2.45v5.57h3.22l.01-5.96z"/>
+          <svg viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.94 8.98H3.72v10.54h3.22V8.98zM5.33 7.52c1.03 0 1.86-.84 1.86-1.86S6.36 3.8 5.33 3.8s-1.86.84-1.86 1.86.83 1.86 1.86 1.86zM20.53 13.56c0-3.03-1.62-4.44-3.78-4.44-1.74 0-2.52.96-2.95 1.63V8.98h-3.08c.04.99 0 10.54 0 10.54h3.21v-5.89c0-.31.02-.63.12-.85.26-.63.86-1.28 1.86-1.28 1.31 0 1.84.99 1.84 2.45v5.57h3.22l.01-5.96z"></path>
           </svg>
           <span>LinkedIn</span>
         </a>
@@ -334,7 +185,7 @@
     </div>
   </div>
 </footer>
-<script src="/nav.js?v=20261023-assessment" defer></script>
+<script src="/nav.js?v=20261024-milestone3" defer></script>
 <script src="/cookie-consent.js" defer></script>
 </body>
 </html>
