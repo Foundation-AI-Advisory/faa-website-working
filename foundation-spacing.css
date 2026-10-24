@@ -1,0 +1,11 @@
+/* Give diagnostic cards a consistent inset on the Data Curation page. */
+.editorial-page main .data-problems-grid {gap:24px;align-items:stretch;}
+.editorial-page main .data-problem-card {padding:28px;min-width:0;box-sizing:border-box;}
+.editorial-page main .data-problem-card__title {margin:0;font-size:22px;line-height:1.25;}
+.editorial-page main .data-problem-card__dek {margin:14px 0 0;font-size:16px;line-height:1.65;}
+@media(max-width:767px){
+ .editorial-page main .data-problems-grid {gap:20px;}
+ .editorial-page main .data-problem-card {padding:24px;}
+ .editorial-page main .data-problem-card__title {font-size:22px;}
+ .editorial-page main .data-problem-card__dek {margin-top:12px;}
+}
