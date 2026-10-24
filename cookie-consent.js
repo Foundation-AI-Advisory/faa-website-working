@@ -78,6 +78,8 @@
       }
 
       const href = a.getAttribute('href') || '';
+      const choice = a.dataset.assessmentChoice || (href.startsWith('/assessment/') ? 'self' : '');
+      if (choice) sendEvent(choice === 'self' ? 'assessment_start' : 'assessment_inquiry_click', {page_path: window.location.pathname, cta_location: a.closest('header') ? 'header' : (a.closest('section')?.id || 'footer')});
       const linkText = (a.textContent || '').trim().slice(0, 100);
 
       // Mailto -> email_click
@@ -103,7 +105,7 @@
       // Sent in addition to email_click when the CTA is a mailto button —
       // gives a clean primary-conversion-intent count distinct from raw
       // mailto clicks elsewhere on the page.
-      if (a.classList && a.classList.contains('btn-primary')) {
+      if (a.classList && (a.classList.contains('btn-primary') || a.classList.contains('hf-button'))) {
         sendEvent('cta_click', {
           link_text: linkText,
           link_url: href,
@@ -241,7 +243,7 @@
 
   function init() {
     const consent = readConsent();
-    if (consent && consent.analytics === true) {
+    if (consent) {
       loadAnalytics(consent);
       return;
     }
