@@ -411,6 +411,11 @@
     var header = document.getElementById('site-header');
     if (!header) return;
 
+    // Pre-rendered links stay crawlable; enhance their controls in place.
+    header.querySelectorAll('[data-prebuilt-assessment]').forEach(function(wrap) {
+      wireDropdown(wrap, wrap.querySelector('button'), wrap.querySelector('nav'), wrap.querySelector('.assessment-dd__backdrop'));
+    });
+
     // 1. Desktop primary button -> dropdown.
     var desktopBtn = header.querySelector('a.btn.btn-primary');
     if (desktopBtn && !desktopBtn.closest('[data-assessment-dd]')) {
@@ -468,6 +473,7 @@
     enhanceHeader();
   }
 })();
+
 
 
 
