@@ -1,0 +1,200 @@
+/* Foundation AI Advisory. Approved white/navy system, shared by every public page. */
+.faa-sitewide{--faa-navy:#071a35;--faa-blue:#176595;--faa-gray-600:#4c6075;--faa-gray-700:#394b5a;--home-ink:#071a35;--home-muted:#4c6075;--home-cyan:#58afe8;--home-navy:#122c43;--home-paper:#fff;--slate-page:#fff;--slate-panel:#f4f7fa;--slate-raised:#e9f0f5;--slate-line:#d9e2e9;--slate-text:#071a35;--slate-muted:#4c6075;--slate-link:#176595;--slate-action:#176595;--serif:Arial,Helvetica,sans-serif;background:#fff;color:#4c6075}
+.faa-sitewide main{min-width:0}
+.faa-sitewide main :is(h1,h2,h3,h4){text-wrap:pretty}
+.faa-sitewide:not(.approved-home):not(.faq-redesign) main :is(h1,h2,h3,h4){font-family:Arial,Helvetica,sans-serif;color:#071a35}
+.faa-sitewide main img,.faa-sitewide main video{max-width:100%}
+.faa-sitewide .hf-footer{font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;border-top:1px solid #e3e9ee}
+.faa-sitewide .hf-footer a{color:#4c6075;text-decoration:none}
+.faa-sitewide .hf-footer a:hover{color:#071a35;text-decoration:underline;text-underline-offset:4px}
+.faa-sitewide #site-header .mobile-menu-group{border-radius:8px;overflow:hidden}
+.faa-sitewide #site-header .mobile-menu-panel{border-top:1px solid #d9e2e9}
+.faa-sitewide #site-header .mobile-menu-links>a:has(.mobile-menu-step)::after{display:none}
+.faa-sitewide #site-header .mobile-menu-cta{border-radius:26px}
+.faa-sitewide .editorial-nav-link{color:#071a35}
+.faa-sitewide main .container-faa{max-width:1280px;padding-inline:40px}
+.faa-sitewide .ed-hero{padding:28px 0 48px;background:#fff;border-bottom:1px solid #e2e8ee}
+.faa-sitewide .ed-breadcrumb{gap:10px;flex-wrap:wrap;line-height:1.5;margin-bottom:32px;color:#5c6e80}
+.faa-sitewide .ed-breadcrumb a{color:#4c6075;text-decoration:none}
+.faa-sitewide .fa-hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:52px;align-items:center;padding:0}
+.faa-sitewide .fa-hero-copy{min-width:0}
+.faa-sitewide .fa-hero-grid h1,.faa-sitewide .fa-hero-text h1{font-size:clamp(36px,4vw,58px);line-height:1.05;letter-spacing:-.05em;margin:0}
+.faa-sitewide .fa-hero-grid .ed-intro{border:0;padding:0;margin-top:24px}
+.faa-sitewide .ed-intro :is(p,.body-lg,.hero-dek){font:18px/1.6 Arial,Helvetica,sans-serif;color:#4c6075;margin:0 0 24px;max-width:60ch}
+.faa-sitewide .fa-hero-grid .ed-hero-photo{height:100%;min-height:400px;max-height:540px;border-radius:8px;align-self:stretch;background:#edf2f6}
+.faa-sitewide .fa-hero-grid .ed-hero-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.faa-sitewide .fa-hero-text{padding:8px 0 12px;grid-template-columns:1.1fr 1fr;gap:56px}
+.faa-sitewide.editorial-legal .fa-hero-text{grid-template-columns:1fr;gap:20px}
+.faa-sitewide .fa-hero-text .ed-intro{border:0;padding:0}
+.faa-sitewide main :is(.btn,.btn-primary,.btn-on-blue,.btn-secondary,.btn-outline-navy,.btn-outline-white){display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:50px;max-width:100%;padding:14px 24px;border-radius:28px;box-shadow:none;font:600 15px/1.4 Arial,Helvetica,sans-serif;letter-spacing:0;text-decoration:none;text-transform:none;white-space:normal;text-align:center;transition:background .15s}
+.faa-sitewide main :is(.btn-primary,.btn-on-blue){background:#0b2132;color:#fff;border:1px solid #0b2132}
+.faa-sitewide main :is(.btn-secondary,.btn-outline-navy,.btn-outline-white){background:#fff;color:#0b2132;border:1px solid #b8c7d4}
+.faa-sitewide main :is(.btn-primary,.btn-on-blue):hover{background:#214a68;color:#fff;border-color:#214a68}
+.faa-sitewide main .btn::before,.faa-sitewide main .btn::after{display:none}
+.faa-sitewide main .read-link{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 0;border:0;font:600 15px/1.5 Arial,Helvetica,sans-serif;color:#173d5b;text-decoration:none}
+.faa-sitewide main .read-link:hover{text-decoration:underline;text-underline-offset:4px}
+.faa-sitewide main :is(.eyebrow,.ed-eyebrow,.kicker){color:#526b80;letter-spacing:.12em}
+.faa-sitewide .fa-page-index{padding-block:0;border-bottom:1px solid #e2e8ee;background:#fff}
+.faa-sitewide .fa-page-index>summary{display:flex;align-items:center;justify-content:space-between;min-height:62px;padding:16px 0;cursor:pointer;list-style:none;font:600 14px/1.4 Arial,sans-serif;color:#071a35}
+.faa-sitewide .fa-page-index>summary::-webkit-details-marker{display:none}
+.faa-sitewide .fa-page-index>summary::after{content:'+';font-size:24px;font-weight:400}
+.faa-sitewide .fa-page-index[open]>summary::after{content:'−'}
+.faa-sitewide .fa-page-index .ed-jump{padding:0 0 20px;border:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 24px}
+.faa-sitewide .ed-jump a{display:flex;align-items:center;min-height:44px;border:0;padding:8px 0;font-size:14px;line-height:1.5;color:#4c6075}
+.faa-sitewide .ed-jump a:hover{color:#071a35;text-decoration:underline;text-underline-offset:4px}
+.faa-sitewide .ed-context{background:#f4f7fa}
+.faa-sitewide .ed-context-copy{columns:auto;max-width:1000px;display:grid;gap:16px 40px;grid-template-columns:1fr 1fr;align-items:start}
+.faa-sitewide .ed-context-copy>*{margin:0}
+.faa-sitewide .ed-context-copy>*:only-child{grid-column:1/-1;max-width:80ch}
+.faa-sitewide .ed-context-copy .hero-trust-line{grid-column:1/-1;font-size:15px}
+.faa-sitewide .ed-context-copy .hero-proof-list li{color:#4c6075}
+.faa-sitewide .ed-section{background:#fff;border:0;border-bottom:1px solid #e2e8ee}
+.faa-sitewide .ed-section:nth-of-type(even){background:#f6f8fa}
+.faa-sitewide .ed-section>.container-faa{padding-block:64px!important}
+.faa-sitewide main .body-lg{font-size:18px;line-height:1.7}
+.faa-sitewide .methodology-intro-grid{gap:48px}
+.faa-sitewide main :is(.card,.data-problem-card,.methodology-summary-card,.workforce-topic-card){border:1px solid #dce5ed;border-radius:8px;box-shadow:none;background:#fff;overflow:hidden}
+.faa-sitewide main :is(.card,.data-problem-card):hover{transform:none;box-shadow:none}
+.faa-sitewide main .methodology-aeo{background:#eef3f7;border:0;border-radius:8px;padding:30px;box-shadow:none}
+.faa-sitewide main :is(.ed-number,.about-charter-value__num,.about-methodology-card__number){background:#58afe8;color:#09233a;border:0}
+.faa-sitewide .ed-method-row::before{display:none}
+.faa-sitewide .ed-method-row>img{border-radius:8px}
+.faa-sitewide main .outcomes-strip{background:#122c43;color:#fff}
+.faa-sitewide main .outcomes-strip :is(p,li,span,h2,h3){color:#e7f0f6}
+.faa-sitewide .outcomes-strip-list li{border-left:0;padding:8px 12px;font-size:14px}
+.faa-sitewide .outcomes-strip-list{gap:8px}
+.faa-sitewide .methodology-summary-card{padding:30px}
+.faa-sitewide .ed-faq summary{min-height:52px;font-size:16px;color:#071a35}
+.faa-sitewide main .ed-faq-answer{display:block;grid-template-rows:none}
+.faa-sitewide main .ed-faq-answer>div{overflow:visible}
+.faa-sitewide main .ed-faq-answer a{text-decoration:underline;text-underline-offset:3px}
+.faa-sitewide main .ed-faq-answer p{margin:0 0 12px}
+.faa-sitewide main form input:not([type=checkbox]):not([type=radio]),.faa-sitewide main form select,.faa-sitewide main form textarea{border-radius:6px;font-size:16px;color:#071a35;background:#fff}
+.faa-sitewide main blockquote{border-left-color:#58afe8}
+.faa-sitewide main .medical-lineage-subsection__note,.faa-sitewide main .insight-article-byline__sep{color:#526b80}
+.faa-sitewide .ed-section span.shrink-0[style*="width:32px"]{background:#58afe8!important;color:#09233a;border-radius:50%}
+.faa-sitewide main .capital-scorecard__card--green .capital-scorecard__signal{color:#216a41}
+.faa-sitewide main .insight-hero-image{width:100%;max-width:100%;margin:32px 0;border-radius:8px;overflow:hidden}
+.faa-sitewide main :is(.table-scroll,.table-wrap){overflow-x:auto;max-width:100%}
+.faa-sitewide.editorial-industry .fa-hero-grid .ed-hero-photo{min-height:360px}
+.faa-sitewide .ed-industry-grid{gap:28px}
+.faa-sitewide main .industry-card{padding:230px 28px 28px;border-radius:8px;min-height:440px;text-decoration:none}
+.faa-sitewide main .industry-card-bg{height:205px;object-fit:cover;border-radius:0}
+.faa-sitewide main .industry-card .kicker{display:block;color:#4c6075;font-size:11px}
+.faa-sitewide main .industry-card h3{color:#071a35;font-size:27px}
+.faa-sitewide main .industry-card p{color:#4c6075}
+.faa-sitewide main .industry-card:hover h3{color:#176595}
+/* Long-form reading: generous measure, clear headings, quiet navigation. */
+.faa-sitewide.editorial-article main .ed-article-hero{padding:42px 0 38px;border-bottom:0;background:#fff}
+.faa-sitewide.editorial-article main .ed-article-hero>.container-faa{max-width:1120px}
+.faa-sitewide.editorial-article main .ed-article-hero h1{font-size:clamp(38px,4.5vw,64px);line-height:1.07;max-width:1000px;color:#071a35}
+.faa-sitewide.editorial-article main :is(.insight-detail-meta,.foundations-meta){gap:8px 18px}
+.faa-sitewide.editorial-article main :is(.insight-detail-meta,.foundations-meta) span{padding:0;border:0;background:none;color:#526b80;line-height:1.6;font-size:10px}
+.faa-sitewide.editorial-article main :is(.insight-detail-excerpt,.foundations-article-subhead){font-size:20px;line-height:1.6;color:#4c6075;max-width:78ch}
+.faa-sitewide.editorial-article main .insight-detail-layout{padding-top:0}
+.faa-sitewide.editorial-article main .insight-detail-image{overflow:hidden;border-radius:8px}
+.faa-sitewide.editorial-article main .insight-detail-image img{background:#f4f7fa;max-height:480px}
+.faa-sitewide.editorial-article main .ed-reading-nav{border-top:1px solid #cbd7e1;top:112px}
+.faa-sitewide.editorial-article main .ed-reading-nav summary{min-height:44px;display:flex;align-items:center;justify-content:space-between}
+.faa-sitewide.editorial-article main .ed-reading-nav a{min-height:44px}
+.faa-sitewide.editorial-article main .ed-reading-body{max-width:740px}
+.faa-sitewide.editorial-article main .ed-reading-body :is(p,li){font:18px/1.8 Arial,Helvetica,sans-serif;color:#394b5a}
+.faa-sitewide.editorial-article main .ed-reading-body h2{color:#071a35}
+.faa-sitewide.editorial-article main .ed-reading-body blockquote{background:#eef3f7;border-left:3px solid #58afe8;border-radius:0 8px 8px 0}
+.faa-sitewide.editorial-article main :is(.insight-takeaways,.foundations-operator-box,.foundations-diagnostic){border:0;border-radius:8px;background:#eef3f7}
+.faa-sitewide main :is(.foundations-series-card,.foundations-series-nav a){border:1px solid #dce5ed;border-radius:8px;background:#f4f7fa}
+.faa-sitewide main .foundations-hub-panel{border-color:#58afe8}
+.faa-sitewide main .insight-article-cta{border-top:1px solid #dce5ed;padding-top:28px}
+/* The existing Perspectives search/filter behavior is retained. */
+.faa-sitewide.perspectives-page .perspectives-masthead{padding-block:32px 44px;background:#fff}
+.faa-sitewide.perspectives-page .perspectives-intro h1 span{color:#168fce}
+.faa-sitewide.perspectives-page .perspectives-discovery{background:#f4f7fa;border-color:#dce5ed}
+.faa-sitewide.perspectives-page .perspectives-topics button{color:#4c6075}
+.faa-sitewide.perspectives-page .perspectives-topics button:is(:hover,[aria-pressed=true]){color:#071a35}
+.faa-sitewide.perspectives-page .perspectives-topics button[aria-pressed=true]::after{background:#071a35}
+.faa-sitewide.perspectives-page .perspectives-results-bar{border-color:#dce5ed}
+.faa-sitewide.perspectives-page main :is(#perspectives-search,#perspectives-format){background:#fff!important;border-radius:6px;color:#071a35}
+.faa-sitewide.perspectives-page main .perspectives-grid>a.card{border:1px solid #e0e7ed;border-radius:8px;background:#fff;overflow:hidden}
+.faa-sitewide.perspectives-page main .perspectives-grid>a.card .card-image{border-radius:0;overflow:hidden}
+.faa-sitewide.perspectives-page main .perspectives-grid>a.card .pill{border:0;background:#fff;color:#071a35;border-radius:20px;padding:6px 10px}
+.faa-sitewide.perspectives-page :is(.perspectives-reset-all,#perspectives-more){background:#0b2132;color:#fff;border-color:#0b2132;border-radius:28px;min-height:48px}
+.faa-sitewide.perspectives-page :is(.perspectives-reset-all,#perspectives-more):hover{background:#214a68;color:#fff}
+.faa-sitewide.perspectives-page #perspectives-more span{color:#fff}
+.faa-sitewide.perspectives-page .perspectives-empty-label{color:#176595!important}
+/* Secondary pages and interactive experiences. */
+.faa-sitewide .about-charter-pillar,.faa-sitewide .about-methodology-card{border:1px solid #dce5ed;border-radius:8px;background:#f4f7fa;box-shadow:none}
+.faa-sitewide .about-methodology-callout{background:#122c43;border-radius:8px}
+.faa-sitewide .about-methodology-callout :is(h2,h3,p){color:#fff}
+.faa-sitewide .client-workspace-section{background:#fff;padding-block:60px}
+.faa-sitewide .client-workspace-copy h1{font-size:clamp(40px,4.5vw,60px)}
+.faa-sitewide .client-workspace-login-card .card{background:#f4f7fa;border:1px solid #dce5ed;border-radius:8px;padding:32px}
+.faa-sitewide .client-workspace-section .border-l-2{border-left:0;padding-left:0}
+.faa-sitewide.editorial-legal .ed-legal-copy{background:#fff}
+.faa-sitewide.faa-assessment{background:#f4f7fa;--navy:#071a35;--slate:#4c6075;--blue:#176595;--cyan:#58afe8;--soft:#edf4f8;--line:#dce5ed}
+.faa-sitewide.faa-assessment .assessment-flow{background:#f4f7fa}
+.faa-sitewide.faa-assessment .screen .card{border:1px solid #dce5ed;border-radius:10px;background:#fff;box-shadow:none}
+.faa-sitewide.faa-assessment #scr-intro .card{padding:44px}
+.faa-sitewide.faa-assessment .screen h1{font-size:clamp(36px,4vw,50px);color:#071a35}
+.faa-sitewide.faa-assessment .screen button{border-radius:28px;background:#0b2132;border-color:#0b2132;min-height:50px}
+.faa-sitewide.faa-assessment .screen button.ghost{background:#fff;color:#0b2132}
+.faa-sitewide.faa-assessment .opt{border-radius:7px;min-height:56px}
+.faa-sitewide.faa-assessment .qcard .qnum{color:#526b80}
+.faa-sitewide.faa-assessment .segs i{border-radius:2px}
+.faa-sitewide.faa-assessment .segs i.on{background:#176595}
+.faa-sitewide.faa-assessment .progressbar{top:88px}
+.faa-sitewide.faa-assessment .screen :is(input,button,a,textarea):focus-visible{outline-color:#176595}
+.faa-sitewide.faa-assessment :is(input[type=email],textarea,.notice,.goalreflect){border-radius:7px}
+.faa-sitewide.faa-triage .dt-hero{background:#fff;color:#4c6075;border-bottom:1px solid #dce5ed}
+.faa-sitewide.faa-triage .dt-hero :is(h1,h2,p){color:#071a35}
+.faa-sitewide.faa-triage .dt-receipt{background:#122c43;border:0;border-radius:8px}
+.faa-sitewide.faa-triage #dt{--serif:Arial,Helvetica,sans-serif;--g400:#526b80;--warn:#825e14;background:#f4f7fa}
+.faa-sitewide.faa-triage .dt-hero :is(.eyebrow,.dt-pledge b){color:#173f5f}
+.faa-sitewide.faa-triage main .dt-cta h2{color:#fff}
+.faa-sitewide.faa-triage #dt :is(.card,textarea,select){border-radius:8px}
+.faa-sitewide.faa-triage #dt .btn{border-radius:24px;min-height:44px}
+.faa-sitewide.faa-triage #dt .step h2 i{background:#58afe8;color:#09233a}
+.faa-sitewide [hidden]{display:none!important}
+@media(max-width:1050px){
+ .faa-sitewide .fa-hero-grid{gap:32px;grid-template-columns:1.1fr 1fr}
+ .faa-sitewide .fa-hero-grid h1{font-size:40px}
+ .faa-sitewide .fa-hero-grid .ed-hero-photo{min-height:380px}
+ .faa-sitewide .fa-page-index .ed-jump{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+ .faa-sitewide main .container-faa{padding-inline:20px}
+ .faa-sitewide .ed-hero{padding:22px 0 30px}
+ .faa-sitewide .ed-breadcrumb{margin-bottom:24px;font-size:11px}
+ .faa-sitewide .fa-hero-grid,.faa-sitewide .fa-hero-text{display:grid;grid-template-columns:1fr;gap:28px;padding:0}
+ .faa-sitewide .fa-hero-grid h1,.faa-sitewide .fa-hero-text h1{font-size:clamp(34px,8.7vw,48px);line-height:1.08}
+ .faa-sitewide .fa-hero-grid .ed-intro{margin-top:22px}
+ .faa-sitewide .ed-intro :is(p,.body-lg,.hero-dek){font-size:17px;line-height:1.6}
+ .faa-sitewide .fa-hero-grid .ed-hero-photo,.faa-sitewide.editorial-industry .fa-hero-grid .ed-hero-photo{height:230px;min-height:0;max-height:none}
+ .faa-sitewide .fa-page-index{padding-inline:20px}
+ .faa-sitewide .fa-page-index .ed-jump{grid-template-columns:1fr;padding-inline:0}
+ .faa-sitewide .ed-context-copy{display:block}
+ .faa-sitewide .ed-context-copy>*+*{margin-top:18px}
+ .faa-sitewide .ed-section>.container-faa{padding-block:40px!important}
+ .faa-sitewide .methodology-intro-grid{gap:30px}
+ .faa-sitewide main .body-lg{font-size:17px}
+ .faa-sitewide main .methodology-aeo{padding:22px}
+ .faa-sitewide main .industry-card{padding:200px 22px 22px;min-height:0}
+ .faa-sitewide main .industry-card-bg{height:180px}
+ .faa-sitewide main .industry-card h3{font-size:25px}
+ .faa-sitewide.editorial-article main .ed-article-hero{padding:24px 0 28px}
+ .faa-sitewide.editorial-article main .ed-article-hero h1{font-size:clamp(34px,8.8vw,48px);line-height:1.08;margin-block:22px}
+ .faa-sitewide.editorial-article main :is(.insight-detail-excerpt,.foundations-article-subhead){font-size:18px}
+ .faa-sitewide.editorial-article main .ed-reading-nav{border:1px solid #dce5ed;border-radius:7px;padding:8px 16px;background:#f4f7fa}
+ .faa-sitewide.editorial-article main .ed-reading-body :is(p,li){font-size:17px;line-height:1.8}
+ .faa-sitewide.editorial-article main .insight-detail-image{margin-bottom:28px}
+ .faa-sitewide.editorial-article main .ed-reading-grid{gap:30px}
+ .faa-sitewide.perspectives-page .perspectives-masthead{padding-block:24px 32px}
+ .faa-sitewide.perspectives-page main .perspectives-intro p{font-size:17px}
+ .faa-sitewide.perspectives-page .perspectives-topics button{font-size:12px}
+ .faa-sitewide.perspectives-page main .perspectives-grid.is-curated>a.card:nth-child(2),.faa-sitewide.perspectives-page main .perspectives-grid.is-curated>a.card:nth-child(3){grid-template-columns:96px minmax(0,1fr)}
+ .faa-sitewide.perspectives-page main .perspectives-grid.is-curated>a.card:nth-child(2) h3,.faa-sitewide.perspectives-page main .perspectives-grid.is-curated>a.card:nth-child(3) h3{font-size:19px}
+ .faa-sitewide .client-workspace-section{padding-block:36px}
+ .faa-sitewide.faa-assessment #scr-intro .card,.faa-sitewide.faa-assessment .screen .card{padding:24px 20px}
+ .faa-sitewide.faa-assessment .progressbar{top:76px}
+ .faa-sitewide .hf-footer nav{gap:14px 20px}
+}
+@media(prefers-reduced-motion:reduce){.faa-sitewide *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}

@@ -14,11 +14,10 @@
 <meta property="og:description" content="Private access point for active Foundation AI Advisory clients.">
 <meta property="og:url" content="https://foundationaiadvisory.com/client-workspace/">
 <meta property="og:site_name" content="Foundation AI Advisory">
-<link rel="stylesheet" href="/tailwind-static.css?v=20260525a">
-<link rel="stylesheet" href="/styles.css?v=20261023-assessment">
-<link rel="stylesheet" href="/homepage.css?v=20261024-milestone3"><link rel="stylesheet" href="/navigation-editorial.css?v=20261024-milestone3"><link rel="stylesheet" href="/editorial-pages.css?v=20261024-milestone3"><link rel="stylesheet" href="/editorial-content.css?v=20261024-card-fix-1"><link rel="stylesheet" href="/slate-theme.css?v=20261024-blue-slate-1">
-</head>
-<body class="slate-theme homepage-redesign editorial-page editorial-complete"><a href="#main-content" class="skip-link">Skip to main content</a>
+<link rel="stylesheet" href="/tailwind-static.css?v=20261024-sitewide">
+<link rel="stylesheet" href="/styles.css?v=20261024-sitewide">
+<link rel="stylesheet" href="/navigation-editorial.css?v=20261024-sitewide"><link rel="stylesheet" href="/editorial-pages.css?v=20261024-sitewide"><link rel="stylesheet" href="/editorial-content.css?v=20261024-sitewide"><link rel="stylesheet" href="/approved-homepage.css?v=20261024-sitewide"><link rel="stylesheet" href="/sitewide.css?v=20261024-sitewide"></head>
+<body class="homepage-redesign editorial-page editorial-complete faa-sitewide"><a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="sticky top-0 z-40 bg-white border-b" style="border-color: var(--faa-gray-100);" id="site-header">
   <div class="container-faa flex items-center justify-between relative" style="height:96px;">
@@ -47,12 +46,14 @@
       
     </nav>
 
-    <div class="flex items-center shrink-0">
-      <a href="/client-workspace/" class="utility-access-link"><svg width="14" height="14" viewbox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.2" stroke="currentColor" stroke-width="1.4"></rect><path d="M5.5 7V5a2.5 2.5 0 1 1 5 0v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg><span>Client Workspace</span></a>
-      <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-header-cta" aria-label="Start a Business Systems Assessment">Assessment</a>
-      <a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="btn btn-primary hidden sm:inline-flex">Business Systems Assessment</a>
-    </div>
-  </div>
+    <div class="flex items-center shrink-0"><div class="assessment-dd assessment-dd--compact" data-assessment-dd data-prebuilt-assessment>
+<button type="button" class="mobile-header-cta assessment-dd__trigger" aria-expanded="false" aria-controls="assessment-menu-home">Assessment<svg class="assessment-dd__caret" viewbox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"></path></svg></button>
+<div class="assessment-dd__backdrop" aria-hidden="true" hidden></div>
+<nav class="assessment-dd__menu" id="assessment-menu-home" aria-label="Choose your assessment" hidden>
+<p class="assessment-dd__eyebrow">Assessments</p><h2 class="assessment-dd__heading">Where would you like to start?</h2>
+<a class="assessment-dd__item" href="/assessment/?utm_source=site_nav" data-assessment-choice="self"><span class="assessment-dd__copy"><span class="assessment-dd__title">Foundation’s AI Self-Assessment</span><span class="assessment-dd__description">Explore your AI readiness.</span><span class="assessment-dd__action">Start self-assessment <span aria-hidden="true">→</span></span></span><span class="assessment-dd__arrow" aria-hidden="true">›</span></a>
+<a class="assessment-dd__item" href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" data-assessment-choice="inquiry"><span class="assessment-dd__copy"><span class="assessment-dd__title">Business Systems Assessment</span><span class="assessment-dd__description">Discuss your business with FAA.</span><span class="assessment-dd__action">Start an inquiry <span aria-hidden="true">→</span></span></span><span class="assessment-dd__arrow" aria-hidden="true">›</span></a>
+</nav></div></div></div>
 
 <div id="mega-methodology" class="mega-menu editorial-nav-panel" role="region" aria-label="Our methodology">
  <div class="editorial-nav-inner"><div class="editorial-nav-intro"><p class="editorial-nav-eyebrow">Our methodology</p><h2>The foundation comes first.</h2><p>Three steps. In sequence. Built around the way your business operates.</p><a href="/methodology/" class="editorial-nav-overview">Explore our methodology <span aria-hidden="true">→</span></a></div><div class="editorial-nav-content"><a class="editorial-nav-link" href="/foundation/"><span class="editorial-nav-number" aria-hidden="true">1</span><span><strong>Data Curation &amp; Governance</strong><small>Build clean, governed data that the business can trust.</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/operations/"><span class="editorial-nav-number" aria-hidden="true">2</span><span><strong>Workflow Optimization</strong><small>Improve how work gets done before applying AI.</small></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/agentic-ai/"><span class="editorial-nav-number" aria-hidden="true">3</span><span><strong>AI Design &amp; Implementation</strong><small>Apply AI with ownership, controls, and measurable outcomes.</small></span><span aria-hidden="true">→</span></a></div></div>
@@ -64,7 +65,7 @@
  <div class="editorial-nav-inner"><div class="editorial-nav-intro"><p class="editorial-nav-eyebrow">Perspectives</p><h2>Ideas for the people running the business.</h2><p>Practical perspectives on data, workflows, and applied AI.</p><a href="/insights/" class="editorial-nav-overview">Explore all perspectives <span aria-hidden="true">→</span></a></div><div class="editorial-nav-content"><div class="editorial-nav-perspectives"><div><h3>Explore</h3><a class="editorial-nav-link" href="/insights/"><span><strong>All Perspectives</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/ai-frontiers/"><span><strong>AI Frontiers</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/capital-decisions/"><span><strong>Capital Decisions</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/#foundations-series"><span><strong>Foundations Series</strong></span><span aria-hidden="true">→</span></a></div><div><h3>Read &amp; watch</h3><a class="editorial-nav-link" href="/insights/?format=article"><span><strong>Articles</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=brief"><span><strong>Briefs</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=field-note"><span><strong>Field Notes</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=infographic"><span><strong>Infographics</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=podcast"><span><strong>Podcast</strong></span><span aria-hidden="true">→</span></a><a class="editorial-nav-link" href="/insights/?format=video"><span><strong>Video</strong></span><span aria-hidden="true">→</span></a></div></div></div></div>
  </div>
 
-</header>
+<noscript><nav class="hf-nojs" aria-label="Quick links"><a href="/methodology/">Methodology</a><a href="/industries/">Industries</a><a href="/insights/">Perspectives</a><a href="/assessment/">AI Self-Assessment</a><a href="/business-systems-assessment/">Business Systems Assessment</a><a href="/about/">About</a></nav></noscript></header>
 
 <main id="main-content">
 
@@ -127,31 +128,8 @@
 
 </main>
 
-<footer class="home-footer" style="background: var(--faa-navy);">
-  <div class="container-faa" style="padding-top:48px; padding-bottom:48px;">
-    <p class="footer-attribution">Business First. AI Applied.</p>
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
-      <div class="flex items-center gap-4" style="color: var(--faa-white);">
-        <img src="/assets/global-footer-logo-wordmark.png" width="512" height="140" alt="Foundation AI Advisory" style="height:32px;width:auto;display:block;opacity:0.95;">
-        <span style="color: rgba(255,255,255,0.6); font-size: 13px;">© 2026 Foundation AI Advisory. All rights reserved.</span>
-      </div>
-      <nav aria-label="Legal" class="flex flex-wrap items-center gap-6">
-        <a href="/client-workspace/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Client Workspace</a>
-        <a href="/privacy-policy/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Privacy</a>
-        <a href="/terms/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Terms</a>
-        <a href="/contact/" style="color: var(--faa-white); font-size: 13px;" class="hover:underline">Contact</a>
-        <a href="https://www.linkedin.com/company/foundation-ai-advisory" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Foundation AI Advisory on LinkedIn" style="font-size: 13px;">
-          <svg viewbox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M6.94 8.98H3.72v10.54h3.22V8.98zM5.33 7.52c1.03 0 1.86-.84 1.86-1.86S6.36 3.8 5.33 3.8s-1.86.84-1.86 1.86.83 1.86 1.86 1.86zM20.53 13.56c0-3.03-1.62-4.44-3.78-4.44-1.74 0-2.52.96-2.95 1.63V8.98h-3.08c.04.99 0 10.54 0 10.54h3.21v-5.89c0-.31.02-.63.12-.85.26-.63.86-1.28 1.86-1.28 1.31 0 1.84.99 1.84 2.45v5.57h3.22l.01-5.96z"></path>
-          </svg>
-          <span>LinkedIn</span>
-        </a>
-      </nav>
-    </div>
-  </div>
-</footer>
-<script src="/nav.js?v=20261024-milestone3" defer></script>
-<script src="/cookie-consent.js" defer></script>
+<footer class="hf-footer"><div class="hf-container"><div class="hf-footer-top"><a href="/" aria-label="Foundation AI Advisory home"><img src="/assets/global-header-logo-wordmark.png" alt="Foundation AI Advisory" width="512" height="140" loading="lazy"></a><p>Business First. AI Applied.</p></div><nav aria-label="Footer"><a href="/assessment/">AI Self-Assessment</a><a href="/business-systems-assessment/">Business Systems Assessment</a><a href="/client-workspace/">Client Workspace</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="/terms/">Terms</a><a href="https://www.linkedin.com/company/foundation-ai-advisory" rel="noopener noreferrer" target="_blank">LinkedIn</a></nav><small>© 2026 Foundation AI Advisory. All rights reserved.</small></div></footer><script src="/nav.js?v=20261024-sitewide" defer></script>
+<script src="/cookie-consent.js?v=20261024-sitewide" defer></script>
 <script>
 /* Client Workspace placeholder login.
  *
