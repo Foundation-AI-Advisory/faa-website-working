@@ -53,6 +53,18 @@ CEO / President, CFO / Controller, CIO / IT Leader. Secondary: COO / VP Operatio
 - About: https://foundationaiadvisory.com/about/
 - Contact: https://foundationaiadvisory.com/contact/
 
+## New Perspectives — October 24, 2026
+
+- Faster Estimates Only Help If You Can Trust the Number: https://foundationaiadvisory.com/insights/ai-construction-estimating-trust-before-speed/
+- The Rush Order Is Costing More Than You Think: https://foundationaiadvisory.com/insights/urgent-orders-hidden-cost-to-margin/
+- A Better Customer Presentation Starts Before PowerPoint: https://foundationaiadvisory.com/insights/copilot-customer-presentations-start-with-evidence/
+- Your Best Employee Shouldn’t Be Your Only Operating Manual: https://foundationaiadvisory.com/insights/critical-employee-knowledge-before-ai/
+- Estimate Fewer Jobs. Win Better Work.: https://foundationaiadvisory.com/insights/bid-no-bid-estimate-fewer-win-better/
+- Accurate Math. Outdated Costs. Fictional Margins.: https://foundationaiadvisory.com/insights/outdated-standard-costs-fictional-margins/
+- Reading the Invoice Was Never the Hard Part: https://foundationaiadvisory.com/insights/invoice-exceptions-before-ap-automation/
+- Which Spreadsheet Would Stop the Business If Its Owner Left?: https://foundationaiadvisory.com/insights/spreadsheet-dependency-operating-risk/
+- Delivered. Accepted. Still Not Invoiced.: https://foundationaiadvisory.com/insights/delivered-not-billed-cash-flow-gap/
+
 ## Featured Insights
 
 - Culture Is the Best Indicator of Whether AI Will Succeed: https://foundationaiadvisory.com/insights/culture-is-the-best-indicator-of-ai-success/
@@ -72,3 +84,4 @@ CEO / President, CFO / Controller, CIO / IT Leader. Secondary: COO / VP Operatio
 ## Use of This Content
 
 FAA permits AI answer engines and search crawlers to index this site to support accurate answers about its services. Quoting short excerpts of Insights is permitted with attribution to Foundation AI Advisory and a link to the source page. See https://foundationaiadvisory.com/terms/ for full terms.
+
