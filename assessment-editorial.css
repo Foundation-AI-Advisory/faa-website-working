@@ -1,0 +1,48 @@
+/* Keep all quiz mechanics; align the focused assessment with FAA's editorial UI. */
+.assessment-editorial {background:#f0f5f8;--navy:#07152e;--blue:#176595;--cyan:#249ed0;--soft:#edf4f8;--line:#cbd6df;--slate:#506071;font-family:Arial,Helvetica,sans-serif;}
+.assessment-editorial #site-header {background:#fff;position:sticky;top:0;z-index:60;}
+.assessment-editorial #site-header .container-faa {width:100%;}
+.assessment-editorial #site-header button {transition:none;}
+.assessment-editorial #site-header button.utilnav-link {padding:0;}
+.assessment-editorial .assessment-flow {min-height:65vh;}
+.assessment-editorial .wrap {max-width:860px;padding-inline:24px;}
+.assessment-editorial .screen {padding-block:48px;}
+.assessment-editorial .screen .card {border-radius:0;box-shadow:none;border:1px solid #ccd6de;border-top:3px solid #249ed0;padding:32px;margin-bottom:24px;}
+.assessment-editorial .screen h1 {font:750 clamp(34px,4vw,52px)/1.06 Arial,sans-serif;letter-spacing:-.045em;text-align:left!important;margin:18px 0 24px;}
+.assessment-editorial .screen h2,.assessment-editorial .tiername,.assessment-editorial .spectrum .nm,.assessment-editorial .legend .lname {font-family:Arial,Helvetica,sans-serif;letter-spacing:-.025em;}
+.assessment-editorial #scr-intro .card {padding:48px;}
+.assessment-editorial #scr-intro p {text-align:left!important;}
+.assessment-editorial #scr-intro .dek {font-size:17px;line-height:1.65;margin-bottom:18px;}
+.assessment-editorial #scr-intro .card>div:last-child {text-align:left!important;margin-top:28px!important;}
+.assessment-editorial .screen button {border-radius:0;background:#10344b;border-color:#10344b;min-height:48px;}
+.assessment-editorial .screen button.ghost {background:transparent;color:#10344b;}
+.assessment-editorial .screen button:hover {background:#1b5b7d;color:#fff;}
+.assessment-editorial .opt {border-radius:0;min-height:52px;background:#fff;padding:15px 16px;}
+.assessment-editorial .opt.selected {background:#edf4f8;border-color:#176595;box-shadow:inset 3px 0 #176595;}
+.assessment-editorial .qcard .qnum {color:#9b471c;font-weight:700;}
+.assessment-editorial .qcard .qtext {font-size:20px;line-height:1.3;letter-spacing:-.025em;}
+.assessment-editorial .qcard.unanswered-flag {border-color:#bc392b;background:#fdf6f5;}
+.assessment-editorial .progressbar {top:105px;z-index:40;border-top:1px solid #d5dfe7;}
+.assessment-editorial .segs i {border-radius:0;}
+.assessment-editorial .segs i.on {background:#b35423;}
+.assessment-editorial .legend,.assessment-editorial .notice,.assessment-editorial .goalreflect,.assessment-editorial .spectrum .seg,.assessment-editorial input[type=email],.assessment-editorial textarea,.assessment-editorial .barcell {border-radius:0;}
+.assessment-editorial .spectrum .seg.hit {transform:none;box-shadow:none;}
+.assessment-editorial .screen :is(input,button,a,textarea):focus-visible {outline:3px solid #b35423;outline-offset:4px;}
+.assessment-editorial footer {text-align:left;margin-top:0;}
+.assessment-editorial .preview-assessment-notice {background:#fff1e7;color:#7b3616;padding:12px 24px;border-bottom:1px solid #dab598;font-size:13px;}
+@media(max-width:760px){
+ .assessment-editorial .progressbar {top:85px;}
+ .assessment-editorial .screen {padding-block:28px;}
+ .assessment-editorial #scr-intro .card,.assessment-editorial .screen .card {padding:24px;}
+ .assessment-editorial .wrap {padding-inline:16px;}
+ .assessment-editorial .qcard .qtext {font-size:18px;}
+}
+@media(max-width:480px){
+ .assessment-editorial .progressbar {top:77px;}
+ .assessment-editorial .progressbar .inner {flex-wrap:wrap;gap:8px;}
+ .assessment-editorial .segs {flex-basis:100%;}
+ .assessment-editorial #scr-intro .card,.assessment-editorial .screen .card {padding:22px 18px;}
+ .assessment-editorial .screen h1 {font-size:36px;}
+ .assessment-editorial .screen button {width:100%;}
+}
+.assessment-editorial #site-header button.mobile-menu-toggle {padding:0;}
