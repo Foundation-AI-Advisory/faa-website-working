@@ -477,3 +477,17 @@
 
 
 
+
+/* Contact routing is activated only after the submission service passes delivery checks. */
+(async function(){
+ try{
+  const r=await fetch('/contact-config.json',{cache:'no-store'});if(!r.ok)return;
+  const c=await r.json();if(!c.enabled||!c.turnstileSiteKey||!/^https:\/\//.test(c.endpoint||''))return;
+  document.querySelectorAll('a[href^="mailto:blueprint@foundationaiadvisory.com"]').forEach(a=>{
+   if(a.hasAttribute('data-keep-email')||a.textContent.includes('@'))return;
+   const subject=new URLSearchParams(a.getAttribute('href').split('?')[1]||'').get('subject')||'Website inquiry';
+   if(/subscrib/i.test(subject))return;
+   a.href='/contact/?subject='+encodeURIComponent(subject)+'#inquiry';
+  });
+ }catch{/* Keep the existing email links available if configuration cannot load. */}
+})();

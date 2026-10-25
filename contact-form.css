@@ -1,0 +1,15 @@
+
+.faa-inquiry{padding:64px 0;background:#f3f6f8}
+.faa-inquiry-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+.faa-inquiry h2{font-size:clamp(30px,4vw,46px);line-height:1.12;margin:12px 0 24px}
+.faa-inquiry p{line-height:1.65}.faa-inquiry form{background:white;padding:32px;border:1px solid #d7dfe5}
+.faa-inquiry label{display:block;font-weight:600;margin-bottom:8px}
+.faa-inquiry input,.faa-inquiry textarea{box-sizing:border-box;width:100%;padding:12px;border:1px solid #8293a0;border-radius:0;font:inherit;color:#132b40;background:white}
+.faa-inquiry input:focus,.faa-inquiry textarea:focus{outline:3px solid #8bbdf1;outline-offset:2px}
+.faa-inquiry .field{margin-bottom:22px}.faa-inquiry textarea{min-height:140px;resize:vertical}
+.faa-inquiry .optional{font-weight:400;color:#536472}
+.faa-inquiry .form-note{font-size:14px;color:#536472;margin:18px 0}
+.faa-inquiry .trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.faa-inquiry [hidden]{display:none!important}.faa-inquiry button:disabled{opacity:.6;cursor:wait}
+.faa-inquiry [role=status]{margin-top:18px;font-weight:600}
+@media(max-width:760px){.faa-inquiry-grid{grid-template-columns:1fr;gap:24px}.faa-inquiry form{padding:24px}.faa-inquiry{padding:40px 0}}
