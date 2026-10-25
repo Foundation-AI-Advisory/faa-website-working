@@ -270,7 +270,7 @@
    ============================================================= */
 (function() {
   var SELF_ASSESSMENT_HREF = "/assessment/?utm_source=site_nav";
-  var INQUIRY_HREF = "mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry";
+  var INQUIRY_HREF = "mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20inquiry&body=Hi%20Ben%2C%0D%0A%0D%0AI%E2%80%99m%20interested%20in%20learning%20more%20about%20Foundation%20AI%20Advisory%E2%80%99s%20Business%20Systems%20Assessment%20and%20whether%20it%20would%20be%20a%20good%20fit%20for%20our%20business.%0D%0A%0D%0ACould%20we%20arrange%20a%20brief%20conversation%20to%20discuss%20what%E2%80%99s%20involved%20and%20the%20next%20steps%3F%0D%0A%0D%0AThank%20you.";
   var caretSvg = '<svg class="assessment-dd__caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>';
 
   var idSeq = 0;
@@ -408,6 +408,14 @@
   }
 
   function enhanceHeader() {
+    // Keep pre-rendered and page-level assessment inquiries ready to send.
+    document.querySelectorAll('a[href^="mailto:blueprint@foundationaiadvisory.com"]').forEach(function(link) {
+      var url = new URL(link.href);
+      if ((url.searchParams.get('subject') || '').toLowerCase() === 'business systems assessment inquiry') {
+        link.href = INQUIRY_HREF;
+      }
+    });
+
     var header = document.getElementById('site-header');
     if (!header) return;
 
