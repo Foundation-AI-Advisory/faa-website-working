@@ -69,10 +69,38 @@
       '<a href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" class="mobile-menu-cta">Business Systems Assessment</a>',
       '<p class="mobile-menu-footer">Business First. AI Applied.</p>'
     ].join('');
+    let renderEditorialMenu;
     if (editorial) {
-      panel.querySelectorAll('.mobile-menu-step').forEach((step, i) => step.textContent = String(i + 1));
-      panel.querySelector('a[href="/industries/"]').firstChild.textContent = 'Industries';
-      panel.querySelector('.mobile-menu-group--perspectives summary').textContent = 'Perspectives';
+      const sections = {
+        'Methodology': { description: 'Data first. Workflow second. Then applied AI.', overview: ['Explore the methodology', '/methodology/'], links: [['Data Curation & Governance', '/foundation/'], ['Workflow Optimization', '/operations/'], ['AI Design & Implementation', '/agentic-ai/']] },
+        'AI Training': { description: 'Build practical skills for the work your team does.', overview: ['Explore AI training', '/ai-training-workforce-development/'], links: [['AI Training Bootcamp', '/ai-training-workforce-development/#ai-bootcamp'], ['Workforce Development', '/ai-training-workforce-development/#workforce-development']] },
+        'Industries': { description: 'Explore the foundation for your operating environment.', overview: ['View all industries', '/industries/'], links: [['Manufacturing & Industrial Production', '/industry-manufacturing-industrial-production/'], ['Construction & Infrastructure', '/industry-engineering-construction-infrastructure/'], ['Transportation & Logistics', '/industry-transportation-logistics/'], ['Distribution & Wholesale', '/industry-distribution-wholesale/']] },
+        'Perspectives': { description: 'Practical thinking on data, workflows, and applied AI.', overview: ['View all perspectives', '/insights/'], links: [['AI Frontiers', '/ai-frontiers/'], ['Foundations Series', '/insights/#foundations-series']] }
+      };
+      const arrow = '<span class="faa-nav-arrow" aria-hidden="true">&rarr;</span>';
+      const link = (label, href, cls = '') => '<a class="faa-nav-row ' + cls + '" href="' + href + '">' + label + arrow + '</a>';
+      renderEditorialMenu = (section, focus = false) => {
+        panel.setAttribute('data-section', section || 'root');
+        if (!section) {
+          panel.innerHTML = '<p class="faa-nav-eyebrow">Explore Foundation</p>' + link('Home', '/') + Object.keys(sections).map(title => '<button type="button" class="faa-nav-row" data-nav-section="' + title + '">' + title + arrow + '</button>').join('') + link('About', '/about/') + '<div class="faa-nav-footer"><a href="/contact/">Contact</a><a href="/client-workspace/">Client Workspace</a></div>';
+        } else {
+          const data = sections[section];
+          panel.innerHTML = '<button type="button" class="faa-nav-back" data-nav-back="' + section + '"><span aria-hidden="true">&larr;</span> All sections</button><p class="faa-nav-eyebrow">Explore Foundation</p><h2 class="faa-nav-title">' + section + '</h2><p class="faa-nav-description">' + data.description + '</p>' + link(data.overview[0], data.overview[1], 'faa-nav-overview') + data.links.map((item, i) => link((section === 'Methodology' ? '<span class="faa-nav-number">0' + (i + 1) + '</span>' : '') + '<span class="faa-nav-label">' + item[0] + '</span>', item[1], 'faa-nav-subrow')).join('');
+        }
+        panel.scrollTop = 0;
+        if (focus) panel.querySelector('button, a').focus();
+      };
+      panel.addEventListener('click', e => {
+        const next = e.target.closest('[data-nav-section]');
+        const back = e.target.closest('[data-nav-back]');
+        if (next) renderEditorialMenu(next.dataset.navSection, true);
+        if (back) {
+          const previous = back.dataset.navBack;
+          renderEditorialMenu();
+          panel.querySelector('[data-nav-section="' + previous + '"]').focus();
+        }
+      });
+      renderEditorialMenu();
     }
     header.appendChild(panel);
 
@@ -94,6 +122,7 @@
     if (window.visualViewport) window.visualViewport.addEventListener('resize', positionMobilePanel);
     function setMobileOpen(open) {
       clearMobileCloseTimer();
+      if (open && !isMobileMenuOpen && renderEditorialMenu) renderEditorialMenu();
       isMobileMenuOpen = Boolean(open);
       if (isMobileMenuOpen) document.dispatchEvent(new CustomEvent('faa:navigation-open', { detail: 'mobile' }));
       if (isMobileMenuOpen) positionMobilePanel();
