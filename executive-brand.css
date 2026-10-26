@@ -253,3 +253,42 @@
  .executive-site #site-header .ep-wordmark::before{width:55px;height:50px;background-size:182.857px 50px}
  .executive-site #site-header .ep-wordmark::after{width:93px;height:36px;background-size:131.657px 36px;background-position:-40.5px 0}
 }
+
+/* Assessment navigation: match the light Executive Journal header. */
+.executive-site #site-header .assessment-dd__trigger{
+ background:#fff;color:#081e3d;border:1px solid #9bb1c5;
+ font-family:Georgia,serif;font-weight:400;box-shadow:none;
+ transition:background-color .15s,border-color .15s,color .15s;
+}
+.executive-site #site-header .assessment-dd__trigger:hover,
+.executive-site #site-header .assessment-dd__trigger[aria-expanded=true]{
+ background:#eef4f8;color:#081e3d;border-color:#527fa7;
+}
+.executive-site #site-header .assessment-dd__caret{color:#527fa7}
+.executive-site .assessment-dd--compact .assessment-dd__menu{
+ background:#fff;color:#081e3d;border:1px solid #d8e2eb;
+ border-top:2px solid #6e9bc5;border-bottom:1px solid #d8e2eb;
+ box-shadow:0 16px 38px #081e3d1c;gap:0;
+}
+.executive-site .assessment-dd__heading{color:#081e3d;font-weight:400}
+.executive-site .assessment-dd__item,
+.executive-site .assessment-dd__item--self,
+.executive-site .assessment-dd__item--inquiry{
+ background:transparent;color:#081e3d;border:0;border-top:1px solid #d8e2eb;border-radius:0;
+}
+.executive-site .assessment-dd__item:hover{background:#f3f7fa;color:#081e3d}
+.executive-site .assessment-dd__title{color:#081e3d}
+.executive-site .assessment-dd__description,
+.executive-site .assessment-dd__item--inquiry .assessment-dd__description{color:#526475}
+.executive-site .assessment-dd__action,
+.executive-site .assessment-dd__item--inquiry .assessment-dd__action{
+ color:#2f648c;font:500 12px/1.5 Arial,sans-serif;letter-spacing:.025em;
+}
+.executive-site .assessment-dd__arrow,
+.executive-site .assessment-dd__item--inquiry .assessment-dd__arrow{color:#527fa7}
+.executive-site #site-header .assessment-dd__trigger:focus-visible,
+.executive-site .assessment-dd__item:focus-visible{outline:2px solid #2f648c;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){
+ .executive-site #site-header .assessment-dd__trigger,
+ .executive-site .assessment-dd__caret{transition:none}
+}
