@@ -196,3 +196,13 @@ body.faa-modern{background:#FFFFFF;color:#1A202C;--ep-ink:#0B192C;--ep-blue:#246
 .faa-modern[data-page-family=methodology] main .methodology-aeo .ed-faq summary::after{color:#FFFFFF}
 .faa-modern[data-page-family=methodology] main .methodology-aeo :is(.ed-faq,.aeo-faq-item,.aeo-closing){border-color:#FFFFFF55}
 .faa-modern[data-page-family=methodology] main .methodology-aeo :is(summary,a):focus-visible{outline:2px solid #FFFFFF;outline-offset:4px}
+
+/* Consistent breathing room for boxed assessment and data cards. */
+.faa-modern main .data-problems-grid{gap:24px;align-items:stretch}
+.faa-modern main .data-problem-card{padding:28px;min-width:0;box-sizing:border-box}
+.faa-modern main .data-problem-card .data-problem-card__title{margin:0;font-size:22px;line-height:1.3;letter-spacing:normal;text-wrap:pretty}
+.faa-modern main .data-problem-card .data-problem-card__dek{margin:12px 0 0;font-size:16px;line-height:1.65;text-wrap:pretty}
+@media(max-width:767px){
+ .faa-modern main .data-problems-grid{gap:20px}
+ .faa-modern main .data-problem-card{padding:24px}
+}
