@@ -102,3 +102,7 @@ body.executive-home .assessment-dd__item{border-top-color:#c0ddd5}
 body.executive-home .assessment-dd__item:hover,body.executive-home .assessment-dd__item:focus-visible{background:#dff3ec}
 body.executive-home .assessment-dd__item .assessment-dd__action,body.executive-home .assessment-dd__item .assessment-dd__arrow{color:#087563}
 body.executive-home .assessment-dd__item:focus-visible{outline-color:#087f6d}
+
+/* Give the industry heading natural serif spacing and room for descenders. */
+body.executive-home #industries-heading{letter-spacing:normal;word-spacing:normal;line-height:1.2;padding-bottom:4px}
+@media(max-width:760px){body.executive-home .hf-industry-grid{row-gap:24px}body.executive-home #industries-heading{margin-bottom:20px}}
