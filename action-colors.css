@@ -1,6 +1,6 @@
 /* Shared action palette. Loaded after page styles to unify existing CTA variants.
    Palette declarations intentionally override older page-specific button colors. */
-:root{--faa-action:#2457e6;--faa-action-hover:#1944bd;--faa-action-soft:#edf2ff;--faa-action-focus:#17388c}
+:root{--faa-action:#087f6d;--faa-action-hover:#066555;--faa-action-soft:#e8f7f2;--faa-action-focus:#064e44}
 :is(a,button):is(.btn,.hf-button,.ep-action,.about-methodology-callout__cta,.mobile-header-cta,.mobile-menu-cta,.assessment-dd__trigger),
 .faa-assessment .screen button{
  background:var(--faa-action)!important;color:#fff!important;border:1px solid var(--faa-action)!important;
