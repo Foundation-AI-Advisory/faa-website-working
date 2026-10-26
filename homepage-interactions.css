@@ -93,3 +93,12 @@
 .method-explore .method-content .mi-label{font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:400;line-height:1.25;letter-spacing:-.02em;text-transform:none;margin-bottom:12px}
 .executive-home .method-explore .method-link{font-family:Georgia,'Times New Roman',serif;font-size:17px}
 @media(max-width:760px){.method-explore .method-content p{font-size:17px}.method-explore .method-content .mi-label{font-size:20px}}
+
+/* Homepage assessment menu: a restrained aqua wash with emerald accents. */
+body.executive-home .assessment-dd--compact .assessment-dd__menu{background:#f0faf7;border-color:#c0ddd5;border-top:3px solid #087f6d}
+body.executive-home .assessment-dd__eyebrow{color:#087563}
+body.executive-home .assessment-dd__heading{color:#075e63}
+body.executive-home .assessment-dd__item{border-top-color:#c0ddd5}
+body.executive-home .assessment-dd__item:hover,body.executive-home .assessment-dd__item:focus-visible{background:#dff3ec}
+body.executive-home .assessment-dd__item .assessment-dd__action,body.executive-home .assessment-dd__item .assessment-dd__arrow{color:#087563}
+body.executive-home .assessment-dd__item:focus-visible{outline-color:#087f6d}
