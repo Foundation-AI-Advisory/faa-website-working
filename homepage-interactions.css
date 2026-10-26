@@ -16,7 +16,7 @@
 .method-content .mi-label,.mi-label{font:600 10px/1.5 Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#536982;margin:0 0 12px}
 .method-link{grid-column:1/-1;display:inline-flex;align-items:center;gap:18px;min-height:44px;color:#2457e6;font:500 14px/1.4 Arial,sans-serif;text-decoration:underline;text-underline-offset:5px;justify-self:start}
 .method-step summary:focus-visible,.role-foundation summary:focus-visible,.role-controls select:focus-visible{outline:3px solid #2457e6;outline-offset:4px}
-.role-explorer{background:#f1f4f9;border-block:1px solid #dce4ee;padding:64px 0;color:#4a5b70}
+.role-explorer{background:#e8f7f5;border-block:1px solid #c5e5e0;padding:64px 0;color:#4a5b70}
 .role-intro{max-width:740px;margin-bottom:38px}
 .executive-home .role-intro h2{font:400 clamp(34px,4vw,54px)/1.05 Georgia,serif;letter-spacing:-.045em;color:#081e3d;margin:0 0 22px}
 .role-intro>p:last-child{font:18px/1.6 Arial,sans-serif;max-width:620px;margin:0}
@@ -52,7 +52,7 @@
 .role-foundation li+li{margin-top:16px}
 .role-foundation strong{color:#081e3d}.role-foundation p{margin:5px 0 0}
 .role-outcome{margin:24px 0}.role-outcome p{font:16px/1.6 Arial,sans-serif;color:#081e3d;margin:0}
-.role-next{padding:20px;background:#f6f8fb;margin-bottom:24px}.role-next p{font:13px/1.65 Arial,sans-serif;margin:10px 0}.role-next strong{color:#081e3d}
+.role-next{padding:20px;background:#edf8f6;margin-bottom:24px}.role-next p{font:13px/1.65 Arial,sans-serif;margin:10px 0}.role-next strong{color:#081e3d}
 .role-panel .role-cta{gap:22px}.role-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 @media(max-width:760px){
  .method-step>summary{grid-template-columns:30px minmax(0,1fr) 22px;gap:14px;padding:23px 0}
@@ -67,3 +67,23 @@
  .role-panel .role-cta{width:100%;font-size:14px;min-height:52px;padding:12px 14px}
  .role-next{padding:16px}.role-intro .ej-rule{margin-bottom:18px}
 }
+
+/* Deep teal and aqua connect the methodology to the blue brand palette. */
+.executive-home .hf-methodology.method-explore{background:#075e63;color:#dcf3ef}
+.executive-home .method-explore h2,.method-explore .method-title{color:#fff}
+.method-explore .ej-section-intro>p,.method-explore .method-subtitle{color:#d0ece8}
+.method-explore .ej-rule{background:#58d9c7}
+.method-explore .method-accordion,.method-explore .method-step{border-color:#438b8d}
+.method-explore .method-number,.method-explore .method-toggle{color:#70edda}
+.method-explore .method-step[open]>summary .method-title{color:#a0f5e6}
+.method-explore .method-content{background:#064b51;border-left:3px solid #58d9c7}
+.method-explore .method-content p{color:#e1f5f1}
+.method-explore .method-content .mi-label{color:#83e6d5}
+.executive-home .method-explore .method-link{color:#a0f5e6}
+.method-explore .method-step summary:focus-visible,.executive-home .method-explore a:focus-visible{outline-color:#70edda}
+.role-explorer .ej-rule{background:#087f83}
+.role-explorer .role-intro>.mi-label{color:#08646a}
+.role-explorer .role-controls select{border-color:#4c9695}
+.role-explorer .role-target{border-color:#b6dbd5}
+.role-explorer [hidden]{display:none!important}
+.role-layout.is-awaiting-role{grid-template-columns:minmax(0,620px);gap:0}
