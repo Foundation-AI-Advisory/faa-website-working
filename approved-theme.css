@@ -183,3 +183,16 @@ body.faa-modern{background:#FFFFFF;color:#1A202C;--ep-ink:#0B192C;--ep-blue:#246
 .faa-modern.faa-assessment .screen .opt.selected span{color:#FFFFFF}
 .faa-modern.faa-assessment .screen .opt.selected{background:#075E63!important;border-color:#075E63!important}
 @media(max-width:350px){.faa-modern.faa-assessment .screen .assessment-step-actions{gap:8px}.faa-modern.faa-assessment .screen .assessment-step-actions button{font-size:12px!important;padding-inline:10px!important}}
+
+/* Approved contrast refinements: white practice cards and readable teal FAQs. */
+.faa-modern .method-explore .method-content{background:#FFFFFF;border-left:3px solid #246BCE;color:#1A202C}
+.faa-modern .method-explore .method-content p{color:#1A202C}
+.faa-modern .method-explore .method-content .mi-label{color:#075E63!important}
+.faa-modern .method-explore .method-content .method-link,
+.faa-modern .method-explore .method-content .method-link span{color:#246BCE!important}
+.faa-modern .method-explore .method-content a:focus-visible{outline-color:#246BCE}
+.faa-modern[data-page-family=methodology] main .methodology-aeo :is(.eyebrow,summary,.ed-faq-answer,.ed-faq-answer div,dt,dd,p,a,strong){color:#FFFFFF}
+.faa-modern[data-page-family=methodology] main .methodology-aeo .ed-faq summary{font-family:Georgia,'Times New Roman',serif;font-size:18px;font-weight:400;line-height:1.5}
+.faa-modern[data-page-family=methodology] main .methodology-aeo .ed-faq summary::after{color:#FFFFFF}
+.faa-modern[data-page-family=methodology] main .methodology-aeo :is(.ed-faq,.aeo-faq-item,.aeo-closing){border-color:#FFFFFF55}
+.faa-modern[data-page-family=methodology] main .methodology-aeo :is(summary,a):focus-visible{outline:2px solid #FFFFFF;outline-offset:4px}
