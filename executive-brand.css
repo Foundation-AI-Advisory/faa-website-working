@@ -228,3 +228,28 @@
 }
 @media(max-width:700px){.executive-site.faa-assessment .progressbar{top:77px}}
 @media(prefers-reduced-motion:reduce){.executive-site *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Approved compact FAA logo: original artwork, smaller emblem and half-size wordmark.
+   Keep the text in the DOM for the home link's accessible name. */
+.executive-site #site-header .ep-wordmark{
+ display:inline-flex;align-items:center;gap:5px;width:124px;max-width:none;
+ height:44px;flex:0 0 124px;font-size:0!important;line-height:0;
+ letter-spacing:0;white-space:nowrap;vertical-align:middle;
+}
+.executive-site #site-header .ep-wordmark::before,
+.executive-site #site-header .ep-wordmark::after{
+ content:"";display:block;flex:none;
+ background-image:url("/assets/global-header-logo-wordmark.png");
+ background-repeat:no-repeat;mix-blend-mode:multiply;
+}
+.executive-site #site-header .ep-wordmark::before{
+ width:44px;height:40px;background-size:146.286px 40px;background-position:0 0;
+}
+.executive-site #site-header .ep-wordmark::after{
+ width:75px;height:29px;background-size:106.057px 29px;background-position:-32.5px 0;
+}
+@media(min-width:1024px){
+ .executive-site #site-header .ep-wordmark{width:155px;flex-basis:155px;gap:7px}
+ .executive-site #site-header .ep-wordmark::before{width:55px;height:50px;background-size:182.857px 50px}
+ .executive-site #site-header .ep-wordmark::after{width:93px;height:36px;background-size:131.657px 36px;background-position:-40.5px 0}
+}
