@@ -1,0 +1,69 @@
+/* Homepage methodology and role explorer. */
+.method-explore .method-accordion{margin-top:32px;border-top:1px solid #d4deea}
+.method-step{border-bottom:1px solid #d4deea}
+.method-step>summary{display:grid;grid-template-columns:48px minmax(0,1fr) 28px;gap:22px;align-items:center;cursor:pointer;padding:26px 0;list-style:none}
+.method-step>summary::-webkit-details-marker,.role-foundation>summary::-webkit-details-marker{display:none}
+.method-number{font:400 26px/1 Georgia,serif;color:#2457e6;align-self:start;padding-top:3px}
+.method-title{display:block;font:400 clamp(22px,2.2vw,30px)/1.2 Georgia,serif;letter-spacing:-.035em;color:#081e3d}
+.method-subtitle{display:block;font:15px/1.5 Arial,sans-serif;color:#536475;margin-top:8px}
+.method-toggle{width:24px;height:24px;position:relative;color:#2457e6}
+.method-toggle::before,.method-toggle::after{content:'';position:absolute;top:11px;left:4px;width:16px;height:2px;background:currentColor}
+.method-toggle::after{transform:rotate(90deg)}
+.method-step[open] .method-toggle::after{transform:none}
+.method-step[open]>summary .method-title{color:#2457e6}
+.method-content{margin:0 0 28px 70px;padding:24px;background:#f3f6fb;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.method-content p{font:15px/1.65 Arial,sans-serif;color:#4a5b70;margin:0}
+.method-content .mi-label,.mi-label{font:600 10px/1.5 Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#536982;margin:0 0 12px}
+.method-link{grid-column:1/-1;display:inline-flex;align-items:center;gap:18px;min-height:44px;color:#2457e6;font:500 14px/1.4 Arial,sans-serif;text-decoration:underline;text-underline-offset:5px;justify-self:start}
+.method-step summary:focus-visible,.role-foundation summary:focus-visible,.role-controls select:focus-visible{outline:3px solid #2457e6;outline-offset:4px}
+.role-explorer{background:#f1f4f9;border-block:1px solid #dce4ee;padding:64px 0;color:#4a5b70}
+.role-intro{max-width:740px;margin-bottom:38px}
+.executive-home .role-intro h2{font:400 clamp(34px,4vw,54px)/1.05 Georgia,serif;letter-spacing:-.045em;color:#081e3d;margin:0 0 22px}
+.role-intro>p:last-child{font:18px/1.6 Arial,sans-serif;max-width:620px;margin:0}
+.role-layout{display:grid;grid-template-columns:minmax(230px,.8fr) minmax(0,2fr);gap:48px;align-items:start}
+.role-controls label{display:block;font:600 14px/1.5 Arial,sans-serif;color:#081e3d;margin-bottom:12px}
+.role-controls select{width:100%;min-height:54px;background:#fff;border:1px solid #8199ba;border-radius:0;padding:12px 34px 12px 12px;font:16px/1.4 Arial,sans-serif;color:#081e3d;cursor:pointer;box-sizing:border-box}
+.role-target{margin-top:26px;padding-top:24px;border-top:1px solid #cad6e5}
+.role-target>p{display:flex;align-items:baseline;gap:10px;margin:6px 0 12px;color:#2457e6}
+.role-target strong{font:400 86px/.95 Georgia,serif;letter-spacing:-.06em}
+.role-target>p>span{font:19px/1.4 Arial,sans-serif}
+.role-target>span:last-child{display:block;font:14px/1.55 Arial,sans-serif;color:#536475}
+.role-context{font:14px/1.7 Arial,sans-serif;max-width:280px;margin-top:22px}
+.role-panel{background:#fff;border:1px solid #d8e2ed;border-top:3px solid #2457e6;padding:34px}
+.role-panel[hidden],#role-picker[hidden]{display:none!important}
+.executive-home .role-panel h3{font:400 clamp(28px,2.9vw,40px)/1.12 Georgia,serif;letter-spacing:-.035em;color:#081e3d;margin:0 0 24px}
+.role-application{font:600 15px/1.5 Arial,sans-serif;color:#081e3d;margin:0 0 8px}
+.role-description{font:16px/1.65 Arial,sans-serif;margin:0 0 25px;color:#4a5b70}
+.executive-home .role-panel h4{font:600 15px/1.5 Arial,sans-serif;letter-spacing:0;color:#081e3d;margin:0 0 10px}
+.role-assumption{font:12px/1.6 Arial,sans-serif;color:#536475;margin:0 0 18px}
+.role-time table{border-collapse:collapse;width:100%;table-layout:fixed;font:14px/1.5 Arial,sans-serif;color:#081e3d}
+.role-time th,.role-time td{padding:13px 7px;border-bottom:1px solid #dce4ee;text-align:right;vertical-align:top}
+.role-time th:first-child{width:49%;text-align:left;padding-left:0;font-weight:400}
+.role-time thead th{font-size:11px;color:#536475;font-weight:600;white-space:nowrap}
+.role-time thead th:first-child,.role-time tfoot th:first-child{font-weight:600}
+.role-time tfoot{background:#f2f5ff;font-weight:600}
+.role-time tfoot th:first-child{padding-left:9px}
+.role-time tfoot td:last-child{color:#2457e6}
+.role-foundation{border-block:1px solid #dce4ee;margin-top:26px}
+.role-foundation>summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;list-style:none;padding:18px 0;font:600 14px/1.5 Arial,sans-serif;color:#081e3d}
+.role-foundation>summary>span{font-size:22px;color:#2457e6}
+.role-foundation[open]>summary>span{transform:rotate(45deg)}
+.role-foundation ol{padding-left:21px;margin:0 0 22px;font:14px/1.6 Arial,sans-serif}
+.role-foundation li+li{margin-top:16px}
+.role-foundation strong{color:#081e3d}.role-foundation p{margin:5px 0 0}
+.role-outcome{margin:24px 0}.role-outcome p{font:16px/1.6 Arial,sans-serif;color:#081e3d;margin:0}
+.role-next{padding:20px;background:#f6f8fb;margin-bottom:24px}.role-next p{font:13px/1.65 Arial,sans-serif;margin:10px 0}.role-next strong{color:#081e3d}
+.role-panel .role-cta{gap:22px}.role-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:760px){
+ .method-step>summary{grid-template-columns:30px minmax(0,1fr) 22px;gap:14px;padding:23px 0}
+ .method-title{font-size:23px}.method-number{font-size:23px}.method-subtitle{font-size:14px}
+ .method-content{margin:0 0 24px;padding:20px;grid-template-columns:1fr;gap:20px}
+ .role-explorer{padding:38px 0}.role-intro{margin-bottom:26px}.role-intro>p:last-child{font-size:16px}
+ .role-layout{grid-template-columns:1fr;gap:24px}.role-controls{display:grid;grid-template-columns:1fr;gap:0}
+ .role-target{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:16px;padding-top:18px;margin-top:20px}
+ .role-target .mi-label{margin-bottom:6px}.role-target>p{grid-column:2;grid-row:1/3;margin:0}.role-target strong{font-size:64px}.role-target>p>span{font-size:15px}
+ .role-target>span:last-child{font-size:12px}.role-context{display:none}
+ .role-panel{padding:22px 18px}.role-description{font-size:15px}.role-time table{font-size:12px}.role-time th,.role-time td{padding:12px 4px}.role-time th:first-child{width:46%}.role-time thead th{font-size:10px}
+ .role-panel .role-cta{width:100%;font-size:14px;min-height:52px;padding:12px 14px}
+ .role-next{padding:16px}.role-intro .ej-rule{margin-bottom:18px}
+}
