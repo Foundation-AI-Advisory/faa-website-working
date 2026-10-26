@@ -123,3 +123,12 @@
 .executive-home #site-header .assessment-dd__trigger{font-size:13px;padding-inline:9px;gap:6px}
 .executive-home #site-header .mobile-menu-toggle{width:28px;margin-left:6px}
 }
+
+/* Light editorial hero action, aligned with the assessment navigation. */
+.executive-home .ej-hero .ej-assessment-link{display:inline-grid;grid-template-columns:minmax(0,1fr) 52px;align-items:stretch;gap:0;max-width:100%;min-height:58px;padding:0;border:1px solid #9bb1c5;border-radius:0;background:transparent;color:#081e3d;box-shadow:none;text-decoration:none;transition:background-color .15s,border-color .15s}
+.executive-home .ej-hero .ej-assessment-link .ej-action-label{display:block;min-width:0;padding:15px 18px;font:500 14px/1.45 Arial,Helvetica,sans-serif;letter-spacing:.01em}
+.executive-home .ej-hero .ej-assessment-link .ej-action-arrow{display:flex;align-items:center;justify-content:center;border-left:1px solid #c5d3df;color:#527fa7;font:400 25px/1 Arial,sans-serif}
+.executive-home .ej-hero .ej-assessment-link:hover{background:#eef4f8;border-color:#527fa7;color:#081e3d}
+.executive-home .ej-hero .ej-assessment-link:focus-visible{outline:2px solid #2f648c;outline-offset:4px}
+@media(max-width:700px){.executive-home .ej-hero .ej-assessment-link{width:100%;grid-template-columns:minmax(0,1fr) 48px}.executive-home .ej-hero .ej-assessment-link .ej-action-label{padding:14px 15px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){.executive-home .ej-hero .ej-assessment-link{transition:none}}
