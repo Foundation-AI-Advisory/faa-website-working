@@ -1,0 +1,230 @@
+.executive-site #site-header>.container-faa{height:78px!important;max-width:1536px;padding-inline:5%;gap:20px}
+.executive-site .ep-wordmark{font:400 clamp(20px,1.8vw,28px)/1.15 Georgia,serif;letter-spacing:-.05em;color:#081a34;white-space:nowrap}
+.executive-site .utilnav-link{height:78px!important;font-size:12px;font-weight:500}
+.executive-site #site-header nav[aria-label=Primary]{gap:22px}
+.executive-site #site-header .mobile-header-cta{border-radius:0;min-height:42px;font-weight:500;font-size:13px}
+.executive-site #site-header .mobile-menu-toggle{border:0;background:transparent;margin-left:8px}
+/* Restored header assessment access and Executive Journal dropdown. */
+.executive-site #site-header .assessment-dd--compact{display:inline-flex!important}
+.executive-site #site-header .assessment-dd__trigger{border-radius:0;min-height:44px;padding:12px 18px;gap:12px;background:#081e3d;color:#fff;font:400 15px/1.2 Georgia,serif;border:1px solid #081e3d}
+.executive-site #site-header .assessment-dd__trigger:hover,.executive-site #site-header .assessment-dd__trigger[aria-expanded=true]{background:#173c60;border-color:#173c60}
+.executive-site .assessment-dd--compact .assessment-dd__menu{border-radius:0;border:1px solid #d8e2eb;border-top:3px solid #6998c7;box-shadow:0 18px 45px #071a3526;padding:28px 30px 8px;width:520px;overflow-y:auto}
+.executive-site .assessment-dd__eyebrow{font:500 10px/1.5 Arial,sans-serif;letter-spacing:.16em;color:#567591;margin-bottom:12px}
+.executive-site .assessment-dd__heading{font:400 30px/1.13 Georgia,serif;letter-spacing:-.04em;margin-bottom:16px}
+.executive-site .assessment-dd__item{padding:23px 0;grid-template-columns:minmax(0,1fr) 26px;gap:18px}
+.executive-site .assessment-dd__title{font:400 22px/1.2 Georgia,serif;letter-spacing:-.025em}
+.executive-site .assessment-dd__description{font:400 15px/1.5 Arial,sans-serif;color:#586a79;margin-top:8px}
+.executive-site .assessment-dd__action{font:400 15px/1.4 Georgia,serif;margin-top:12px;color:#173c60}
+.executive-site .assessment-dd__arrow{border-radius:0;background:none;width:26px;height:auto;font-size:28px;font-weight:400;color:#527fa7}
+.executive-site .assessment-dd__item:hover .assessment-dd__title{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){
+.executive-site #site-header>.container-faa{padding-inline:16px;gap:10px;height:76px!important}
+.executive-site .ep-wordmark{font-size:20px;max-width:155px;line-height:1.08;white-space:normal}
+.executive-site #site-header .assessment-dd__trigger{font-size:14px;padding:11px 12px;gap:8px;min-height:44px}
+.executive-site #site-header .mobile-menu-toggle{width:32px;margin-left:9px}
+.executive-site .assessment-dd--compact .assessment-dd__menu{left:12px;right:12px;width:auto;max-width:none;top:calc(var(--assessment-top,76px) + 6px);max-height:calc(100dvh - var(--assessment-top,76px) - 18px);padding:24px 22px 6px}
+.executive-site .assessment-dd__heading{font-size:27px}
+.executive-site .assessment-dd__title{font-size:21px}
+.executive-site .assessment-dd__item{padding:21px 0}
+}
+@media(max-width:360px){
+.executive-site #site-header>.container-faa{padding-inline:12px;gap:6px}
+.executive-site .ep-wordmark{font-size:18px;max-width:128px}
+.executive-site #site-header .assessment-dd__trigger{font-size:13px;padding-inline:9px;gap:6px}
+.executive-site #site-header .mobile-menu-toggle{width:28px;margin-left:6px}
+}
+
+/* Executive Journal interior pages. No rules apply outside this six-page release. */
+.executive-site{--ep-ink:#081e3d;--ep-blue:#6e9bc5;background:#fff;color:#4c6075}
+.executive-site.faa-sitewide main :is(h1,h2,h3,h4){font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.035em}
+.executive-site #site-header{background:#fff}
+.executive-site main :is(a,button,summary,input,select):focus-visible{outline:2px solid #4086be;outline-offset:5px}
+.executive-site main :is(section,[id]){scroll-margin-top:100px}
+.executive-site main .ep-hero{position:relative;isolation:isolate;background:#081e3d;color:#fff;overflow:hidden}
+.executive-site .ep-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;z-index:-2}
+.executive-site .ep-hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,17,34,.89),rgba(3,17,34,.65) 47%,rgba(3,17,34,.10))}
+.executive-site .ep-hero-inner{min-height:650px;display:flex;flex-direction:column;padding-block:25px 62px}
+.executive-site .ep-breadcrumb{display:flex;flex-wrap:wrap;gap:12px;font:12px/1.5 Arial,sans-serif;color:#dce8f3}
+.executive-site main .ep-breadcrumb a{color:#dce8f3;text-decoration:none}
+.executive-site .ep-hero-copy{max-width:780px;margin-block:auto;padding-top:60px}
+.executive-site .ep-eyebrow{font:500 11px/1.5 Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;margin:0 0 20px;color:#d4e6f5}
+.executive-site.faa-sitewide main .ep-hero h1{font:400 clamp(48px,5.7vw,82px)/1.02 Georgia,serif;letter-spacing:-.05em;color:#fff;margin:0 0 26px;text-wrap:balance}
+.executive-site .ep-dek{font:400 21px/1.5 Georgia,serif;max-width:530px;color:#f2f6fa;margin:0 0 30px}
+.executive-site main .ep-action{display:inline-flex;align-items:center;gap:24px;border:1px solid #d0deea;border-radius:0;min-height:48px;padding:13px 22px;color:#fff;background:#081e3d80;text-decoration:none;font:400 16px/1.4 Georgia,serif;max-width:100%}
+.executive-site main .ep-action:hover{background:#fff;color:#081e3d}
+.executive-site .ep-action span{font:400 24px/1 Arial,sans-serif}
+.executive-site .ep-related{display:flex;flex-wrap:wrap;gap:8px 25px;margin-top:22px}
+.executive-site main .ep-related a{display:inline-flex;align-items:center;min-height:44px;color:#e6eef5;font:13px/1.5 Arial,sans-serif;text-decoration:underline;text-underline-offset:5px}
+.executive-site .ep-overview{padding:62px 0 68px;background:#fff;border-bottom:1px solid #dbe4ec}
+.executive-site .ep-intro{display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:60px;margin-bottom:40px}
+.executive-site .ep-intro h2::before{content:'';display:block;width:46px;height:2px;background:#6e9bc5;margin-bottom:24px}
+.executive-site .ep-intro h2{font-size:42px;line-height:1.1;margin:0}
+.executive-site .ep-intro p{font:18px/1.6 Georgia,serif;max-width:400px}
+.executive-site .ep-steps{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin:0;padding:0}
+.executive-site .ep-steps li>span{display:block;border-bottom:1px solid #a8c6e3;padding-bottom:13px;margin-bottom:20px;color:#5484b3;font:30px/1 Georgia,serif}
+.executive-site .ep-steps h3{font-size:26px;line-height:1.15;margin:0 0 14px}
+.executive-site .ep-steps h3 a{color:#081e3d;text-decoration:none}
+.executive-site .ep-steps h3 a:hover{text-decoration:underline;text-underline-offset:5px}
+.executive-site .ep-steps p{font:17px/1.6 Georgia,serif;margin:0}
+.executive-site .ed-section:nth-of-type(even){background:#fafbfd}
+.executive-site .ed-section>.container-faa{padding-block:64px!important}
+.executive-site main :is(.btn,.btn-primary,.btn-on-blue,.btn-secondary,.btn-outline-navy,.btn-outline-white){border-radius:0;font:400 16px/1.4 Georgia,serif}
+.executive-site main :is(.card,.data-problem-card,.methodology-summary-card,.workforce-topic-card,.methodology-aeo,.about-charter-pillar,.about-methodology-card,.about-methodology-callout){border-radius:0;box-shadow:none}
+.executive-site .ed-method-row>img{border-radius:0}
+.executive-site main .ed-number{background:none;color:#5484b3;font-family:Georgia,serif}
+.executive-site .ep-industry-heading{font-size:42px;line-height:1.15;margin:0 0 35px}
+.executive-site.faa-sitewide main .industry-card{isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;min-height:360px;padding:34px;border:0;border-radius:0;background:#081e3d;color:#fff}
+.executive-site.faa-sitewide main .industry-card-bg{inset:0;height:100%;width:100%;z-index:-2;object-fit:cover;border-radius:0}
+.executive-site.faa-sitewide main .industry-card::before{display:block;content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(3,17,34,.97),rgba(3,17,34,.65) 62%,rgba(3,17,34,.2))}
+.executive-site.faa-sitewide main .industry-card :is(.kicker,h3,p,.read-link){color:#fff}
+.executive-site.faa-sitewide main .industry-card .kicker{font:400 29px/1.1 Georgia,serif;letter-spacing:-.025em;text-transform:none}
+.executive-site.faa-sitewide main .industry-card h3{font:500 15px/1.5 Arial,sans-serif;letter-spacing:0}
+.executive-site.faa-sitewide main .industry-card .read-link{margin-top:15px}
+.executive-site.faa-sitewide main .industry-card:hover .kicker{text-decoration:underline;text-underline-offset:5px}
+.executive-site.perspectives-page .perspectives-discovery{background:#fff}
+.executive-site.perspectives-page main .perspectives-grid>a.card{border-radius:0;border:0;border-bottom:1px solid #dce5ed}
+.executive-site.perspectives-page main .perspectives-grid>a.card h3{font-family:Georgia,serif;font-weight:400}
+.executive-site.perspectives-page :is(.perspectives-reset-all,#perspectives-more){border-radius:0}
+.executive-site .hf-footer{background:#f3f6f8}
+@media(min-width:1280px) and (max-width:1450px){.executive-site #site-header nav[aria-label=Primary]{gap:14px;margin-inline:8px}.executive-site .ep-wordmark{font-size:22px}.executive-site #site-header>.container-faa{padding-inline:3%;gap:12px}}
+@media(max-width:760px){
+.executive-site .ep-hero-inner{min-height:590px;padding-block:22px 38px}
+.executive-site .ep-hero-copy{padding-top:44px}
+.executive-site.faa-sitewide main .ep-hero h1{font-size:clamp(43px,10.7vw,64px);line-height:1.03;margin-bottom:22px;text-wrap:pretty}
+.executive-site .ep-dek{font-size:19px;line-height:1.5;max-width:32ch}
+.executive-site .ep-eyebrow{font-size:10px;margin-bottom:17px}
+.executive-site .ep-hero-image{object-position:65% center}
+.executive-site .ep-hero::before{background:linear-gradient(90deg,rgba(3,17,34,.83),rgba(3,17,34,.35)),linear-gradient(0deg,rgba(3,17,34,.7),transparent 80%)}
+.executive-site .ep-breadcrumb{font-size:11px}
+.executive-site .ep-related{gap:4px 18px;margin-top:18px}
+.executive-site .ep-overview{padding:38px 0 42px}
+.executive-site .ep-intro{display:block;margin-bottom:30px}
+.executive-site .ep-intro h2,.executive-site .ep-industry-heading{font-size:34px}
+.executive-site .ep-intro p{font-size:17px;margin-top:22px}
+.executive-site .ep-steps{grid-template-columns:1fr;gap:30px}
+.executive-site .ep-steps h3{font-size:25px}
+.executive-site .ep-steps li>span{font-size:27px;margin-bottom:16px}
+.executive-site .ed-section>.container-faa{padding-block:38px!important}
+.executive-site.faa-sitewide main .industry-card{min-height:340px;padding:25px}
+.executive-site.faa-sitewide main .industry-card .kicker{font-size:28px}
+}
+
+
+.executive-site.faa-sitewide:not(.approved-home):not(.faq-redesign) main :is(h1,h2,h3,h4){font-family:Georgia,serif;font-weight:400;letter-spacing:-.035em}
+
+/* Consistent brand across landing pages, long-form reading, and interactive tools. */
+.executive-site .ep-wordmark{font-family:Georgia,serif}
+.executive-site .ep-footer-wordmark{display:block;font:400 clamp(22px,2.5vw,30px)/1.15 Georgia,serif;letter-spacing:-.04em;color:#081e3d;max-width:320px}
+.executive-site .hf-footer{background:#f3f6f8;color:#536475;text-align:left}
+.executive-site .hf-footer p{font-family:Georgia,serif;color:#081e3d}
+.executive-site .ep-detail-hero .ep-hero-copy{max-width:900px}
+.executive-site.faa-sitewide main .ep-detail-hero h1{font-size:clamp(42px,5vw,72px);text-wrap:pretty}
+.executive-site .ep-detail-hero .ep-dek{max-width:650px}
+.executive-site .ep-hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.executive-site .ep-hero-actions .ep-action span{font:inherit}
+.executive-site .ep-hero-actions a .ep-action{border:0;padding:0;background:none;min-height:0;display:inline;font:inherit}
+.executive-site .ep-audience{padding:60px 0;background:#081e3d;color:#dce7f0}
+.executive-site .ep-audience .ep-eyebrow{color:#b5cee5}
+.executive-site.faa-sitewide main .ep-audience :is(h2,h3){color:#fff;font-family:Georgia,serif;font-weight:400}
+.executive-site .ep-audience h2{font-size:clamp(32px,3.5vw,48px);line-height:1.1;margin:0 0 40px}
+.executive-site .ep-audience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:42px}
+.executive-site .ep-audience article{border-top:1px solid #52728f;padding-top:25px}
+.executive-site .ep-audience h3{font-size:25px;line-height:1.15;margin:0 0 17px}
+.executive-site .ep-audience p{font:16px/1.65 Arial,sans-serif;margin:0 0 18px;color:#dce7f0}
+.executive-site .ep-audience a{display:inline-flex;gap:15px;align-items:center;min-height:44px;color:#fff;font:16px/1.4 Georgia,serif;text-decoration:underline;text-underline-offset:5px}
+.executive-site.editorial-article main .ed-article-hero{padding-block:48px;background:#f6f8fa;border-bottom:1px solid #d8e3eb}
+.executive-site.editorial-article.faa-sitewide main .ed-article-hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(38px,4.7vw,66px);line-height:1.08;max-width:1000px}
+.executive-site.editorial-article main .ed-reading-body{max-width:760px}
+.executive-site.editorial-article main .ed-reading-body :is(p,li){font-size:18px;line-height:1.8}
+.executive-site.editorial-article main :is(.insight-detail-image,.insight-hero-image,.ed-reading-nav,.foundations-series-card,.foundations-series-nav a,.insight-takeaways,.foundations-operator-box,.foundations-diagnostic){border-radius:0}
+.executive-site .hf-topic-nav a{border-radius:0}
+.executive-site .hf-answers h1{font:400 clamp(42px,5vw,70px)/1.04 Georgia,serif;letter-spacing:-.045em}
+.executive-site.faa-sitewide .ed-hero h1{font-family:Georgia,serif;font-weight:400}
+.executive-site.faa-triage .dt-hero{background:#f4f7fa}
+.executive-site.faa-triage .dt-hero::before{display:none}
+.executive-site.faa-triage main #dt{--serif:Georgia,serif}
+.executive-site.faa-triage main :is(.card,textarea,select,.dt-receipt){border-radius:0}
+.executive-site.faa-triage main .dt-cta h2{color:#fff}
+.executive-site .client-workspace-login-card .card{border-radius:0;border-top:3px solid #6e9bc5}
+.executive-site.editorial-legal .ed-hero{background:#f4f7fa}
+.executive-site main :is(.hf-button,.hf-faq-button){border-radius:0;font-family:Georgia,serif}
+/* Self-assessment: keep the questions and scoring, give each stage the same editorial design. */
+.executive-site.faa-assessment{--navy:#081e3d;--blue:#2f648c;--cyan:#6e9bc5;--soft:#eef4f9;--line:#c9d7e3;--slate:#425870;--pg:#f4f7fa}
+.executive-site.faa-assessment .assessment-flow{background:#f4f7fa;min-height:70vh}
+.executive-site.faa-assessment #site-header{z-index:60}
+.executive-site.faa-assessment .progressbar{top:79px;z-index:35;background:#fff;border-block:1px solid #d4e0e9;padding:15px 20px}
+.executive-site.faa-assessment .progressbar .inner{max-width:810px;gap:20px}
+.executive-site.faa-assessment .progressbar .count{font:500 12px/1.4 Arial,sans-serif;letter-spacing:.02em}
+.executive-site.faa-assessment .segs i{height:4px;border-radius:0;background:#d8e3ec}
+.executive-site.faa-assessment .segs i.on{background:#2f648c}
+.executive-site.faa-assessment .screen .wrap{max-width:860px;padding-inline:24px}
+.executive-site.faa-assessment .screen .card{border:1px solid #d7e1e9;border-top:2px solid #7ca4c9;border-radius:0;padding:34px 36px;margin-bottom:28px;box-shadow:none;background:#fff}
+.executive-site.faa-assessment .qcard .qnum{font:500 11px/1.5 Arial,sans-serif;letter-spacing:.16em;color:#56718a;margin:0 0 15px}
+.executive-site.faa-assessment .qcard .qtext{font:400 28px/1.2 Georgia,serif;letter-spacing:-.025em;color:#081e3d;margin:0 0 25px}
+.executive-site.faa-assessment .opt{border:1px solid #cbd8e3;border-radius:0;background:#fff;padding:17px 18px;gap:14px;min-height:58px;margin:12px 0;transition:background .15s,border-color .15s}
+.executive-site.faa-assessment .opt span{font:400 16px/1.55 Arial,sans-serif;color:#425870}
+.executive-site.faa-assessment .opt input{width:18px;height:18px;margin-top:3px;accent-color:#081e3d}
+.executive-site.faa-assessment .opt:hover{background:#f4f8fb;border-color:#7ca4c9}
+.executive-site.faa-assessment .opt.selected{border-color:#081e3d;background:#edf3f8;box-shadow:inset 3px 0 #081e3d}
+.executive-site.faa-assessment .opt.selected span{color:#081e3d}
+.executive-site.faa-assessment .qcard.unanswered-flag{border-color:#a83227;background:#fff8f6}
+.executive-site.faa-assessment .screen :is(button,.ghost){border-radius:0;min-height:48px;font:400 17px/1.4 Georgia,serif;background:#081e3d;border:1px solid #081e3d;color:#fff;padding:13px 23px}
+.executive-site.faa-assessment .screen button.ghost{background:#fff;color:#081e3d}
+.executive-site.faa-assessment .screen button:hover{background:#244b6e;color:#fff}
+.executive-site.faa-assessment .screen :is(input,button,a,textarea):focus-visible,.executive-site.faa-assessment .opt:focus-within{outline:2px solid #3675a6;outline-offset:4px}
+.executive-site.faa-assessment .screen :is(h1,h2,.tiername,.spectrum .nm,.legend .lname){font-family:Georgia,serif;font-weight:400}
+.executive-site.faa-assessment #scr-intro{position:relative;isolation:isolate;padding:0;overflow:hidden;background:#081e3d}
+.executive-site.faa-assessment .ep-assessment-art{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:65% center}
+.executive-site.faa-assessment #scr-intro::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#041529f2,#041529b3 55%,#04152933)}
+.executive-site.faa-assessment #scr-intro .wrap{max-width:1280px;min-height:600px;padding:70px 40px;display:flex;align-items:center}
+.executive-site.faa-assessment #scr-intro .card{padding:0;max-width:680px;background:transparent;border:0;margin:0}
+.executive-site.faa-assessment #scr-intro h1{font:400 clamp(44px,5vw,68px)/1.05 Georgia,serif;color:#fff;letter-spacing:-.045em;margin:22px 0 26px}
+.executive-site.faa-assessment #scr-intro .eyebrow{color:#c2d9ed;font-size:11px}
+.executive-site.faa-assessment #scr-intro .dek{font:400 20px/1.55 Georgia,serif;color:#edf3f8;max-width:610px}
+.executive-site.faa-assessment #scr-intro .dek+.dek{font:14px/1.6 Arial,sans-serif!important;color:#c2d4e2}
+.executive-site.faa-assessment #scr-intro button{background:#fff;color:#081e3d;border-color:#fff}
+.executive-site.faa-assessment #scr-intro button:hover{background:#dbe8f2}
+.executive-site.faa-assessment #scr-gate h2{font-size:36px;line-height:1.1;margin:14px 0 28px}
+.executive-site.faa-assessment .screen :is(input[type=email],textarea,.legend,.notice,.goalreflect,.spectrum .seg,.barcell){border-radius:0}
+.executive-site.faa-assessment .tiername{font-size:46px;line-height:1.1;color:#081e3d}
+.executive-site.faa-assessment .spectrum .seg{background:#f3f7fa}
+.executive-site.faa-assessment .spectrum .seg.hit{background:#081e3d;border-color:#081e3d;transform:none;box-shadow:none}
+.executive-site.faa-assessment .screen .spectrum .seg.hit .nm{color:#fff}
+.executive-site.faa-assessment .youare{color:#56718a}
+.executive-site.faa-assessment .notice,.executive-site.faa-assessment .goalreflect{border-left:2px solid #6e9bc5;background:#eef4f9}
+.executive-site.faa-assessment .notice.error{border-left-color:#a83227;background:#fff4f1}
+.executive-site.faa-assessment #scr-result .card h2{font-size:25px!important;line-height:1.2}
+.executive-site.faa-assessment .barrow{gap:12px;margin:12px 0}
+.executive-site.faa-assessment .barcell.f.hi{background:#326a5a;border-color:#326a5a}
+.executive-site.faa-assessment .barcell.f.mid{background:#94762e;border-color:#94762e}
+.executive-site.faa-assessment .barcell.f.lo{background:#b15e4d;border-color:#b15e4d}
+@media(max-width:760px){
+.executive-site .ep-audience{padding:38px 0}
+.executive-site .ep-audience-grid{grid-template-columns:1fr;gap:28px}
+.executive-site .ep-audience h2{margin-bottom:30px}
+.executive-site.faa-sitewide main .ep-detail-hero h1{font-size:clamp(38px,9.2vw,56px);line-height:1.05;overflow-wrap:break-word}
+.executive-site .ep-hero-actions{display:grid;justify-items:start}
+.executive-site .ep-hero-actions .ep-action{font-size:15px;gap:15px}
+.executive-site.editorial-article main .ed-article-hero{padding-block:28px}
+.executive-site.editorial-article.faa-sitewide main .ed-article-hero h1{font-size:38px}
+.executive-site.editorial-article main .ed-reading-body :is(p,li){font-size:17px}
+.executive-site.faa-assessment .screen{padding-block:28px 38px}
+.executive-site.faa-assessment .screen .wrap{padding-inline:18px}
+.executive-site.faa-assessment .screen .card{padding:25px 21px;margin-bottom:23px}
+.executive-site.faa-assessment .qcard .qtext{font-size:25px;line-height:1.23}
+.executive-site.faa-assessment .opt{padding:15px 14px;gap:12px;margin-block:11px}
+.executive-site.faa-assessment .opt span{font-size:16px;line-height:1.5}
+.executive-site.faa-assessment .progressbar{padding:12px 18px}
+.executive-site.faa-assessment .progressbar .inner{display:flex;flex-wrap:wrap;gap:10px}
+.executive-site.faa-assessment .segs{flex-basis:100%}
+.executive-site.faa-assessment #scr-intro .wrap{min-height:600px;padding:44px 24px}
+.executive-site.faa-assessment #scr-intro .card{padding:0}
+.executive-site.faa-assessment #scr-intro h1{font-size:45px}
+.executive-site.faa-assessment #scr-intro .dek{font-size:19px}
+.executive-site.faa-assessment .barrow{flex-wrap:wrap;gap:6px 10px;margin:16px 0}
+.executive-site.faa-assessment .barlabel{flex:0 0 100%;width:auto;text-align:left;font-size:13px}
+.executive-site.faa-assessment .bartrack{min-width:130px}
+.executive-site.faa-assessment .bartag{width:64px}
+}
+@media(max-width:700px){.executive-site.faa-assessment .progressbar{top:77px}}
+@media(prefers-reduced-motion:reduce){.executive-site *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
