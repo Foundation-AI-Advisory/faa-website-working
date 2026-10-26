@@ -1,0 +1,110 @@
+.executive-page #site-header>.container-faa{height:78px!important;max-width:1536px;padding-inline:5%;gap:20px}
+.executive-page .ep-wordmark{font:400 clamp(20px,1.8vw,28px)/1.15 Georgia,serif;letter-spacing:-.05em;color:#081a34;white-space:nowrap}
+.executive-page .utilnav-link{height:78px!important;font-size:12px;font-weight:500}
+.executive-page #site-header nav[aria-label=Primary]{gap:22px}
+.executive-page #site-header .mobile-header-cta{border-radius:0;min-height:42px;font-weight:500;font-size:13px}
+.executive-page #site-header .mobile-menu-toggle{border:0;background:transparent;margin-left:8px}
+/* Restored header assessment access and Executive Journal dropdown. */
+.executive-page #site-header .assessment-dd--compact{display:inline-flex!important}
+.executive-page #site-header .assessment-dd__trigger{border-radius:0;min-height:44px;padding:12px 18px;gap:12px;background:#081e3d;color:#fff;font:400 15px/1.2 Georgia,serif;border:1px solid #081e3d}
+.executive-page #site-header .assessment-dd__trigger:hover,.executive-page #site-header .assessment-dd__trigger[aria-expanded=true]{background:#173c60;border-color:#173c60}
+.executive-page .assessment-dd--compact .assessment-dd__menu{border-radius:0;border:1px solid #d8e2eb;border-top:3px solid #6998c7;box-shadow:0 18px 45px #071a3526;padding:28px 30px 8px;width:520px;overflow-y:auto}
+.executive-page .assessment-dd__eyebrow{font:500 10px/1.5 Arial,sans-serif;letter-spacing:.16em;color:#567591;margin-bottom:12px}
+.executive-page .assessment-dd__heading{font:400 30px/1.13 Georgia,serif;letter-spacing:-.04em;margin-bottom:16px}
+.executive-page .assessment-dd__item{padding:23px 0;grid-template-columns:minmax(0,1fr) 26px;gap:18px}
+.executive-page .assessment-dd__title{font:400 22px/1.2 Georgia,serif;letter-spacing:-.025em}
+.executive-page .assessment-dd__description{font:400 15px/1.5 Arial,sans-serif;color:#586a79;margin-top:8px}
+.executive-page .assessment-dd__action{font:400 15px/1.4 Georgia,serif;margin-top:12px;color:#173c60}
+.executive-page .assessment-dd__arrow{border-radius:0;background:none;width:26px;height:auto;font-size:28px;font-weight:400;color:#527fa7}
+.executive-page .assessment-dd__item:hover .assessment-dd__title{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){
+.executive-page #site-header>.container-faa{padding-inline:16px;gap:10px;height:76px!important}
+.executive-page .ep-wordmark{font-size:20px;max-width:155px;line-height:1.08;white-space:normal}
+.executive-page #site-header .assessment-dd__trigger{font-size:14px;padding:11px 12px;gap:8px;min-height:44px}
+.executive-page #site-header .mobile-menu-toggle{width:32px;margin-left:9px}
+.executive-page .assessment-dd--compact .assessment-dd__menu{left:12px;right:12px;width:auto;max-width:none;top:calc(var(--assessment-top,76px) + 6px);max-height:calc(100dvh - var(--assessment-top,76px) - 18px);padding:24px 22px 6px}
+.executive-page .assessment-dd__heading{font-size:27px}
+.executive-page .assessment-dd__title{font-size:21px}
+.executive-page .assessment-dd__item{padding:21px 0}
+}
+@media(max-width:360px){
+.executive-page #site-header>.container-faa{padding-inline:12px;gap:6px}
+.executive-page .ep-wordmark{font-size:18px;max-width:128px}
+.executive-page #site-header .assessment-dd__trigger{font-size:13px;padding-inline:9px;gap:6px}
+.executive-page #site-header .mobile-menu-toggle{width:28px;margin-left:6px}
+}
+
+/* Executive Journal interior pages. No rules apply outside this six-page release. */
+.executive-page{--ep-ink:#081e3d;--ep-blue:#6e9bc5;background:#fff;color:#4c6075}
+.executive-page.faa-sitewide:not(.approved-home):not(.faq-redesign) main :is(h1,h2,h3,h4){font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.035em}
+.executive-page #site-header{background:#fff}
+.executive-page main :is(a,button,summary,input,select):focus-visible{outline:2px solid #4086be;outline-offset:5px}
+.executive-page main :is(section,[id]){scroll-margin-top:100px}
+.executive-page main .ep-hero{position:relative;isolation:isolate;background:#081e3d;color:#fff;overflow:hidden}
+.executive-page .ep-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;z-index:-2}
+.executive-page .ep-hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,17,34,.89),rgba(3,17,34,.65) 47%,rgba(3,17,34,.10))}
+.executive-page .ep-hero-inner{min-height:650px;display:flex;flex-direction:column;padding-block:25px 62px}
+.executive-page .ep-breadcrumb{display:flex;flex-wrap:wrap;gap:12px;font:12px/1.5 Arial,sans-serif;color:#dce8f3}
+.executive-page main .ep-breadcrumb a{color:#dce8f3;text-decoration:none}
+.executive-page .ep-hero-copy{max-width:780px;margin-block:auto;padding-top:60px}
+.executive-page .ep-eyebrow{font:500 11px/1.5 Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;margin:0 0 20px;color:#d4e6f5}
+.executive-page.faa-sitewide main .ep-hero h1{font:400 clamp(48px,5.7vw,82px)/1.02 Georgia,serif;letter-spacing:-.05em;color:#fff;margin:0 0 26px;text-wrap:balance}
+.executive-page .ep-dek{font:400 21px/1.5 Georgia,serif;max-width:530px;color:#f2f6fa;margin:0 0 30px}
+.executive-page main .ep-action{display:inline-flex;align-items:center;gap:24px;border:1px solid #d0deea;border-radius:0;min-height:48px;padding:13px 22px;color:#fff;background:#081e3d80;text-decoration:none;font:400 16px/1.4 Georgia,serif;max-width:100%}
+.executive-page main .ep-action:hover{background:#fff;color:#081e3d}
+.executive-page .ep-action span{font:400 24px/1 Arial,sans-serif}
+.executive-page .ep-related{display:flex;flex-wrap:wrap;gap:8px 25px;margin-top:22px}
+.executive-page main .ep-related a{display:inline-flex;align-items:center;min-height:44px;color:#e6eef5;font:13px/1.5 Arial,sans-serif;text-decoration:underline;text-underline-offset:5px}
+.executive-page .ep-overview{padding:62px 0 68px;background:#fff;border-bottom:1px solid #dbe4ec}
+.executive-page .ep-intro{display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:60px;margin-bottom:40px}
+.executive-page .ep-intro h2::before{content:'';display:block;width:46px;height:2px;background:#6e9bc5;margin-bottom:24px}
+.executive-page .ep-intro h2{font-size:42px;line-height:1.1;margin:0}
+.executive-page .ep-intro p{font:18px/1.6 Georgia,serif;max-width:400px}
+.executive-page .ep-steps{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin:0;padding:0}
+.executive-page .ep-steps li>span{display:block;border-bottom:1px solid #a8c6e3;padding-bottom:13px;margin-bottom:20px;color:#5484b3;font:30px/1 Georgia,serif}
+.executive-page .ep-steps h3{font-size:26px;line-height:1.15;margin:0 0 14px}
+.executive-page .ep-steps h3 a{color:#081e3d;text-decoration:none}
+.executive-page .ep-steps h3 a:hover{text-decoration:underline;text-underline-offset:5px}
+.executive-page .ep-steps p{font:17px/1.6 Georgia,serif;margin:0}
+.executive-page .ed-section:nth-of-type(even){background:#fafbfd}
+.executive-page .ed-section>.container-faa{padding-block:64px!important}
+.executive-page main :is(.btn,.btn-primary,.btn-on-blue,.btn-secondary,.btn-outline-navy,.btn-outline-white){border-radius:0;font:400 16px/1.4 Georgia,serif}
+.executive-page main :is(.card,.data-problem-card,.methodology-summary-card,.workforce-topic-card,.methodology-aeo,.about-charter-pillar,.about-methodology-card,.about-methodology-callout){border-radius:0;box-shadow:none}
+.executive-page .ed-method-row>img{border-radius:0}
+.executive-page main .ed-number{background:none;color:#5484b3;font-family:Georgia,serif}
+.executive-page .ep-industry-heading{font-size:42px;line-height:1.15;margin:0 0 35px}
+.executive-page.faa-sitewide main .industry-card{isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;min-height:360px;padding:34px;border:0;border-radius:0;background:#081e3d;color:#fff}
+.executive-page.faa-sitewide main .industry-card-bg{inset:0;height:100%;width:100%;z-index:-2;object-fit:cover;border-radius:0}
+.executive-page.faa-sitewide main .industry-card::before{display:block;content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(3,17,34,.97),rgba(3,17,34,.65) 62%,rgba(3,17,34,.2))}
+.executive-page.faa-sitewide main .industry-card :is(.kicker,h3,p,.read-link){color:#fff}
+.executive-page.faa-sitewide main .industry-card .kicker{font:400 29px/1.1 Georgia,serif;letter-spacing:-.025em;text-transform:none}
+.executive-page.faa-sitewide main .industry-card h3{font:500 15px/1.5 Arial,sans-serif;letter-spacing:0}
+.executive-page.faa-sitewide main .industry-card .read-link{margin-top:15px}
+.executive-page.faa-sitewide main .industry-card:hover .kicker{text-decoration:underline;text-underline-offset:5px}
+.executive-page.perspectives-page .perspectives-discovery{background:#fff}
+.executive-page.perspectives-page main .perspectives-grid>a.card{border-radius:0;border:0;border-bottom:1px solid #dce5ed}
+.executive-page.perspectives-page main .perspectives-grid>a.card h3{font-family:Georgia,serif;font-weight:400}
+.executive-page.perspectives-page :is(.perspectives-reset-all,#perspectives-more){border-radius:0}
+.executive-page .hf-footer{background:#f3f6f8}
+@media(min-width:1280px) and (max-width:1450px){.executive-page #site-header nav[aria-label=Primary]{gap:14px;margin-inline:8px}.executive-page .ep-wordmark{font-size:22px}.executive-page #site-header>.container-faa{padding-inline:3%;gap:12px}}
+@media(max-width:760px){
+.executive-page .ep-hero-inner{min-height:590px;padding-block:22px 38px}
+.executive-page .ep-hero-copy{padding-top:44px}
+.executive-page.faa-sitewide main .ep-hero h1{font-size:clamp(43px,10.7vw,64px);line-height:1.03;margin-bottom:22px;text-wrap:pretty}
+.executive-page .ep-dek{font-size:19px;line-height:1.5;max-width:32ch}
+.executive-page .ep-eyebrow{font-size:10px;margin-bottom:17px}
+.executive-page .ep-hero-image{object-position:65% center}
+.executive-page .ep-hero::before{background:linear-gradient(90deg,rgba(3,17,34,.83),rgba(3,17,34,.35)),linear-gradient(0deg,rgba(3,17,34,.7),transparent 80%)}
+.executive-page .ep-breadcrumb{font-size:11px}
+.executive-page .ep-related{gap:4px 18px;margin-top:18px}
+.executive-page .ep-overview{padding:38px 0 42px}
+.executive-page .ep-intro{display:block;margin-bottom:30px}
+.executive-page .ep-intro h2,.executive-page .ep-industry-heading{font-size:34px}
+.executive-page .ep-intro p{font-size:17px;margin-top:22px}
+.executive-page .ep-steps{grid-template-columns:1fr;gap:30px}
+.executive-page .ep-steps h3{font-size:25px}
+.executive-page .ep-steps li>span{font-size:27px;margin-bottom:16px}
+.executive-page .ed-section>.container-faa{padding-block:38px!important}
+.executive-page.faa-sitewide main .industry-card{min-height:340px;padding:25px}
+.executive-page.faa-sitewide main .industry-card .kicker{font-size:28px}
+}
