@@ -93,3 +93,33 @@
 }
 @media(prefers-reduced-motion:reduce){.ej-article img{transition:none}.ej-article:hover img{transform:none}}
 @media(max-width:700px){.ej-hero-art{display:block;flex:none;z-index:0}.ej-hero-copy{position:relative;z-index:1}}
+
+/* Restored header assessment access and Executive Journal dropdown. */
+.executive-home #site-header .assessment-dd--compact{display:inline-flex!important}
+.executive-home #site-header .assessment-dd__trigger{border-radius:0;min-height:44px;padding:12px 18px;gap:12px;background:#081e3d;color:#fff;font:400 15px/1.2 Georgia,serif;border:1px solid #081e3d}
+.executive-home #site-header .assessment-dd__trigger:hover,.executive-home #site-header .assessment-dd__trigger[aria-expanded=true]{background:#173c60;border-color:#173c60}
+.executive-home .assessment-dd--compact .assessment-dd__menu{border-radius:0;border:1px solid #d8e2eb;border-top:3px solid #6998c7;box-shadow:0 18px 45px #071a3526;padding:28px 30px 8px;width:520px;overflow-y:auto}
+.executive-home .assessment-dd__eyebrow{font:500 10px/1.5 Arial,sans-serif;letter-spacing:.16em;color:#567591;margin-bottom:12px}
+.executive-home .assessment-dd__heading{font:400 30px/1.13 Georgia,serif;letter-spacing:-.04em;margin-bottom:16px}
+.executive-home .assessment-dd__item{padding:23px 0;grid-template-columns:minmax(0,1fr) 26px;gap:18px}
+.executive-home .assessment-dd__title{font:400 22px/1.2 Georgia,serif;letter-spacing:-.025em}
+.executive-home .assessment-dd__description{font:400 15px/1.5 Arial,sans-serif;color:#586a79;margin-top:8px}
+.executive-home .assessment-dd__action{font:400 15px/1.4 Georgia,serif;margin-top:12px;color:#173c60}
+.executive-home .assessment-dd__arrow{border-radius:0;background:none;width:26px;height:auto;font-size:28px;font-weight:400;color:#527fa7}
+.executive-home .assessment-dd__item:hover .assessment-dd__title{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){
+.executive-home #site-header>.container-faa{padding-inline:16px;gap:10px;height:76px!important}
+.executive-home .ej-wordmark{font-size:20px;max-width:155px;line-height:1.08;white-space:normal}
+.executive-home #site-header .assessment-dd__trigger{font-size:14px;padding:11px 12px;gap:8px;min-height:44px}
+.executive-home #site-header .mobile-menu-toggle{width:32px;margin-left:9px}
+.executive-home .assessment-dd--compact .assessment-dd__menu{left:12px;right:12px;width:auto;max-width:none;top:calc(var(--assessment-top,76px) + 6px);max-height:calc(100dvh - var(--assessment-top,76px) - 18px);padding:24px 22px 6px}
+.executive-home .assessment-dd__heading{font-size:27px}
+.executive-home .assessment-dd__title{font-size:21px}
+.executive-home .assessment-dd__item{padding:21px 0}
+}
+@media(max-width:360px){
+.executive-home #site-header>.container-faa{padding-inline:12px;gap:6px}
+.executive-home .ej-wordmark{font-size:18px;max-width:128px}
+.executive-home #site-header .assessment-dd__trigger{font-size:13px;padding-inline:9px;gap:6px}
+.executive-home #site-header .mobile-menu-toggle{width:28px;margin-left:6px}
+}
