@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/tailwind-static.css?v=20261024-sitewide"><link rel="stylesheet" href="/styles.css?v=20261024-sitewide"><link rel="stylesheet" href="/navigation-editorial.css?v=20261024-sitewide"><meta charset="UTF-8">
+<link rel="stylesheet" href="/tailwind-static.css?v=20261026-authority"><link rel="stylesheet" href="/styles.css?v=20261026-authority"><link rel="stylesheet" href="/navigation-editorial.css?v=20261026-authority"><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Where Do You Stand With AI? | Foundation AI Advisory</title>
 <style>
-:root{--navy:#1B2A41;--navy2:#22334E;--slate:#4A5A73;--pg:#F3F7FB;--line:#DDE6EF;--paper:#FFFFFF;
- --blue:#2E6DB4;--cyan:#2BA3DC;--soft:#EAF3FA;--ok:#2E7D5B;--amber:#B8892E;--coral:#C0574A;
- --t0:#8A94A6;--t1:#B8892E;--t2:#2E6DB4;--t3:#2E7D5B}
+:root{--navy:#0B192C;--navy2:#0B192C;--slate:#64748B;--pg:#F4F6F9;--line:#F4F6F9;--paper:#FFFFFF;
+ --blue:#246BCE;--cyan:#246BCE;--soft:#F4F6F9;--ok:#075E63;--amber:#64748B;--coral:#64748B;
+ --t0:#64748B;--t1:#64748B;--t2:#246BCE;--t3:#075E63}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;background:var(--pg);color:var(--navy);font:15.5px/1.55 "Inter",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
@@ -22,16 +22,16 @@ h2{font-size:21px;margin:0 0 8px}
 .screen{display:none;padding:34px 0 60px}
 .screen.active{display:block}
 .card{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--cyan);border-radius:14px;
- box-shadow:0 10px 30px rgba(27,42,65,.08);padding:26px 28px;margin:0 0 18px}
+ box-shadow:0 10px 30px rgba(11,25,44,.08);padding:26px 28px;margin:0 0 18px}
 .qcard .qnum{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600;margin:0 0 6px}
 .qcard .qtext{font-size:16.5px;font-weight:600;margin:0 0 14px;line-height:1.4}
-.qcard.unanswered-flag{border-color:#C0392B;border-top-color:#C0392B;background:#FDF6F5}
-.opt{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:8px 0;cursor:pointer;background:#FBFDFF;transition:all .12s}
+.qcard.unanswered-flag{border-color:#64748B;border-top-color:#64748B;background:#F4F6F9}
+.opt{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:8px 0;cursor:pointer;background:#FFFFFF;transition:all .12s}
 .opt:hover{background:var(--soft);border-color:var(--cyan)}
 .opt.selected{border-color:var(--blue);background:var(--soft);box-shadow:inset 3px 0 0 var(--blue)}
 .opt input{margin-top:3px;accent-color:var(--blue);flex:none}
 .opt span{font-size:14.5px}
-button{font:inherit;font-size:15px;font-weight:600;padding:12px 24px;border:1px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;border-radius:10px;transition:background .12s}
+button{font:inherit;font-size:15px;font-weight:600;padding:12px 24px;border:1px solid var(--navy);background:var(--navy);color:#FFFFFF;cursor:pointer;border-radius:10px;transition:background .12s}
 button:hover{background:var(--navy2)}
 button.ghost{background:var(--paper);color:var(--navy)}
 button.ghost:hover{background:var(--soft)}
@@ -44,17 +44,17 @@ button:disabled{opacity:.45;cursor:not-allowed}
 .segs i{flex:1;height:6px;border-radius:3px;background:var(--line);transition:background .2s}
 .segs i.on{background:var(--cyan)}
 .notice{background:var(--soft);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:12px 16px;margin:14px 0;font-size:14px}
-.notice.error{background:#FDF6F5;border-left-color:#C0392B}
+.notice.error{background:#F4F6F9;border-left-color:#64748B}
 .field label{display:block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--slate);margin-bottom:6px}
-input[type=email],textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px 13px;font:inherit;font-size:15px;background:#FBFDFF;color:var(--navy)}
+input[type=email],textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px 13px;font:inherit;font-size:15px;background:#FFFFFF;color:var(--navy)}
 textarea{min-height:90px;resize:vertical}
 input:focus,textarea:focus,button:focus{outline:2px solid var(--cyan);outline-offset:1px}
 .consent{color:var(--slate);font-size:12.5px;margin:10px 0 16px;line-height:1.5}
 .spectrum{display:flex;gap:8px;margin:20px 0 6px}
 .spectrum .seg{flex:1;text-align:center;padding:16px 4px 12px;border-radius:10px;background:var(--pg);border:1px solid var(--line)}
 .spectrum .seg .nm{font-family:"Source Serif 4",Georgia,serif;font-size:15px;color:var(--slate)}
-.spectrum .seg.hit{border-width:2px;transform:scale(1.04);box-shadow:0 6px 16px rgba(27,42,65,.18)}
-.spectrum .seg.hit .nm{color:#fff;font-weight:600}
+.spectrum .seg.hit{border-width:2px;transform:scale(1.04);box-shadow:0 6px 16px rgba(11,25,44,.18)}
+.spectrum .seg.hit .nm{color:#FFFFFF;font-weight:600}
 .seg.hit.t0{background:var(--t0);border-color:var(--t0)}
 .seg.hit.t1{background:var(--t1);border-color:var(--t1)}
 .seg.hit.t2{background:var(--t2);border-color:var(--t2)}
@@ -62,7 +62,7 @@ input:focus,textarea:focus,button:focus{outline:2px solid var(--cyan);outline-of
 .youare{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:600;margin:0 0 4px}
 .tiername{font-size:36px;margin:2px 0 10px}
 .legend{margin:14px 0 4px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.legend .lrow{display:flex;gap:10px;padding:9px 14px;font-size:13px;border-bottom:1px solid var(--line);background:#FBFDFF}
+.legend .lrow{display:flex;gap:10px;padding:9px 14px;font-size:13px;border-bottom:1px solid var(--line);background:#FFFFFF}
 .legend .lrow:last-child{border-bottom:0}
 .legend .lrow.cur{background:var(--soft)}
 .legend .lname{font-family:"Source Serif 4",Georgia,serif;font-weight:600;width:104px;flex:none;color:var(--navy)}
@@ -71,24 +71,25 @@ input:focus,textarea:focus,button:focus{outline:2px solid var(--cyan);outline-of
 .barlabel{width:176px;font-size:12.5px;color:var(--slate);text-align:right;flex:none}
 .bartrack{flex:1;display:flex;gap:4px}
 .barcell{flex:1;height:14px;border-radius:4px;background:var(--pg);border:1px solid var(--line)}
-.barcell.f.hi{background:linear-gradient(90deg,#3FA776,var(--ok));border-color:var(--ok)}
-.barcell.f.mid{background:linear-gradient(90deg,#D9B25F,var(--amber));border-color:var(--amber)}
-.barcell.f.lo{background:linear-gradient(90deg,#DB8A7C,var(--coral));border-color:var(--coral)}
+.barcell.f.hi{background:linear-gradient(90deg,#075E63,var(--ok));border-color:var(--ok)}
+.barcell.f.mid{background:linear-gradient(90deg,#246BCE,var(--amber));border-color:var(--amber)}
+.barcell.f.lo{background:linear-gradient(90deg,#246BCE,var(--coral));border-color:var(--coral)}
 .chartnote{color:var(--slate);font-size:12px;margin:10px 0 0}
 .bartag{width:64px;font-size:10.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;flex:none}
 .bartag.hi{color:var(--ok)} .bartag.lo{color:var(--coral)}
 .disclaimer{color:var(--slate);font-size:12.5px;font-style:italic;margin-top:18px}
 .ctarow{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 4px}
 .goalreflect{background:var(--soft);border-left:4px solid var(--blue);border-radius:0 10px 10px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
-footer{background:var(--navy);color:#B9C4D6;margin-top:40px;padding:26px 20px;font-size:13px;text-align:center}
-footer .fbrand{font-family:"Source Serif 4",Georgia,serif;color:#fff;font-size:16px;margin:0 0 4px}
+footer{background:var(--navy);color:#F4F6F9;margin-top:40px;padding:26px 20px;font-size:13px;text-align:center}
+footer .fbrand{font-family:"Source Serif 4",Georgia,serif;color:#FFFFFF;font-size:16px;margin:0 0 4px}
 @media(max-width:560px){.card{padding:20px 16px}.spectrum{flex-wrap:wrap}.spectrum .seg{min-width:44%}.ctarow{flex-direction:column}.ctarow button{width:100%}.barlabel{width:116px;font-size:10.5px}.bartag{width:50px}.legend .lname{width:84px}}
 </style>
-<link rel="stylesheet" href="/assessment-editorial.css?v=20261024-sitewide"><link rel="stylesheet" href="/approved-homepage.css?v=20261024-sitewide"><link rel="stylesheet" href="/sitewide.css?v=20261024-sitewide"><meta name="faa-design-version" content="executive-20261026-sitewide">
-<link rel="stylesheet" href="/executive-brand.css?v=20261025-assessment4">
-<link rel="stylesheet" href="/action-colors.css?v=20261026-cobalt">
+<link rel="stylesheet" href="/assessment-editorial.css?v=20261026-authority"><link rel="stylesheet" href="/approved-homepage.css?v=20261026-authority"><link rel="stylesheet" href="/sitewide.css?v=20261026-authority"><meta name="faa-design-version" content="executive-20261026-sitewide">
+<link rel="stylesheet" href="/executive-brand.css?v=20261026-authority">
+<link rel="stylesheet" href="/action-colors.css?v=20261026-authority">
+<link rel="stylesheet" href="/approved-theme.css?v=20261026-authority">
 </head>
-<body class="homepage-redesign assessment-editorial faa-sitewide faa-assessment executive-site">
+<body class="homepage-redesign assessment-editorial faa-sitewide faa-assessment executive-site faa-modern">
 <header class="sticky top-0 z-40 bg-white border-b" style="border-color: var(--faa-gray-100);" id="site-header">
   <div class="container-faa flex items-center justify-between relative" style="height:96px;">
     <a href="/" class="flex items-center shrink-0" aria-label="Foundation AI Advisory home">
@@ -122,7 +123,7 @@ footer .fbrand{font-family:"Source Serif 4",Georgia,serif;color:#fff;font-size:1
 <nav class="assessment-dd__menu" id="assessment-menu-home" aria-label="Choose your assessment" hidden>
 <p class="assessment-dd__eyebrow">Assessments</p><h2 class="assessment-dd__heading">Where would you like to start?</h2>
 <a class="assessment-dd__item" href="/assessment/?utm_source=site_nav" data-assessment-choice="self"><span class="assessment-dd__copy"><span class="assessment-dd__title">Foundation’s AI Self-Assessment</span><span class="assessment-dd__description">Explore your AI readiness.</span><span class="assessment-dd__action">Start self-assessment <span aria-hidden="true">→</span></span></span><span class="assessment-dd__arrow" aria-hidden="true">›</span></a>
-<a class="assessment-dd__item" href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" data-assessment-choice="inquiry"><span class="assessment-dd__copy"><span class="assessment-dd__title">Business Systems Assessment</span><span class="assessment-dd__description">Discuss your business with FAA.</span><span class="assessment-dd__action">Start an inquiry <span aria-hidden="true">→</span></span></span><span class="assessment-dd__arrow" aria-hidden="true">›</span></a>
+<a class="assessment-dd__item" href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20inquiry&amp;body=Hi%20Ben%2C%0D%0A%0D%0AI%E2%80%99m%20interested%20in%20learning%20more%20about%20Foundation%20AI%20Advisory%E2%80%99s%20Business%20Systems%20Assessment%20and%20whether%20it%20would%20be%20a%20good%20fit%20for%20our%20business.%0D%0A%0D%0ACould%20we%20arrange%20a%20brief%20conversation%20to%20discuss%20what%E2%80%99s%20involved%20and%20the%20next%20steps%3F%0D%0A%0D%0AThank%20you." data-assessment-choice="inquiry"><span class="assessment-dd__copy"><span class="assessment-dd__title">Business Systems Assessment</span><span class="assessment-dd__description">Discuss your business with FAA.</span><span class="assessment-dd__action">Start an inquiry <span aria-hidden="true">→</span></span></span><span class="assessment-dd__arrow" aria-hidden="true">›</span></a>
 </nav></div></div></div>
 
 <div id="mega-methodology" class="mega-menu editorial-nav-panel" role="region" aria-label="Our methodology">
@@ -137,7 +138,7 @@ footer .fbrand{font-family:"Source Serif 4",Georgia,serif;color:#fff;font-size:1
 
 <noscript><nav class="hf-nojs" aria-label="Quick links"><a href="/methodology/">Methodology</a><a href="/industries/">Industries</a><a href="/insights/">Perspectives</a><a href="/assessment/">AI Self-Assessment</a><a href="/business-systems-assessment/">Business Systems Assessment</a><a href="/about/">About</a></nav></noscript></header>
 
-<main id="main-content" class="assessment-flow"><div class="progressbar" id="pbar"><div class="inner"><span class="count" id="pcount">0 of 14 answered</span><div class="segs" id="psegs"></div></div></div>
+<main id="main-content" class="assessment-flow"><div class="progressbar" id="pbar"><div class="inner"><span class="count" aria-live="polite" id="pcount">0 of 14 answered</span><div class="segs" id="psegs"></div></div></div>
 <section class="screen active" id="scr-intro" aria-label="Foundation’s AI Self-Assessment"><img class="ep-assessment-art" src="/assets/executive-pages/glass.webp" alt="" width="1536" height="1024" fetchpriority="high" decoding="async"><div class="wrap"><div class="card">
 <p class="eyebrow" style="text-align:center">Foundation’s AI Self-Assessment · About 3 minutes</p>
 <h1 style="text-align:center">Find out where you stand with AI</h1>
@@ -147,8 +148,8 @@ footer .fbrand{font-family:"Source Serif 4",Georgia,serif;color:#fff;font-size:1
 </div></div></section>
 <section class="screen" id="scr-quiz"><div class="wrap">
 <div id="qlist"></div>
-<div class="notice error" id="unanswered-note" style="display:none">A few questions still need an answer, and they’re highlighted above.</div>
-<button id="btn-continue">Continue →</button>
+<div class="notice error" role="alert" id="unanswered-note" style="display:none">Choose an answer before continuing.</div>
+<div class="assessment-step-actions"><button type="button" id="btn-back" class="ghost">← Back</button><button type="button" id="btn-continue">Next question →</button></div>
 </div></section>
 <section class="screen" id="scr-gate"><div class="wrap"><div class="card">
 <p class="eyebrow" style="text-align:center">Your result is ready</p>
@@ -156,25 +157,24 @@ footer .fbrand{font-family:"Source Serif 4",Georgia,serif;color:#fff;font-size:1
 <div class="field" style="margin:16px 0 4px"><label for="email">Email address</label>
 <input type="email" id="email" placeholder="you@company.com" autocomplete="email" inputmode="email"></div>
 <p class="consent">We’ll use your email to show and send your result, and may follow up with relevant guidance from Foundation AI Advisory. No spam, and we never share or sell your address.</p>
-<div class="notice error" id="email-err" style="display:none">That doesn’t look like a valid email address.</div>
-<button id="btn-reveal">Reveal my result →</button>
+<div class="notice error" role="alert" id="email-err" style="display:none">That doesn’t look like a valid email address.</div>
+<div class="assessment-step-actions"><button type="button" id="btn-review" class="ghost">← Review answers</button><button id="btn-reveal">Reveal my result →</button></div>
 </div></div></section>
 <section class="screen" id="scr-result"><div class="wrap">
 <div class="card">
 <p class="youare" style="text-align:center">Your AI-adoption profile</p>
 <p class="tiername" id="r-tier" style="text-align:center"></p>
-<div class="spectrum" id="r-spectrum"></div>
-<div class="legend" id="r-legend"></div>
+<div class="spectrum" id="r-spectrum" hidden></div>
+
 <p id="r-desc" style="font-size:15.5px;margin-top:16px"></p>
-<h2 style="font-size:18px;margin-top:22px">Your profile at a glance</h2>
-<div id="r-bars"></div>
-<p class="chartnote">Each bar reflects one of your answers on a 0–3 scale. It is a snapshot of what you told us, not a diagnostic measurement.</p>
+
 <div class="goalreflect" id="r-goal" style="display:none"></div>
 <h2 style="font-size:18px;margin-top:22px">A practical next step</h2>
 <p id="r-next" style="font-size:14.5px"></p>
 <div class="ctarow"><button id="r-cta"></button>
 <button class="ghost" id="r-cta2">Email the team</button></div>
-<p class="disclaimer">This is a directional snapshot based on how you answered today, not a test score.</p>
+<details class="assessment-result-detail"><summary>Explore the four profiles</summary><div class="legend" id="r-legend"></div></details><details class="assessment-result-detail assessment-answer-detail"><summary>Your answers at a glance</summary><div id="r-bars"></div>
+<p class="chartnote">Each bar reflects one of your answers on a 0–3 scale. It is a snapshot of what you told us, not a diagnostic measurement.</p></details><p class="disclaimer">This is a directional snapshot based on how you answered today, not a test score.</p>
 <div class="notice" id="email-sent-note" style="display:none"></div>
 <div class="notice error" id="save-fail-note" style="display:none">We couldn’t save your submission just now. Your result above is complete and unaffected.</div>
 </div>
@@ -215,17 +215,36 @@ var GOAL_REFLECT={A:"getting better results on individual tasks",B:"creating rep
 var state={answers:new Array(11).fill(null),q12:null,qp:null,q13:null,email:null,idem:(crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random().toString(16).slice(2)),source:new URLSearchParams(location.search).get("utm_source")||"direct",saved:false};
 var qlist=document.getElementById("qlist");
 var html="";
-QUESTIONS.forEach(function(q,i){html+='<div class="card qcard" id="qc'+i+'"><p class="qnum">Question '+(i+1)+' of 14</p><p class="qtext">'+q.text+'</p>';q.opts.forEach(function(o,oi){html+='<label class="opt" data-q="'+i+'" data-o="'+oi+'"><input type="radio" name="q'+i+'" value="'+oi+'"><span>'+o+'</span></label>';});html+='</div>';});
-[Q12,QP,Q13].forEach(function(q,k){var qi=11+k;html+='<div class="card qcard" id="qc'+qi+'"><p class="qnum">Question '+(qi+1)+' of 14</p><p class="qtext">'+q.text+'</p>';q.opts.forEach(function(pair){html+='<label class="opt" data-q="'+qi+'" data-letter="'+pair[0]+'"><input type="radio" name="q'+qi+'" value="'+pair[0]+'"><span>'+pair[1]+'</span></label>';});html+='</div>';});
+QUESTIONS.forEach(function(q,i){html+='<fieldset class="card qcard" id="qc'+i+'"><legend class="qtext">'+q.text+'</legend><p class="qnum">Question '+(i+1)+' of 14</p>';q.opts.forEach(function(o,oi){html+='<label class="opt" data-q="'+i+'" data-o="'+oi+'"><input type="radio" name="q'+i+'" value="'+oi+'"><span>'+o+'</span></label>';});html+='</fieldset>';});
+[Q12,QP,Q13].forEach(function(q,k){var qi=11+k;html+='<fieldset class="card qcard" id="qc'+qi+'"><legend class="qtext">'+q.text+'</legend><p class="qnum">Question '+(qi+1)+' of 14</p>';q.opts.forEach(function(pair){html+='<label class="opt" data-q="'+qi+'" data-letter="'+pair[0]+'"><input type="radio" name="q'+qi+'" value="'+pair[0]+'"><span>'+pair[1]+'</span></label>';});html+='</fieldset>';});
 qlist.innerHTML=html;
 var psegs=document.getElementById("psegs");
 for(var s=0;s<14;s++){psegs.innerHTML+='<i></i>';}
 qlist.addEventListener("change",function(e){var lab=e.target.closest(".opt");if(!lab)return;var qi=+lab.dataset.q;lab.parentElement.querySelectorAll(".opt").forEach(function(el){el.classList.remove("selected");});lab.classList.add("selected");document.getElementById("qc"+qi).classList.remove("unanswered-flag");if(qi<11)state.answers[qi]=+lab.dataset.o;else if(qi===11)state.q12=lab.dataset.letter;else if(qi===12)state.qp=lab.dataset.letter;else state.q13=lab.dataset.letter;updateProgress();});
 function answeredCount(){return state.answers.filter(function(v){return v!==null;}).length+(state.q12?1:0)+(state.qp?1:0)+(state.q13?1:0);}
-function updateProgress(){var n=answeredCount();document.getElementById("pcount").textContent=n+" of 14 answered";var segs=psegs.children;for(var i=0;i<14;i++){segs[i].className=i<n?"on":"";}}
+function updateProgress(){var n=answeredCount();document.getElementById("pcount").textContent="Question "+(currentQuestion+1)+" of 14 · "+n+" answered";var segs=psegs.children;for(var i=0;i<14;i++){segs[i].className=i<n?"on":"";}}
 function show(id){document.querySelectorAll(".screen").forEach(function(s){s.classList.remove("active");});document.getElementById(id).classList.add("active");window.scrollTo({top:0});document.getElementById("pbar").classList.toggle("active",id==="scr-quiz");}
-document.getElementById("btn-start").onclick=function(){show("scr-quiz");updateProgress();};
-document.getElementById("btn-continue").onclick=function(){var fm=null;state.answers.forEach(function(v,i){if(v===null){document.getElementById("qc"+i).classList.add("unanswered-flag");if(fm===null)fm=i;}});if(!state.q12){document.getElementById("qc11").classList.add("unanswered-flag");if(fm===null)fm=11;}if(!state.qp){document.getElementById("qc12").classList.add("unanswered-flag");if(fm===null)fm=12;}if(!state.q13){document.getElementById("qc13").classList.add("unanswered-flag");if(fm===null)fm=13;}if(fm!==null){document.getElementById("unanswered-note").style.display="block";document.getElementById("qc"+fm).scrollIntoView({behavior:"smooth",block:"center"});return;}document.getElementById("unanswered-note").style.display="none";show("scr-gate");document.getElementById("email").focus();};
+var currentQuestion=0;
+function hasAnswer(i){return i<11?state.answers[i]!==null:i===11?state.q12!==null:i===12?state.qp!==null:state.q13!==null;}
+function displayQuestion(i,focus){
+ currentQuestion=Math.max(0,Math.min(13,i));
+ document.querySelectorAll('#qlist .qcard').forEach(function(card,k){card.hidden=k!==currentQuestion;});
+ document.getElementById('btn-back').textContent=currentQuestion===0?'← Introduction':'← Back';
+ document.getElementById('btn-continue').textContent=currentQuestion===13?'See my profile →':'Next question →';
+ document.getElementById('unanswered-note').style.display='none';
+ document.getElementById('pcount').textContent='Question '+(currentQuestion+1)+' of 14 · '+answeredCount()+' answered';
+ if(focus){document.querySelector('#qc'+currentQuestion+' input:checked, #qc'+currentQuestion+' input').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});}
+}
+document.getElementById('btn-start').onclick=function(){show('scr-quiz');updateProgress();displayQuestion(currentQuestion,true);};
+document.getElementById('btn-back').onclick=function(){if(currentQuestion===0){show('scr-intro');document.getElementById('btn-start').focus();}else displayQuestion(currentQuestion-1,true);};
+document.getElementById('btn-review').onclick=function(){show('scr-quiz');displayQuestion(13,true);};
+document.getElementById('btn-continue').onclick=function(){
+ if(!hasAnswer(currentQuestion)){document.getElementById('unanswered-note').style.display='block';document.getElementById('qc'+currentQuestion).classList.add('unanswered-flag');document.querySelector('#qc'+currentQuestion+' input').focus({preventScroll:true});return;}
+ if(currentQuestion<13){displayQuestion(currentQuestion+1,true);return;}
+ for(var i=0;i<14;i++){if(!hasAnswer(i)){displayQuestion(i,true);return;}}
+ show('scr-gate');document.getElementById('email').focus();
+};
+displayQuestion(0,false);
 function validEmail(s){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s);}
 document.getElementById("btn-reveal").onclick=function(){var em=document.getElementById("email").value.trim();if(!validEmail(em)){document.getElementById("email-err").style.display="block";return;}document.getElementById("email-err").style.display="none";state.email=em;renderResult();show("scr-result");submitLead();};
 document.getElementById("r-cta2").onclick=function(){var t=state.result?state.result.tier_public:"";location.href="mailto:blueprint@foundationaiadvisory.com?subject="+encodeURIComponent("AI Assessment follow-up"+(t?" - "+t+" profile":""));};
@@ -245,6 +264,6 @@ function post(body){return fetch("https://faa-assessment.vercel.app/api/submit",
 function submitLead(){post(payload()).catch(function(){return post(payload());}).then(function(data){state.saved=true;var note=document.getElementById("email-sent-note");if(data&&data.emailSent===false){note.textContent="We couldn’t send the email copy of your result. Everything above is complete, so feel free to print or screenshot it.";note.style.display="block";}else if(data&&data.emailSent===true){note.textContent="A copy of your result is on its way to "+state.email+".";note.style.display="block";}}).catch(function(){document.getElementById("save-fail-note").style.display="block";});}
 document.getElementById("btn-pain").onclick=function(){var t=document.getElementById("pain-text").value.trim();if(!t)return;var btn=this;btn.disabled=true;var body={idempotency_id:state.idem,pain_point_text:t,update:"pain_point"};post(body).catch(function(){return post(body);}).then(function(){document.getElementById("pain-thanks").style.display="inline";}).catch(function(){btn.disabled=false;document.getElementById("pain-thanks").textContent="Couldn’t send just now. Try once more.";document.getElementById("pain-thanks").style.display="inline";});};
 </script>
-<script src="/nav.js?v=20261024-sitewide" defer></script></body>
+<script src="/nav.js?v=20261026-authority" defer></script></body>
 </html>
 

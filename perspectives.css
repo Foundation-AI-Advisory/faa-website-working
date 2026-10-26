@@ -15,9 +15,9 @@
 .perspectives-page .perspectives-topics {display:flex;gap:28px;align-self:stretch;}
 .perspectives-page .perspectives-topics button {position:relative;min-height:76px;padding:0;white-space:nowrap;border:0;border-radius:0;background:transparent;color:var(--slate-muted);font:600 14px/1.4 Arial,sans-serif;cursor:pointer;}
 .perspectives-page .perspectives-topics button::after {content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:transparent;}
-.perspectives-page .perspectives-topics button[aria-pressed="true"] {color:#fff;}
+.perspectives-page .perspectives-topics button[aria-pressed="true"] {color:#FFFFFF;}
 .perspectives-page .perspectives-topics button[aria-pressed="true"]::after {background:var(--slate-action);}
-.perspectives-page .perspectives-topics button:hover {color:#fff;}
+.perspectives-page .perspectives-topics button:hover {color:#FFFFFF;}
 .perspectives-page .perspectives-tools {width:100%;max-width:none;box-sizing:border-box;margin:0;display:flex;gap:12px;align-items:center;}
 .perspectives-page .perspectives-search {flex:1;min-width:0;position:relative;}
 .perspectives-page .perspectives-search>svg {position:absolute;left:14px;top:15px;width:18px;height:18px;color:var(--slate-muted);pointer-events:none;}
@@ -28,7 +28,7 @@
 .perspectives-page main #perspectives-format {appearance:none;width:100%;height:48px;border:1px solid var(--slate-line)!important;border-radius:0;padding:0 32px 0 14px;background:transparent!important;font:14px/1.4 Arial,sans-serif;cursor:pointer;}
 .perspectives-page #perspectives-format option {background:var(--slate-panel);color:var(--slate-text);}
 .perspectives-page .perspectives-format svg {position:absolute;right:12px;top:16px;width:16px;height:16px;pointer-events:none;color:var(--slate-link);}
-.perspectives-page .perspectives-results-bar {min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid #3f5667;}
+.perspectives-page .perspectives-results-bar {min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid #64748B;}
 .perspectives-page main #perspectives-status {font:12px/1.5 Arial,sans-serif;color:var(--slate-muted)!important;margin:0;}
 .perspectives-page .perspectives-reset {flex-shrink:0;border:0;background:transparent;padding:12px 0;color:var(--slate-link);font:600 12px/1.5 Arial,sans-serif;cursor:pointer;}
 .perspectives-page .perspectives-reset span {margin-left:6px;}
@@ -55,7 +55,7 @@
 .perspectives-page main .perspectives-empty h3 {font-size:34px;margin:12px 0;}
 .perspectives-page main .perspectives-empty p {max-width:46ch;margin:0 auto;font:16px/1.6 Arial,sans-serif;}
 .perspectives-page main .perspectives-empty-label {color:var(--slate-link)!important;font-size:12px;text-transform:uppercase;letter-spacing:.1em;}
-.perspectives-page .perspectives-reset-all,.perspectives-page #perspectives-more {min-height:48px;border:1px solid var(--slate-line);background:transparent;color:#fff;font:600 14px/1.4 Arial,sans-serif;padding:14px 24px;cursor:pointer;}
+.perspectives-page .perspectives-reset-all,.perspectives-page #perspectives-more {min-height:48px;border:1px solid var(--slate-line);background:transparent;color:#FFFFFF;font:600 14px/1.4 Arial,sans-serif;padding:14px 24px;cursor:pointer;}
 .perspectives-page .perspectives-reset-all {margin-top:24px;}
 .perspectives-page .perspectives-more {text-align:center;margin-top:36px;}
 .perspectives-page #perspectives-more span {margin-left:20px;color:var(--slate-link);}

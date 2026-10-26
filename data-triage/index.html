@@ -17,8 +17,8 @@
 <meta property="og:site_name" content="Foundation AI Advisory">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://foundationaiadvisory.com/"},{"@type":"ListItem","position":2,"name":"Business Systems Assessment","item":"https://foundationaiadvisory.com/business-systems-assessment/"},{"@type":"ListItem","position":3,"name":"Data Triage","item":"https://foundationaiadvisory.com/data-triage/"}]}</script>
-<link rel="stylesheet" href="/tailwind-static.css?v=20261024-sitewide">
-<link rel="stylesheet" href="/styles.css?v=20261024-sitewide">
+<link rel="stylesheet" href="/tailwind-static.css?v=20261026-authority">
+<link rel="stylesheet" href="/styles.css?v=20261026-authority">
 <style>
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -29,10 +29,10 @@
    Palette and type from the FAA site design system (styles.css).
    ═══════════════════════════════════════════════════════════════════════════ */
 :root{
-  --blue:#2D689E; --blue-light:#4E96C1; --highlight:#7FC2E1; --blue-50:#E8F2F9;
-  --white:#FFFFFF; --g50:#F8FAFC; --g100:#F1F5F9; --g200:#E2E8F0; --g400:#94A3B8;
-  --g600:#475569; --navy:#1E293B; --navy-deep:#0F172A;
-  --ok:#2E7D5B; --warn:#B8892E; --flag:#C0574A;
+  --blue:#246BCE; --blue-light:#246BCE; --highlight:#246BCE; --blue-50:#F4F6F9;
+  --white:#FFFFFF; --g50:#F4F6F9; --g100:#F4F6F9; --g200:#F4F6F9; --g400:#64748B;
+  --g600:#64748B; --navy:#0B192C; --navy-deep:#0B192C;
+  --ok:#075E63; --warn:#64748B; --flag:#64748B;
   --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -63,7 +63,7 @@
 
 #dt .pledge{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 24px;
   padding:12px 16px;border-radius:0 10px 10px 0;border-left:4px solid var(--ok);
-  background:#EDF5F1;font-size:13.5px}
+  background:#F4F6F9;font-size:13.5px}
 
 #dt .pledge b{color:var(--navy)}
 
@@ -92,7 +92,7 @@
 
 /* ── cards / steps ── */
 #dt .card{background:var(--white);border:1px solid var(--g200);border-radius:0 12px 12px 12px;
-  box-shadow:0 1px 3px rgba(15,23,42,.05)}
+  box-shadow:0 1px 3px rgba(11,25,44,.05)}
 
 #dt .card + .card{border-radius:12px;margin-top:18px}
 
@@ -117,7 +117,7 @@
 #dt .row{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:12px}
 
 #dt .btn{cursor:pointer;border-radius:9px;padding:10px 18px;font:600 13px var(--sans);border:0;
-  background:linear-gradient(135deg,#0b5f9f 0%,#0d75bd 52%,#11a4c2 100%);color:#fff}
+  background:linear-gradient(135deg,#246BCE 0%,#246BCE 52%,#075E63 100%);color:#FFFFFF}
 
 #dt .btn:active{translate:0 1px}
 
@@ -140,7 +140,7 @@
 
 #dt .fact b{color:var(--navy)}
 
-#dt .fact.warn{color:var(--warn);border-color:#E4CD9A;background:#FBF6EA}
+#dt .fact.warn{color:var(--warn);border-color:#246BCE;background:#F4F6F9}
 
 #dt .cols{display:grid;gap:9px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
 
@@ -156,7 +156,7 @@
 
 #dt .col[data-role="measure"]{border-color:var(--blue-light);background:linear-gradient(0deg,var(--blue-50),var(--white) 55%)}
 
-#dt .col[data-role="date"]{border-color:#9CC5B3;background:linear-gradient(0deg,#EDF5F1,var(--white) 55%)}
+#dt .col[data-role="date"]{border-color:#FFFFFF;background:linear-gradient(0deg,#F4F6F9,var(--white) 55%)}
 
 #dt .col[data-role="ignore"]{opacity:.45}
 
@@ -166,7 +166,7 @@
 #dt .pills button{background:none;border:0;cursor:pointer;color:var(--g600);border-radius:999px;
   font:600 12.5px var(--sans);padding:8px 15px;white-space:nowrap}
 
-#dt .pills button.on{background:var(--navy);color:#fff}
+#dt .pills button.on{background:var(--navy);color:#FFFFFF}
 
 #dt .ctrl{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:16px 0 4px}
 
@@ -220,8 +220,8 @@
  #dt .chk.warn .dot{background:var(--warn)}
  #dt .chk.flag .dot{background:var(--flag)}
 
-#dt .chk.warn{color:#8a6a20}
- #dt .chk.flag{color:#96453a}
+#dt .chk.warn{color:#64748B}
+ #dt .chk.flag{color:#64748B}
 
 #dt .chk.ok{color:var(--g600)}
 
@@ -243,7 +243,7 @@
 
 #dt tr.dropped td:first-child:before{content:"⊘ ";color:var(--warn)}
 
-#dt tr.hit td{background:#FBF1EF}
+#dt tr.hit td{background:#F4F6F9}
 
 #dt td .pillneg{color:var(--flag);font-weight:700}
 
@@ -268,19 +268,19 @@
 
 /* Data Triage page chrome (hero, receipt, proofs, CTA band) */
 .dt-hero{position:relative;background:var(--faa-gray-900);overflow:hidden}
-.dt-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(127,194,225,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(127,194,225,.055) 1px,transparent 1px);background-size:56px 56px}
-.dt-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:150px;background:linear-gradient(180deg,transparent,rgba(17,164,194,.10))}
+.dt-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(36,107,206,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(36,107,206,.055) 1px,transparent 1px);background-size:56px 56px}
+.dt-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:150px;background:linear-gradient(180deg,transparent,rgba(7,94,99,.10))}
 .dt-hero-inner{position:relative;max-width:1280px;margin:0 auto;padding:64px 24px 56px;display:flex;justify-content:space-between;align-items:flex-start;gap:48px;flex-wrap:wrap}
 .dt-hero-copy{max-width:640px}
 .dt-hero .eyebrow{color:var(--faa-highlight)}
 .dt-hero h1{color:var(--faa-white);font-size:clamp(34px,4vw,56px);font-weight:600;letter-spacing:-.02em;line-height:1.08;margin:18px 0 0}
 .dt-hero .dt-dek{margin:18px 0 0;max-width:560px;font-size:clamp(15px,1.1vw,17px);line-height:1.5;color:rgba(255,255,255,.85)}
 .dt-pledge{margin-top:22px;display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.5;color:rgba(255,255,255,.85)}
-.dt-pledge svg{flex:none;margin-top:3px;color:#2FBF6B}
+.dt-pledge svg{flex:none;margin-top:3px;color:#075E63}
 .dt-pledge b{color:var(--faa-white)}
-.dt-receipt{flex:none;width:322px;max-width:100%;border:1px solid rgba(127,194,225,.28);border-radius:12px;background:rgba(15,23,42,.72);padding:15px 18px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;line-height:2.05;color:var(--faa-highlight)}
-.dt-receipt .rr-hd{display:flex;justify-content:space-between;border-bottom:1px solid rgba(127,194,225,.22);padding-bottom:7px;margin-bottom:7px;letter-spacing:.1em;color:rgba(255,255,255,.75)}
-.dt-receipt .rr-live{color:#2FBF6B}
+.dt-receipt{flex:none;width:322px;max-width:100%;border:1px solid rgba(36,107,206,.28);border-radius:12px;background:rgba(11,25,44,.72);padding:15px 18px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;line-height:2.05;color:var(--faa-highlight)}
+.dt-receipt .rr-hd{display:flex;justify-content:space-between;border-bottom:1px solid rgba(36,107,206,.22);padding-bottom:7px;margin-bottom:7px;letter-spacing:.1em;color:rgba(255,255,255,.75)}
+.dt-receipt .rr-live{color:#075E63}
 .dt-receipt .rr{display:flex;justify-content:space-between;gap:12px}
 .dt-receipt .rr b{color:var(--faa-white);font-weight:600;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px;text-transform:uppercase}
 @media(min-width:1024px){.dt-hero-inner{padding:76px 48px 64px}}
@@ -294,11 +294,12 @@
 .dt-cta h2{color:var(--faa-white);font-size:clamp(24px,2.6vw,34px);font-weight:600;letter-spacing:-.015em;line-height:1.22;margin:0;max-width:680px}
 .dt-cta h2 span{color:var(--faa-highlight)}
 </style>
-<link rel="stylesheet" href="/navigation-editorial.css?v=20261024-sitewide"><link rel="stylesheet" href="/editorial-pages.css?v=20261024-sitewide"><link rel="stylesheet" href="/editorial-content.css?v=20261024-sitewide"><link rel="stylesheet" href="/approved-homepage.css?v=20261024-sitewide"><link rel="stylesheet" href="/sitewide.css?v=20261024-sitewide"><meta name="faa-design-version" content="executive-20261026-sitewide">
-<link rel="stylesheet" href="/executive-brand.css?v=20261025-assessment4">
-<link rel="stylesheet" href="/action-colors.css?v=20261026-cobalt">
+<link rel="stylesheet" href="/navigation-editorial.css?v=20261026-authority"><link rel="stylesheet" href="/editorial-pages.css?v=20261026-authority"><link rel="stylesheet" href="/editorial-content.css?v=20261026-authority"><link rel="stylesheet" href="/approved-homepage.css?v=20261026-authority"><link rel="stylesheet" href="/sitewide.css?v=20261026-authority"><meta name="faa-design-version" content="executive-20261026-sitewide">
+<link rel="stylesheet" href="/executive-brand.css?v=20261026-authority">
+<link rel="stylesheet" href="/action-colors.css?v=20261026-authority">
+<link rel="stylesheet" href="/approved-theme.css?v=20261026-authority">
 </head>
-<body class="homepage-redesign editorial-tool editorial-complete faa-sitewide faa-triage executive-site">
+<body class="homepage-redesign editorial-tool editorial-complete faa-sitewide faa-triage executive-site faa-modern">
 <header class="sticky top-0 z-40 bg-white border-b" style="border-color: var(--faa-gray-100);" id="site-header">
   <div class="container-faa flex items-center justify-between relative" style="height:96px;">
     <a href="/" class="flex items-center shrink-0" aria-label="Foundation AI Advisory home">
@@ -332,7 +333,7 @@
 <nav class="assessment-dd__menu" id="assessment-menu-home" aria-label="Choose your assessment" hidden>
 <p class="assessment-dd__eyebrow">Assessments</p><h2 class="assessment-dd__heading">Where would you like to start?</h2>
 <a class="assessment-dd__item" href="/assessment/?utm_source=site_nav" data-assessment-choice="self"><span class="assessment-dd__copy"><span class="assessment-dd__title">Foundation’s AI Self-Assessment</span><span class="assessment-dd__description">Explore your AI readiness.</span><span class="assessment-dd__action">Start self-assessment <span aria-hidden="true">→</span></span></span><span class="assessment-dd__arrow" aria-hidden="true">›</span></a>
-<a class="assessment-dd__item" href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" data-assessment-choice="inquiry"><span class="assessment-dd__copy"><span class="assessment-dd__title">Business Systems Assessment</span><span class="assessment-dd__description">Discuss your business with FAA.</span><span class="assessment-dd__action">Start an inquiry <span aria-hidden="true">→</span></span></span><span class="assessment-dd__arrow" aria-hidden="true">›</span></a>
+<a class="assessment-dd__item" href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20inquiry&amp;body=Hi%20Ben%2C%0D%0A%0D%0AI%E2%80%99m%20interested%20in%20learning%20more%20about%20Foundation%20AI%20Advisory%E2%80%99s%20Business%20Systems%20Assessment%20and%20whether%20it%20would%20be%20a%20good%20fit%20for%20our%20business.%0D%0A%0D%0ACould%20we%20arrange%20a%20brief%20conversation%20to%20discuss%20what%E2%80%99s%20involved%20and%20the%20next%20steps%3F%0D%0A%0D%0AThank%20you." data-assessment-choice="inquiry"><span class="assessment-dd__copy"><span class="assessment-dd__title">Business Systems Assessment</span><span class="assessment-dd__description">Discuss your business with FAA.</span><span class="assessment-dd__action">Start an inquiry <span aria-hidden="true">→</span></span></span><span class="assessment-dd__arrow" aria-hidden="true">›</span></a>
 </nav></div></div></div>
 
 <div id="mega-methodology" class="mega-menu editorial-nav-panel" role="region" aria-label="Our methodology">
@@ -1625,7 +1626,7 @@ function updateReceipt(){
 updateReceipt();
 
 </script>
-<script src="/nav.js?v=20261024-sitewide" defer></script>
+<script src="/nav.js?v=20261026-authority" defer></script>
 <script src="/cookie-consent.js?v=20261024-sitewide" defer></script>
 </body>
 </html>
