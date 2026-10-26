@@ -106,3 +106,14 @@ body.executive-home .assessment-dd__item:focus-visible{outline-color:#087f6d}
 /* Give the industry heading natural serif spacing and room for descenders. */
 body.executive-home #industries-heading{letter-spacing:normal;word-spacing:normal;line-height:1.2;padding-bottom:4px}
 @media(max-width:760px){body.executive-home .hf-industry-grid{row-gap:24px}body.executive-home #industries-heading{margin-bottom:20px}}
+
+/* Homepage brand refinements: 15% larger artwork, same proportions. */
+body.executive-home #site-header .ep-wordmark{width:142.6px;flex-basis:142.6px;height:50.6px;gap:5.75px}
+body.executive-home #site-header .ep-wordmark::before{width:50.6px;height:46px;background-size:168.229px 46px}
+body.executive-home #site-header .ep-wordmark::after{width:86.25px;height:33.35px;background-size:121.966px 33.35px;background-position:-37.375px 0}
+body.executive-home .ej-hero-copy .hero-company-name{font:600 12px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#087563;margin:0 0 20px}
+@media(min-width:1024px){
+ body.executive-home #site-header .ep-wordmark{width:178.25px;flex-basis:178.25px;gap:8.05px;height:57.5px}
+ body.executive-home #site-header .ep-wordmark::before{width:63.25px;height:57.5px;background-size:210.286px 57.5px}
+ body.executive-home #site-header .ep-wordmark::after{width:106.95px;height:41.4px;background-size:151.406px 41.4px;background-position:-46.575px 0}
+}
