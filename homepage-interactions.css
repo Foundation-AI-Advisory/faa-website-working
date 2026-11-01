@@ -156,3 +156,41 @@ body.executive-home .ej-hero-copy .hero-company-name{font:600 12px/1.5 Arial,Hel
 .homepage-redesign #mobile-menu .faa-nav-overview {font-size:16px;padding:16px 0;margin-bottom:12px;border:0}
 .homepage-redesign #mobile-menu .faa-nav-footer {display:flex;flex-wrap:wrap;gap:20px;margin-top:28px;padding-top:14px;border-top:1px solid #F4F6F9}
 .homepage-redesign #mobile-menu .faa-nav-footer a {font:400 13px/1.5 Arial,sans-serif;color:#64748B;background:white;padding:8px 0;border:0;margin:0;text-decoration:none}
+
+/* Choose time recovered or capacity added before exploring a role. */
+.role-goal-picker{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:0 0 12px}
+.role-goal{--goal-color:#075E63;appearance:none;position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:0;width:100%;min-width:0;padding:28px 30px 24px;background:#FFFFFF;border:1px solid #CBD5E1;border-top:4px solid var(--goal-color);border-radius:12px;text-align:left;cursor:pointer;color:#0B192C;box-shadow:none;transition:box-shadow .15s,border-color .15s;overflow-wrap:break-word}
+.role-goal--capacity{--goal-color:#246BCE}
+.role-goal[aria-pressed="true"]{border-color:var(--goal-color);box-shadow:0 0 0 1px var(--goal-color),0 8px 24px #0B192C0A}
+.role-goal:hover{border-color:var(--goal-color);box-shadow:0 4px 18px #0B192C0D}
+.role-goal:focus-visible{outline:3px solid var(--goal-color);outline-offset:5px}
+.role-goal__label{display:block;font:600 11px/1.4 Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--goal-color);margin-bottom:14px}
+.role-goal__title{display:block;max-width:460px;font:400 clamp(27px,2.6vw,37px)/1.14 Georgia,'Times New Roman',serif;letter-spacing:-.035em;margin-bottom:14px}
+.role-goal__title strong{font-weight:400;color:var(--goal-color)}
+.role-goal__description{display:block;max-width:410px;font:15px/1.5 Arial,Helvetica,sans-serif;color:#526174;margin-bottom:22px}
+.role-goal__action{display:flex;align-items:center;justify-content:space-between;gap:22px;width:100%;margin-top:auto;padding-top:14px;border-top:1px solid #E4E9EE;font:600 13px/1.4 Arial,Helvetica,sans-serif;color:var(--goal-color)}
+.role-goal__action>span{font-size:23px;line-height:1}
+.role-goal-note{font:12px/1.5 Arial,Helvetica,sans-serif;color:#526174;margin:14px 0 30px;max-width:680px}
+.role-explorer[data-role-goal="capacity"] .role-panel{border-top-color:#246BCE}
+.role-explorer[data-role-goal="capacity"] .role-target>p,.role-explorer[data-role-goal="capacity"] .role-time tfoot td:last-child{color:#246BCE}
+.role-explorer[data-role-goal="capacity"] .role-controls select{border-color:#246BCE}
+@media(min-width:761px){.role-goal__title{min-height:2.28em}.role-intro{margin-bottom:28px}}
+@media(max-width:760px){
+ .role-explorer{scroll-margin-top:88px;padding-block:30px 38px}
+ .role-intro{margin-bottom:20px}
+ .executive-home .role-intro h2{font-size:32px;margin-bottom:12px}
+ .role-intro>.mi-label{margin-bottom:8px}
+ .role-intro>p:last-child{font-size:15px;line-height:1.45}
+ .role-goal-picker{grid-template-columns:1fr;gap:12px;margin:0}
+ .role-goal{padding:16px 18px 14px;border-radius:10px;border-top-width:3px}
+ .role-goal__label{font-size:10px;margin-bottom:7px}
+ .role-goal__title{font-size:26px;line-height:1.12;margin-bottom:8px;max-width:100%}
+ .role-goal__description{font-size:14px;line-height:1.4;margin-bottom:10px;max-width:100%}
+ .role-goal__action{font-size:12px;padding-top:9px}
+ .role-goal__action>span{font-size:20px}
+ .role-goal-note{font-size:11px;line-height:1.45;margin:12px 0 22px}
+ .role-layout.is-awaiting-role{grid-template-columns:1fr}
+}
+
+/* Account for the shared header scroll padding without doubling its offset. */
+.executive-home #your-role{scroll-margin-top:0}
