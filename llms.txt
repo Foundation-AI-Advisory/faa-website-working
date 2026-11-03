@@ -41,6 +41,12 @@ Manufacturing & Industrial Production; Engineering, Construction & Infrastructur
 
 CEO / President, CFO / Controller, CIO / IT Leader. Secondary: COO / VP Operations, department heads, process owners.
 
+## Executive Decision Questions
+
+- Practical answers on AI readiness, data governance, workflow automation, ownership, controls, costs, and payback: https://foundationaiadvisory.com/ai-decision-questions/
+- All 30 questions: https://foundationaiadvisory.com/ai-decision-questions/#all-questions
+- Each question has a direct anchor and its complete answer in the page HTML.
+
 ## Key URLs
 
 - Home: https://foundationaiadvisory.com/
