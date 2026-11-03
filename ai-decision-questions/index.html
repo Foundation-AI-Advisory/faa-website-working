@@ -25,7 +25,50 @@
 <link rel="stylesheet" href="/executive-brand.css?v=20261026-authority">
 <link rel="stylesheet" href="/action-colors.css?v=20261026-authority">
 <link rel="stylesheet" href="/approved-theme.css?v=20261026-dropdown-spacing">
-</head>
+<style id="decision-guide-styles">
+/* Approved combined decision guide, scoped to this page. */
+main.decision-guide{padding:0;max-width:none;width:100%;margin:0;color:#0b192c}
+.decision-guide .decision-width{width:min(100% - 48px,1080px);margin-inline:auto}
+.decision-guide .decision-hero{background:radial-gradient(ellipse at 90% 20%,#103653 0,transparent 65%),linear-gradient(120deg,#07182b,#0c223b);padding:64px 0 52px}
+.decision-guide .decision-eyebrow{font:600 12px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:#526176;margin:0 0 16px}
+.decision-guide .decision-hero .decision-eyebrow{color:#fff;display:flex;align-items:center;gap:18px}
+.decision-guide .decision-hero .decision-eyebrow:before{content:"";width:38px;height:3px;background:#29a65a}
+.decision-guide .decision-hero h1{font:400 clamp(38px,5.5vw,70px)/1.06 Georgia,serif;letter-spacing:-.04em;color:#fff;margin:0 0 22px}
+.decision-guide .decision-intro{font:400 19px/1.6 Arial,sans-serif;color:#fff;max-width:780px;margin:0}
+.decision-guide .decision-principles{font:400 16px/1.5 Arial,sans-serif;color:#d9e3ec;margin:28px 0 0}
+.decision-guide .decision-body{max-width:900px;padding-block:36px 48px}
+.decision-guide .decision-navigation{margin-bottom:38px}
+.decision-guide label.decision-eyebrow{display:block}
+.decision-guide .decision-select{position:relative}
+.decision-guide .decision-select:after{content:"";position:absolute;right:22px;top:24px;width:10px;height:10px;border-right:2px solid #0b192c;border-bottom:2px solid #0b192c;transform:rotate(45deg);pointer-events:none}
+.decision-guide select{appearance:none;width:100%;min-height:62px;background:#fff;border:1px solid #738091;border-radius:8px;padding:12px 48px 12px 20px;color:#0b192c;font:400 23px/1.3 Georgia,serif;cursor:pointer}
+.decision-guide :is(select,summary,a):focus-visible{outline:3px solid #159c77;outline-offset:4px}
+.decision-guide .decision-position{display:flex;gap:24px;align-items:center;margin-top:16px;font:400 14px/1.5 Arial,sans-serif;color:#526176}
+.decision-guide .decision-position>span{white-space:nowrap}
+.decision-guide .decision-progress{display:flex;gap:7px;flex:1}
+.decision-guide .decision-progress span{height:8px;flex:1;border-radius:5px;background:#e0e3e8}
+.decision-guide .decision-progress .is-active{background:#189944}
+.decision-guide .decision-panel{margin:0 0 40px;scroll-margin-top:110px}
+.decision-guide .decision-panel[hidden]{display:none!important}
+.decision-guide .decision-panel .decision-eyebrow{margin-bottom:10px}
+.decision-guide .hf-heading{font:400 clamp(30px,4vw,46px)/1.15 Georgia,serif;letter-spacing:-.035em;color:#0b192c;margin:0 0 24px}
+.decision-guide .decision-subtitle{font:400 17px/1.5 Arial,sans-serif;color:#526176;margin:-12px 0 28px}
+.decision-guide .hf-faq-list{display:grid;gap:12px}
+.decision-guide .hf-faq-item,.decision-guide .hf-faq-item:last-child{border:1px solid #b2c4c5;border-radius:7px;background:#fff;margin:0;padding:0 20px;overflow:hidden}
+.decision-guide .hf-faq-item summary{font:600 17px/1.45 Arial,sans-serif;color:#0b192c;min-height:66px;padding:17px 0;gap:18px}
+.decision-guide .hf-faq-item summary:after{display:flex;align-items:center;justify-content:center;width:26px;height:26px;min-width:26px;border:1.5px solid #086769;border-radius:50%;font:400 24px/1 Arial,sans-serif;color:#086769}
+.decision-guide .hf-faq-item[open] summary:after{background:#086769;color:#fff}
+.decision-guide .hf-faq-item[open] summary{border-bottom:1px solid #e0e5e8;margin-bottom:17px}
+.decision-guide .hf-faq-item .ed-faq-answer{padding:0 0 8px}
+.decision-guide .hf-faq-item .ed-faq-answer p{font:400 16px/1.7 Arial,sans-serif;color:#273546;margin:0 0 16px}
+.decision-guide .hf-faq-item .ed-faq-answer .decision-takeaway{background:#e5f4ed;color:#07553a;padding:12px 15px;border-radius:5px;font-style:italic;font-weight:600}
+.decision-guide .hf-answer-cta{max-width:none;margin:0;border-radius:0;background:linear-gradient(110deg,#0c1f36,#192f48);padding:40px 0}
+.decision-guide .hf-answer-cta .hf-heading{color:#fff;font-size:clamp(28px,3.5vw,40px)}
+.decision-guide .hf-answer-cta .hf-button{display:inline-flex;align-items:center;gap:14px;background:linear-gradient(120deg,#087f76,#085c64);color:#fff;border:1px solid #209c92;border-radius:9px;font:500 17px/1.4 Arial,sans-serif;padding:15px 22px;text-decoration:none}
+@media(min-width:1100px){.decision-guide .decision-body{padding-block:48px 60px}.decision-guide .decision-navigation{margin-bottom:48px}}
+@media(max-width:600px){.decision-guide .decision-width{width:calc(100% - 36px)}.decision-guide .decision-hero{padding:36px 0 32px}.decision-guide .decision-hero h1{font-size:clamp(34px,8.7vw,48px)}.decision-guide .decision-intro{font-size:17px}.decision-guide .decision-principles{font-size:15px;margin-top:24px}.decision-guide .decision-body{padding-top:26px}.decision-guide select{font-size:21px;padding-left:14px}.decision-guide .hf-faq-item{padding-inline:14px}.decision-guide .hf-faq-item summary{font-size:16px;gap:12px}.decision-guide .decision-position{gap:16px}.decision-guide .hf-heading{font-size:32px}.decision-guide .hf-faq-item .ed-faq-answer p{font-size:16px}}
+@media print{.decision-guide .decision-panel[hidden]{display:block!important}.decision-navigation{display:none}.decision-guide details::details-content{content-visibility:visible}}
+</style></head>
 <body class="homepage-redesign faq-redesign faa-sitewide executive-site faa-modern"><a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header class="sticky top-0 z-40 bg-white border-b" style="border-color: var(--faa-gray-100);" id="site-header">
@@ -76,10 +119,17 @@
 
 <noscript><nav class="hf-nojs" aria-label="Quick links"><a href="/methodology/">Methodology</a><a href="/industries/">Industries</a><a href="/insights/">Perspectives</a><a href="/assessment/">AI Self-Assessment</a><a href="/business-systems-assessment/">Business Systems Assessment</a><a href="/about/">About</a></nav></noscript></header>
 
-<main id="main-content" class="hf-container hf-answers"><p class="hf-eyebrow">Executive answers</p><h1>Practical answers.<br>Better AI decisions.</h1><p class="hf-answers-intro">Questions about data, workflows, ownership, and return on investment. Start with the business outcome you need to improve.</p><nav class="hf-topic-nav" aria-label="Question topics"><a href="#ai-readiness">AI Readiness</a><a href="#data-and-governance">Data &amp; Governance</a><a href="#workflow-and-automation">Workflow &amp; Automation</a><a href="#ownership-risk-and-controls">Ownership, Risk &amp; Controls</a><a href="#roi-and-roadmap">ROI &amp; Roadmap</a></nav><section id="ai-readiness" aria-labelledby="ai-readiness-heading"><h2 class="hf-heading" id="ai-readiness-heading">AI Readiness</h2><div class="hf-faq-list"><details class="hf-faq-item"><summary>How do I know if my company is ready for AI?</summary><div class="ed-faq-answer"><div>
+<main id="main-content" class="hf-answers decision-guide"><div class="decision-hero"><div class="decision-width"><p class="decision-eyebrow">Executive answers</p><h1>Practical answers.<br>Better AI decisions.</h1><p class="decision-intro">Start with the business outcome you need to improve.</p><p class="decision-principles">Data. Workflow. Ownership. Results.</p></div></div>
+<div class="decision-width decision-body">
+<div class="decision-navigation" id="question-topics">
+<label class="decision-eyebrow" for="decision-topic">Explore the questions</label>
+<div class="decision-select"><select id="decision-topic" aria-controls="decision-panels"><option value="ai-readiness">01  AI Readiness</option><option value="data-and-governance">02  Data &amp; Governance</option><option value="workflow-and-automation">03  Workflow &amp; Automation</option><option value="ownership-risk-and-controls">04  Ownership, Risk &amp; Controls</option><option value="roi-and-roadmap">05  ROI &amp; Roadmap</option></select></div>
+<div class="decision-position"><span id="decision-position" aria-live="polite">1 of 5 topics</span><div class="decision-progress" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span><span></span></div></div>
+<noscript><nav class="hf-topic-nav" aria-label="Question topics"><a href="#ai-readiness">AI Readiness</a><a href="#data-and-governance">Data &amp; Governance</a><a href="#workflow-and-automation">Workflow &amp; Automation</a><a href="#ownership-risk-and-controls">Ownership, Risk &amp; Controls</a><a href="#roi-and-roadmap">ROI &amp; Roadmap</a></nav></noscript></div>
+<div id="decision-panels"><section class="decision-panel" id="ai-readiness" aria-labelledby="ai-readiness-heading"><p class="decision-eyebrow">01 / AI Readiness</p><h2 class="hf-heading" id="ai-readiness-heading" tabindex="-1">Is your business ready?</h2><p class="decision-subtitle">Build confidence before you invest.</p><div class="hf-faq-list"><details class="hf-faq-item" open><summary>How do I know if my company is ready for AI?</summary><div class="ed-faq-answer"><div>
             <p>A company is ready for AI when it has a clear business problem, reliable data, a defined workflow, an accountable owner, and a measurable outcome. Readiness does not mean having perfect systems. It means the company knows where the data comes from, how work actually gets done, who reviews the output, and how success will be measured.</p>
             <p>If those pieces are missing, AI will likely expose the weakness instead of fixing it. The right starting point is to assess the business system underneath the AI opportunity: data quality, workflow clarity, ownership, controls, and expected business impact.</p>
-          </div>
+          <p class="decision-takeaway">Readiness starts with the business foundation.</p></div>
         </div></details><details class="hf-faq-item"><summary>What should a mid-market company do before investing in AI?</summary><div class="ed-faq-answer"><div>
             <p>Before investing in AI, a mid-market company should identify the business outcome it wants to improve, map the workflow involved, assess the quality of the data, assign ownership, and define how ROI will be measured. AI should not be approved because the technology is available. It should be approved because it can improve margin, throughput, cycle time, cash flow, risk exposure, or operational visibility.</p>
             <p>The practical sequence is data first, workflow second, AI third. That order reduces wasted spend and prevents companies from automating confusion.</p>
@@ -96,7 +146,7 @@
             <p>Choose the first AI use case by looking for a workflow with visible friction, measurable business impact, accessible data, and clear ownership. Avoid starting with broad or vague ideas like “use AI across the company.” Start with a specific operating problem.</p>
             <p>A strong first use case should answer five questions: What outcome improves? Who owns it? What data supports it? Where does the workflow change? How will the result be reviewed and measured?</p>
           </div>
-        </div></details></div></section><section id="data-and-governance" aria-labelledby="data-and-governance-heading"><h2 class="hf-heading" id="data-and-governance-heading">Data &amp; Governance</h2><div class="hf-faq-list"><details class="hf-faq-item"><summary>Should we fix our data before using AI?</summary><div class="ed-faq-answer"><div>
+        </div></details></div></section><section class="decision-panel" id="data-and-governance" aria-labelledby="data-and-governance-heading"><p class="decision-eyebrow">02 / Data &amp; Governance</p><h2 class="hf-heading" id="data-and-governance-heading" tabindex="-1">Data &amp; Governance</h2><div class="hf-faq-list"><details class="hf-faq-item"><summary>Should we fix our data before using AI?</summary><div class="ed-faq-answer"><div>
             <p>Yes. A company does not need perfect data before using AI, but it does need data that is clean enough, governed enough, and understood well enough for the use case. AI depends on the quality of the information underneath it. If the data is inconsistent, incomplete, duplicated, or poorly defined, AI will amplify those problems.</p>
             <p>The goal is not data cleanup for its own sake. The goal is to make the data reliable enough to support decisions, workflows, automation, and AI outputs that the business can trust.</p>
           </div>
@@ -112,7 +162,7 @@
             <p>AI fails with incomplete or ungoverned data because it cannot reliably distinguish between accurate information, outdated records, duplicate entries, conflicting definitions, and undocumented workarounds. It may still produce an answer, but the answer may not be traceable, defensible, or useful.</p>
             <p>Ungoverned data creates hidden risk. AI can make that risk move faster by producing outputs that appear confident even when the foundation is weak.</p>
           </div>
-        </div></details></div></section><section id="workflow-and-automation" aria-labelledby="workflow-and-automation-heading"><h2 class="hf-heading" id="workflow-and-automation-heading">Workflow &amp; Automation</h2><div class="hf-faq-list"><details class="hf-faq-item"><summary>What workflows should be automated with AI?</summary><div class="ed-faq-answer"><div>
+        </div></details></div></section><section class="decision-panel" id="workflow-and-automation" aria-labelledby="workflow-and-automation-heading"><p class="decision-eyebrow">03 / Workflow &amp; Automation</p><h2 class="hf-heading" id="workflow-and-automation-heading" tabindex="-1">Workflow &amp; Automation</h2><div class="hf-faq-list"><details class="hf-faq-item"><summary>What workflows should be automated with AI?</summary><div class="ed-faq-answer"><div>
             <p>The best workflows to automate with AI are repeatable, rules-informed, data-supported, and tied to a measurable business outcome. Good candidates include reporting preparation, document review, customer response support, internal knowledge retrieval, exception triage, scheduling support, forecasting assistance, and reconciliation workflows.</p>
             <p>A workflow should not be automated simply because it is manual. It should be automated when the process is understood, the data is reliable, the risk is controlled, and the business impact is clear.</p>
           </div>
@@ -128,7 +178,7 @@
             <p>Yes. Workflows should be improved before AI is implemented because AI changes how work moves through the business. If the existing workflow is unclear, undocumented, or dependent on individual workarounds, AI will not have a stable operating environment.</p>
             <p>Workflow optimization helps define where AI fits, what it should receive, what it should produce, who reviews the output, and how the business measures improvement.</p>
           </div>
-        </div></details></div></section><section id="ownership-risk-and-controls" aria-labelledby="ownership-risk-and-controls-heading"><h2 class="hf-heading" id="ownership-risk-and-controls-heading">Ownership, Risk &amp; Controls</h2><div class="hf-faq-list"><details class="hf-faq-item"><summary>Who should own AI inside a company?</summary><div class="ed-faq-answer"><div>
+        </div></details></div></section><section class="decision-panel" id="ownership-risk-and-controls" aria-labelledby="ownership-risk-and-controls-heading"><p class="decision-eyebrow">04 / Ownership, Risk &amp; Controls</p><h2 class="hf-heading" id="ownership-risk-and-controls-heading" tabindex="-1">Ownership, Risk &amp; Controls</h2><div class="hf-faq-list"><details class="hf-faq-item"><summary>Who should own AI inside a company?</summary><div class="ed-faq-answer"><div>
             <p>AI should be owned by the business leader accountable for the outcome, supported by IT, data, security, legal, and finance where appropriate. AI should not be treated as only an IT project if the goal is to improve operations, finance, sales, service, or delivery.</p>
             <p>The owner should be responsible for defining the problem, approving the workflow change, measuring results, and ensuring the AI output is used appropriately.</p>
           </div>
@@ -148,7 +198,7 @@
             <p>Before using AI in a business process, a company should define access controls, data sources, output review, approval rules, exception handling, auditability, security requirements, and performance monitoring. The level of control should match the risk of the workflow.</p>
             <p>Low-risk internal drafting may require lighter controls. Finance, customer, compliance, safety, legal, or operational decision workflows require stronger controls and clearer accountability.</p>
           </div>
-        </div></details></div></section><section id="roi-and-roadmap" aria-labelledby="roi-and-roadmap-heading"><h2 class="hf-heading" id="roi-and-roadmap-heading">ROI &amp; Roadmap</h2><div class="hf-faq-list"><details class="hf-faq-item"><summary>How do we measure ROI from an AI project?</summary><div class="ed-faq-answer"><div>
+        </div></details></div></section><section class="decision-panel" id="roi-and-roadmap" aria-labelledby="roi-and-roadmap-heading"><p class="decision-eyebrow">05 / ROI &amp; Roadmap</p><h2 class="hf-heading" id="roi-and-roadmap-heading" tabindex="-1">ROI &amp; Roadmap</h2><div class="hf-faq-list"><details class="hf-faq-item"><summary>How do we measure ROI from an AI project?</summary><div class="ed-faq-answer"><div>
             <p>AI ROI should be measured against a specific business outcome. Common measures include reduced cycle time, lower manual effort, improved margin visibility, faster cash conversion, fewer errors, better throughput, reduced rework, lower risk exposure, or improved decision speed.</p>
             <p>The ROI model should be defined before implementation. If the company cannot name the owner, baseline, workflow change, cost, expected benefit, and measurement method, the AI initiative is not ready.</p>
           </div>
@@ -156,8 +206,12 @@
             <p>A company should improve its operating foundation before deciding whether to buy a platform, build custom tools, or extend existing systems. The right technology choice depends on the business problem, workflow, data environment, integration needs, risk level, and ownership model.</p>
             <p>Buying a platform too early can create another disconnected system. Building custom tools too early can create unnecessary complexity. The better sequence is to clarify the business outcome, fix the workflow and data foundation, then choose the technology that fits the operating need.</p>
           </div>
-        </div></details></div></section><section class="hf-answer-cta"><h2 class="hf-heading">Start with the business problem.</h2><a class="hf-button" href="mailto:blueprint@foundationaiadvisory.com?subject=Business%20Systems%20Assessment%20Inquiry" data-assessment-choice="inquiry">Discuss your business <span aria-hidden="true">→</span></a></section></main><footer class="hf-footer"><div class="hf-container"><div class="hf-footer-top"><a href="/" aria-label="Foundation AI Advisory home"><span class="ep-footer-wordmark">Foundation AI Advisory</span></a><p>Business First. AI Applied.</p></div><nav aria-label="Footer"><a href="/assessment/">AI Self-Assessment</a><a href="/business-systems-assessment/">Business Systems Assessment</a><a href="/client-workspace/">Client Workspace</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="/terms/">Terms</a><a href="https://www.linkedin.com/company/foundation-ai-advisory" rel="noopener noreferrer" target="_blank">LinkedIn</a></nav><small>© 2026 Foundation AI Advisory. All rights reserved.</small></div></footer><script src="/nav.js?v=20261026-authority" defer></script>
+        </div></details></div></section></div></div><section class="hf-answer-cta"><div class="decision-width"><h2 class="hf-heading">Turn questions into a clear next step.</h2><a class="hf-button" href="/business-systems-assessment/">Explore the assessment <span aria-hidden="true">→</span></a></div></section></main><footer class="hf-footer"><div class="hf-container"><div class="hf-footer-top"><a href="/" aria-label="Foundation AI Advisory home"><span class="ep-footer-wordmark">Foundation AI Advisory</span></a><p>Business First. AI Applied.</p></div><nav aria-label="Footer"><a href="/assessment/">AI Self-Assessment</a><a href="/business-systems-assessment/">Business Systems Assessment</a><a href="/client-workspace/">Client Workspace</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="/terms/">Terms</a><a href="https://www.linkedin.com/company/foundation-ai-advisory" rel="noopener noreferrer" target="_blank">LinkedIn</a></nav><small>© 2026 Foundation AI Advisory. All rights reserved.</small></div></footer><script src="/nav.js?v=20261026-authority" defer></script>
 <script src="/cookie-consent.js?v=20261024-sitewide" defer></script>
-</body>
+<script>
+(()=>{const select=document.getElementById('decision-topic');const panels=[...document.querySelectorAll('.decision-panel')];const bars=[...document.querySelectorAll('.decision-progress span')];const position=document.getElementById('decision-position');if(!select||panels.length!==5)return;
+function show(id){let i=panels.findIndex(p=>p.id===id);if(i<0)i=0;panels.forEach((p,n)=>p.hidden=n!==i);select.value=panels[i].id;position.textContent=(i+1)+' of '+panels.length+' topics';bars.forEach((b,n)=>b.classList.toggle('is-active',n===i));}
+show(location.hash.slice(1));select.addEventListener('change',()=>{show(select.value);history.pushState(null,'','#'+select.value);});window.addEventListener('hashchange',()=>show(location.hash.slice(1)));window.addEventListener('popstate',()=>show(location.hash.slice(1)));
+})();</script></body>
 </html>
 
