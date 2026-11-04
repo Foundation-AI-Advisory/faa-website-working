@@ -1,4 +1,4 @@
-#methodology{font:400 16px/1.5 Arial,Helvetica,sans-serif;--navy:#0b2133;--teal:#075e63;--green:#51bf82;margin:0;width:100%;max-width:none;padding-bottom:0;scroll-margin-top:90px}#methodology p{padding:0}#methodology h2,#methodology h3{font-family:Georgia,serif;font-weight:400;color:inherit}#methodology button{min-width:0;padding:0;box-shadow:none;text-transform:none;letter-spacing:normal}#methodology img{max-width:100%;border-radius:0}#methodology [hidden]{display:none!important}
+#methodology{font:400 16px/1.6 Georgia,'Times New Roman',serif;--navy:#0b2133;--teal:#075e63;--green:#51bf82;margin:0;width:100%;max-width:none;padding-bottom:0;scroll-margin-top:90px}#methodology p{padding:0}#methodology h2,#methodology h3{font-family:Georgia,serif;font-weight:400;color:inherit}#methodology button{min-width:0;padding:0;box-shadow:none;text-transform:none;letter-spacing:normal}#methodology img{max-width:100%;border-radius:0}#methodology [hidden]{display:none!important}
 #methodology{--navy:#0b2133;--teal:#075e63;--green:#51bf82;--cream:#f7f7f2;--card-width:660px;--card-height:494px;--side-offset:690px}
 #methodology *{box-sizing:border-box}
 #methodology a{color:inherit;text-decoration:none}
@@ -124,3 +124,34 @@
 #methodology:not(.fmc-ready) .fmc-select-card,#methodology:not(.fmc-ready) .fmc-controls,#methodology:not(.fmc-ready) .fmc-step-nav{display:none}
 #methodology:not(.fmc-ready) .fmc-practice{margin-bottom:20px}
 @media(max-width:760px){#methodology .fmc-outcome{max-width:none}#methodology .fmc-practices{padding:0 8%;margin-top:25px}#methodology .fmc-practice p{font-size:13px}}
+
+
+/* Use the homepage's editorial type hierarchy within this section only. */
+#methodology-heading,#methodology .fmc-card-copy h3{font-family:Georgia,'Times New Roman',serif;font-style:normal;font-weight:400;letter-spacing:-.025em;line-height:1.16}
+#methodology button,#methodology .fmc-eyebrow,#methodology .fmc-image-label,#methodology .fmc-card-kicker,#methodology .fmc-outcome>span,#methodology .fmc-practice-label,#methodology .fmc-counter,#methodology .fmc-rotation-status{font-family:Arial,Helvetica,sans-serif}
+#methodology .fmc-intro-copy{font-size:16px;line-height:1.6}
+#methodology .fmc-description{font-size:16px;line-height:1.6}
+#methodology .fmc-outcome{font-size:15px;line-height:1.5;font-weight:400}
+#methodology .fmc-practice p{font-size:16px;line-height:1.65}
+#methodology .fmc-intro .fmc-eyebrow{font-size:11px;letter-spacing:.14em}
+#methodology .fmc-card-kicker{font-size:12px;letter-spacing:0;font-weight:400;line-height:1.5}
+#methodology .fmc-image-label{font-size:10px;letter-spacing:.13em}
+#methodology .fmc-outcome>span,#methodology .fmc-practice .fmc-practice-label{font-size:10px;font-weight:500;line-height:1.5;letter-spacing:.13em}
+#methodology .fmc-explore,#methodology .fmc-section-foot a{font:400 15px/1.5 Georgia,'Times New Roman',serif}
+#methodology .fmc-section-foot p{font-size:14px;line-height:1.6}
+#methodology .fmc-step-nav button{font-size:14px;line-height:1.5}
+#methodology .fmc-icon{width:22px;height:22px;display:block;flex:none}
+#methodology .fmc-round{width:44px;height:44px}
+#methodology #fmc-play-icon .fmc-play-symbol{display:none}
+#methodology #fmc-play-icon[data-paused="true"] .fmc-play-symbol{display:block}
+#methodology #fmc-play-icon[data-paused="true"] .fmc-pause-symbol{display:none}
+#methodology{--card-height:550px}
+@media(min-width:1600px){#methodology{--card-height:550px}}
+@media(max-width:760px){
+ #methodology{--card-height:590px}
+ #methodology .fmc-intro-copy{font-size:15px}
+ #methodology .fmc-card-copy h3{font-size:30px}
+ #methodology .fmc-step-nav button{font-size:13px}
+ #methodology .fmc-rotation-status{font-size:11px}
+}
+@media(max-width:360px){#methodology{--card-height:630px}#methodology .fmc-card-copy h3{font-size:27px}}
