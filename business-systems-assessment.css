@@ -1,0 +1,124 @@
+/* Approved compact Business Systems Assessment page; all rules are page-scoped. */
+body.bsa-simple {
+  --bsa-ink: #0b192c;
+  --bsa-navy: #0b2234;
+  --bsa-teal: #075e63;
+  --bsa-mint: #72baa1;
+  --bsa-paper: #faf9f6;
+}
+.bsa-simple main .container-faa { width: 90%; max-width: 1380px; padding-inline: 0; margin-inline: auto; }
+.bsa-simple main :is(section, details, [id]) { scroll-margin-top: 100px; }
+.bsa-simple main :is(.bsa-value, .bsa-expectations, .bsa-close) { margin: 0; padding: 0; }
+.bsa-simple main .bsa-inner { padding-block: 54px; }
+.bsa-simple main :is(.bsa-value, .bsa-expectations, .bsa-close) :is(h2, h3, h4, h5, p) { margin: 0; }
+.bsa-simple.faa-modern.faa-sitewide main :is(.bsa-value, .bsa-expectations, .bsa-close) :is(h2, h3) {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  letter-spacing: -.025em;
+  line-height: 1.16;
+}
+.bsa-simple main :is(.bsa-value, .bsa-expectations, .bsa-close) p { font: 400 17px/1.6 Arial, Helvetica, sans-serif; }
+.bsa-simple main .bsa-hero { background: #fafbfc; color: var(--bsa-ink); }
+.bsa-simple .bsa-hero::before { background: linear-gradient(90deg, #fafbfc 2%, rgba(250,251,252,.97) 31%, rgba(250,251,252,.72) 53%, rgba(250,251,252,0) 78%); }
+.bsa-simple .bsa-hero .ep-hero-image { object-position: 64% center; }
+.bsa-simple .bsa-hero .ep-hero-inner { min-height: 510px; padding-block: 22px 46px; }
+.bsa-simple .bsa-hero .ep-breadcrumb,
+.bsa-simple main .bsa-hero .ep-breadcrumb a { color: #526172; }
+.bsa-simple .bsa-hero .ep-hero-copy { max-width: 680px; padding-top: 34px; margin-block: auto; }
+.bsa-simple .bsa-hero .ep-eyebrow { color: var(--bsa-teal); font: 600 12px/1.5 Arial, Helvetica, sans-serif; letter-spacing: .12em; margin-bottom: 18px; }
+.bsa-simple.faa-modern.faa-sitewide main .bsa-hero h1 { color: var(--bsa-ink); font: 400 clamp(44px, 4.8vw, 68px)/1.06 Georgia, 'Times New Roman', serif; letter-spacing: -.035em; margin-bottom: 22px; text-wrap: balance; }
+.bsa-simple .bsa-hero .ep-dek { color: #283645; font: 400 20px/1.55 Arial, Helvetica, sans-serif; max-width: 510px; margin-bottom: 26px; }
+.bsa-simple main .bsa-action { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 50px; padding: 13px 22px; font: 500 16px/1.45 Arial, Helvetica, sans-serif; text-decoration: none; }
+.bsa-simple main .bsa-action svg { flex: 0 0 24px; }
+.bsa-simple .bsa-hero .bsa-hero-note { color: #425063; font: 400 14px/1.5 Arial, Helvetica, sans-serif; margin: 14px 0 0; }
+.bsa-simple .bsa-hero-note span { margin-inline: 4px; }
+.bsa-simple main .bsa-value { background: var(--bsa-navy); color: #fff; }
+.bsa-simple main .bsa-value .bsa-eyebrow { color: var(--bsa-mint); font: 600 12px/1.5 Arial, Helvetica, sans-serif; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 16px; }
+.bsa-simple.faa-modern.faa-sitewide main .bsa-value h2 { color: #fff; font-size: clamp(32px, 3.3vw, 46px); }
+.bsa-simple main .bsa-value .bsa-intro { color: #dbe5eb; margin-top: 16px; }
+.bsa-simple main .bsa-benefits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); margin-top: 38px; }
+.bsa-simple main .bsa-benefits article { min-width: 0; }
+.bsa-simple main .bsa-benefits article::before { content: ''; display: block; width: 54px; height: 3px; background: var(--bsa-mint); margin-bottom: 18px; }
+.bsa-simple.faa-modern.faa-sitewide main .bsa-benefits h3 { color: #fff; font-size: clamp(25px, 2.2vw, 31px); }
+.bsa-simple main .bsa-benefits p { color: #dbe5eb; margin-top: 12px; max-width: 35ch; }
+.bsa-simple main .bsa-expectations { background: var(--bsa-paper); color: var(--bsa-ink); }
+.bsa-simple.faa-modern.faa-sitewide main .bsa-expectations h2 { color: var(--bsa-ink); font-size: 38px; }
+.bsa-simple main .bsa-expect-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.2fr); align-items: start; gap: 54px; margin-top: 30px; }
+.bsa-simple main .bsa-engagement { padding-right: 32px; border-right: 1px solid #cad3d4; }
+.bsa-simple.faa-modern.faa-sitewide main .bsa-engagement h3 { color: var(--bsa-ink); font-size: clamp(28px, 2.5vw, 36px); }
+.bsa-simple main .bsa-engagement p { color: #354452; margin-top: 14px; max-width: 38ch; }
+.bsa-simple main .bsa-questions { min-width: 0; }
+.bsa-simple main .bsa-question { border-bottom: 1px solid #becbcd; }
+.bsa-simple main .bsa-question > summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 60px; padding-block: 16px; list-style: none; cursor: pointer; color: var(--bsa-ink); font: 600 17px/1.5 Arial, Helvetica, sans-serif; }
+.bsa-simple main .bsa-question:first-child > summary { padding-top: 4px; min-height: 48px; }
+.bsa-simple main :is(.bsa-question, .bsa-subdetail) > summary::-webkit-details-marker { display: none; }
+.bsa-simple main :is(.bsa-question, .bsa-subdetail) > summary::after { content: '+'; flex: 0 0 24px; color: var(--bsa-teal); font: 400 26px/1 Arial, Helvetica, sans-serif; text-align: center; }
+.bsa-simple main :is(.bsa-question, .bsa-subdetail)[open] > summary::after { content: '−'; }
+.bsa-simple main :is(.bsa-question, .bsa-subdetail) > summary:hover { color: var(--bsa-teal); }
+.bsa-simple main :is(.bsa-question, .bsa-subdetail) > summary:focus-visible { outline: 2px solid #246bce; outline-offset: 4px; }
+.bsa-simple main .bsa-answer { padding-bottom: 24px; color: #354452; overflow-wrap: anywhere; }
+.bsa-simple main .bsa-answer :is(p, li) { font: 400 16px/1.65 Arial, Helvetica, sans-serif; color: #354452; }
+.bsa-simple main .bsa-answer p + p { margin-top: 12px; }
+.bsa-simple.faa-modern.faa-sitewide main .bsa-answer h4 { color: var(--bsa-ink); font: 400 22px/1.3 Georgia, 'Times New Roman', serif; margin: 25px 0 12px; }
+.bsa-simple main .bsa-answer h5 { color: var(--bsa-ink); font: 600 16px/1.5 Arial, Helvetica, sans-serif; margin: 20px 0 5px; }
+.bsa-simple main .bsa-answer > :first-child { margin-top: 0; }
+.bsa-simple main .bsa-answer ul { margin: 14px 0; padding-left: 22px; list-style: disc; }
+.bsa-simple main .bsa-answer li + li { margin-top: 8px; }
+.bsa-simple main .bsa-answer a { color: var(--bsa-teal); text-decoration: underline; text-underline-offset: 3px; }
+.bsa-simple main .bsa-subdetail { border-top: 1px solid #d5dedd; margin-top: 18px; }
+.bsa-simple main .bsa-subdetail > summary { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 48px; padding-block: 12px; cursor: pointer; list-style: none; color: var(--bsa-teal); font: 600 15px/1.5 Arial, Helvetica, sans-serif; }
+.bsa-simple main .bsa-subdetail > summary::after { font-size: 22px; }
+.bsa-simple main .bsa-subanswer { padding: 0 0 8px; }
+.bsa-simple main .bsa-subanswer > :first-child { margin-top: 10px; }
+.bsa-simple main .bsa-expectations .bsa-principle { color: #425063; font-size: 15px; margin-top: 34px; }
+.bsa-simple main .bsa-close { background: var(--bsa-teal); color: #fff; }
+.bsa-simple main .bsa-close .bsa-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-block: 38px; }
+.bsa-simple.faa-modern.faa-sitewide main .bsa-close h2 { color: #fff; font-size: clamp(27px, 2.7vw, 38px); max-width: 26ch; text-wrap: balance; }
+.bsa-simple main .bsa-close .bsa-action-light { background: #fff !important; color: var(--bsa-teal) !important; border-color: #fff !important; flex-shrink: 0; }
+.bsa-simple main .bsa-close .bsa-action-light:hover { background: #edf5f0 !important; }
+.bsa-simple main .bsa-close .bsa-action-light:focus-visible { outline-color: #fff !important; }
+@media (max-width: 1050px) {
+  .bsa-simple .bsa-hero .ep-hero-inner { min-height: 470px; }
+  .bsa-simple .bsa-hero .ep-hero-copy { max-width: 620px; }
+  .bsa-simple main .bsa-expect-grid { gap: 32px; }
+  .bsa-simple main .bsa-engagement { padding-right: 24px; }
+  .bsa-simple main .bsa-question > summary { font-size: 16px; gap: 14px; }
+}
+@media (max-width: 760px) {
+  .bsa-simple main .container-faa { width: calc(100% - 40px); }
+  .bsa-simple main .bsa-inner { padding-block: 36px; }
+  .bsa-simple main .bsa-hero { display: flex; flex-direction: column; }
+  .bsa-simple .bsa-hero::before { display: none; }
+  .bsa-simple .bsa-hero .ep-hero-image { position: relative; inset: auto; order: 2; z-index: 0; height: 170px; width: 100%; object-position: center 55%; }
+  .bsa-simple .bsa-hero .ep-hero-inner { min-height: 0; padding-block: 18px 30px; order: 1; }
+  .bsa-simple .bsa-hero .ep-breadcrumb { font-size: 10px; gap: 7px; }
+  .bsa-simple .bsa-hero .ep-hero-copy { padding-top: 26px; }
+  .bsa-simple .bsa-hero .ep-eyebrow { font-size: 11px; letter-spacing: .1em; margin-bottom: 14px; }
+  .bsa-simple.faa-modern.faa-sitewide main .bsa-hero h1 { font-size: clamp(35px, 9vw, 46px); line-height: 1.08; letter-spacing: -.03em; margin-bottom: 18px; }
+  .bsa-simple .bsa-hero h1 br { display: none; }
+  .bsa-simple .bsa-hero .ep-dek { font-size: 17px; line-height: 1.55; margin-bottom: 22px; max-width: 36ch; }
+  .bsa-simple main .bsa-action { font-size: 16px; padding: 13px 18px; gap: 18px; }
+  .bsa-simple .bsa-hero .bsa-hero-note { font-size: 13px; }
+  .bsa-simple.faa-modern.faa-sitewide main .bsa-value h2 { font-size: 33px; text-wrap: balance; }
+  .bsa-simple main .bsa-value .bsa-intro { font-size: 16px; line-height: 1.6; margin-top: 14px; }
+  .bsa-simple main .bsa-benefits { grid-template-columns: minmax(0, 1fr); gap: 28px; margin-top: 28px; }
+  .bsa-simple main .bsa-benefits article::before { width: 44px; margin-bottom: 13px; }
+  .bsa-simple.faa-modern.faa-sitewide main .bsa-benefits h3 { font-size: 27px; }
+  .bsa-simple main .bsa-benefits p { font-size: 16px; line-height: 1.6; margin-top: 9px; max-width: 38ch; }
+  .bsa-simple.faa-modern.faa-sitewide main .bsa-expectations h2 { font-size: 33px; }
+  .bsa-simple main .bsa-expect-grid { grid-template-columns: minmax(0, 1fr); gap: 26px; margin-top: 24px; }
+  .bsa-simple main .bsa-engagement { border: 0; padding: 0; }
+  .bsa-simple.faa-modern.faa-sitewide main .bsa-engagement h3 { font-size: 29px; }
+  .bsa-simple main .bsa-engagement p { font-size: 16px; margin-top: 12px; }
+  .bsa-simple main .bsa-questions { border-top: 1px solid #becbcd; }
+  .bsa-simple main .bsa-question:first-child > summary { padding-top: 16px; min-height: 60px; }
+  .bsa-simple main .bsa-expectations .bsa-principle { margin-top: 26px; font-size: 14px; }
+  .bsa-simple main .bsa-close .bsa-inner { flex-direction: column; align-items: flex-start; gap: 24px; padding-block: 34px; }
+  .bsa-simple.faa-modern.faa-sitewide main .bsa-close h2 { font-size: 30px; max-width: 24ch; text-wrap: pretty; }
+}
+@media (prefers-reduced-motion: reduce) { .bsa-simple { scroll-behavior: auto; } }
+@media print {
+  .bsa-simple details > :not(summary) { display: block !important; }
+  .bsa-simple main .bsa-hero .ep-hero-image { display: none; }
+  .bsa-simple main .bsa-expect-grid { display: block; }
+}
