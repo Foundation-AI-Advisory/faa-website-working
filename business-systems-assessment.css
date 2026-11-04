@@ -90,7 +90,7 @@ body.bsa-simple {
   .bsa-simple main .bsa-hero { display: flex; flex-direction: column; }
   .bsa-simple .bsa-hero::before { display: none; }
   .bsa-simple .bsa-hero .ep-hero-image { position: relative; inset: auto; order: 2; z-index: 0; height: 170px; width: 100%; object-position: center 55%; }
-  .bsa-simple .bsa-hero .ep-hero-inner { min-height: 0; padding-block: 18px 30px; order: 1; }
+  .bsa-simple .bsa-hero .ep-hero-inner { min-height: 0; padding-block: 18px 14px; order: 1; }
   .bsa-simple .bsa-hero .ep-breadcrumb { font-size: 10px; gap: 7px; }
   .bsa-simple .bsa-hero .ep-hero-copy { padding-top: 26px; }
   .bsa-simple .bsa-hero .ep-eyebrow { font-size: 11px; letter-spacing: .1em; margin-bottom: 14px; }
@@ -98,7 +98,7 @@ body.bsa-simple {
   .bsa-simple .bsa-hero h1 br { display: none; }
   .bsa-simple .bsa-hero .ep-dek { font-size: 17px; line-height: 1.55; margin-bottom: 22px; max-width: 36ch; }
   .bsa-simple main .bsa-action { font-size: 16px; padding: 13px 18px; gap: 18px; }
-  .bsa-simple .bsa-hero .bsa-hero-note { font-size: 13px; }
+  .bsa-simple .bsa-hero .bsa-hero-note { font-size: 13px; margin-top: 8px; }
   .bsa-simple.faa-modern.faa-sitewide main .bsa-value h2 { font-size: 33px; text-wrap: balance; }
   .bsa-simple main .bsa-value .bsa-intro { font-size: 16px; line-height: 1.6; margin-top: 14px; }
   .bsa-simple main .bsa-benefits { grid-template-columns: minmax(0, 1fr); gap: 28px; margin-top: 28px; }
