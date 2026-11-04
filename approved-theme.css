@@ -228,3 +228,245 @@ body.faa-modern{background:#FFFFFF;color:#1A202C;--ep-ink:#0B192C;--ep-blue:#246
  .faa-modern #site-header .assessment-dd--compact .assessment-dd__menu{padding:18px 14px 14px}
  .faa-modern #site-header .assessment-dd__item{padding:18px 14px;gap:10px}
 }
+
+/* Approved soft navy and sage navigation. Header and page content stay independent. */
+.faa-modern #site-header {
+  --menu-paper: #f6f3ed;
+  --menu-navy: #283e49;
+  --menu-sage: #b8cec0;
+  --menu-text: #dce5e0;
+  --menu-line: #53666e;
+  --menu-highlight: #365b5d;
+  --menu-button: #356367;
+}
+.faa-modern #site-header #mobile-menu {
+  background: var(--menu-navy);
+  color: var(--menu-paper);
+  border-top: 1px solid var(--menu-line);
+  padding: 24px 22px max(28px, env(safe-area-inset-bottom));
+  height: calc(100dvh - var(--navigation-top, 76px));
+  max-height: calc(100dvh - var(--navigation-top, 76px));
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: #839b94 var(--menu-navy);
+}
+.faa-modern #site-header #mobile-menu .faa-nav-eyebrow {
+  color: var(--menu-sage);
+  font: 500 11px/1.5 Arial, Helvetica, sans-serif;
+  letter-spacing: .14em;
+  margin: 4px 0 18px;
+}
+.faa-modern #site-header #mobile-menu[data-section="root"] > .faa-nav-eyebrow {
+  border-left: 2px solid var(--menu-sage);
+  padding-left: 12px;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-row {
+  background: transparent !important;
+  color: var(--menu-paper) !important;
+  border: 0;
+  border-bottom: 1px solid var(--menu-line);
+  border-radius: 0;
+  min-height: 58px;
+  padding: 15px 10px;
+  gap: 16px;
+  font: 400 27px/1.2 Georgia, 'Times New Roman', serif;
+  text-decoration: none;
+  transition: background-color .16s ease;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-row:is(:hover, :focus-visible, [aria-current="page"], [data-current="true"]) {
+  background: var(--menu-highlight) !important;
+  border-radius: 7px;
+  box-shadow: inset 2px 0 var(--menu-sage);
+  text-decoration: none;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--menu-paper);
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-arrow svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-back {
+  color: var(--menu-sage);
+  background: transparent;
+  border-radius: 5px;
+  font: 400 14px/1.5 Arial, Helvetica, sans-serif;
+  min-height: 44px;
+  padding: 8px 0;
+  margin: -8px 0 20px;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-title {
+  color: var(--menu-paper);
+  font: 400 36px/1.15 Georgia, 'Times New Roman', serif;
+  letter-spacing: -.025em;
+  margin: 0 0 14px;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-description {
+  color: var(--menu-text);
+  font: 400 15px/1.6 Arial, Helvetica, sans-serif;
+  margin: 0 0 12px;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-links { margin: 8px 0 0; }
+.faa-modern #site-header #mobile-menu .faa-nav-subrow {
+  font: 400 21px/1.25 Georgia, 'Times New Roman', serif;
+  min-height: 64px;
+  padding: 20px 6px;
+  align-items: center;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-label { min-width: 0; flex: 1; }
+.faa-modern #site-header #mobile-menu .faa-nav-label small {
+  display: block;
+  color: var(--menu-text);
+  font: 400 14px/1.5 Arial, Helvetica, sans-serif;
+  margin-top: 7px;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-steps {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-steps li { position: relative; margin: 0; padding: 0; }
+.faa-modern #site-header #mobile-menu .faa-nav-steps li:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  top: 58px;
+  bottom: -22px;
+  left: 17.5px;
+  background: var(--menu-sage);
+  opacity: .65;
+  pointer-events: none;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-steps .faa-nav-row {
+  border: 0;
+  padding: 20px 0;
+  gap: 15px;
+  position: relative;
+  align-items: flex-start;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-steps li:not(:last-child) .faa-nav-row::after {
+  content: '';
+  height: 1px;
+  background: var(--menu-line);
+  position: absolute;
+  left: 51px;
+  right: 0;
+  bottom: 0;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--menu-sage);
+  border-radius: 50%;
+  background: var(--menu-navy);
+  color: var(--menu-sage);
+  font: 400 17px/1 Arial, Helvetica, sans-serif;
+  margin-top: 2px;
+  position: relative;
+  z-index: 1;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-steps .faa-nav-arrow { align-self: center; }
+.faa-modern #site-header #mobile-menu .faa-nav-overview {
+  color: var(--menu-paper) !important;
+  background: var(--menu-button) !important;
+  border: 1px solid #73928e;
+  border-radius: 8px;
+  box-shadow: none;
+  font: 500 16px/1.4 Arial, Helvetica, sans-serif;
+  min-height: 54px;
+  padding: 14px 17px;
+  margin: 24px 0 0;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-overview:is(:hover, :focus-visible) { background: #417377 !important; box-shadow: none; }
+.faa-modern #site-header #mobile-menu .faa-nav-footer {
+  border: 0;
+  margin: 14px 0 0;
+  padding: 0;
+  gap: 10px 20px;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-footer a {
+  color: var(--menu-sage);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font: 400 14px/1.5 Arial, Helvetica, sans-serif;
+  padding: 8px 0;
+}
+.faa-modern #site-header #mobile-menu .faa-nav-tagline {
+  color: var(--menu-text);
+  font: 400 14px/1.6 Arial, Helvetica, sans-serif;
+  margin: 12px 0 0;
+}
+.faa-modern #site-header #mobile-menu :is(a, button):focus-visible {
+  outline: 2px solid var(--menu-sage);
+  outline-offset: 3px;
+}
+/* Desktop menus use the same palette and hierarchy. */
+.faa-modern #site-header .editorial-nav-panel {
+  background: var(--menu-navy);
+  color: var(--menu-paper);
+  border-top: 2px solid #73928e;
+  border-bottom: 1px solid var(--menu-line);
+  box-shadow: 0 12px 24px #0b223426;
+  border-radius: 0 0 10px 10px;
+  scrollbar-color: #839b94 var(--menu-navy);
+}
+.faa-modern #site-header :is(.editorial-nav-intro, .editorial-nav-content, .editorial-nav-link) { background: transparent; color: var(--menu-paper); }
+.faa-modern #site-header .editorial-nav-intro { border-color: var(--menu-line); }
+.faa-modern #site-header .editorial-nav-eyebrow,
+.faa-modern #site-header .editorial-nav-perspectives h3 { color: var(--menu-sage); font: 500 11px/1.5 Arial, Helvetica, sans-serif; }
+.faa-modern #site-header .editorial-nav-intro h2 { color: var(--menu-paper); font: 400 32px/1.16 Georgia, 'Times New Roman', serif; letter-spacing: -.025em; }
+.faa-modern #site-header .editorial-nav-intro > p:not(.editorial-nav-eyebrow),
+.faa-modern #site-header .editorial-nav-link small { color: var(--menu-text); }
+.faa-modern #site-header .editorial-nav-link { border-color: var(--menu-line); border-radius: 6px; }
+.faa-modern #site-header .editorial-nav-link strong { color: var(--menu-paper); font: 400 22px/1.25 Georgia, 'Times New Roman', serif; }
+.faa-modern #site-header .editorial-nav-link > span:last-child { color: var(--menu-sage); }
+.faa-modern #site-header .editorial-nav-number {
+  background: var(--menu-navy);
+  color: var(--menu-sage);
+  border: 1px solid var(--menu-sage);
+  height: 42px;
+  flex-basis: 42px;
+  font: 400 17px/1 Arial, Helvetica, sans-serif;
+}
+.faa-modern #site-header .editorial-nav-overview {
+  color: var(--menu-paper);
+  background: var(--menu-button);
+  font: 500 14px/1.45 Arial, Helvetica, sans-serif;
+  border: 1px solid #73928e;
+  border-radius: 8px;
+  padding: 13px 16px;
+  min-height: 48px;
+  align-items: center;
+}
+.faa-modern #site-header .editorial-nav-panel a:hover,
+.faa-modern #site-header #mega-ai-training .editorial-nav-link:hover { background: var(--menu-highlight); text-decoration: none; }
+.faa-modern #site-header .editorial-nav-panel a:focus-visible { outline: 2px solid var(--menu-sage); outline-offset: 3px; background: var(--menu-highlight); }
+.faa-modern #site-header #mega-ai-training .editorial-nav-link { background: #304b54; border: 1px solid var(--menu-line); border-radius: 8px; }
+.faa-modern #site-header .editorial-nav-industries .editorial-nav-link { padding-inline: 10px; }
+.faa-modern #site-header .editorial-nav-industries strong,
+.faa-modern #site-header .editorial-nav-perspectives strong { font-size: 19px; }
+.faa-modern #site-header .editorial-nav-perspectives .editorial-nav-link { padding-inline: 10px; }
+@media (max-width: 360px) {
+  .faa-modern #site-header #mobile-menu { padding-inline: 16px; }
+  .faa-modern #site-header #mobile-menu .faa-nav-row { font-size: 25px; }
+  .faa-modern #site-header #mobile-menu .faa-nav-title { font-size: 32px; }
+  .faa-modern #site-header #mobile-menu .faa-nav-subrow { font-size: 20px; }
+  .faa-modern #site-header #mobile-menu .faa-nav-steps .faa-nav-row { gap: 12px; }
+  .faa-modern #site-header #mobile-menu .faa-nav-overview { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faa-modern #site-header #mobile-menu .faa-nav-row { transition: none; }
+}

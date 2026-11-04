@@ -72,20 +72,32 @@
     let renderEditorialMenu;
     if (editorial) {
       const sections = {
-        'Methodology': { description: 'Data first. Workflow second. Then applied AI.', overview: ['Explore the methodology', '/methodology/'], links: [['Data Curation & Governance', '/foundation/'], ['Workflow Optimization', '/operations/'], ['AI Design & Implementation', '/agentic-ai/']] },
+        'Methodology': { description: 'Data first. Workflow second. Then applied AI.', overview: ['Explore the methodology', '/methodology/'], links: [['Data Curation & Governance', '/foundation/', 'Reliable data. Clear ownership.'], ['Workflow Optimization', '/operations/', 'Less friction. Better handoffs.'], ['AI Design & Implementation', '/agentic-ai/', 'Clear controls. Practical execution.']] },
         'AI Training': { description: 'Build practical skills for the work your team does.', overview: ['Explore AI training', '/ai-training-workforce-development/'], links: [['AI Training Bootcamp', '/ai-training-workforce-development/#ai-bootcamp'], ['Workforce Development', '/ai-training-workforce-development/#workforce-development']] },
         'Industries': { description: 'Explore the foundation for your operating environment.', overview: ['View all industries', '/industries/'], links: [['Manufacturing & Industrial Production', '/industry-manufacturing-industrial-production/'], ['Construction & Infrastructure', '/industry-engineering-construction-infrastructure/'], ['Transportation & Logistics', '/industry-transportation-logistics/'], ['Distribution & Wholesale', '/industry-distribution-wholesale/']] },
         'Perspectives': { description: 'Practical thinking on data, workflows, and applied AI.', overview: ['View all perspectives', '/insights/'], links: [['AI Frontiers', '/ai-frontiers/'], ['Foundations Series', '/insights/#foundations-series']] }
       };
-      const arrow = '<span class="faa-nav-arrow" aria-hidden="true">&rarr;</span>';
-      const link = (label, href, cls = '') => '<a class="faa-nav-row ' + cls + '" href="' + href + '">' + label + arrow + '</a>';
+      const arrow = '<span class="faa-nav-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span>';
+      const normalizePath = href => href.split('#')[0].replace(/\/+$/, '') || '/';
+      const currentPath = normalizePath(window.location.pathname);
+      const link = (label, href, cls = '') => '<a class="faa-nav-row ' + cls + '" href="' + href + '"' + (!href.includes('#') && normalizePath(href) === currentPath ? ' aria-current="page"' : '') + '>' + label + arrow + '</a>';
       renderEditorialMenu = (section, focus = false) => {
         panel.setAttribute('data-section', section || 'root');
         if (!section) {
-          panel.innerHTML = '<p class="faa-nav-eyebrow">Explore Foundation</p>' + link('Home', '/') + Object.keys(sections).map(title => '<button type="button" class="faa-nav-row" data-nav-section="' + title + '">' + title + arrow + '</button>').join('') + link('About', '/about/') + '<div class="faa-nav-footer"><a href="/contact/">Contact</a><a href="/client-workspace/">Client Workspace</a></div>';
+          panel.innerHTML = '<p class="faa-nav-eyebrow">Explore Foundation</p>' + link('Home', '/') + Object.keys(sections).map(title => {
+            const data = sections[title];
+            const isCurrent = [data.overview, ...data.links].some(item => normalizePath(item[1]) === currentPath);
+            return '<button type="button" class="faa-nav-row" data-nav-section="' + title + '"' + (isCurrent ? ' data-current="true"' : '') + '>' + title + arrow + '</button>';
+          }).join('') + link('About', '/about/') + '<div class="faa-nav-footer"><a href="/contact/">Contact</a><a href="/client-workspace/">Client Workspace</a></div><p class="faa-nav-tagline">Business First. AI Applied.</p>';
         } else {
           const data = sections[section];
-          panel.innerHTML = '<button type="button" class="faa-nav-back" data-nav-back="' + section + '"><span aria-hidden="true">&larr;</span> All sections</button><p class="faa-nav-eyebrow">Explore Foundation</p><h2 class="faa-nav-title">' + section + '</h2><p class="faa-nav-description">' + data.description + '</p>' + link(data.overview[0], data.overview[1], 'faa-nav-overview') + data.links.map((item, i) => link((section === 'Methodology' ? '<span class="faa-nav-number">0' + (i + 1) + '</span>' : '') + '<span class="faa-nav-label">' + item[0] + '</span>', item[1], 'faa-nav-subrow')).join('');
+          const isMethodology = section === 'Methodology';
+          const rows = data.links.map((item, i) => {
+            const copy = '<span class="faa-nav-label">' + item[0] + (item[2] ? '<small>' + item[2] + '</small>' : '') + '</span>';
+            const row = link((isMethodology ? '<span class="faa-nav-number" aria-hidden="true">0' + (i + 1) + '</span>' : '') + copy, item[1], 'faa-nav-subrow');
+            return isMethodology ? '<li>' + row + '</li>' : row;
+          }).join('');
+          panel.innerHTML = '<button type="button" class="faa-nav-back" data-nav-back="' + section + '"><span aria-hidden="true">&larr;</span> All sections</button><p class="faa-nav-eyebrow">' + (isMethodology ? 'The Foundation Method' : 'Explore Foundation') + '</p><h2 class="faa-nav-title">' + section + '</h2><p class="faa-nav-description">' + data.description + '</p>' + (isMethodology ? '<ol class="faa-nav-steps" aria-label="Our three-step methodology">' + rows + '</ol>' : '<div class="faa-nav-links">' + rows + '</div>') + link(data.overview[0], data.overview[1], 'faa-nav-overview');
         }
         panel.scrollTop = 0;
         if (focus) panel.querySelector('button, a').focus();
@@ -105,6 +117,8 @@
     header.appendChild(panel);
 
     let isMobileMenuOpen = false;
+    let previousBodyOverflow = '';
+    let previousBodyOverscroll = '';
     let mobileCloseTimer = null;
     const hoverCapableCompact = window.matchMedia('(hover: hover) and (pointer: fine) and (max-width: 1279px)');
 
@@ -117,13 +131,26 @@
     function positionMobilePanel() {
       panel.style.setProperty('--navigation-top', Math.max(0, header.getBoundingClientRect().bottom) + 'px');
     }
-    window.addEventListener('resize', () => { if (isMobileMenuOpen) positionMobilePanel(); });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1280) setMobileOpen(false);
+      else if (isMobileMenuOpen) positionMobilePanel();
+    });
     window.addEventListener('scroll', () => { if (isMobileMenuOpen) positionMobilePanel(); }, { passive: true });
     if (window.visualViewport) window.visualViewport.addEventListener('resize', positionMobilePanel);
     function setMobileOpen(open) {
       clearMobileCloseTimer();
       if (open && !isMobileMenuOpen && renderEditorialMenu) renderEditorialMenu();
+      const wasOpen = isMobileMenuOpen;
       isMobileMenuOpen = Boolean(open);
+      if (isMobileMenuOpen && !wasOpen) {
+        previousBodyOverflow = document.body.style.overflow;
+        previousBodyOverscroll = document.body.style.overscrollBehavior;
+        document.body.style.overflow = 'hidden';
+        document.body.style.overscrollBehavior = 'none';
+      } else if (!isMobileMenuOpen && wasOpen) {
+        document.body.style.overflow = previousBodyOverflow;
+        document.body.style.overscrollBehavior = previousBodyOverscroll;
+      }
       if (isMobileMenuOpen) document.dispatchEvent(new CustomEvent('faa:navigation-open', { detail: 'mobile' }));
       if (isMobileMenuOpen) positionMobilePanel();
       panel.hidden = !isMobileMenuOpen;
@@ -165,6 +192,18 @@
       if (e.target.closest('a')) setMobileOpen(false);
     });
     document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab' && isMobileMenuOpen) {
+        const focusable = [...header.querySelectorAll('a[href], button:not([disabled])')].filter(el => el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && (document.activeElement === first || !header.contains(document.activeElement))) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && (document.activeElement === last || !header.contains(document.activeElement))) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
       if (e.key === 'Escape' && isMobileMenuOpen) {
         const returnFocus = panel.contains(document.activeElement);
         setMobileOpen(false);
@@ -510,6 +549,7 @@
     enhanceHeader();
   }
 })();
+
 
 
 
