@@ -1,175 +1,143 @@
 #faa-client-quotes {
-    --fq-ink: #14202f;
-    --fq-muted: #566170;
-    --fq-green: #0b5e63;
-    --fq-blue: #2f70bd;
-    --fq-paper: #faf9f6;
-    --fq-line: #dce1e5;
-    color-scheme: light;
-    background: var(--fq-paper);
-    color: var(--fq-ink);
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    text-align: left;
-    isolation: isolate;
-  }
-  #faa-client-quotes *,
-  #faa-client-quotes *::before,
-  #faa-client-quotes *::after { box-sizing: border-box; }
-  #faa-client-quotes [hidden] { display: none !important; }
-  #faa-client-quotes h2,
-  #faa-client-quotes h3,
-  #faa-client-quotes p,
-  #faa-client-quotes figure,
-  #faa-client-quotes blockquote { margin: 0; padding: 0; border: 0; background: transparent; }
-  #faa-client-quotes .fq-section {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 48px clamp(22px, 4vw, 48px) 52px;
-  }
-  #faa-client-quotes .fq-feature { text-align: center; max-width: 820px; margin: 0 auto; }
-  #faa-client-quotes .fq-eyebrow {
-    color: var(--fq-green);
-    font: 500 12px/1.4 Arial, Helvetica, sans-serif;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-  }
-  #faa-client-quotes .fq-feature-mark {
-    display: block;
-    color: var(--fq-green);
-    font: 400 64px/.8 Georgia, 'Times New Roman', serif;
-    margin: 24px 0 9px;
-    height: 38px;
-  }
-  #faa-client-quotes .fq-feature blockquote p {
-    color: var(--fq-ink);
-    font: 400 clamp(29px, 4.4vw, 44px)/1.18 Georgia, 'Times New Roman', serif;
-    letter-spacing: -.035em;
-    text-wrap: balance;
-  }
-  #faa-client-quotes .fq-feature figcaption {
-    color: var(--fq-green);
-    font: 400 16px/1.5 Arial, Helvetica, sans-serif;
-    margin-top: 22px;
-  }
-  #faa-client-quotes .fq-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: stretch;
-    gap: 22px;
-    margin-top: 40px;
-  }
-  #faa-client-quotes .fq-story {
-    --fq-story-accent: var(--fq-green);
-    --fq-story-soft: #edf5f3;
-    background: #fff;
-    border: 1px solid var(--fq-line);
-    border-top: 3px solid var(--fq-story-accent);
-    border-radius: 13px;
-    padding: 26px 25px 20px;
-    box-shadow: 0 5px 18px rgb(20 32 47 / 3%);
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    min-height: 500px;
-  }
-  #faa-client-quotes .fq-story--art {
-    --fq-story-accent: var(--fq-blue);
-    --fq-story-soft: #edf3fa;
-  }
-  #faa-client-quotes .fq-story.fq-expanded { min-height: 0; }
-  #faa-client-quotes .fq-grid:has(.fq-expanded) { align-items: start; }
-  #faa-client-quotes .fq-story-label {
-    color: var(--fq-story-accent);
-    font: 500 12px/1.5 Arial, Helvetica, sans-serif;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    padding-bottom: 21px;
-  }
-  #faa-client-quotes .fq-story-figure { display: flex; flex-direction: column; flex: 1; }
-  #faa-client-quotes .fq-excerpt {
-    color: var(--fq-ink);
-    font: 400 clamp(22px, 2.65vw, 29px)/1.36 Georgia, 'Times New Roman', serif;
-    letter-spacing: -.025em;
-    overflow-wrap: break-word;
-  }
-  #faa-client-quotes .fq-story--electric .fq-excerpt {
-    font-size: clamp(21px, 2.35vw, 26px);
-  }
-  #faa-client-quotes .fq-full {
-    color: var(--fq-ink);
-    font: 400 18px/1.65 Georgia, 'Times New Roman', serif;
-  }
-  #faa-client-quotes .fq-full p { color: var(--fq-ink); font: inherit; }
-  #faa-client-quotes .fq-full p + p { margin-top: 17px; }
-  #faa-client-quotes .fq-byline {
-    margin-top: auto;
-    padding-top: 28px;
-    color: var(--fq-ink);
-    font: 500 15px/1.5 Arial, Helvetica, sans-serif;
-  }
-  #faa-client-quotes .fq-byline span { display: block; }
-  #faa-client-quotes .fq-byline .fq-company {
-    color: var(--fq-muted);
-    font: 400 13px/1.5 Arial, Helvetica, sans-serif;
-    margin-top: 2px;
-  }
-  #faa-client-quotes .fq-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    background: transparent;
-    border: 0;
-    border-top: 1px solid var(--fq-line);
-    border-radius: 0;
-    padding: 15px 0 0;
-    margin: 19px 0 0;
-    width: 100%;
-    min-height: 52px;
-    text-align: left;
-    color: var(--fq-story-accent);
-    font: 500 14px/1.5 Arial, Helvetica, sans-serif;
-    text-transform: none;
-    letter-spacing: 0;
-    box-shadow: none;
-  }
-  #faa-client-quotes .fq-toggle:hover .fq-toggle-label { text-decoration: underline; text-underline-offset: 4px; }
-  #faa-client-quotes .fq-toggle:focus-visible { outline: 3px solid var(--fq-story-accent); outline-offset: 6px; border-radius: 3px; }
-  #faa-client-quotes .fq-toggle-icon {
-    display: grid;
-    place-items: center;
-    flex: 0 0 30px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    color: var(--fq-story-accent);
-    background: var(--fq-story-soft);
-    font: 400 23px/1 Arial, Helvetica, sans-serif;
-  }
-  @media (min-width: 900px) {
-    #faa-client-quotes .fq-section { padding-top: 52px; padding-bottom: 60px; }
-    #faa-client-quotes .fq-grid { gap: 28px; margin-top: 46px; }
-    #faa-client-quotes .fq-story { padding: 30px 31px 24px; min-height: 470px; }
-  }
-  @media (max-width: 599px) {
-    #faa-client-quotes .fq-section { padding: 36px 20px 36px; }
-    #faa-client-quotes .fq-eyebrow { font-size: 11px; }
-    #faa-client-quotes .fq-feature-mark { margin-top: 22px; }
-    #faa-client-quotes .fq-feature blockquote p { font-size: 30px; line-height: 1.19; }
-    #faa-client-quotes .fq-feature figcaption { font-size: 14px; margin-top: 18px; }
-    #faa-client-quotes .fq-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; margin-top: 30px; }
-    #faa-client-quotes .fq-story { min-height: 0; padding: 24px 22px 19px; }
-    #faa-client-quotes .fq-story-label { padding-bottom: 18px; }
-    #faa-client-quotes .fq-excerpt,
-    #faa-client-quotes .fq-story--electric .fq-excerpt { font-size: 23px; line-height: 1.37; }
-    #faa-client-quotes .fq-byline { padding-top: 24px; }
-    #faa-client-quotes .fq-full { font-size: 18px; line-height: 1.65; }
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    #faa-client-quotes .fq-toggle-icon { transition: background-color .18s, color .18s; }
-    #faa-client-quotes .fq-toggle:hover .fq-toggle-icon { background: var(--fq-story-accent); color: #fff; }
-  }
-#faa-client-quotes { scroll-margin-top: 120px; }
-#faa-client-quotes .fq-action { cursor: pointer; }
-
+  --fq-ink: #14202f;
+  --fq-muted: #566170;
+  --fq-green: #0b5e63;
+  --fq-paper: #faf9f6;
+  --fq-line: #d8e2dd;
+  color-scheme: light;
+  background: var(--fq-paper);
+  color: var(--fq-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: left;
+  isolation: isolate;
+  scroll-margin-top: 100px;
+}
+#faa-client-quotes *,
+#faa-client-quotes *::before,
+#faa-client-quotes *::after { box-sizing: border-box; }
+#faa-client-quotes [hidden] { display: none !important; }
+#faa-client-quotes h2,
+#faa-client-quotes h3,
+#faa-client-quotes p,
+#faa-client-quotes figure,
+#faa-client-quotes blockquote { margin: 0; padding: 0; border: 0; background: transparent; }
+#faa-client-quotes .fq-section {
+  max-width: 1380px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 48px 0 52px;
+}
+#faa-client-quotes .fq-eyebrow {
+  color: var(--fq-green);
+  font: 500 12px/1.4 Arial, Helvetica, sans-serif;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+#faa-client-quotes .fq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+  margin-top: 24px;
+}
+#faa-client-quotes .fq-story {
+  background: #fff;
+  border: 1px solid var(--fq-line);
+  border-top: 3px solid var(--fq-green);
+  border-radius: 8px;
+  padding: 28px 26px 22px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+#faa-client-quotes .fq-story--electric { background: #edf5f0; }
+#faa-client-quotes .fq-grid:has(.fq-expanded) { align-items: start; }
+#faa-client-quotes .fq-story-label {
+  color: var(--fq-green);
+  font: 600 12px/1.5 Arial, Helvetica, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding-bottom: 24px;
+}
+#faa-client-quotes .fq-story-figure { display: flex; flex-direction: column; flex: 1; }
+#faa-client-quotes .fq-excerpt {
+  color: var(--fq-ink);
+  font: 400 clamp(23px, 1.9vw, 28px)/1.35 Georgia, 'Times New Roman', serif;
+  letter-spacing: -.025em;
+  overflow-wrap: break-word;
+}
+#faa-client-quotes .fq-full { color: var(--fq-ink); font: 400 18px/1.65 Georgia, 'Times New Roman', serif; }
+#faa-client-quotes .fq-full p { color: var(--fq-ink); font: inherit; }
+#faa-client-quotes .fq-full p + p { margin-top: 17px; }
+#faa-client-quotes .fq-byline {
+  margin-top: auto;
+  padding-top: 28px;
+  color: var(--fq-ink);
+  font: 600 15px/1.5 Arial, Helvetica, sans-serif;
+}
+#faa-client-quotes .fq-byline span { display: block; }
+#faa-client-quotes .fq-byline .fq-company {
+  color: var(--fq-muted);
+  font: 400 13px/1.5 Arial, Helvetica, sans-serif;
+  margin-top: 2px;
+}
+#faa-client-quotes .fq-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--fq-line);
+  border-radius: 0;
+  padding: 15px 0 0;
+  margin: 19px 0 0;
+  width: 100%;
+  min-height: 52px;
+  text-align: left;
+  color: var(--fq-green);
+  font: 500 14px/1.5 Arial, Helvetica, sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+#faa-client-quotes .fq-toggle:hover .fq-toggle-label { text-decoration: underline; text-underline-offset: 4px; }
+#faa-client-quotes .fq-toggle:focus-visible { outline: 3px solid var(--fq-green); outline-offset: 6px; border-radius: 3px; }
+#faa-client-quotes .fq-toggle-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #b6cdc3;
+  border-radius: 50%;
+  color: var(--fq-green);
+  background: transparent;
+  font: 400 23px/1 Arial, Helvetica, sans-serif;
+}
+@media (min-width: 901px) {
+  #faa-client-quotes .fq-story--manufacturer .fq-story-figure { padding-bottom: 92.5px; }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  #faa-client-quotes .fq-grid { gap: 16px; }
+  #faa-client-quotes .fq-story { padding: 24px 20px 20px; }
+}
+@media (max-width: 900px) {
+  #faa-client-quotes .fq-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  #faa-client-quotes .fq-section { max-width: 680px; }
+  #faa-client-quotes .fq-excerpt { font-size: 26px; }
+}
+@media (max-width: 599px) {
+  #faa-client-quotes .fq-section { width: calc(100% - 40px); padding: 36px 0; }
+  #faa-client-quotes .fq-eyebrow { font-size: 11px; }
+  #faa-client-quotes .fq-story { padding: 24px 22px 20px; }
+  #faa-client-quotes .fq-story-label { padding-bottom: 18px; }
+  #faa-client-quotes .fq-excerpt { font-size: 23px; line-height: 1.37; }
+  #faa-client-quotes .fq-byline { padding-top: 24px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #faa-client-quotes .fq-toggle-icon { transition: background-color .18s, color .18s; }
+  #faa-client-quotes .fq-toggle:hover .fq-toggle-icon { background: var(--fq-green); color: #fff; }
+}
