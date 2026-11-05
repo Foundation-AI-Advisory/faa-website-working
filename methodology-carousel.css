@@ -1,4 +1,4 @@
-#methodology{font:400 16px/1.6 Georgia,'Times New Roman',serif;--navy:#0b2133;--teal:#075e63;--green:#51bf82;margin:0;width:100%;max-width:none;padding-bottom:0;scroll-margin-top:90px}#methodology p{padding:0}#methodology h2,#methodology h3{font-family:Georgia,serif;font-weight:400;color:inherit}#methodology button{min-width:0;padding:0;box-shadow:none;text-transform:none;letter-spacing:normal}#methodology img{max-width:100%;border-radius:0}#methodology [hidden]{display:none!important}
+#methodology{font:400 16px/1.6 Arial,Helvetica,sans-serif;--navy:#0b2133;--teal:#075e63;--green:#51bf82;margin:0;width:100%;max-width:none;padding-bottom:0;scroll-margin-top:90px}#methodology p{padding:0}#methodology h2,#methodology h3{font-family:Georgia,serif;font-weight:400;color:inherit}#methodology button{min-width:0;padding:0;box-shadow:none;text-transform:none;letter-spacing:normal}#methodology img{max-width:100%;border-radius:0}#methodology [hidden]{display:none!important}
 #methodology{--navy:#0b2133;--teal:#075e63;--green:#51bf82;--cream:#f7f7f2;--card-width:660px;--card-height:494px;--side-offset:690px}
 #methodology *{box-sizing:border-box}
 #methodology a{color:inherit;text-decoration:none}
@@ -137,7 +137,7 @@
 #methodology .fmc-card-kicker{font-size:12px;letter-spacing:0;font-weight:400;line-height:1.5}
 #methodology .fmc-image-label{font-size:10px;letter-spacing:.13em}
 #methodology .fmc-outcome>span,#methodology .fmc-practice .fmc-practice-label{font-size:10px;font-weight:500;line-height:1.5;letter-spacing:.13em}
-#methodology .fmc-explore,#methodology .fmc-section-foot a{font:400 15px/1.5 Georgia,'Times New Roman',serif}
+#methodology .fmc-explore,#methodology .fmc-section-foot a{font:400 15px/1.5 Arial,Helvetica,sans-serif}
 #methodology .fmc-section-foot p{font-size:14px;line-height:1.6}
 #methodology .fmc-step-nav button{font-size:14px;line-height:1.5}
 #methodology .fmc-icon{width:22px;height:22px;display:block;flex:none}
@@ -155,3 +155,8 @@
  #methodology .fmc-rotation-status{font-size:11px}
 }
 @media(max-width:360px){#methodology{--card-height:630px}#methodology .fmc-card-copy h3{font-size:27px}}
+
+
+/* Match the approved carousel heading while keeping body copy clear on phones. */
+#methodology-heading em{font-style:italic;font-weight:400}
+#methodology .fmc-outcome{font-weight:600}
