@@ -233,7 +233,7 @@ What to do instead: Curate the data first. Identify authoritative sources, clean
 
 ### 3. High-risk decisions without review
 
-Agents should not be allowed to make or trigger high-risk decisions without human-in-the-loop controls.
+Agents should not be allowed to make or trigger high-risk decisions without approval and override controls.
 
 High-risk decisions include anything that affects pricing, customer commitments, financial reporting, procurement, production scheduling, compliance, employee matters, safety, legal exposure, or material customer impact.
 

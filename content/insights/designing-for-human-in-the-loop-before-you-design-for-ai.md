@@ -1,5 +1,5 @@
 ---
-title: "Designing for Human-in-the-Loop Before You Design for AI"
+title: "Designing AI Workflows That Keep People in Control"
 slug: "designing-for-human-in-the-loop-before-you-design-for-ai"
 category: "Workflow Optimization"
 topic: "Process"
@@ -76,9 +76,9 @@ These are not edge cases.
 
 They are the system.
 
-## What Human-in-the-Loop Actually Means
+## What It Means for People to Stay in Control
 
-Human-in-the-loop is often misunderstood.
+People need clear authority over the decisions an AI workflow can make.
 
 It does not mean:
 
@@ -88,7 +88,7 @@ That’s not a system.
 
 That’s a patch.
 
-Real human-in-the-loop design means:
+Keeping people in control means:
 
 - defining where decisions require judgment
 - identifying where data is insufficient
@@ -208,7 +208,7 @@ The issue was that the process was never designed for automation.
 
 ## What Good Looks Like
 
-A well-designed human-in-the-loop system has clear decision definitions, structured exception handling, explicit control points, and traceability.
+A system designed to keep people in control has clear decision definitions, structured exception handling, explicit control points, and traceability.
 
 ### Clear Decision Definitions
 

@@ -263,7 +263,7 @@ That means:
 - The workflow is understood
 - Owners are defined
 - Outputs can be validated
-- Human-in-the-loop controls are designed
+- Approval and override controls are designed
 - Performance can be measured
 
 Only then does AI have a credible path to value.
