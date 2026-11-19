@@ -26,7 +26,7 @@ Optional section visual for the "Most AI Isn't Failing. It's Being Misapplied." 
 Visual direction:
 A business workflow under stress: fragmented handoffs, duplicated records, disconnected decision paths, and controlled tension. Premium consulting-grade editorial style. No readable text.
 
-## Section Image: Human-in-the-Loop Control
+## Section Image: How People Stay in Control
 
 Suggested filename:
 `human-in-the-loop-control-layer.png`

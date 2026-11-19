@@ -301,7 +301,7 @@ Evaluation criteria should include:
 - cost
 - scalability
 - vendor risk
-- ability to support human-in-the-loop controls
+- ability to support approval and override controls
 
 This turns platform selection into an operating decision instead of a software preference.
 
@@ -362,7 +362,7 @@ If the data cannot support the use case, fix the data foundation first.
 
 What could go wrong?
 
-Define review thresholds, approval points, escalation paths, permissions, audit trails, and human-in-the-loop requirements.
+Define review thresholds, approval points, escalation paths, permissions, audit trails, and requirements for human approval.
 
 If the risk is material, do not allow the platform to dictate control design.
 

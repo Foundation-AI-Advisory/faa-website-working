@@ -12,7 +12,7 @@
 
 1. **Data Curation & Governance** — one source of record per critical dataset, defined ownership, enforced input rules, lineage into reports and AI outputs.
 2. **Workflow Optimization** — align hand-offs, exceptions, and decision rights before any automation is introduced.
-3. **AI Design & Implementation** — agents and AI-supported workflows designed around measurable operating outcomes, with human-in-the-loop where it matters.
+3. **AI Design & Implementation** — agents and AI-supported workflows designed around measurable operating outcomes, with human decision authority where it matters.
 
 ## Offers
 

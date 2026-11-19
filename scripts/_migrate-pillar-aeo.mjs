@@ -41,7 +41,7 @@ const pages = [
     cta: 'Plan your first AI use case',
     asideLabel: 'What this answers about AI Design and Implementation',
     qa: [
-      { q: 'What is AI Design &amp; Implementation?',                       a: 'AI Design &amp; Implementation is the process of choosing where AI fits inside an operating model, defining its inputs and outputs, setting human-in-the-loop controls, and deploying it inside a workflow tied to a measurable business outcome.' },
+      { q: 'What is AI Design &amp; Implementation?',                       a: 'AI Design &amp; Implementation is the process of choosing where AI fits inside an operating model, defining its inputs and outputs, defining who can approve, override, or stop an action, and deploying it inside a workflow tied to a measurable business outcome.' },
       { q: 'How does FAA design AI for measurable business outcomes?',     a: 'Every use case FAA recommends is tied to one of six outcomes: margin, throughput, cycle time, cash flow, risk exposure, or operational visibility. The use case must have a clear owner, defined inputs, controlled outputs, and a path to production &mdash; not a pilot that ends in a slide deck.' },
       { q: 'Who should own AI implementation?',                            a: 'Ownership should sit with the business function whose outcome the AI affects, supported by IT for architecture and security. AI without a named business owner becomes orphaned infrastructure.' },
       { q: 'What outcomes should AI produce?',                             a: 'AI should improve margin, throughput, cycle time, cash flow, risk exposure, or operational visibility. FAA does not recommend AI work without a clear business outcome and a path to production.' },
